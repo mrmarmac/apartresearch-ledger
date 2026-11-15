@@ -120,6 +120,11 @@ dl.src dt{color:var(--muted)}
 dl.src dd{margin:0;min-width:0;overflow-wrap:anywhere}
 .idline{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
 button.copy{font:inherit;font-size:12px;padding:2px 8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:3px;cursor:pointer}
+details.cov{margin:0 0 6px;font-size:14px}
+details.cov summary{cursor:pointer;color:var(--accent)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;margin-top:8px;font-size:13px;min-width:520px}
+th,td{text-align:left;padding:5px 12px 5px 0;border-bottom:1px solid var(--line);vertical-align:top}
 footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
 .legend{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:6px 0 0}
 .legend span span{display:inline-block;width:18px;height:18px;line-height:16px;text-align:center;font-weight:700;border:1px solid currentColor;border-radius:2px;margin-right:4px;font-size:12px}
@@ -193,11 +198,23 @@ def render_index(ledger, labs):
     legend = "".join(
         f'<span><span class="s-{s}">{config.STATUS_MARK[s]}</span>{E(config.STATUS_LABEL[s])}</span>'
         for s in ("baseline", "added", "kept", "strengthened", "weakened", "removed", "relocated"))
+    vmap = {v["version_id"]: v for v in ledger["versions"]}
+    cov_rows = []
+    for cov in ledger["labs"]:
+        n = sum(1 for c in items if c["lab"] == cov["lab"])
+        pairs = ", ".join(f'{E(vmap[a]["label"])} → {E(vmap[b]["label"])}' for a, b in cov["traced_pairs"])
+        gaps = ", ".join(f'{E(vmap[a]["label"])} → {E(vmap[b]["label"])}' for a, b in cov["untraced_pairs"]) or "None"
+        cov_rows.append(f'<tr><th scope="row"><a href="?lab={cov["lab"]}">{E(cov["name"])}</a></th><td>{n}</td><td>{pairs}</td><td>{gaps}</td></tr>')
+    coverage = ('<details class="cov"><summary>Coverage: which version pairs are traced</summary><div class="scroll"><table>'
+                '<thead><tr><th>Lab</th><th>Commitments</th><th>Traced</th><th>In the corpus, not traced</th></tr></thead><tbody>'
+                + "".join(cov_rows) + '</tbody></table></div>'
+                '<p class="note">A commitment that is "In force" is in the last traced version. Versions after July 2026 are not in the ledger.</p></details>')
     n_events = sum(1 for c in items for h in c["history"] if h["status"] in config.FEED_STATUSES)
     body = f"""
 <h1>What did each lab promise, and what happened to each promise?</h1>
 <p class="lede">{len(items)} safety-framework commitments from {len(labs)} developer{"s" if len(labs) != 1 else ""}, across {len(ledger["versions"])} framework versions.
 Each commitment has one stable ID. {n_events} recorded changes. Each change has the verbatim text and the SHA-256 of its source document.</p>
+{coverage}
 <div class="filters">
 <div><label for="f-lab">Lab</label><select id="f-lab"><option value="">All</option>{_options(sorted(labs), labs)}</select></div>
 <div><label for="f-current">Status now</label><select id="f-current"><option value="">All</option>{_options(["active", "removed", "relocated", "merged", "not_traced"], config.STATUS_LABEL)}</select></div>
@@ -244,7 +261,11 @@ def _entry_html(c, i, versions):
     if h["quote"] is None:
         if prev and prev["quote"]:
             parts.append(f'<div class="quote gone">{E(prev["quote"])}</div>')
-        parts.append('<p class="note"><b>No counterpart in this version.</b></p>')
+        if h["status"] == "relocated":
+            parts.append('<p class="note"><b>Relocated.</b> The framework no longer has this text. '
+                         'The upstream coder found a counterpart in a companion document or a non-binding section.</p>')
+        else:
+            parts.append('<p class="note"><b>No counterpart in this version.</b></p>')
     elif prev and prev["quote"] and prev["quote"] != h["quote"]:
         ratio, marked = _diff(prev["quote"], h["quote"])
         if ratio >= 0.5:
@@ -276,12 +297,15 @@ def _entry_html(c, i, versions):
     return f'<li class="is-{h["status"]}" id="{E(h["version_id"])}">{"".join(parts)}</li>'
 
 
-def render_commitment(c, versions, labs):
+def render_commitment(c, versions, labs, later=False):
     last = c["history"][-1]
     if c["current_status"] == "removed":
         headline = f'Removed on {_date(versions[last["version_id"]]["publication_date"])}'
     elif c["current_status"] == "merged":
         headline = f'Continues as <a href="{c["merged_into"]}.html" class="mono">{c["merged_into"]}</a>'
+    elif c["current_status"] == "active":
+        headline = (f'In the last traced version, {_date(versions[last["version_id"]]["publication_date"])}'
+                    + (". Later versions are not traced." if later else ""))
     else:
         headline = f'Last traced on {_date(versions[last["version_id"]]["publication_date"])}'
     tags = "".join(f'<a class="chip" href="../index.html?tag={E(t)}">{E(t)}</a>' for t in c["tags"])
@@ -350,6 +374,10 @@ def render(ledger, root, out):
     for v in ledger["versions"]:
         labs[v["lab"]] = v.get("lab_name", v["lab"])
     versions = {v["version_id"]: v for v in ledger["versions"]}
+    later_untraced = {}
+    for cov in ledger["labs"]:
+        last = cov["last_traced_version_id"]
+        later_untraced[cov["lab"]] = any(a == last for a, _ in cov["untraced_pairs"])
     if os.path.isdir(os.path.join(out, "c")):
         shutil.rmtree(os.path.join(out, "c"))
     os.makedirs(os.path.join(out, "c"), exist_ok=True)
@@ -360,7 +388,7 @@ def render(ledger, root, out):
 
     write("index.html", render_index(ledger, labs))
     for c in ledger["commitments"]:
-        write(os.path.join("c", c["id"] + ".html"), render_commitment(c, versions, labs))
+        write(os.path.join("c", c["id"] + ".html"), render_commitment(c, versions, labs, later_untraced[c["lab"]]))
     write("feed.xml", render_feed(ledger, labs))
     write(".nojekyll", "")
     shutil.copyfile(os.path.join(root, "data", "ledger.json"), os.path.join(out, "ledger.json"))

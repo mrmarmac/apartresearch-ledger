@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Initiate protocols for heightened access controls to model weights… · Meta · Commitment Ledger</title>
+<meta name="description" content="Meta commitment meta-consequence-84ab: Initiate protocols for heightened access controls to model weights as overseen by the Chief AI Officer and/or Director of Alignment and…">
+<link rel="alternate" type="application/rss+xml" title="Commitment Ledger changes" href="../feed.xml">
+<style>
+:root{--bg:#f6f4ee;--panel:#fffdf8;--ink:#1c1b18;--muted:#6a665c;--line:#d9d4c6;--accent:#1f4e79;
+--removed:#a4262c;--removed-bg:#fbe9e7;--weakened:#8a5300;--weakened-bg:#fdf0d5;--strengthened:#1d6b3a;--strengthened-bg:#e3f3e6;
+--added:#1f4e79;--added-bg:#e4eef8;--kept:#5d5a52;--kept-bg:#ebe8df;--relocated:#5b3a8c;--relocated-bg:#efe8f8}
+:root:not([data-theme="light"]){color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15161a;--panel:#1d1f24;--ink:#e9e6df;--muted:#a09c92;--line:#34363d;--accent:#8fbde8;
+--removed:#ff9d96;--removed-bg:#4a1f1f;--weakened:#f2c26b;--weakened-bg:#43330f;--strengthened:#8fd6a4;--strengthened-bg:#173722;
+--added:#8fbde8;--added-bg:#172f47;--kept:#b5b1a6;--kept-bg:#2b2d33;--relocated:#c9aef2;--relocated-bg:#32244a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 56px}
+header.top{border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:22px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+header.top a.home{font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:.01em}
+header.top nav{margin-left:auto;display:flex;gap:14px;font-size:14px;flex-wrap:wrap}
+h1{font-size:26px;line-height:1.25;margin:0 0 8px}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:30px 0 10px}
+p.lede{color:var(--muted);margin:0 0 18px;max-width:62ch}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px}
+.quote{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:17px;line-height:1.5}
+.badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:3px;white-space:nowrap;border:1px solid currentColor}
+.s-removed{color:var(--removed);background:var(--removed-bg)}
+.s-weakened{color:var(--weakened);background:var(--weakened-bg)}
+.s-strengthened{color:var(--strengthened);background:var(--strengthened-bg)}
+.s-added,.s-active{color:var(--added);background:var(--added-bg)}
+.s-kept,.s-baseline,.s-merged,.s-not_traced{color:var(--kept);background:var(--kept-bg)}
+.s-relocated{color:var(--relocated);background:var(--relocated-bg)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chip{font-size:13px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);text-decoration:none;cursor:pointer;font-family:inherit}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 6px}
+.filters label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block}
+.filters select,.filters input{width:100%;font:inherit;font-size:16px;padding:8px;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--ink);margin-top:3px}
+.filters .wide{grid-column:1/-1}
+.count{color:var(--muted);font-size:14px;margin:12px 0 6px}
+ul.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+ul.rows li{border-bottom:1px solid var(--line)}
+ul.rows a{display:block;padding:13px 2px;color:inherit;text-decoration:none}
+ul.rows a:hover .rtext,ul.rows a:focus .rtext{text-decoration:underline}
+.rmeta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:4px}
+.rtext{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:16px;line-height:1.45}
+.strip{display:inline-flex;gap:2px;margin-left:auto}
+.strip span{width:18px;height:18px;line-height:16px;text-align:center;font-size:12px;font-weight:700;border-radius:2px;border:1px solid currentColor}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px}
+ol.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);margin-left:6px}
+ol.timeline>li{position:relative;padding:0 0 26px 20px}
+ol.timeline>li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+ol.timeline>li.is-removed::before{background:var(--removed);border-color:var(--removed)}
+ol.timeline>li.is-weakened::before{background:var(--weakened);border-color:var(--weakened)}
+ol.timeline>li.is-strengthened::before{background:var(--strengthened);border-color:var(--strengthened)}
+ol.timeline>li.is-added::before{background:var(--added);border-color:var(--added)}
+.when{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.when time{font-weight:700}
+.when .doc{color:var(--muted);font-size:14px}
+del{color:var(--removed);background:var(--removed-bg);text-decoration:line-through;padding:0 2px;border-radius:2px}
+ins{color:var(--strengthened);background:var(--strengthened-bg);text-decoration:none;padding:0 2px;border-radius:2px}
+.gone{color:var(--removed);text-decoration:line-through;text-decoration-thickness:1px}
+.note{font-size:14px;color:var(--muted);margin:8px 0 0}
+.note b{color:var(--ink);font-weight:600}
+dl.src{display:grid;grid-template-columns:max-content 1fr;gap:3px 12px;font-size:13px;margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line)}
+dl.src dt{color:var(--muted)}
+dl.src dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.idline{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
+button.copy{font:inherit;font-size:12px;padding:2px 8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:3px;cursor:pointer}
+details.cov{margin:0 0 6px;font-size:14px}
+details.cov summary{cursor:pointer;color:var(--accent)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;margin-top:8px;font-size:13px;min-width:520px}
+th,td{text-align:left;padding:5px 12px 5px 0;border-bottom:1px solid var(--line);vertical-align:top}
+footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.legend{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:6px 0 0}
+.legend span span{display:inline-block;width:18px;height:18px;line-height:16px;text-align:center;font-weight:700;border:1px solid currentColor;border-radius:2px;margin-right:4px;font-size:12px}
+@media (max-width:560px){h1{font-size:22px}.filters{grid-template-columns:1fr 1fr}.strip{margin-left:0;width:100%}.quote{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="home" href="../index.html">Commitment Ledger</a>
+<nav><a href="../ledger.json">ledger.json</a><a href="../feed.xml">RSS</a><a href="../schema.json">Schema</a><a href="https://github.com/mrmarmac/apartresearch-ledger">GitHub</a></nav>
+</header>
+
+<p class="rmeta"><a href="../index.html?lab=meta">Meta</a><span>·</span><span>Consequences of results</span></p>
+<h1 class="quote" style="font-weight:400">Initiate protocols for heightened access controls to model weights as overseen by the Chief AI Officer and/or Director of Alignment and Risk, to prevent their tampering or exfiltration insofar as is technically feasible and commercially practicable.</h1>
+<div class="idline"><span class="badge s-active">In force</span><span>In the last traced version, 7 Apr 2026</span></div>
+<div class="idline"><span class="mono" id="cid">meta-consequence-84ab</span><button class="copy" type="button" data-copy="meta-consequence-84ab">Copy ID</button><span class="strip" aria-hidden="true"><span class="s-baseline" title="meta-v1.1: First seen">•</span><span class="s-weakened" title="meta-v2: Weakened">↓</span></span></div>
+<div class="chips"><a class="chip" href="../index.html?tag=security">security</a></div>
+<h2>History, oldest first</h2>
+<ol class="timeline"><li class="is-baseline" id="meta-v1.1"><div class="when"><time datetime="2025-02-03">3 Feb 2025</time><span class="badge s-baseline">First seen</span><span class="doc">Frontier AI Framework, version v1.1</span></div><div class="quote">Access is strictly limited to a small number of experts, alongside security protections to prevent hacking or exfiltration insofar as is technically feasible and commercially practicable.</div><dl class="src"><dt>Section</dt><dd>Table 1</dd><dt>Source</dt><dd><a href="https://web.archive.org/web/20250213105620id_/https://ai.meta.com/static-resource/meta-frontier-ai-framework/">https://web.archive.org/web/20250213105620id_/https://ai.meta.com/sta…</a></dd><dt>SHA-256</dt><dd><span class="mono">9fa301dfb67bf8d392abda13a2466358ffde756f14a9d55e4fe2d95f7cfecc21</span></dd><dt>Quote check</dt><dd>Found in the hashed document</dd><dt>Upstream row</dt><dd><span class="mono">META-1-030</span></dd><dt>Event ID</dt><dd><span class="mono">meta-consequence-84ab@meta-v1.1</span></dd></dl></li><li class="is-weakened" id="meta-v2"><div class="when"><time datetime="2026-04-07">7 Apr 2026</time><span class="badge s-weakened">Weakened</span><span class="doc">Advanced AI Scaling Framework, version v2</span></div><div class="quote">Initiate protocols for heightened access controls to model weights as overseen by the Chief AI Officer and/or Director of Alignment and Risk, to prevent their tampering or exfiltration insofar as is technically feasible and commercially practicable.</div><p class="note"><b>Before:</b> <span class="gone">Access is strictly limited to a small number of experts, alongside security protections to prevent hacking or exfiltration insofar as is technically feasible and commercially practicable.</span></p><p class="note"><b>Mixed change.</b> Stronger in one dimension and weaker in a different dimension. The status is then Weakened.</p><p class="note"><b>Why this status (upstream coder):</b> Security consequence at critical changes from a stated state (&#x27;Access is strictly limited to a small number of experts&#x27;) to a process (&#x27;Initiate protocols for heightened access controls to model weights&#x27;), which removes the specific access restriction (dim 6, weakening) while adding named oversight by the Chief AI Officer and/or Director of Alignment and Risk (dim 3, strengthening); both directions present so coded W.</p><p class="note"><b>Disclosure:</b> The developer&#x27;s account identifies the area, but not the change.</p><dl class="src"><dt>Section</dt><dd>Table 1</dd><dt>Source</dt><dd><a href="https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2">https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framewor…</a> · <a href="https://web.archive.org/web/*/https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2">Wayback</a></dd><dt>SHA-256</dt><dd><span class="mono">d87aa9bf00456ec747e80b84216f9f2ffc427c1e98541f8b3c8f7f52c13c7b6a</span></dd><dt>Quote check</dt><dd>Found in the hashed document</dd><dt>Confidence</dt><dd>low</dd><dt>Upstream row</dt><dd><span class="mono">META-1-030</span></dd><dt>Event ID</dt><dd><span class="mono">meta-consequence-84ab@meta-v2</span></dd></dl></li></ol>
+<script>
+[].forEach.call(document.querySelectorAll('button.copy'),function(b){b.addEventListener('click',function(){
+ if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.copy).then(function(){b.textContent='Copied'})}})});
+</script>
+
+<footer>
+<p>Seed data derived from the <a href="https://github.com/louisyzhu/frontier-safety-framework-corpus">Frontier Safety Framework Corpus</a> by Louis Yiven Zhu
+(<a href="https://arxiv.org/abs/2609.08789">Silent Revision, arXiv:2609.08789</a>), CC BY 4.0.
+The upstream coding used a language model with one human author. Read each code as a reference, not as ground truth.
+Quotes are the property of their publishers.</p>
+</footer>
+</div>
+</body>
+</html>

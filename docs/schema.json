@@ -4,7 +4,7 @@
   "title": "Commitment Ledger",
   "description": "Atomic safety-framework commitments of frontier AI developers, each with a stable ID and a history across framework versions.",
   "type": "object",
-  "required": ["schema_version", "source", "versions", "commitments"],
+  "required": ["schema_version", "source", "labs", "versions", "commitments"],
   "additionalProperties": false,
   "properties": {
     "schema_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
@@ -20,6 +20,25 @@
         "doi": { "type": "string" },
         "licence": { "type": "string" },
         "citation": { "type": "string" }
+      }
+    },
+    "labs": {
+      "type": "array",
+      "description": "Coverage for each lab. Read it before you interpret current_status.",
+      "items": {
+        "type": "object",
+        "required": ["lab", "name", "traced_pairs", "last_traced_version_id", "untraced_pairs"],
+        "additionalProperties": false,
+        "properties": {
+          "lab": { "type": "string" },
+          "name": { "type": "string" },
+          "traced_pairs": { "type": "array", "items": { "type": "array", "items": { "$ref": "#/$defs/version_id" }, "minItems": 2, "maxItems": 2 } },
+          "last_traced_version_id": { "$ref": "#/$defs/version_id" },
+          "untraced_pairs": {
+            "description": "Consecutive versions that the ledger has, but does not trace.",
+            "type": "array", "items": { "type": "array", "items": { "$ref": "#/$defs/version_id" }, "minItems": 2, "maxItems": 2 }
+          }
+        }
       }
     },
     "versions": { "type": "array", "items": { "$ref": "#/$defs/version" } },
@@ -81,7 +100,7 @@
         },
         "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
         "current_status": {
-          "description": "active: in the latest traced version. merged: continues under merged_into. not_traced: the ledger has no record after last_version_id.",
+          "description": "active: in the last traced version of the lab (see labs). It can be different in a later version. merged: continues under merged_into. not_traced: the ledger has no record after last_version_id.",
           "enum": ["active", "removed", "relocated", "merged", "not_traced"]
         },
         "merged_into": {

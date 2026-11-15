@@ -14,6 +14,10 @@ CORPUS_CITATION = (
 # also when the company changes its name (xAI -> SpaceXAI).
 LABS = {
     "xAI": "xai",
+    "Anthropic": "anthropic",
+    "Google DeepMind": "google",
+    "Meta": "meta",
+    "OpenAI": "openai",
 }
 
 # Upstream outcome code -> ledger status.
@@ -77,7 +81,7 @@ STATUS_LABEL = {
     "weakened": "Weakened",
     "removed": "Removed",
     "relocated": "Relocated",
-    "active": "Active",
+    "active": "In force",
     "merged": "Merged",
     "not_traced": "Not traced",
 }

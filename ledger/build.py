@@ -116,11 +116,13 @@ def build_lab(corpus, provider, lab):
     chains = []
     by_row = {}
     traced_last = None
+    traced_pairs = []
 
     for pair, rows in corpus.traced_pairs(provider):
         vid_i = version_id(lab, pair["v_i"])
         vid_next = version_id(lab, pair["v_next"])
         traced_last = vid_next
+        traced_pairs.append([vid_i, vid_next])
         candidates = [c for c in chains if c.open and c.last["quote"]]
         used = set()
 
@@ -230,7 +232,17 @@ def build_lab(corpus, provider, lab):
     for item in commitments:
         target = item["merged_into"]
         item["merged_into"] = ids[id(target)] if target is not None else None
-    return versions, commitments
+    coverage = {
+        "lab": lab,
+        "name": provider,
+        "traced_pairs": traced_pairs,
+        "last_traced_version_id": traced_last,
+        "untraced_pairs": [[a, b] for a, b in zip(order, order[1:])
+                           if [a, b] not in traced_pairs
+                           and not any(order.index(x) <= order.index(a) and order.index(b) <= order.index(y)
+                                       for x, y in traced_pairs)],
+    }
+    return versions, commitments, coverage
 
 
 def build(corpus, labs=None):
@@ -245,11 +257,13 @@ def build(corpus, labs=None):
             "licence": "CC BY 4.0 (coding and manifest). Provider documents belong to their publishers.",
             "citation": config.CORPUS_CITATION,
         },
+        "labs": [],
         "versions": [],
         "commitments": [],
     }
     for provider, lab in labs.items():
-        versions, commitments = build_lab(corpus, provider, lab)
+        versions, commitments, coverage = build_lab(corpus, provider, lab)
+        ledger["labs"].append(coverage)
         ledger["versions"].extend(versions)
         ledger["commitments"].extend(commitments)
     ids = [c["id"] for c in ledger["commitments"]]

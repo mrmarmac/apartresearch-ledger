@@ -8,6 +8,118 @@
     "licence": "CC BY 4.0 (coding and manifest). Provider documents belong to their publishers.",
     "citation": "Zhu, Louis Yiven (2026). Silent Revision: a versioned corpus of frontier AI safety frameworks and their revision accounts. Zenodo. arXiv:2609.08789."
   },
+  "labs": [
+    {
+      "lab": "xai",
+      "name": "xAI",
+      "traced_pairs": [
+        [
+          "xai-draft-2025-02-10",
+          "xai-draft-2025-02-20"
+        ],
+        [
+          "xai-draft-2025-02-20",
+          "xai-2025-08-20"
+        ],
+        [
+          "xai-2025-08-20",
+          "xai-2025-12-30"
+        ],
+        [
+          "xai-2025-12-30",
+          "xai-2026-06-30"
+        ]
+      ],
+      "last_traced_version_id": "xai-2026-06-30",
+      "untraced_pairs": []
+    },
+    {
+      "lab": "anthropic",
+      "name": "Anthropic",
+      "traced_pairs": [
+        [
+          "anthropic-v1.0",
+          "anthropic-v2.0"
+        ],
+        [
+          "anthropic-v2.2",
+          "anthropic-v3.0"
+        ]
+      ],
+      "last_traced_version_id": "anthropic-v3.0",
+      "untraced_pairs": [
+        [
+          "anthropic-v2.0",
+          "anthropic-v2.1"
+        ],
+        [
+          "anthropic-v2.1",
+          "anthropic-v2.2"
+        ],
+        [
+          "anthropic-v3.0",
+          "anthropic-v3.1"
+        ],
+        [
+          "anthropic-v3.1",
+          "anthropic-v3.2"
+        ],
+        [
+          "anthropic-v3.2",
+          "anthropic-v3.3"
+        ],
+        [
+          "anthropic-v3.3",
+          "anthropic-v3.4"
+        ]
+      ]
+    },
+    {
+      "lab": "google",
+      "name": "Google DeepMind",
+      "traced_pairs": [
+        [
+          "google-v2.0",
+          "google-v3.0"
+        ],
+        [
+          "google-v3.0",
+          "google-v3.1"
+        ]
+      ],
+      "last_traced_version_id": "google-v3.1",
+      "untraced_pairs": [
+        [
+          "google-v1.0",
+          "google-v2.0"
+        ]
+      ]
+    },
+    {
+      "lab": "meta",
+      "name": "Meta",
+      "traced_pairs": [
+        [
+          "meta-v1.1",
+          "meta-v2"
+        ]
+      ],
+      "last_traced_version_id": "meta-v2",
+      "untraced_pairs": []
+    },
+    {
+      "lab": "openai",
+      "name": "OpenAI",
+      "traced_pairs": [
+        [
+          "openai-beta",
+          "openai-v2"
+        ]
+      ],
+      "last_traced_version_id": "openai-v2",
+      "untraced_pairs": []
+    }
+  ],
   "versions": [
     {
       "version_id": "xai-draft-2025-02-10",
