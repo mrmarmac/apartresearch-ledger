@@ -21,6 +21,17 @@ For 5 documents, `state.json` starts with the SHA-256 from the upstream corpus (
 So the first run already compares the live file with the file that the ledger was coded from.
 A difference in that first run means that the developer replaced the file after the corpus was collected.
 
+## First result, 15 November 2026
+
+| Address | Result |
+|---|---|
+| Anthropic RSP v3.4, Google DeepMind FSF v3.1, Meta v2, OpenAI PF v2 | The live file has the same SHA-256 as the corpus file. |
+| xAI framework, 30 June 2026 | **Different.** The corpus address gives HTTP 404. The xAI safety page links a file with the same date in its name and a different name suffix. Its SHA-256 is `4be128b1…`. The corpus file is `2c3c6313…`. See [issue 1](https://github.com/mrmarmac/apartresearch-ledger/issues/1). |
+| OpenAI Preparedness page | HTTP 403. The site blocks the watcher. |
+| Google DeepMind Frontier Safety page | No document links found in the page source. This entry does not detect a change. |
+
+The xAI result shows that the bytes are different. It does not show that the words are different. Nobody compared the two files yet.
+
 ## Limits
 
 - **The watcher finds that a file is different. It does not find what changed.** A person must look.
