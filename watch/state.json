@@ -1,0 +1,37 @@
+{
+ "anthropic-rsp-v3.4": {
+  "bytes": null,
+  "fails": 0,
+  "seed": "SHA-256 from the upstream corpus manifest (v3.4)",
+  "sha256": "6247b9e4001fd342827526fabc476c9d4dd6b2041ac00055f0ccda26f4d0b07d",
+  "url": "https://cdn.sanity.io/files/4zrzovbb/website/0bacdc8440ea96e62a8766d99ebe1d4eea6d5f3a.pdf"
+ },
+ "google-fsf-v3.1": {
+  "bytes": null,
+  "fails": 0,
+  "seed": "SHA-256 from the upstream corpus manifest (v3.1)",
+  "sha256": "ad10d2d240e0d557ecad406dbccedcbb4a70295f8ba8eec46bfe01803cb9c301",
+  "url": "https://deepmind-media.storage.googleapis.com/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf"
+ },
+ "meta-aaisf-v2": {
+  "bytes": null,
+  "fails": 0,
+  "seed": "SHA-256 from the upstream corpus manifest (v2)",
+  "sha256": "d87aa9bf00456ec747e80b84216f9f2ffc427c1e98541f8b3c8f7f52c13c7b6a",
+  "url": "https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2"
+ },
+ "openai-pf-v2": {
+  "bytes": null,
+  "fails": 0,
+  "seed": "SHA-256 from the upstream corpus manifest (v2-reupload-20250611)",
+  "sha256": "fae6e4cc6f7212a010bb9348fc0cde1fe711b9cad426c6a99db97740ee52729b",
+  "url": "https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf"
+ },
+ "xai-faif-2026-06-30": {
+  "bytes": null,
+  "fails": 0,
+  "seed": "SHA-256 from the upstream corpus manifest (2026-06-30)",
+  "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53",
+  "url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf"
+ }
+}

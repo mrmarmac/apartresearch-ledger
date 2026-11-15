@@ -84,12 +84,17 @@ Full results: [`validation.md`](validation.md).
 - **Quote check.** 1,344 of 1,360 quotes (99%) are in the text extraction of the hashed source document.
 - **Count check.** The ledger has one event for each of the 636 upstream rows of the 5 labs.
 
+## Change watcher
+
+A GitHub Action runs one time each day. It gets 10 addresses (framework files and the pages that list them) and compares a SHA-256 with the last one.
+If a hash is different, it opens an issue in this repository. Details and limits: [`watch/README.md`](watch/README.md).
+
 ## Known limits
 
 1. **The codes are not ground truth.** A language model helped with the upstream coding, and one human author adjudicated it. Read each status as a reference.
 2. **Anthropic is joined in part only.** The upstream coding cut the v2.0 text and the v2.2 text into different units. The ledger joined 14 chains and already had 20. 55 chains stop at v2.2 with status `not_traced`, and 25 of those overlap an upstream chain that the ledger could not join one to one.
 3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries. 1 of 47 is open. New commitments in those versions are not detected.
-4. **Nothing after July 2026.** The ledger is a seed dataset. It does not update automatically.
+4. **Nothing after July 2026.** The ledger is a seed dataset. A daily watcher reports when a framework file or page is different (see `watch/`), but a person must then trace the new version.
 5. **Frameworks only.** Model cards, usage policies and violations are not in the ledger. Watchtower covers those.
 6. **Commitments only.** Admissions and descriptions are not commitments, and are not in the ledger.
 7. **Links across versions use text.** For xAI, the upstream notes give the links. For Google DeepMind and Anthropic, the ledger uses exact text, then similarity of 0.9 or more. A commitment that was fully rewritten gets a new ID.
@@ -114,6 +119,7 @@ python run.py all
 | `python run.py site` | Writes the site and `feed.xml` into `docs/`. |
 | `python run.py align` | Scores the alignment test and writes `validation/alignment/report.md`. |
 | `python run.py score` | Scores `validation/predictions/` and writes `validation.md`. |
+| `python run.py watch` | Gets each watched address and compares its hash with `watch/state.json`. |
 | `python run.py stats` | Prints a count table. |
 
 The build has no language-model step and no network step after `fetch`. Two builds give the same files.
@@ -130,6 +136,8 @@ data/extension/      tracing and coding answers for the Anthropic pairs that ups
 examples/            one full record
 validation/          test items, rules, prompt, model answers (2 runs), key, human check, Watchtower check
 validation.md        results
+watch/               the change watcher: addresses, last hashes
+tests/               tests
 docs/                the site (GitHub Pages)
 ```
 
@@ -137,7 +145,7 @@ docs/                the site (GitHub Pages)
 
 - Ask an independent second person to check the model-coded Anthropic entries, and resolve the 25 overlaps.
 - Add an alignment step for new versions, and test it against the upstream rows.
-- Add a scheduled job that looks for new framework versions.
+- Trace a new version when the watcher reports one.
 - Ask a second person to code a sample.
 
 ## Credit and licence

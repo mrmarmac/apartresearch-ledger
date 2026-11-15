@@ -1,0 +1,75 @@
+{
+  "note": "One entry for each watched address. kind 'file': the watcher hashes the bytes. kind 'page': the watcher hashes the list of document links on the page, so a new PDF is a change and a new cookie banner is not.",
+  "sources": [
+    {
+      "id": "anthropic-rsp-page",
+      "lab": "anthropic",
+      "name": "Responsible Scaling Policy, version page",
+      "kind": "page",
+      "url": "https://www.anthropic.com/responsible-scaling-policy"
+    },
+    {
+      "id": "anthropic-rsp-v3.4",
+      "lab": "anthropic",
+      "name": "Responsible Scaling Policy v3.4, file",
+      "kind": "file",
+      "url": "https://cdn.sanity.io/files/4zrzovbb/website/0bacdc8440ea96e62a8766d99ebe1d4eea6d5f3a.pdf"
+    },
+    {
+      "id": "openai-pf-page",
+      "lab": "openai",
+      "name": "Preparedness Framework, page",
+      "kind": "page",
+      "url": "https://openai.com/safety/preparedness"
+    },
+    {
+      "id": "openai-pf-v2",
+      "lab": "openai",
+      "name": "Preparedness Framework v2, file",
+      "kind": "file",
+      "url": "https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf"
+    },
+    {
+      "id": "google-fsf-page",
+      "lab": "google",
+      "name": "Frontier Safety Framework, page",
+      "kind": "page",
+      "url": "https://deepmind.google/frontier-safety/"
+    },
+    {
+      "id": "google-fsf-v3.1",
+      "lab": "google",
+      "name": "Frontier Safety Framework v3.1, file",
+      "kind": "file",
+      "url": "https://deepmind-media.storage.googleapis.com/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf"
+    },
+    {
+      "id": "xai-faif-2026-06-30",
+      "lab": "xai",
+      "name": "Frontier Artificial Intelligence Framework, 30 June 2026, file",
+      "kind": "file",
+      "url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf"
+    },
+    {
+      "id": "xai-safety-page",
+      "lab": "xai",
+      "name": "xAI safety page",
+      "kind": "page",
+      "url": "https://x.ai/safety"
+    },
+    {
+      "id": "meta-mssf-v2.1",
+      "lab": "meta",
+      "name": "Meta Superintelligence Scaling Framework v2.1, file",
+      "kind": "file",
+      "url": "https://research.meta.ai/static/meta-superintelligence-scaling-framework"
+    },
+    {
+      "id": "meta-aaisf-v2",
+      "lab": "meta",
+      "name": "Advanced AI Scaling Framework v2, file",
+      "kind": "file",
+      "url": "https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2"
+    }
+  ]
+}

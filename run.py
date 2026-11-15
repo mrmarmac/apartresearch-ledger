@@ -7,6 +7,7 @@
   python run.py site       Write the static site and feed.xml into docs/.
   python run.py score      Score validation/predictions/ against the upstream codes. Write validation.md.
   python run.py align      Score the alignment test. Write validation/alignment/report.md.
+  python run.py watch      Get each watched address and compare its hash with watch/state.json.
   python run.py check      Check that the demo path works.
   python run.py stats      Print a count table.
   python run.py all        fetch, build, validate, stats.
@@ -129,6 +130,11 @@ def align():
     print(f"alignment: model {ok('model_class')}/{len(done)}, text matching {ok('text_class')}/{len(done)}; wrote validation/alignment/report.md")
 
 
+def watch():
+    from ledger.watch import run as run_watch
+    run_watch(ROOT)
+
+
 def check():
     """The demo path must always work."""
     with open(LEDGER, encoding="utf-8") as handle:
@@ -147,7 +153,7 @@ def check():
     print("ok   demo path: whistleblower commitment, 5 versions, last status removed")
 
 
-COMMANDS = {"check": [check], "site": [site], "score": [score], "align": [align], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
+COMMANDS = {"check": [check], "site": [site], "score": [score], "align": [align], "watch": [watch], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
             "all": [fetch, do_build, validate, check, site, stats]}
 
 if __name__ == "__main__":

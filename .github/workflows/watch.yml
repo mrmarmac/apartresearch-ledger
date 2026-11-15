@@ -1,0 +1,53 @@
+name: Watch framework addresses
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # one time each day, 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Get each address and compare
+        run: python -c "import sys; sys.path.insert(0, '.'); from ledger.watch import run; run('.')"
+      - name: Open an issue for each change
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, subprocess
+          issues = json.load(open("watch/issues.json"))
+          open_titles = subprocess.run(
+              ["gh", "issue", "list", "--state", "open", "--limit", "200", "--json", "title", "--jq", ".[].title"],
+              capture_output=True, text=True, check=True).stdout.splitlines()
+          for issue in issues:
+              if issue["title"] in open_titles:
+                  print("already open:", issue["title"])
+                  continue
+              subprocess.run(["gh", "issue", "create", "--title", issue["title"], "--body", issue["body"]], check=True)
+          PY
+      - name: Save the new state
+        run: |
+          rm -f watch/issues.json
+          if [ -n "$(git status --porcelain watch/state.json)" ]; then
+            git config user.name "commitment-ledger-watcher"
+            git config user.email "actions@users.noreply.github.com"
+            git add watch/state.json
+            git commit -m "Watcher: update state"
+            git push
+          else
+            echo "no change"
+          fi
