@@ -140,7 +140,7 @@ def _human(val_dir, key, run1):
     answers = record["answers"]
     lines = [
         "", "## Human check: one lawyer, 20 items", "",
-        f"**Coder:** {record['coder']}. One person, no second human coder.", "",
+        f"**Coder:** {record['coder']}. One person, no second human coder. This is the only human coding in the project that is independent of the upstream pipeline and of the ledger's model runs.", "",
         "**Design.** 20 of the 120 items: 10 drawn at random from the items where model run 1 agreed with upstream, "
         "and 10 drawn at random from the 15 items where it disagreed (seed 20261116). Mixed sequence. "
         "The coder did not see the upstream code, the model answers, or which group an item was in. "
@@ -273,8 +273,11 @@ def score(corpus, val_dir, model_name):
         "",
         "## Limits",
         "",
-        "1. **The gold standard is not ground truth.** A language model helped with the upstream first pass. One human author adjudicated. "
+        "1. **The gold standard is not ground truth.** A Claude model made the upstream first pass. The author of that study adjudicated it. "
+        "No other person coded independently, and all upstream reliability checks used models. "
         "Agreement thus shows consistency with that coding. It does not show that the code is correct.",
+        "1a. **This test is not independent of upstream.** The model in this test is Claude Opus 5.5. Upstream used Claude Opus 5.5 as one of its two second coders "
+        "and reports alpha 0.92 for the outcome code. This test repeats that check on a different sample. It does not add a view from outside the model family.",
         "2. **This test does not include alignment.** The model gets a matched pair. To find the counterpart of a commitment in a new version is a different, harder step.",
         "3. **This test does not include Added, Removed or Relocated.** Those codes depend on alignment, not on direction.",
         "4. **Isolation was by instruction.** The model ran as a sub-agent with file tools. The instructions told it to read only its batch file and the rules. "

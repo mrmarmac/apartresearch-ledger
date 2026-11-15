@@ -132,7 +132,7 @@ def build_lab(corpus, provider, lab):
             if _present(row["v_i_text"]):
                 target = squash(row["v_i_text"])
                 # The upstream sheet sometimes names the earlier row: "prior id XAI-3-038".
-                # Two or more IDs mean that the upstream coder merged rows.
+                # Two or more IDs mean that the upstream coding merged rows.
                 priors = []
                 if "prior id" in row["flags"]:
                     note = row["flags"].split("prior id", 1)[1].split(".")[0]

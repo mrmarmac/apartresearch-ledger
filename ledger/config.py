@@ -110,7 +110,7 @@ DISCLOSURE_LABEL = {
 FEED_STATUSES = ("added", "strengthened", "weakened", "removed", "relocated")
 
 CODED_BY_LABEL = {
-    "upstream": "Upstream coding (Zhu, 2026)",
+    "upstream": "Upstream coding (Zhu, 2026): model first pass, adjudicated by its author",
     "text_match": "Text match: the same words are in this version",
     "model": "Model, two runs",
 }

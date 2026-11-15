@@ -109,7 +109,7 @@
           "enum": ["active", "removed", "relocated", "merged", "not_traced"]
         },
         "merged_into": {
-          "description": "ID of the commitment that continues this one, when the upstream coder merged two rows.",
+          "description": "ID of the commitment that continues this one, when the upstream coding merged two rows.",
           "anyOf": [{ "$ref": "#/$defs/commitment_id" }, { "type": "null" }]
         },
         "former_ids": {

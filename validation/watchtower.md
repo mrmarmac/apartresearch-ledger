@@ -30,7 +30,7 @@
 
 Notes:
 
-- **Rows 5 and 6.** Watchtower says "removed". The ledger says "weakened", because the upstream coder found a qualitative replacement. The direction is the same.
+- **Rows 5 and 6.** Watchtower says "removed". The ledger says "weakened", because the upstream coding records a qualitative replacement. The direction is the same.
 - **Row 14.** Watchtower says that the new paragraph has no commitment, evaluation or trigger. The ledger records it two times: as "strengthened" against a vague earlier sentence, and as "weakened" against the specific training statement (rows 8 and 9).
 - **Rows 15 and 16** are admissions, not commitments. The upstream codebook traces commitments only. A ledger of commitments will not have them.
 - **Row 17** is a true miss. A new risk domain is a change of scope.

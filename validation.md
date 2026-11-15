@@ -67,7 +67,8 @@ The sample has the same number of rows for each code. The pool does not. Thus th
 
 ## Limits
 
-1. **The gold standard is not ground truth.** A language model helped with the upstream first pass. One human author adjudicated. Agreement thus shows consistency with that coding. It does not show that the code is correct.
+1. **The gold standard is not ground truth.** A Claude model made the upstream first pass. The author of that study adjudicated it. No other person coded independently, and all upstream reliability checks used models. Agreement thus shows consistency with that coding. It does not show that the code is correct.
+1a. **This test is not independent of upstream.** The model in this test is Claude Opus 5.5. Upstream used Claude Opus 5.5 as one of its two second coders and reports alpha 0.92 for the outcome code. This test repeats that check on a different sample. It does not add a view from outside the model family.
 2. **This test does not include alignment.** The model gets a matched pair. To find the counterpart of a commitment in a new version is a different, harder step.
 3. **This test does not include Added, Removed or Relocated.** Those codes depend on alignment, not on direction.
 4. **Isolation was by instruction.** The model ran as a sub-agent with file tools. The instructions told it to read only its batch file and the rules. Each run made 4 tool calls, which agrees with: read rules, read batch, write answers, report.
@@ -100,7 +101,7 @@ Same model, same items, same prompt, new sub-agents. Answers are in `validation/
 
 ## Human check: one lawyer, 20 items
 
-**Coder:** M.R. (author, lawyer). One person, no second human coder.
+**Coder:** M.R. (author, lawyer). One person, no second human coder. This is the only human coding in the project that is independent of the upstream pipeline and of the ledger's model runs.
 
 **Design.** 20 of the 120 items: 10 drawn at random from the items where model run 1 agreed with upstream, and 10 drawn at random from the 15 items where it disagreed (seed 20261116). Mixed sequence. The coder did not see the upstream code, the model answers, or which group an item was in. The page (`validation/human/page.html`) showed the two texts, the headings, the developer name and a summary of the rules.
 
@@ -333,7 +334,7 @@ An AI assistant read each disagreement and sorted it. The author did not check t
 
 Notes:
 
-- **Rows 5 and 6.** Watchtower says "removed". The ledger says "weakened", because the upstream coder found a qualitative replacement. The direction is the same.
+- **Rows 5 and 6.** Watchtower says "removed". The ledger says "weakened", because the upstream coding records a qualitative replacement. The direction is the same.
 - **Row 14.** Watchtower says that the new paragraph has no commitment, evaluation or trigger. The ledger records it two times: as "strengthened" against a vague earlier sentence, and as "weakened" against the specific training statement (rows 8 and 9).
 - **Rows 15 and 16** are admissions, not commitments. The upstream codebook traces commitments only. A ledger of commitments will not have them.
 - **Row 17** is a true miss. A new risk domain is a change of scope.

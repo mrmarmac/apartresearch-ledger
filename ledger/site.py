@@ -264,7 +264,7 @@ def _entry_html(c, i, versions):
             parts.append(f'<div class="quote gone">{E(prev["quote"])}</div>')
         if h["status"] == "relocated":
             parts.append('<p class="note"><b>Relocated.</b> The framework no longer has this text. '
-                         'The upstream coder found a counterpart in a companion document or a non-binding section.</p>')
+                         'The upstream coding records a counterpart in a companion document or a non-binding section.</p>')
         else:
             parts.append('<p class="note"><b>No counterpart in this version.</b></p>')
     elif prev and prev["quote"] and prev["quote"] != h["quote"]:
@@ -277,11 +277,11 @@ def _entry_html(c, i, versions):
     else:
         parts.append(f'<div class="quote">{E(h["quote"])}</div>')
     if h["status"] == "kept" and prev and prev["quote"] and prev["quote"] != h["quote"]:
-        parts.append('<p class="note"><b>Kept.</b> The text changed. The upstream coder found no material change to the obligation.</p>')
+        parts.append('<p class="note"><b>Kept.</b> The text changed. The upstream coding records no material change to the obligation.</p>')
     if h.get("mixed"):
         parts.append('<p class="note"><b>Mixed change.</b> Stronger in one dimension and weaker in a different dimension. The status is then Weakened.</p>')
     if h.get("rationale") and h["status"] not in ("kept", "baseline"):
-        who = "model" if h.get("coded_by") == "model" else "upstream coder"
+        who = "model" if h.get("coded_by") == "model" else "upstream coding"
         parts.append(f'<p class="note"><b>Why this status ({who}):</b> {E(h["rationale"])}</p>')
     if h.get("disclosure") in config.DISCLOSURE_LABEL and h["status"] in config.FEED_STATUSES:
         parts.append(f'<p class="note"><b>Disclosure:</b> {E(config.DISCLOSURE_LABEL[h["disclosure"]])}</p>')

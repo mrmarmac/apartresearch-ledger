@@ -44,10 +44,10 @@ ledger.json
 | `section` | string or null | Section heading in this version. |
 | `section_changed` | boolean | The heading is different from the previous entry. A renamed heading also sets it. |
 | `mixed` | boolean | Stronger in one dimension, weaker in a different dimension. Status is then `weakened`. |
-| `material` | boolean or null | The upstream coder found a material change. |
+| `material` | boolean or null | The upstream coding records a material change. |
 | `disclosure` | enum or null | Did the developer's own account identify the change? See "Disclosure". |
 | `confidence` | `high`, `medium`, `low` or null | Confidence grade from the upstream first pass. |
-| `rationale` | string or null | The upstream coder's reason. |
+| `rationale` | string or null | The reason in the upstream coding. A model wrote the first version of it. |
 | `link` | enum or null | How the ledger connected this entry to the previous entry. See "Links". |
 | `coded_by` | enum | Who decided this entry. See "Coded by". |
 | `needs_review` | boolean | The two model runs did not agree on this entry, or a person checked it and did not agree. |
@@ -86,7 +86,7 @@ The full rules are in the upstream codebook, `codebook_v0.2_FROZEN.md`.
 | `active` | In the last traced version of the lab. The site shows it as "In force". |
 | `removed` | The last entry is `removed`. |
 | `relocated` | The last entry is `relocated`. |
-| `merged` | The upstream coder merged this row into a different row. Read `merged_into`. |
+| `merged` | The upstream coding merged this row into a different row. Read `merged_into`. |
 | `not_traced` | The ledger has no record after `last_version_id`. This is not a removal. |
 
 **Read `labs[]` before you interpret `active`.** A lab can have later versions that the ledger does not trace.
@@ -95,7 +95,7 @@ The full rules are in the upstream codebook, `codebook_v0.2_FROZEN.md`.
 
 | Value | Meaning |
 |---|---|
-| `upstream` | The Silent Revision coding (Zhu, 2026). |
+| `upstream` | The Silent Revision coding (Zhu, 2026): a first pass by a Claude model, adjudicated by the author of that study. No independent human coder. |
 | `text_match` | The same words are in this version. The status is `kept`. No judgement by a person or a model. |
 | `model` | A language model found the counterpart and coded the change. Two runs. See `human_check` for the result of a check by a person. |
 

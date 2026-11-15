@@ -3,6 +3,7 @@
 **What did each AI lab promise in its safety framework, and what happened to each promise?**
 
 An open ledger of 447 safety-framework commitments from 5 frontier AI developers, across 23 framework versions.
+The upstream study traced 7 developers. Microsoft and Naver are not in the ledger.
 Each commitment has one stable ID and a history: kept, strengthened, weakened, removed or relocated.
 
 - **Site:** https://mrmarmac.github.io/apartresearch-ledger/
@@ -29,7 +30,7 @@ This project does not do new coding of the frameworks. It builds on existing wor
 | Existing work | What it gives | What it does not give |
 |---|---|---|
 | [Watchtower](https://www.themidasproject.com/watchtower) (The Midas Project) | A log of policy changes and violations, written by people | One entry for each revision. No record for each commitment. No data feed. |
-| [Silent Revision corpus](https://github.com/louisyzhu/frontier-safety-framework-corpus) (Zhu, 2026) | 710 commitments, coded for each version pair, with hashes | A new row ID in each pair. CSV only. No history for one commitment. |
+| [Silent Revision corpus](https://github.com/louisyzhu/frontier-safety-framework-corpus) (Zhu, 2026) | 710 commitments, coded for each version pair by a model first pass with one adjudicator, with hashes | A new row ID in each pair. CSV only. No history for one commitment. |
 
 The ledger adds four things:
 
@@ -68,6 +69,7 @@ The ledger traces them itself. Each entry says who decided it (`coded_by`).
 - 68 Anthropic commitments now reach v3.4. 11 of them have a history from v1.0 (2023) to v3.4 (2026).
 - 25 chains overlap an upstream chain, but not one to one. They are not joined. See `related_ids`.
 - The ledger does not detect commitments that are new in v2.1, v2.2 or v3.1 to v3.4.
+- **The blind check by a person is the only human coding in this project that is independent of both model pipelines** (the upstream pipeline and the ledger's). It has one coder, who is the author.
 - One person (the author) checked the 47 model-coded entries blind. He agreed with the model on 34 of 44 decided entries (77%). He then took a second look at the others, not blind. Where the two model runs agreed, his final code is the model code in 41 of 42 decided entries. The one error that passed two runs was a phrase that moved outside the text that the model got. Where the two runs disagreed (4 entries), the final code differs from model run 1 in 3.
 - **Full-document rerun.** Two new runs coded the 47 entries again with the two full documents. They corrected the one known error of the moved-phrase type (e19). Their agreement with the final codes was not higher than before (42 and 43 of 47, against 42 and 45). See `validation.md`.
 - Data and prompts: `data/extension/anthropic/`.
@@ -79,6 +81,7 @@ Full results: [`validation.md`](validation.md).
 - **Model test.** Claude Opus 5.5 coded 120 matched pairs as kept, strengthened or weakened.
   It agreed with the upstream code on 105 (88%, 95% CI 80 to 92). Cohen's kappa is 0.81.
   7 of the 120 had the opposite direction.
+  This test is not independent of upstream: both sides use Claude models, and upstream ran the same check with Claude Opus 5.5.
 ### The Meta v2.1 trace
 
 Meta published v2.1 after the upstream corpus was frozen. The ledger traces v2 → v2.1 itself. This is the first pair where the ledger also looks for new commitments.
@@ -115,7 +118,9 @@ First result (15 November 2026): 4 of 5 framework files are identical to the cor
 
 ## Known limits
 
-1. **The codes are not ground truth.** A language model helped with the upstream coding, and one human author adjudicated it. Read each status as a reference.
+1. **The codes are not ground truth.** A Claude model made the upstream first pass. The author of that study adjudicated it. No other person coded independently, and all upstream reliability checks used models (Zhu, 2026, section 7). Read each status as a reference.
+1a. **The model tests are not independent of upstream.** The ledger's tests used Claude Opus 5.5. Upstream used Claude models for its first pass, and used Claude Opus 5.5 as one of its two second coders. Agreement between the two shows consistency inside one model family.
+1b. **5 of 7 traced developers.** Upstream also traced Microsoft and Naver (one pair each). The ledger does not have them.
 2. **Anthropic is joined in part only.** The upstream coding cut the v2.0 text and the v2.2 text into different units. The ledger joined 14 chains and already had 20. 55 chains stop at v2.2 with status `not_traced`, and 25 of those overlap an upstream chain that the ledger could not join one to one.
 3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries. The pair v2.0 → v2.1 has no official redline from Anthropic. New commitments in those versions are not detected.
 3a. **Meta v2.1 is traced by the ledger, not by upstream.** One person confirmed the changes, but he saw the model answers first. In a test on 4 other pairs, the search for new commitments found 26 of 34 upstream additions (76%). The 15 new Meta commitments are thus a lower bound.
