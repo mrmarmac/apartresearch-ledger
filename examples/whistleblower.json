@@ -1,0 +1,194 @@
+{
+  "schema_version": "0.1.0",
+  "source": {
+    "name": "Frontier Safety Framework Corpus (Silent Revision)",
+    "repo": "https://github.com/louisyzhu/frontier-safety-framework-corpus",
+    "commit": "11cbeda80c5c526b7a8c2b19f64e07c13d420a49",
+    "doi": "10.5281/zenodo.22670700",
+    "licence": "CC BY 4.0 (coding and manifest). Provider documents belong to their publishers.",
+    "citation": "Zhu, Louis Yiven (2026). Silent Revision: a versioned corpus of frontier AI safety frameworks and their revision accounts. Zenodo. arXiv:2609.08789."
+  },
+  "versions": [
+    {
+      "version_id": "xai-draft-2025-02-10",
+      "lab": "xai",
+      "lab_name": "xAI",
+      "document": "xAI Risk Management Framework (Draft)",
+      "label": "draft-2025-02-10",
+      "publication_date": "2025-02-10",
+      "source_url": "https://web.archive.org/web/20250210221647id_/https://x.ai/documents/2025.02.10-RMF-Draft.pdf",
+      "wayback_timestamp": "20250210221647",
+      "sha256": "5ba8859b6552d5d3acc929ed22cfb7f0459deb4cf076d5d70c8cf9b9e8ee050f"
+    },
+    {
+      "version_id": "xai-draft-2025-02-20",
+      "lab": "xai",
+      "lab_name": "xAI",
+      "document": "xAI Risk Management Framework (Draft)",
+      "label": "draft-2025-02-20",
+      "publication_date": "2025-02-20",
+      "source_url": "https://data.x.ai/2025.02.20-RMF-Draft.pdf",
+      "wayback_timestamp": null,
+      "sha256": "89fafebb73757def5a9068105554e68799e3dcce55374a4179b7a62559b6bef9"
+    },
+    {
+      "version_id": "xai-2025-08-20",
+      "lab": "xai",
+      "lab_name": "xAI",
+      "document": "xAI Risk Management Framework",
+      "label": "2025-08-20",
+      "publication_date": "2025-08-20",
+      "source_url": "https://web.archive.org/web/20250821224133id_/https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf",
+      "wayback_timestamp": "20250821224133",
+      "sha256": "31eae94d448b5b359220cbb93673e22b11adc9e27b8e8eb87e7646521f322f8a",
+      "reuploads": [
+        {
+          "label": "2025-08-20-reupload-20250822",
+          "sha256": "39fab200a4b36f149c6e24ee00d3e31adc84ed59f95a734290ed80a69de73f74",
+          "source_url": "https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf",
+          "wayback_timestamp": null
+        }
+      ]
+    },
+    {
+      "version_id": "xai-2025-12-30",
+      "lab": "xai",
+      "lab_name": "xAI",
+      "document": "xAI Frontier Artificial Intelligence Framework",
+      "label": "2025-12-30",
+      "publication_date": "2025-12-30",
+      "source_url": "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
+      "wayback_timestamp": null,
+      "sha256": "aa01669c19fca50c85323595141d08f98076cf0c48ed8f4a114ad6420c1a1012"
+    },
+    {
+      "version_id": "xai-2026-06-30",
+      "lab": "xai",
+      "lab_name": "xAI",
+      "document": "xAI Frontier Artificial Intelligence Framework",
+      "label": "2026-06-30",
+      "publication_date": "2026-06-30",
+      "source_url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf",
+      "wayback_timestamp": null,
+      "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53"
+    }
+  ],
+  "commitments": [
+    {
+      "id": "xai-governance-673f",
+      "lab": "xai",
+      "text": "xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety.",
+      "topic": "governance",
+      "tags": [
+        "regulators",
+        "whistleblower"
+      ],
+      "current_status": "removed",
+      "merged_into": null,
+      "first_version_id": "xai-draft-2025-02-10",
+      "last_version_id": "xai-2026-06-30",
+      "history": [
+        {
+          "event_id": "xai-governance-673f@xai-draft-2025-02-10",
+          "version_id": "xai-draft-2025-02-10",
+          "status": "baseline",
+          "quote": "xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety.",
+          "section": "Operational and Societal Risks > 5.Responsibility for Risks",
+          "section_changed": false,
+          "mixed": false,
+          "material": null,
+          "disclosure": null,
+          "confidence": null,
+          "rationale": null,
+          "link": null,
+          "gap_before": false,
+          "quote_verified": true,
+          "source_row": "XAI-1-037",
+          "source_url": "https://web.archive.org/web/20250210221647id_/https://x.ai/documents/2025.02.10-RMF-Draft.pdf",
+          "wayback_timestamp": "20250210221647",
+          "sha256": "5ba8859b6552d5d3acc929ed22cfb7f0459deb4cf076d5d70c8cf9b9e8ee050f"
+        },
+        {
+          "event_id": "xai-governance-673f@xai-draft-2025-02-20",
+          "version_id": "xai-draft-2025-02-20",
+          "status": "kept",
+          "quote": "xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety.",
+          "section": "Operational and Societal Risks > 5.Responsibility for Risks",
+          "section_changed": false,
+          "mixed": false,
+          "material": false,
+          "disclosure": "not_applicable",
+          "confidence": "medium",
+          "rationale": "Text identical apart from whitespace and typography; modal force and scope unchanged.",
+          "link": "same_row",
+          "gap_before": false,
+          "quote_verified": true,
+          "source_row": "XAI-1-037",
+          "source_url": "https://data.x.ai/2025.02.20-RMF-Draft.pdf",
+          "wayback_timestamp": null,
+          "sha256": "89fafebb73757def5a9068105554e68799e3dcce55374a4179b7a62559b6bef9"
+        },
+        {
+          "event_id": "xai-governance-673f@xai-2025-08-20",
+          "version_id": "xai-2025-08-20",
+          "status": "kept",
+          "quote": "xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety.",
+          "section": "Operational and Societal Risks > 4. Responsibility for Risks",
+          "section_changed": false,
+          "mixed": false,
+          "material": false,
+          "disclosure": "not_applicable",
+          "confidence": "high",
+          "rationale": "Identical.",
+          "link": "prior_id",
+          "gap_before": false,
+          "quote_verified": true,
+          "source_row": "XAI-2-037",
+          "source_url": "https://web.archive.org/web/20250821224133id_/https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf",
+          "wayback_timestamp": "20250821224133",
+          "sha256": "31eae94d448b5b359220cbb93673e22b11adc9e27b8e8eb87e7646521f322f8a"
+        },
+        {
+          "event_id": "xai-governance-673f@xai-2025-12-30",
+          "version_id": "xai-2025-12-30",
+          "status": "kept",
+          "quote": "xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety.",
+          "section": "Operational and Societal Risks > 4. Governance Approach",
+          "section_changed": true,
+          "mixed": false,
+          "material": false,
+          "disclosure": "not_applicable",
+          "confidence": "high",
+          "rationale": "Text identical apart from RMF -> FAIF renaming, footnote renumbering and formatting; modal force and scope unchanged.",
+          "link": "prior_id",
+          "gap_before": false,
+          "quote_verified": true,
+          "source_row": "XAI-3-038",
+          "source_url": "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
+          "wayback_timestamp": null,
+          "sha256": "aa01669c19fca50c85323595141d08f98076cf0c48ed8f4a114ad6420c1a1012"
+        },
+        {
+          "event_id": "xai-governance-673f@xai-2026-06-30",
+          "version_id": "xai-2026-06-30",
+          "status": "removed",
+          "quote": null,
+          "section": null,
+          "section_changed": false,
+          "mixed": false,
+          "material": true,
+          "disclosure": "no_account",
+          "confidence": "high",
+          "rationale": "'xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety' has no counterpart.",
+          "link": "prior_id",
+          "gap_before": false,
+          "quote_verified": null,
+          "source_row": "XAI-4-042",
+          "source_url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf",
+          "wayback_timestamp": null,
+          "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53"
+        }
+      ]
+    }
+  ]
+}
