@@ -1,0 +1,12 @@
+[
+ {"item": "c07", "outcome": "W", "dims": [1], "mixed": false,
+  "searched": "insider; insider risk; highly sophisticated; state-compromised; sophisticated insider; basic insider risk; ASL-4 preparations; higher security levels (both documents, incl. changelog)",
+  "moved": "",
+  "confidence": "high",
+  "reason": "The covered insider risk narrows from \"mitigate most insider risk\" with only \"highly sophisticated state-compromised insiders\" excluded, to \"mitigate basic insider risk\" with \"sophisticated or state-compromised insiders\" out of scope. The v2.2 changelog in new.txt confirms the change: \"This update excludes both sophisticated insiders and state-compromised insiders... Previously, only 'highly sophisticated state-compromised insiders' were explicitly excluded.\""},
+ {"item": "c16", "outcome": "R", "dims": [], "mixed": false,
+  "searched": "Existing guidance; Securing AI Model Weights; Deploying AI Systems Securely; ISO 42001; CoSAI; SSDF; SOC 2; NIST 800-53",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Apart from the interleaved footnote 11 and page header/footer text, which is ignored under rule 5, the item reads word for word the same: \"Aligning where appropriate with existing guidance... ISO 42001, CSA's AI Safety Initiative, and CoSAI; and standards frameworks like SSDF, SOC 2, NIST 800-53.\" The guidance list is unchanged."}
+]

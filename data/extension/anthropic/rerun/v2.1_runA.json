@@ -1,0 +1,150 @@
+[
+ {
+  "item": "c01",
+  "outcome": "S",
+  "dims": [
+   1,
+   2
+  ],
+  "mixed": false,
+  "searched": "'forthcoming', 'ASL-4 Required Safeguards', 'additional Capability Thresholds', 'before deploying', 'provided we have also conducted a follow-up capability assessment', 'prioritize capabilities', 'as soon as feasible', changelog 'Iterative Commitment'",
+  "moved": "Pre-deployment condition remains in new 4.3 ('may proceed with deploying ... provided we have also conducted a follow-up capability assessment') and 6.1; old caveat 'Our update may not include all possible risks; we will prioritize capabilities that are likely to emerge earlier' is removed in new.",
+  "confidence": "medium",
+  "reason": "Old commitment was tied to ASL-3 only ('update this policy with the Capability Thresholds for the ASL-4 Required Safeguards'; 'before deploying any model that passes the Capability Thresholds for the ASL-3 Required Safeguards'); new applies whenever 'upgrading a model to the Required Safeguards' and requires the policy update 'in parallel' with that upgrade, a broader scope and a firmer trigger; the pre-deployment follow-up assessment is retained in 4.3."
+ },
+ {
+  "item": "c02",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "compared full 7.1.7 Policy changes paragraph and footnote 18 (old) vs 17 (new) on lowering Required Safeguards",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Paragraph is identical ('proposed by the CEO and the Responsible Scaling Officer and approved by the Board of Directors, in consultation with the Long-Term Benefit Trust ... update the public version of the RSP before any changes take effect'); only the footnote number changed (18 -> 17) and its text is identical."
+ },
+ {
+  "item": "c03",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "compared full 7.2.1 Public disclosures paragraph and footnotes 19/20 (old) vs 18/19 (new); 'rsp-updates', 'every 6-12 months', 'U.S. Government entity', 'periodically release information'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text of 7.2.1 is word-for-word identical ('We will publicly release key information ... summaries of related Capability and Safeguards reports when we deploy a model ... plans for current and future comprehensive capability assessments'); only footnote numbers changed (19/20 -> 18/19) and the footnote texts are identical."
+ },
+ {
+  "item": "c04",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "compared full 7.2.1 Public disclosures paragraph and footnotes 19/20 (old) vs 18/19 (new); 'rsp-updates', 'every 6-12 months', 'U.S. Government entity', 'periodically release information'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text of 7.2.1 is word-for-word identical ('We will publicly release key information ... summaries of related Capability and Safeguards reports when we deploy a model ... plans for current and future comprehensive capability assessments'); only footnote numbers changed (19/20 -> 18/19) and the footnote texts are identical."
+ },
+ {
+  "item": "c05",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "CBRN rows of Section 2 table and Appendix C (old) vs CBRN-3 (new); footnotes 21/22 vs 20/21",
+  "moved": "CBRN-4 is added as a new separate threshold in new Section 2 and Appendix C; it does not alter this commitment.",
+  "confidence": "high",
+  "reason": "The CBRN-3 threshold text and its Required Safeguards ('The ASL-3 Deployment Standard and the ASL-3 Security Standard ... are required') are identical; the only change is the added label 'CBRN-3', which is relabelling."
+ },
+ {
+  "item": "c06",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'2-8 hour', 'checkpoint', 'aim to have met', 'Model Autonomy checkpoint' (Appendix C), 'two Autonomous AI R&D'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'the Autonomous AI R&D Capability Threshold' became 'the two Autonomous AI R&D Capability Thresholds' because the old disjunctive threshold was split into AI R&D-4 and AI R&D-5, so coverage is the same; 'we aim to have met' -> 'we will (1) aim to have met' keeps the aim-level modal; 'We will test for this checkpoint' is unchanged."
+ },
+ {
+  "item": "c08",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "compared full 7.2.1 Public disclosures paragraph and footnotes 19/20 (old) vs 18/19 (new); 'rsp-updates', 'every 6-12 months', 'U.S. Government entity', 'periodically release information'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text of 7.2.1 is word-for-word identical ('We will publicly release key information ... (not including sensitive details)'); only footnote numbers changed (19/20 -> 18/19) and the footnote texts are identical."
+ },
+ {
+  "item": "c09",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "7.1.5 Noncompliance paragraph, 7.1.1 duty (6) and footnotes 15-17 (old) vs 14-16 (new); 'quarterly summary reports', 'regularly update the Board'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'The Responsible Scaling Officer will regularly update the Board of Directors on substantial cases of noncompliance and overall trends' and the footnote 'Cases deemed to present minimal additional risk may be reported to the Board in quarterly summary reports' are identical; only footnote numbers changed (16 -> 15, 17 -> 16)."
+ },
+ {
+  "item": "c10",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "3.2 Comprehensive Assessment intro and footnote 7 (old) vs 6 (new) on 'widely accessible'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Sentence is identical ('we will assess whether the model is unlikely to reach any relevant Capability Thresholds absent surprising advances in widely accessible post-training enhancements'); footnote renumbered 7 -> 6 with identical text."
+ },
+ {
+  "item": "c11",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "3.1 'notably more capable' list and footnotes 4-6 (old) vs 3-5 (new); 'measured in calendar time', 'Responsible Scaling Officer may in their discretion'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Both criteria ('4x or more in Effective Compute'; 'Six months' worth of finetuning and other capability elicitation methods') and the calendar-time sentence (also in old) are identical; only footnote numbers changed."
+ },
+ {
+  "item": "c12",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "6.2 Interim measures and Stronger restrictions bullets, footnote 13 (old) vs 12 (new) 'minimize changes to customer experience', 'delete model weights'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Interim measures and 'we will de-deploy the model and replace it with a model that falls below the Capability Threshold. Once the ASL-3 Deployment Standard can be met, the model may be re-deployed' are identical; footnote renumbered 13 -> 12 with identical text."
+ },
+ {
+  "item": "c13",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "3.2 item 4 Forecasting and footnote 8 (old) vs 7 (new) 'informal estimates'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'Make informal forecasts about the likelihood that further training and elicitation will improve test results' is identical; footnote renumbered 8 -> 7 with identical text."
+ },
+ {
+  "item": "c14",
+  "outcome": "W",
+  "dims": [
+   4,
+   6
+  ],
+  "mixed": true,
+  "searched": "'strong affirmative case', 'accountability', 'higher security standard', 'state-level adversaries', 'more precisely' (old footnote 1), 'ASL-4 Security Standard', 'affirmative case' in all of new.txt",
+  "moved": "Old footnote 1 ('We will specify these requirements more precisely when we reach the 2-8 hour ... checkpoint') has no counterpart; the requirements are now specified in the new Section 2 table. 'strong' and 'made with accountability for both the reasoning and implementation' are not found anywhere in new.txt.",
+  "confidence": "medium",
+  "reason": "Strengthened: for AI R&D-5 the state-level protection moved from 'we expect a higher security standard ... will be required' to 'At minimum, the ASL-4 Security Standard ... is required', and for AI R&D-4 'We also expect a strong affirmative case ... will be required' became 'we will develop an affirmative case'. Weakened: for the entry-level-researcher threshold (AI R&D-4) the old expectation of a higher-than-ASL-3 security standard is dropped ('The ASL-3 Security Standard is required.'), and the 'strong' case 'made with accountability for both the reasoning and implementation' is gone; mixed, so W."
+ },
+ {
+  "item": "c15",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": false,
+  "searched": "'specify Required Safeguards', 'more detail', 'update our list of Capability Thresholds', 'additional thresholds', 'additional Capability Thresholds', 'as soon as feasible', 'begin testing'",
+  "moved": "'update our list of Capability Thresholds' now appears only as Section 5 '(1) update this policy to include any additional Capability Thresholds' tied to 'upgrading a model to the Required Safeguards', and Section 2 'we may identify additional thresholds'; specifying safeguards is now Section 2 'as soon as feasible, and at minimum before training or deploying any model that reaches that threshold'.",
+  "confidence": "medium",
+  "reason": "Old: at the checkpoint 'we will also specify Required Safeguards for this Capability Threshold in more detail, update our list of Capability Thresholds to consider additional risks'. New keeps only '(3) begin testing for the full Autonomous AI R&D Capability Threshold and any additional risks'; the threshold-list update and safeguard specification moved to later triggers (upgrade to Required Safeguards; 'at minimum before training or deploying any model that reaches that threshold'), so the trigger is later."
+ }
+]

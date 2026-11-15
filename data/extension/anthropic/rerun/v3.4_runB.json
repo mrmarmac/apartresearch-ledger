@@ -1,0 +1,102 @@
+[
+ {
+  "item": "c19",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'significant lead', 'highly capable' (footnote 11 old / 13 new, Section 3.6 definition), 'automated AI R&D' threshold in Section 1, Appendix A preamble, Change Log v3.4",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Commitment text is identical ('We will require a strong argument that catastrophic risk is contained... We will delay AI development and deployment as needed'); only the footnote number changed (11 to 13). Note: the Section 1 automated R&D threshold that defines 'highly capable' was raised in v3.4 ('compared to both the rate we'd expect and the fastest rate of extended progress we've observed'), but that is a change to the threshold commitment, not to this one's text or its cross-reference."
+ },
+ {
+  "item": "c20",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "mixed": false,
+  "searched": "'Risk mitigations', 'are implementing', 'implemented', 'coverage date', 'plan to implement shortly' in both documents; Change Log v3.4 item 3; footnote 10 new",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Old required reporting 'the mitigations we are implementing' (ongoing, current at publication); new limits it to 'the mitigations we have implemented as of the coverage date', which can be up to 30 days before publication and excludes in-progress mitigations; footnote 10 adds that more recent information carries no 'guarantee [of] completeness'."
+ },
+ {
+  "item": "c21",
+  "outcome": "W",
+  "dims": [
+   5
+  ],
+  "mixed": false,
+  "searched": "'unredacted', 'regular-clearance', 'at least 200', 'minimally-redacted', 'large number of employees' in both documents; Change Log v3.4 item 2",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Old: 'share final, unredacted Risk Reports with Anthropic's regular-clearance staff'; new: unredacted only to 'a large number of Anthropic employees (at least 200)' and 'minimally-redacted Risk Reports' to all regular-clearance staff. The Change Log confirms this replaces sharing with 'all regular-clearance Anthropic staff'."
+ },
+ {
+  "item": "c28",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'significant lead', 'highly capable' (footnote 11 old / 13 new, Section 3.6 definition), 'automated AI R&D' threshold in Section 1, Appendix A preamble, Change Log v3.4",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Commitment text is identical ('We will require a strong argument that catastrophic risk is contained... We will delay AI development and deployment as needed'); only the footnote number changed (11 to 13). Note: the Section 1 automated R&D threshold that defines 'highly capable' was raised in v3.4 ('compared to both the rate we'd expect and the fastest rate of extended progress we've observed'), but that is a change to the threshold commitment, not to this one's text or its cross-reference."
+ },
+ {
+  "item": "c31",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'significant lead', 'highly capable' (footnote 11 old / 13 new, Section 3.6 definition), 'automated AI R&D' threshold in Section 1, Appendix A preamble, Change Log v3.4",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Commitment text is identical ('We will require a strong argument that catastrophic risk is contained... We will delay AI development and deployment as needed'); only the footnote number changed (11 to 13). Note: the Section 1 automated R&D threshold that defines 'highly capable' was raised in v3.4 ('compared to both the rate we'd expect and the fastest rate of extended progress we've observed'), but that is a change to the threshold commitment, not to this one's text or its cross-reference."
+ },
+ {
+  "item": "c34",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Marginal risk and ecosystem analysis', 'marginal risk analysis' footnote (9 old / 11 new), the four numbered items, 'Modified process when marginal risk analysis'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text is word-for-word the same ('we will additionally address the following' with the same four items); only the footnote number changed from 9 to 11, and the footnote definition is unchanged."
+ },
+ {
+  "item": "c35",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Change Log', 'effective date', 'publicly share the updated version', 'current version of the RSP on our website' in both documents",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Same obligation ('publicly share the updated version prior to or on its effective date... record the differences... in the Change Log'); the inserted 'Responsible Scaling Policy, Anthropic 16 [[page 17]]' is a page footer/header and is ignored."
+ },
+ {
+  "item": "c40",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "mixed": false,
+  "searched": "'Scope.', 'at the time of its publication', 'coverage date', 'no more than 30 days', footnote 10 new, 'in-scope models', Change Log v3.4 item 3",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Old covered 'all publicly deployed models at the time of its publication'; new covers models 'as of the coverage date, which will be no more than 30 days prior to the publication', so models deployed in the window before publication fall outside, and footnote 10 says later information carries no guarantee of completeness."
+ },
+ {
+  "item": "c44",
+  "outcome": "S",
+  "dims": [
+   5
+  ],
+  "mixed": false,
+  "searched": "'minimize redactions', 'regular-clearance', 'existence of each redaction', 'brief justification', 'disclose... redaction' in both documents; Change Log v3.4 item 4",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Public-version obligations are unchanged, and the aim 'to minimize redactions' now also extends to 'the version of the report shared with all regular-clearance Anthropic employees'. The same section adds 'We will disclose the existence of each redaction made in the public version', which is not in old.txt. The reduced internal sharing behind the employee version is coded at c21."
+ }
+]

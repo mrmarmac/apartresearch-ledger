@@ -1,0 +1,12 @@
+[
+ {"item": "c07", "outcome": "W", "dims": [1], "mixed": false,
+  "searched": "insider; state-compromised; sophisticated; basic insider risk; ASL-4 preparations; higher security levels; internal employees (searched all of old.txt and new.txt)",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Coverage narrowed from controls to \"mitigate most insider risk\" with only \"highly sophisticated state-compromised insiders\" excluded to controls that \"mitigate basic insider risk\" with \"sophisticated or state-compromised insiders\" out of scope; new.txt's v2.2 changelog confirms the update \"excludes both sophisticated insiders and state-compromised insiders\". The change from \"ASL-4 preparations\" to \"ongoing preparations for higher security levels\" is rewording, not a material change."},
+ {"item": "c16", "outcome": "R", "dims": [], "mixed": false,
+  "searched": "Existing guidance; Securing AI Model Weights; CISA; ISO 42001; CoSAI; SSDF; SOC 2; NIST 800-53 (searched all of old.txt and new.txt)",
+  "moved": "",
+  "confidence": "high",
+  "reason": "With the interleaved footnote 11 and page footer/header ignored, the later text is identical: \"Aligning where appropriate with existing guidance on securing model weights, including Securing AI Model Weights... ISO 42001, CSA's AI Safety Initiative, and CoSAI; and standards frameworks like SSDF, SOC 2, NIST 800-53\"."}
+]

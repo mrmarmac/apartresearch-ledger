@@ -1,0 +1,103 @@
+[
+ {
+  "item": "c17",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'highly capable', 'delay AI development and deployment', 'significant lead', 'strong argument', Appendix A preamble, Section 3.6 definition of highly capable",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Scenario and commitment text identical (\"We will require a strong argument that catastrophic risk is contained ... We will delay AI development and deployment as needed\"); only footnote 7->8 renumbered. The Appendix A preamble adds a separate non-binding statement (\"would strongly consider pausing ... even in cases not covered below\") and the defined term \"highly capable\" now points to the revised automated AI R&D threshold, but this commitment's own text, trigger wording and consequence are unchanged."
+ },
+ {
+  "item": "c22",
+  "outcome": "W",
+  "dims": [
+   3,
+   4
+  ],
+  "mixed": false,
+  "searched": "'separate', 'internal reviewers', 'independent', 'internal feedback', 'provide comprehensive feedback', changelog v3.1",
+  "moved": "",
+  "confidence": "high",
+  "reason": "\"Separate internal reviewers will provide comprehensive feedback\" became \"We will solicit comprehensive internal feedback\": the requirement that reviewers be separate from the drafters appears nowhere in new.txt (actor), and the commitment that feedback will be provided becomes only a commitment to solicit it (obligation)."
+ },
+ {
+  "item": "c24",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": true,
+  "searched": "'compress two years', '2018', 'two years', 'double the rate', 'fully substitute', 'factor of 5', 'moonshot R&D for security', 'highly capable', changelog v3.1",
+  "moved": "'Two years of progress in one year' idea now in footnote 4 of new.txt (\"as much progress in one year as one would see in two years at baseline\")",
+  "confidence": "medium",
+  "reason": "The moonshot R&D commitment (\"Resource and complete significant 'moonshot R&D for security' projects\") is unchanged, but its trigger moved from a model that \"could compress two years of 2018 – 2024 AI progress into a single year\" to either full substitution for all Research Scientists/Engineers or where \"we observe or expect double the rate of progress\" that is \"plausibly ... substantially attributable to the automation\" of R&D. The added attribution and observed-progress conditions raise the trigger, while the new alternative limb (1) broadens it, so the change is mixed and coded W."
+ },
+ {
+  "item": "c25",
+  "outcome": "W",
+  "dims": [
+   3,
+   4
+  ],
+  "mixed": false,
+  "searched": "'separate', 'internal reviewers', 'independent', 'internal feedback', 'refine the report', 'trusted external parties', changelog v3.1",
+  "moved": "",
+  "confidence": "high",
+  "reason": "\"Separate internal reviewers will provide comprehensive feedback\" became \"We will solicit comprehensive internal feedback\", dropping the separateness of reviewers (actor) and weakening provision to solicitation (obligation). \"We will usually also seek feedback from trusted external parties\" is retained unchanged, and the new \"We may also use this feedback to improve or refine the report\" is permissive and adds no obligation."
+ },
+ {
+  "item": "c26",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'highly capable', 'delay AI development and deployment', 'significant lead', 'strong argument', Appendix A preamble, Section 3.6 definition of highly capable",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Scenario and commitment text identical (\"We will require a strong argument that catastrophic risk is contained ... We will delay AI development and deployment as needed\"); only footnote 7->8 renumbered. The Appendix A preamble adds a separate non-binding statement (\"would strongly consider pausing ... even in cases not covered below\") and the defined term \"highly capable\" now points to the revised automated AI R&D threshold, but this commitment's own text, trigger wording and consequence are unchanged."
+ },
+ {
+  "item": "c29",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'highly capable', 'delay AI development and deployment', 'significant lead', 'strong argument', Appendix A preamble, Section 3.6 definition of highly capable",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Scenario and commitment text identical (\"We will require a strong argument that catastrophic risk is contained ... We will delay AI development and deployment as needed\"); only footnote 7->8 renumbered. The Appendix A preamble adds a separate non-binding statement (\"would strongly consider pausing ... even in cases not covered below\") and the defined term \"highly capable\" now points to the revised automated AI R&D threshold, but this commitment's own text, trigger wording and consequence are unchanged."
+ },
+ {
+  "item": "c32",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Marginal risk and ecosystem analysis', 'Competitive landscape', 'Role in risk assessment', 'Benefits analysis', 'Advocacy efforts', 'marginal risk analysis' footnote",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Condition and all four items, including \"Advocacy efforts: The steps we took to raise public awareness ... including our engagement with policymakers and other AI developers\", are word-for-word the same; only the footnote number changed (5->6)."
+ },
+ {
+  "item": "c38",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "mixed": false,
+  "searched": "'above and beyond', 'beyond those posed', 'our public models', 'covered by a prior Risk Report', 'in-scope models', 'large-scale, fully autonomous research'",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Internal models were in scope when their risks were \"above and beyond those posed by our public models\"; now only when \"beyond those posed by models that are covered by a prior Risk Report\". The comparison set is wider (it includes previously reported internal models), so an internal model already covered once no longer has to be covered again, which narrows which internal models must be reported. The \"at a minimum\" large-scale autonomous research floor is retained."
+ },
+ {
+  "item": "c46",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'only redactions', 'legal prohibitions', 'maintain our legal rights', redaction footnote ('uncommon situation')",
+  "moved": "",
+  "confidence": "high",
+  "reason": "\"the only redactions to the Risk Report will be those necessary to comply with legal prohibitions or to maintain our legal rights\" is identical; the explanatory footnote is retained unchanged as footnote 7 (was 6)."
+ }
+]

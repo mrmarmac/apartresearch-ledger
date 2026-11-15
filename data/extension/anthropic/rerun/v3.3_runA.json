@@ -1,0 +1,113 @@
+[
+ {
+  "item": "c18",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'highly capable' definition (Section 3.6), Appendix A preamble 'strongly consider pausing', footnote 8/11",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text identical apart from footnote renumbering (8 -> 11); 'We will require a strong argument that catastrophic risk is contained' and 'We will delay AI development and deployment as needed' unchanged, and the 'highly capable' definition (crosses automated AI R&D threshold) is unchanged."
+ },
+ {
+  "item": "c23",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": true,
+  "searched": "'Novel chemical/biological', 'significantly help', 'moderately resourced', 'expert-backed', 'COVID-19', footnotes 4-7 in new.txt, changelog v3.3 'revises our threshold for novel chemical/biological'",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "The protection commitment ('We will apply protections at least as strong as our ASL-3 protections') is unchanged, but its trigger rose from AI that can 'significantly help threat actors (for example, moderately resourced expert-backed teams)' to AI that can 'functionally substitute for the scarce human expertise' so a team could do what 'would otherwise require recruiting one of a small number of world-leading specialists', a higher capability bar. The harm bar went the other way, from 'far beyond those of past catastrophes such as COVID-19' to 'comparable to or worse than those of COVID-19' (fn 4), so the change is mixed."
+ },
+ {
+  "item": "c27",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'highly capable' definition (Section 3.6), Appendix A preamble 'strongly consider pausing', footnote 8/11",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text identical apart from footnote renumbering (8 -> 11); 'We will require a strong argument that catastrophic risk is contained' and 'We will delay AI development and deployment as needed' unchanged, and the 'highly capable' definition (crosses automated AI R&D threshold) is unchanged."
+ },
+ {
+  "item": "c30",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Anthropic in the lead', 'highly capable' definition (Section 3.6), Appendix A preamble 'strongly consider pausing', footnote 8/11",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text identical apart from footnote renumbering (8 -> 11); 'We will require a strong argument that catastrophic risk is contained' and 'We will delay AI development and deployment as needed' unchanged, and the 'highly capable' definition (crosses automated AI R&D threshold) is unchanged."
+ },
+ {
+  "item": "c33",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Marginal risk and ecosystem analysis', 'marginal risk analysis' footnote (6 -> 9), items 1-4",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Identical text and identical footnote definition of 'marginal risk analysis'; only the footnote number changed (6 -> 9); 'we will additionally address the following' with the same four items."
+ },
+ {
+  "item": "c37",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": false,
+  "searched": "'significantly more capable', 'most recent Risk Report', 'Off-cycle updates', 'publicly analyzed', 'System Card or elsewhere', 'affect or change the analysis', changelog v3.3 'refines our approach to off-cycle updates'",
+  "moved": "The 'Additionally' bullet on public deployment now sits under a new 'Off-cycle updates' heading in Section 3.1, with 'we will publish an analysis of an individual model's relevant risks' in its lead-in.",
+  "confidence": "medium",
+  "reason": "'We will publish a Risk Report every 3-6 months' is unchanged and the off-cycle 'we will publish' is kept, but the trigger moved from a model 'significantly more capable than any of the models covered in the most recent Risk Report' to one 'significantly more capable than (2) all models for which we have publicly analyzed risks ... (e.g., in a prior Risk Report, System Card, or other public artifact)'. Measuring against a larger set raises the bar, so fewer deployments trigger a publication."
+ },
+ {
+  "item": "c39",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": false,
+  "searched": "'could pose significant risks', footnote 5 'risks arising from the capability thresholds in our recommendations for industry-wide safety' (not in new.txt), 'chemical/biological' in Section 3.1, 'in-scope'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Internal models were covered if they 'could pose significant risks' (fn 5: risks from all Section 1 capability thresholds, including chemical/biological). They are now covered only if they 'could pose risks related to high-stakes misalignment or automated R&D', which narrows the risk domains. Footnote 5 does not appear anywhere in new.txt."
+ },
+ {
+  "item": "c42",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": false,
+  "searched": "'significantly more capable', 'most recent Risk Report', 'Off-cycle updates', 'publicly analyzed', 'System Card or elsewhere', 'affect or change the analysis', changelog v3.3 'refines our approach to off-cycle updates'",
+  "moved": "The 'we will publish' obligation moved into the 'Off-cycle updates' lead-in ('we will publish an analysis of an individual model's relevant risks (e.g., how the model's capabilities and propensities affect or change prior analyses)').",
+  "confidence": "medium",
+  "reason": "The obligation to publish is retained in the lead-in, but the trigger changed from 'significantly more capable than any of the models covered in the most recent Risk Report' to 'significantly more capable than ... all models for which we have publicly analyzed risks ... (e.g., in a prior Risk Report, System Card, or other public artifact)'. The baseline set is now larger, so the threshold is higher."
+ },
+ {
+  "item": "c43",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "mixed": false,
+  "searched": "'Within 30 days', 'in-scope', 'publicly analyzed such risks', footnote 5, 'Off-cycle updates', 'chemical/biological'",
+  "moved": "The 'we will publish' obligation moved into the 'Off-cycle updates' lead-in in Section 3.1.",
+  "confidence": "medium",
+  "reason": "The 30-day publication duty still applies, but its trigger narrowed. It was any 'in-scope' internal model (significant risks under all Section 1 thresholds, beyond those in a prior Risk Report). It is now a model that 'could pose risks related to high-stakes misalignment or automated R&D' that 'significantly exceed those of all models for which we have publicly analyzed such risks (e.g., in a prior Risk Report, System Card, or other public artifact)'. That narrows the risk domains and raises the baseline."
+ },
+ {
+  "item": "c47",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'for all critical AI-development activities', 'use AI to analyze', 'insiders', 'public Constitution' in all of new.txt",
+  "moved": "The rest of the sentence ('for all critical AI-development activities, and use AI to analyze them for issues including security threats, concerning behavior by insiders ... public Constitution ...') appears in new.txt lines 522-533 (a PDF column-extraction split within the same row of Section 1).",
+  "confidence": "high",
+  "reason": "The later_text extract is truncated at 'maintain logs', but the rest of the commitment is unchanged in new.txt: 'We will comprehensively gather, centralize, and maintain logs for all critical AI-development activities, and use AI to analyze them...'."
+ }
+]

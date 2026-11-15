@@ -1,0 +1,106 @@
+[
+ {
+  "item": "c17",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": true,
+  "searched": "'highly capable' (both docs, Section 3.6 and Appendix A footnote 7/8); 'compress', 'two years', 'operationaliz', 'automated AI R&D'; Appendix A intro text",
+  "moved": "Old operationalization 'compress two years of 2018 – 2024 AI progress into a single year' no longer in new.txt; replaced in Section 1 table (new.txt ~lines 445-590, footnote 4 'Double the rate of progress'). New Appendix A intro adds 'would strongly consider pausing ... even in cases not covered below' (weak modal, other circumstances; does not change this commitment).",
+  "confidence": "medium",
+  "reason": "Commitment text is unchanged, but its trigger 'highly capable' (footnote: 'as defined in Section 3.6') changed: old 3.6 'could compress two years of 2018 – 2024 AI progress into a single year'; new 3.6 'crosses the threshold for automated AI R&D described in Section 1', i.e. (1) 'fully substitute for our entire set of Research Scientists and Research Engineers' OR (2) 'observe or expect double the rate of progress' AND 'plausible that this doubling is substantially attributable to the automation'. The added conjunct narrows the trigger while alternative (1) adds a path, so mixed on dimension 2 -> W."
+ },
+ {
+  "item": "c22",
+  "outcome": "W",
+  "dims": [
+   3
+  ],
+  "mixed": false,
+  "searched": "'separate', 'reviewer', 'internal feedback', 'solicit', 'internal review' in both docs",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'Separate internal reviewers will provide comprehensive feedback' became 'We will solicit comprehensive internal feedback'; the requirement that reviewers be separate from the drafters is not found anywhere in new.txt, and 'provide' became 'solicit' (actor/independence, dimension 3)."
+ },
+ {
+  "item": "c24",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": true,
+  "searched": "'moonshot', 'compress', 'two years', 'operationaliz', 'automated AI R&D', 'double the rate'",
+  "moved": "Trigger operationalization replaced in same Section 1 table row (new.txt ~lines 412-435, 445-490, footnote 4).",
+  "confidence": "medium",
+  "reason": "The 'We will: Resource and complete significant moonshot R&D for security' text is unchanged, but its trigger changed from 'a model could compress two years of 2018 – 2024 AI progress into a single year' to (1) full substitution 'for our entire set of Research Scientists and Research Engineers' or (2) 'observe or expect double the rate of progress' plus 'plausible that this doubling is substantially attributable to the automation'. The added attribution conjunct narrows while option (1) adds a path: mixed on dimension 2 -> W (changelog: 'some substantive changes')."
+ },
+ {
+  "item": "c25",
+  "outcome": "W",
+  "dims": [
+   3
+  ],
+  "mixed": false,
+  "searched": "'separate', 'reviewer', 'internal feedback', 'solicit', 'external parties', 'improve or refine'",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'Separate internal reviewers will provide comprehensive feedback' became 'We will solicit comprehensive internal feedback'; 'separate' reviewers appear nowhere else in new.txt (dimension 3). 'We will usually also seek feedback from trusted external parties' is unchanged and the added 'We may also use this feedback to improve or refine the report' is permissive, not a new obligation."
+ },
+ {
+  "item": "c26",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": true,
+  "searched": "'highly capable' (both docs, Section 3.6 and Appendix A footnote 7/8); 'compress', 'two years', 'operationaliz', 'automated AI R&D'; Appendix A intro text",
+  "moved": "Old operationalization 'compress two years of 2018 – 2024 AI progress into a single year' no longer in new.txt; replaced in Section 1 table (new.txt ~lines 445-590, footnote 4 'Double the rate of progress'). New Appendix A intro adds 'would strongly consider pausing ... even in cases not covered below' (weak modal, other circumstances; does not change this commitment).",
+  "confidence": "medium",
+  "reason": "Commitment text is unchanged, but its trigger 'highly capable' (footnote: 'as defined in Section 3.6') changed: old 3.6 'could compress two years of 2018 – 2024 AI progress into a single year'; new 3.6 'crosses the threshold for automated AI R&D described in Section 1', i.e. (1) 'fully substitute for our entire set of Research Scientists and Research Engineers' OR (2) 'observe or expect double the rate of progress' AND 'plausible that this doubling is substantially attributable to the automation'. The added conjunct narrows the trigger while alternative (1) adds a path, so mixed on dimension 2 -> W."
+ },
+ {
+  "item": "c29",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": true,
+  "searched": "'highly capable' (both docs, Section 3.6 and Appendix A footnote 7/8); 'compress', 'two years', 'operationaliz', 'automated AI R&D'; Appendix A intro text",
+  "moved": "Old operationalization 'compress two years of 2018 – 2024 AI progress into a single year' no longer in new.txt; replaced in Section 1 table (new.txt ~lines 445-590, footnote 4 'Double the rate of progress'). New Appendix A intro adds 'would strongly consider pausing ... even in cases not covered below' (weak modal, other circumstances; does not change this commitment).",
+  "confidence": "medium",
+  "reason": "Commitment text is unchanged, but its trigger 'highly capable' (footnote: 'as defined in Section 3.6') changed: old 3.6 'could compress two years of 2018 – 2024 AI progress into a single year'; new 3.6 'crosses the threshold for automated AI R&D described in Section 1', i.e. (1) 'fully substitute for our entire set of Research Scientists and Research Engineers' OR (2) 'observe or expect double the rate of progress' AND 'plausible that this doubling is substantially attributable to the automation'. The added conjunct narrows the trigger while alternative (1) adds a path, so mixed on dimension 2 -> W."
+ },
+ {
+  "item": "c32",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Marginal risk and ecosystem analysis', 'Advocacy efforts', footnote 'marginal risk analysis' in both docs",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text of the trigger and all four items, including 'Advocacy efforts: The steps we took to raise public awareness', is identical; only footnote number 5 -> 6 changed, with identical footnote text."
+ },
+ {
+  "item": "c38",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": true,
+  "searched": "'Scope.', 'above and beyond', 'public models', 'prior Risk Report', 'in-scope models', footnote 4/5",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Internal models are in scope if they pose significant risks 'above and beyond those posed by our public models' (old) vs 'beyond those posed by models that are covered by a prior Risk Report' (new). An internal model already covered once need not be covered again (narrower), while public models released since the last report no longer raise the bar (broader): mixed on scope -> W."
+ },
+ {
+  "item": "c46",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'only redactions', 'legal prohibitions', 'legal rights', redaction footnote text",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'the only redactions to the Risk Report will be those necessary to comply with legal prohibitions or to maintain our legal rights' is identical; footnote renumbered 6 -> 7 with identical text."
+ }
+]

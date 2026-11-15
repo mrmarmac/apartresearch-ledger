@@ -302,6 +302,10 @@ def score(corpus, val_dir, model_name):
     if os.path.exists(extra):
         with open(extra, encoding="utf-8") as handle:
             lines += ["", handle.read().rstrip()]
+    extra = os.path.join(val_dir, "rerun.md")
+    if os.path.exists(extra):
+        with open(extra, encoding="utf-8") as handle:
+            lines += ["", handle.read().rstrip()]
     extra = os.path.join(val_dir, "recall.md")
     if os.path.exists(extra):
         with open(extra, encoding="utf-8") as handle:

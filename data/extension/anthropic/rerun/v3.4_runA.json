@@ -1,0 +1,101 @@
+[
+ {
+  "item": "c19",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "Appendix A 'Anthropic in the lead' row in both; footnote 11 (old) vs 13 (new) defining 'highly capable'; preamble of Appendix A",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Scenario and commitment text identical ('We will delay AI development and deployment as needed ... until and unless we no longer believe we have a significant lead'); only footnote number 11 -> 13 changed, and the footnote text ('as defined in Section 3.6') is unchanged."
+ },
+ {
+  "item": "c20",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "mixed": false,
+  "searched": "'are implementing', 'have implemented', 'coverage date' in both docs; Section 3.1 scope; footnote 10 (new); changelog v3.4 item 3",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "Old required documenting mitigations 'we are implementing' (current at publication, incl. in progress); new limits it to mitigations 'we have implemented as of the coverage date' (up to 30 days before publication), and footnote 10 says later information carries no 'guarantee [of] completeness'. Disclosure is narrowed in time and content."
+ },
+ {
+  "item": "c21",
+  "outcome": "W",
+  "dims": [
+   3,
+   5
+  ],
+  "mixed": false,
+  "searched": "'unredacted', 'regular-clearance', '200', 'minimally-redacted' in both docs; Sections 3.5, 3.6, 4; changelog v3.4 item 2",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Old: 'share final, unredacted Risk Reports with Anthropic's regular-clearance staff'; new: unredacted only to 'a large number of Anthropic employees (at least 200)' and 'minimally-redacted' to all regular-clearance staff. Changelog confirms this replaces sharing with 'all regular-clearance Anthropic staff'."
+ },
+ {
+  "item": "c28",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "Appendix A 'Anthropic in the lead' row in both; footnote 11 (old) vs 13 (new) defining 'highly capable'; preamble of Appendix A",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Scenario and commitment text identical ('We will delay AI development and deployment as needed ... until and unless we no longer believe we have a significant lead'); only footnote number 11 -> 13 changed, and the footnote text ('as defined in Section 3.6') is unchanged."
+ },
+ {
+  "item": "c31",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "Appendix A 'Anthropic in the lead' row in both; footnote 11 (old) vs 13 (new) defining 'highly capable'; preamble of Appendix A",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Scenario and commitment text identical ('We will delay AI development and deployment as needed ... until and unless we no longer believe we have a significant lead'); only footnote number 11 -> 13 changed, and the footnote text ('as defined in Section 3.6') is unchanged."
+ },
+ {
+  "item": "c34",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'Marginal risk and ecosystem analysis' section in both; footnote 9 (old) vs 11 (new) defining marginal risk analysis; Section 3.4 item 5",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Trigger and the four required items are word-for-word the same ('we will additionally address the following'); only footnote 9 -> 11 renumbered with identical definition."
+ },
+ {
+  "item": "c35",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'If we update the RSP', 'Change Log', 'current version of the RSP' in both docs",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Text identical ('publicly share the updated version prior to or on its effective date ... record the differences ... in the Change Log'); the inserted 'Responsible Scaling Policy, Anthropic 16 [[page 17]]' is a page footer/header and is ignored."
+ },
+ {
+  "item": "c40",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "mixed": false,
+  "searched": "'coverage date', 'at the time of its publication', 'internally deployed', '30 days' in both docs; footnote 10 (new); off-cycle updates; changelog v3.4 item 3",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Old covered 'all publicly deployed models at the time of its publication'; new covers models 'as of the coverage date, which will be no more than 30 days prior to the publication', so models deployed in that window drop out, and internal models must be deployed 'as of the coverage date'. Footnote 10 gives no 'guarantee [of] completeness' for later information. The 30-day cap only limits the new lag and is not stronger than old."
+ },
+ {
+  "item": "c44",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "'minimize redactions', 'regular-clearance', 'unredacted', 'disclose the existence of each redaction' in both docs; Sections 3.5, 4; changelog v3.4 items 2 and 4",
+  "moved": "",
+  "confidence": "low",
+  "reason": "The public-version duties ('We will publish a public version' and 'aim to minimize redactions') are unchanged. The added 'or to the version ... shared with all regular-clearance Anthropic employees' is not a new obligation: old.txt Section 4 already required that version to be fully 'unredacted', and that weakening is coded under c21. The new sentence in 3.5 ('We will disclose the existence of each redaction') is a separate added commitment and is not counted here. If it were counted, this item would be S (dim 5)."
+ }
+]
