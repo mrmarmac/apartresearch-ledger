@@ -1,0 +1,102 @@
+[
+ {
+  "id": "gdm01",
+  "earlier_section": "Table 3.2.1.a: Machine Learning R&D CCLs and Security Mitigations",
+  "earlier_text": "ML R&D automation level 1: Can fully automate the work of any team of researchers at Google focused on improving AI capabilities, with approximately comparable all-inclusive costs."
+ },
+ {
+  "id": "gdm02",
+  "earlier_section": "Table 3.2.1.a: Machine Learning R&D CCLs and Security Mitigations",
+  "earlier_text": "ML R&D acceleration level 1: Has been used to accelerate AI development, resulting in AI progress substantially accelerating from historical rates."
+ },
+ {
+  "id": "gdm03",
+  "earlier_section": "2.2 Misuse Critical Capability Levels",
+  "earlier_text": "These recommended security levels reflect our current thinking proportionate to the risks posed and may be adjusted if our understanding of the risks changes. This may occur if, for example, a model does not possess capabilities meaningfully different from other publicly available models that have weaker security applied (in which case the marginal benefit of higher security is limited), or if we assess that the benefits of the open release of model weights outweigh the risks."
+ },
+ {
+  "id": "gdm04",
+  "earlier_section": "Table 4.a: Exploratory Misalignment CCLs and Mitigations",
+  "earlier_text": "Instrumental Reasoning Level 2: The instrumental reasoning abilities of the model enable enough situational awareness and stealth that, even when relevant model outputs (including, e.g. scratchpads) are being monitored, we cannot detect or rule out the risk of a model significantly undermining human control."
+ },
+ {
+  "id": "gdm05",
+  "earlier_section": "Section 4: Misalignment (Exploratory Approach) / Table 4.a",
+  "earlier_text": "When models reach this capability level, one possible mitigation is to apply an automated monitor to the model’s explicit reasoning (e.g. chain-of-thought output). ... Automated monitoring: monitoring system to detect illicit use of instrumental reasoning capabilities in a model’s chain-of-thought may be applied in high-stakes internal deployments where there is significant risk of the model undermining human control."
+ },
+ {
+  "id": "gdm06",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "To identify meaningful new capabilities or material increases in performance, we conduct model capability evaluations, including our automated benchmarks. These evaluations are primarily aimed at understanding the capabilities of the model and may be triggered, for example, upon the completion of a pre-training or post-training run, on various candidates of a model version."
+ },
+ {
+  "id": "gdm07",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "We conduct further analysis, including reviewing model independent information, external evaluations, and post-market monitoring as appropriate."
+ },
+ {
+  "id": "gdm08",
+  "earlier_section": "Overview",
+  "earlier_text": "These mitigations are most effective when adopted by industry as a whole: our adoption of them would result in effective risk mitigation for society only if all relevant organisations provide similar levels of protection."
+ },
+ {
+  "id": "gdm09",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "In our evaluations, we seek to equip the model with appropriate scaffolding and other augmentations to make it more likely that we are also assessing the capabilities of systems that will likely be produced with the model."
+ },
+ {
+  "id": "gdm10",
+  "earlier_section": "5.1 Updates",
+  "earlier_text": "The Frontier Safety Framework will be updated at least once a year—more frequently if we have reasonable grounds to believe the adequacy of the Framework or our adherence to it has been materially undermined."
+ },
+ {
+  "id": "gdm11",
+  "earlier_section": "1.6 Summary of Risk Acceptance Criteria",
+  "earlier_text": "Security mitigations have been applied to the model weights reaching the recommended security level stated below, or we otherwise assess that the level of security applied is adequate, e.g. if they match or exceed the level of security applied to other models with similar capabilities or risk profiles, or we assess that the benefits of the open release of model weights outweigh the risks."
+ },
+ {
+  "id": "gdm12",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "We may run early warning evaluations more frequently or adjust the alert threshold of our evaluations if the rate of progress suggests our safety buffer is no longer adequate."
+ },
+ {
+  "id": "gdm13",
+  "earlier_section": "1.4 Response Plans and Mitigations",
+  "earlier_text": "We apply safety and security mitigations throughout the lifecycle of our models, including as part of our training and model development phase and, where appropriate, before CCLs are reached as described in the process below."
+ },
+ {
+  "id": "gdm14",
+  "earlier_section": "2.1.2 Deployment Mitigations / 3.1.2 Deployment Mitigations",
+  "earlier_text": "The following mitigation process for external deployments will be applied to models reaching a misuse CCL, allowing for iterative and flexible tailoring of mitigations to each risk and use case. ... The following mitigation process will be applied for deployments of a model reaching a ML R&D CCL. The approach is similar to misuse deployment mitigations, with an added focus on large scale internal deployments."
+ },
+ {
+  "id": "gdm15",
+  "earlier_section": "Table 2.2.3.a: Harmful Manipulation CCLs and Security Mitigations",
+  "earlier_text": "Possesses manipulative capabilities sufficient to enable it to systematically and substantially change beliefs and behavior in identified high stakes contexts over the course of interactions with the model, reasonably resulting in additional expected harm at severe scale."
+ },
+ {
+  "id": "gdm16",
+  "earlier_section": "1.4 Response Plans and Mitigations",
+  "earlier_text": "When a model reaches an alert threshold for a CCL, we will assess the proximity of the model to the CCL and analyze the risk posed, involving internal and external experts as needed. This will inform the formulation and application of a response plan."
+ },
+ {
+  "id": "gdm17",
+  "earlier_section": "2.1.2 Deployment Mitigations",
+  "earlier_text": "Post-deployment processes: our safety cases and mitigations may be updated if deemed necessary by post-market monitoring."
+ },
+ {
+  "id": "gdm18",
+  "earlier_section": "2.1.2 Deployment Mitigations",
+  "earlier_text": "Pre-deployment review of safety case: external deployments of a model take place only after the appropriate governance function determines the safety case regarding each CCL the model has reached to be adequate."
+ },
+ {
+  "id": "gdm19",
+  "earlier_section": "1.4 Response Plans and Mitigations",
+  "earlier_text": "Where model capabilities remain quite distant from a CCL, a response plan may involve the adoption of additional capability assessment processes to flag when heightened mitigations are required."
+ },
+ {
+  "id": "gdm20",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "Central to our model evaluations are “early warning evaluations,” to assess the proximity of the model to a CCL. We define “alert thresholds” for these evaluations that are designed to flag when a CCL may be reached before a risk assessment is conducted again."
+ }
+]

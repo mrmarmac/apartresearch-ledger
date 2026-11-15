@@ -6,6 +6,7 @@
   python run.py validate   Check data/ledger.json and examples/ against schema.json.
   python run.py site       Write the static site and feed.xml into docs/.
   python run.py score      Score validation/predictions/ against the upstream codes. Write validation.md.
+  python run.py align      Score the alignment test. Write validation/alignment/report.md.
   python run.py check      Check that the demo path works.
   python run.py stats      Print a count table.
   python run.py all        fetch, build, validate, stats.
@@ -109,6 +110,22 @@ def score():
     run_score(Corpus(CACHE), os.path.join(ROOT, "validation"), "Claude Opus 5.5 (sub-agent)")
 
 
+def align():
+    from ledger.alignment import report, run as run_align
+    folder = os.path.join(ROOT, "validation", "alignment")
+    rows = run_align(Corpus(CACHE), folder, "Claude Opus 5.5 (sub-agent)")
+    with open(os.path.join(folder, "results.json"), "w", encoding="utf-8") as handle:
+        json.dump(rows, handle, indent=1, ensure_ascii=False)
+    with open(os.path.join(folder, "report.md"), "w", encoding="utf-8") as handle:
+        text = "\n".join(report(rows, "Claude Opus 5.5 (sub-agent)")).lstrip() + "\n"
+        review = os.path.join(folder, "review.md")
+        note = open(review, encoding="utf-8").read().rstrip() if os.path.exists(review) else ""
+        handle.write(text.replace("__REVIEW__", note))
+    done = [r for r in rows if r["answered"]]
+    ok = lambda f: sum(r[f] in ("same", "both_none") for r in done)
+    print(f"alignment: model {ok('model_class')}/{len(done)}, text matching {ok('text_class')}/{len(done)}; wrote validation/alignment/report.md")
+
+
 def check():
     """The demo path must always work."""
     with open(LEDGER, encoding="utf-8") as handle:
@@ -127,7 +144,7 @@ def check():
     print("ok   demo path: whistleblower commitment, 5 versions, last status removed")
 
 
-COMMANDS = {"check": [check], "site": [site], "score": [score], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
+COMMANDS = {"check": [check], "site": [site], "score": [score], "align": [align], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
             "all": [fetch, do_build, validate, check, site, stats]}
 
 if __name__ == "__main__":

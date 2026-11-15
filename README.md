@@ -59,6 +59,7 @@ Full results: [`validation.md`](validation.md).
   7 of the 120 had the opposite direction.
 - **Stability.** A second run of the same model gave the same answer on 113 of 120 items (kappa 0.91). 2 of the 7 changes went to the opposite direction.
 - **Human check.** One lawyer (the author) coded 20 items blind: 10 where the model agreed with upstream and 10 where it disagreed. He coded 17, and rejected the pairing of 3. In the disagreed group (8 coded), he agreed with upstream on 4, with the model on 2, and with neither on 2. This is not a random sample.
+- **Alignment test.** Given one commitment and the full next version, the model found the same counterpart as upstream, or correctly found none, for 48 of 60 items (80%). Plain text matching: 37 of 60 (62%). Google DeepMind v3.0 to v3.1: 20 of 20. OpenAI Beta to v2, a full rewrite: 10 of 20.
 - **Watchtower check.** The ledger has 14 of the 17 sub-changes in the Watchtower entry for the xAI revision of June 2026.
 - **Quote check.** 855 of 871 quotes (98%) are in the text extraction of the hashed source document.
 - **Count check.** The ledger has one event for each of the 636 upstream rows of the 5 labs.
@@ -91,6 +92,7 @@ python run.py all
 | `python run.py validate` | Checks the ledger against `schema.json`. |
 | `python run.py check` | Checks that the demo path works. |
 | `python run.py site` | Writes the site and `feed.xml` into `docs/`. |
+| `python run.py align` | Scores the alignment test and writes `validation/alignment/report.md`. |
 | `python run.py score` | Scores `validation/predictions/` and writes `validation.md`. |
 | `python run.py stats` | Prints a count table. |
 

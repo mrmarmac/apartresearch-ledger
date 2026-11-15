@@ -1,0 +1,142 @@
+[
+ {
+  "id": "xai01",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "high",
+  "reason": "The SecureBio benchmark and the under 1-in-20 answer-rate acceptance threshold are gone; only generic acceptance criteria remain."
+ },
+ {
+  "id": "xai02",
+  "counterpart": "Under this FAIF, xAI’s models apply heightened safeguards if they receive user prompts\nthat demonstrate intent to engage in the development, use, , or proliferation of weapons\nof mass destruction, including CBRN agents.",
+  "later_section": "2.1. Risk Identification > (a) Addressing CBRN Risks",
+  "confidence": "medium",
+  "reason": "Governs the same object: restricting model assistance toward chem/bio weapons steps, now framed as heightened CBRN safeguards."
+ },
+ {
+  "id": "xai03",
+  "counterpart": "to mitigate risks, employ tiered availability of the functionality and features of its models.\n\nFor instance, the full functionality of our models may be available to only a limited set of\ntrusted parties, partners, and government agencies;",
+  "later_section": "2.3. Systemic risk acceptance determination",
+  "confidence": "high",
+  "reason": "Same tiered-availability deployment measure, moved into risk acceptance determination."
+ },
+ {
+  "id": "xai04",
+  "counterpart": "If we determine that allowing a system to continue running would materially and\nunjustifiably increase the likelihood of a risk, we may temporarily fully shut down the\nrelevant system until we have developed a more targeted response.",
+  "later_section": "3. Incident reporting",
+  "confidence": "high",
+  "reason": "Same temporary full shutdown response; trigger broadened from catastrophic event to a risk."
+ },
+ {
+  "id": "xai05",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "high",
+  "reason": "No statement of compliance with California's TFAIA; only a generic reference to applicable laws in governance."
+ },
+ {
+  "id": "xai06",
+  "counterpart": "xAI regularly evaluates the adequacy and reliability of such benchmarks, including by\ncomparing them against other benchmarks that we could potentially utilize, to determine\nand apply effective benchmarks available at the time of evaluation.",
+  "later_section": "2.1. Risk Identification > (a) Addressing CBRN Risks",
+  "confidence": "high",
+  "reason": "Same malicious-use benchmark adequacy review, now in the CBRN subsection; revision sentence dropped."
+ },
+ {
+  "id": "xai07",
+  "counterpart": "xAI regularly evaluates the adequacy and reliability of such benchmarks and controls,\nincluding by comparing them against other benchmarks that we could potentially utilize.",
+  "later_section": "2.1. Risk Identification > (b) Addressing Risks of Loss of Control",
+  "confidence": "high",
+  "reason": "Same loss-of-control benchmark adequacy review, extended to controls."
+ },
+ {
+  "id": "xai08",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "high",
+  "reason": "No commitment to explore truth-seeking tools that help users assess events; mission statement wording governs a different object."
+ },
+ {
+  "id": "xai09",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "medium",
+  "reason": "No commitment to keep the public informed or publish FAIF updates; only periodic internal review remains."
+ },
+ {
+  "id": "xai10",
+  "counterpart": "This Frontier AI\nFramework (“FAIF”) outlines xAI’s approach to policies for mitigation of significant risks\nassociated with the development, deployment, and release of xAI’s frontier AI models, such as\nGrok.",
+  "later_section": "1. Introduction",
+  "confidence": "high",
+  "reason": "Same scope statement of the framework, reworded."
+ },
+ {
+  "id": "xai11",
+  "counterpart": "When reportable under applicable laws and regulations, xAI will provide the relevant\nauthorities with a copy of the incident report within the required deadlines",
+  "later_section": "3. Incident reporting",
+  "confidence": "medium",
+  "reason": "Replaces discretionary law-enforcement notification with legally required reporting to authorities in the same incident-response list."
+ },
+ {
+  "id": "xai12",
+  "counterpart": "xAI’s practice on loss of control centers around\nscalable model oversight, training against high-risk model behaviors such as deception\nand sycophancy, and robust evaluation and red-teaming of model-driven agents in\ncontrolled sandboxes.",
+  "later_section": "2.1. Risk Identification > (b) Addressing Risks of Loss of Control",
+  "confidence": "low",
+  "reason": "Training against deception partly covers honesty training; instruction hierarchy and system-prompt anti-deception are not retained."
+ },
+ {
+  "id": "xai13",
+  "counterpart": "xAI’s internal\ngovernance practices include managing risks across the lifecycle of our models and ongoing\nlegal and compliance reviews to ensure that risk management functions adhere to this FAIF.",
+  "later_section": "4. Governance",
+  "confidence": "medium",
+  "reason": "Same object: reviewing adherence to the FAIF, now via ongoing legal and compliance reviews."
+ },
+ {
+  "id": "xai14",
+  "counterpart": "Approach to Mitigating Risks of Malicious Use: Alongside comprehensive evaluations\nmeasuring dual-use capabilities, our mitigation strategy for malicious use risks is to identify\ncritical steps in major risk scenarios and implement redundant layers of safeguards in our\nmodels to inhibit user progress in advancing through such steps.",
+  "later_section": "2.3. Safety mitigations",
+  "confidence": "high",
+  "reason": "Identical malicious-use mitigation strategy statement."
+ },
+ {
+  "id": "xai15",
+  "counterpart": "Driving towards our safety objectives, we continue to design and deploy the following\nsafeguards into our models, as appropriate:",
+  "later_section": "2.3. Safety mitigations",
+  "confidence": "high",
+  "reason": "Same safeguards list (safety training, system prompts, filters), now qualified 'as appropriate' and filters narrowed to CBRN."
+ },
+ {
+  "id": "xai16",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "high",
+  "reason": "No employee survey on future AI developments appears in the later document."
+ },
+ {
+  "id": "xai17",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "high",
+  "reason": "No whistleblower protections for reporting to government agencies; employee escalation is an internal detection channel, a different object."
+ },
+ {
+  "id": "xai18",
+  "counterpart": "To this end, we continually evaluate and improve robustness to adversarial attacks that\nseek to remove xAI model safeguards (e.g., jailbreak attacks), or hijack and redirect\nGrok-powered applications toward nefarious purposes (e.g., prompt injection attacks).",
+  "later_section": "2.1. Risk Identification > (a) Addressing CBRN Risks",
+  "confidence": "high",
+  "reason": "Identical adversarial robustness commitment, moved into the CBRN subsection."
+ },
+ {
+  "id": "xai19",
+  "counterpart": "When critical incidents or imminent threats are identified, xAI’s will investigate the causes and\neffects of the incidents and, if necessary, take action to mitigate and contain incidents, and\nimplement long-term solutions:",
+  "later_section": "3. Incident reporting",
+  "confidence": "high",
+  "reason": "Same lead-in to response steps upon learning of imminent threats, now covering critical incidents."
+ },
+ {
+  "id": "xai20",
+  "counterpart": "To foster accountability, we integrate the approach of designating risk owners, including\nassigning responsibility for proactively mitigating identified risks and monitoring for critical\nincidents or imminent threats, which may be identified through various channels, including:",
+  "later_section": "3. Incident reporting",
+  "confidence": "high",
+  "reason": "Same risk-owner designation, extended to incident monitoring."
+ }
+]

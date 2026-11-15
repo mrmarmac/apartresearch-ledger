@@ -291,6 +291,10 @@ def score(corpus, val_dir, model_name):
         json.dump(items, handle, indent=1, ensure_ascii=False)
     lines += _stability(val_dir, key, preds)
     lines += _human(val_dir, key, preds)
+    extra = os.path.join(val_dir, "alignment", "report.md")
+    if os.path.exists(extra):
+        with open(extra, encoding="utf-8") as handle:
+            lines += ["", handle.read().rstrip()]
     extra = os.path.join(val_dir, "watchtower.md")
     if os.path.exists(extra):
         with open(extra, encoding="utf-8") as handle:

@@ -1,0 +1,102 @@
+[
+ {
+  "id": "xai01",
+  "earlier_section": "Addressing Risks of Malicious Use > 2. Risk Assessment",
+  "earlier_text": "Thresholds: We developed an internal benchmark of benign and restricted biology and chemistry related queries in collaboration with SecureBio. Our risk acceptance criteria for system deployment is maintaining an answer rate of less than 1 out of 20 on restricted queries. We plan to add additional thresholds tied to other benchmarks."
+ },
+ {
+  "id": "xai02",
+  "earlier_section": "Addressing Risks of Malicious Use > 2. Risk Assessment",
+  "earlier_text": "In the setting of biological and chemical weapons, xAI considers critical steps where we restrict xAI models from providing detailed information or substantial assistance: ... xAI restricts its models from providing information that could accelerate user learning related to these steps through the use of AI-powered filters that specifically monitor user conversations for content matching these narrow topics and return a brief message declining to answer when activated."
+ },
+ {
+  "id": "xai03",
+  "earlier_section": "Operational and Societal Risks > 5. Deployment Decisions",
+  "earlier_text": "To mitigate risks, xAI employs tiered availability of the functionality and features of its models. For instance, the full functionality of our models may be available to only a limited set of trusted parties, partners, and government agencies. We may also mitigate risks by adding additional controls on functionality and features depending on the type of end user. For instance, features that we make available to consumers using mobile apps may be different than the features made available to sophisticated ..."
+ },
+ {
+  "id": "xai04",
+  "earlier_section": "Operational and Societal Risks > 4. Governance Approach",
+  "earlier_text": "3. If we determine that allowing a system to continue running would materially and unjustifiably increase the likelihood of a catastrophic event, we may temporarily fully shut down the relevant system until we have developed a more targeted response."
+ },
+ {
+  "id": "xai05",
+  "earlier_section": "xAI Frontier Artificial Intelligence Framework",
+  "earlier_text": "This FAIF complies with California's Transparency in Frontier Artificial Intelligence Act (the “TFAIA”, California Business and Professions Code § 22757.10 et seq.)."
+ },
+ {
+  "id": "xai06",
+  "earlier_section": "Addressing Risks of Malicious Use > 1. Approach to Benchmarking",
+  "earlier_text": "xAI regularly evaluates the adequacy and reliability of such benchmarks, including by comparing them against other benchmarks that we could potentially utilize, to determine and apply effective benchmarks available at the time of evaluation. We may revise this list of benchmarks periodically as relevant or more effective benchmarks for malicious use are created."
+ },
+ {
+  "id": "xai07",
+  "earlier_section": "Addressing Risks of Loss of Control > 1. Approach to Benchmarking",
+  "earlier_text": "xAI regularly evaluates the adequacy and reliability of such benchmarks, including by comparing them against other benchmarks that we could potentially utilize. We may revise this list of benchmarks periodically as relevant benchmarks for loss of control are created."
+ },
+ {
+  "id": "xai08",
+  "earlier_section": "Operational and Societal Risks > 2. Public Understanding",
+  "earlier_text": "xAI is exploring building truth-seeking AI tools, such as AIs that can help users better assess and understand events by better sorting through inaccurate or biased materials."
+ },
+ {
+  "id": "xai09",
+  "earlier_section": "Operational and Societal Risks > 1. Public transparency and third-party review",
+  "earlier_text": "xAI aims to keep the public informed about our risk management policies. As we work towards incorporating more risk management strategies, we intend to publish updates to this FAIF."
+ },
+ {
+  "id": "xai10",
+  "earlier_section": "xAI Frontier Artificial Intelligence Framework",
+  "earlier_text": "This Frontier AI Framework (“FAIF”) outlines xAI’s approach to policies for handling significant risks, including catastrophic risks, associated with the development, deployment, and release of xAI’s AI models, such as Grok."
+ },
+ {
+  "id": "xai11",
+  "earlier_section": "Operational and Societal Risks > 4. Governance Approach",
+  "earlier_text": "1. If we determine it is warranted, we may notify and cooperate with relevant law enforcement agencies, including any agencies that we believe could play a role in preventing or mitigating the incident."
+ },
+ {
+  "id": "xai12",
+  "earlier_section": "Addressing Risks of Loss of Control > 3. Safeguard Implementation",
+  "earlier_text": "xAI trains its models to be honest and have values conducive to controllability, such as recognizing and obeying an instruction hierarchy.10 In addition, using a high level instruction called a “system prompt”, xAI directly instructs its models to not deceive or deliberately mislead the user."
+ },
+ {
+  "id": "xai13",
+  "earlier_section": "Operational and Societal Risks > 1. Public transparency and third-party review",
+  "earlier_text": "1. Frontier AI Framework adherence: Regularly review our adherence with this FAIF."
+ },
+ {
+  "id": "xai14",
+  "earlier_section": "Overall Approach",
+  "earlier_text": "Approach to Mitigating Risks of Malicious Use: Alongside comprehensive evaluations measuring dual-use capabilities, our mitigation strategy for malicious use risks is to identify critical steps in major risk scenarios and implement redundant layers of safeguards in our models to inhibit user progress in advancing through such steps."
+ },
+ {
+  "id": "xai15",
+  "earlier_section": "Addressing Risks of Malicious Use > 3. Safeguard Implementation",
+  "earlier_text": "Driving towards our safety objectives, we continue to design and deploy the following safeguards into our models: ● Safety training: Training our models to recognize and decline harmful requests. ● System prompts: Providing high-priority instructions to our models to enforce our basic refusal policy. ● Input and output filters: Applying classifiers to user inputs or model outputs to verify safety when a model is queried regarding weapons of mass destruction or cyberterrorism."
+ },
+ {
+  "id": "xai16",
+  "earlier_section": "Operational and Societal Risks > 1. Public transparency and third-party review",
+  "earlier_text": "4. Survey: Survey employees for their views and projections of important future developments in AI, e.g., capability gains and benchmark results."
+ },
+ {
+  "id": "xai17",
+  "earlier_section": "Operational and Societal Risks > 4. Governance Approach",
+  "earlier_text": "xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety."
+ },
+ {
+  "id": "xai18",
+  "earlier_section": "Addressing Risks of Malicious Use",
+  "earlier_text": "To this end, we continually evaluate and improve robustness to adversarial attacks that seek to remove xAI model safeguards (e.g., jailbreak attacks), or hijack and redirect Grok-powered applications toward nefarious purposes (e.g., prompt injection attacks)."
+ },
+ {
+  "id": "xai19",
+  "earlier_section": "Operational and Societal Risks > 4. Governance Approach",
+  "earlier_text": "Should it happen that xAI learns of an imminent threat of a significantly harmful event, including loss of control, we may take steps such as the following to stop or prevent that event:"
+ },
+ {
+  "id": "xai20",
+  "earlier_section": "Operational and Societal Risks > 4. Governance Approach",
+  "earlier_text": "To foster accountability, we integrate the approach of designating risk owners, including assigning responsibility for proactively mitigating identified risks."
+ }
+]

@@ -1,0 +1,142 @@
+[
+ {
+  "id": "oai01",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "medium",
+  "reason": "Later version no longer assigns a Preparedness team the research, monitoring, forecasting and regular reporting role to SAG."
+ },
+ {
+  "id": "oai02",
+  "counterpart": "The SAG will strive to recommend further actions that are as targeted and non-disruptive as possible\nwhile still mitigating risks of severe harm.",
+  "later_section": "4.2 Safeguard sufficiency",
+  "confidence": "high",
+  "reason": "Same SAG commitment to targeted, non-disruptive recommendations; the pause-as-last-resort language is dropped."
+ },
+ {
+  "id": "oai03",
+  "counterpart": "• Third-party evaluation of tracked model capabilities: If we deem that a deployment warrants\ndeeper testing of Tracked Categories of capability (as described in Section 3.1), for example based\non results of Capabilities Report presented to them, then when available and feasible, OpenAI will\nwork with third-parties to independently evaluate models.",
+  "later_section": "5.2 Transparency and external participation",
+  "confidence": "medium",
+  "reason": "Governs external third-party testing of frontier model capabilities, now conditional on discretion and availability."
+ },
+ {
+  "id": "oai04",
+  "counterpart": "[Critical] A tool-augmented\nmodel can identify and de-\nvelop functional zero-day\nexploits of all severity lev-\nels in many hardened real-\nworld critical systems with-\nout human intervention OR\nmodel can devise and exe-\ncute end-to-end novel strate-\ngies for cyberattacks against\nhardened targets given only\na high level desired goal.",
+  "later_section": "2.2 Tracked Categories",
+  "confidence": "high",
+  "reason": "Same Critical cybersecurity threshold, reworded from all software projects to many hardened real-world critical systems."
+ },
+ {
+  "id": "oai05",
+  "counterpart": "We will require the following practices for High capability models:",
+  "later_section": "C.3 Security controls",
+  "confidence": "medium",
+  "reason": "Security hardening required at High level, now specified as a list of security control practices."
+ },
+ {
+  "id": "oai06",
+  "counterpart": "• SAG members serve for one year terms. OpenAI Leadership may choose to re-appoint someone\nfrom previous years to ensure there is continuity of knowledge and experience, while still ensuring\nthat fresh and timely perspectives are present in the group.",
+  "later_section": "B Decision-making practices",
+  "confidence": "high",
+  "reason": "Same yearly SAG membership rotation and re-appointment provision."
+ },
+ {
+  "id": "oai07",
+  "counterpart": "• For the avoidance of doubt, OpenAI Leadership can also make decisions without the SAG’s\nparticipation, i.e., the SAG does not have the ability to “filibuster”",
+  "later_section": "B Decision-making practices",
+  "confidence": "high",
+  "reason": "Same Leadership decision authority and no-filibuster clause."
+ },
+ {
+  "id": "oai08",
+  "counterpart": "Our team develops or adopts evaluations designed to track progress on each of these capabilities and to\nindicate when the identified capability thresholds may have been reached.",
+  "later_section": "2.2 Tracked Categories",
+  "confidence": "medium",
+  "reason": "Same commitment to build evaluations per tracked category; the Scorecard reporting element is gone."
+ },
+ {
+  "id": "oai09",
+  "counterpart": "• For each deployment under the Preparedness Framework, providing recommendations on potential\nnext steps and any applicable risks to OpenAI Leadership, as well as rationale",
+  "later_section": "B Decision-making practices",
+  "confidence": "medium",
+  "reason": "SAG passes recommended next steps to Leadership; the explicit sharing with BoD and Preparedness is dropped."
+ },
+ {
+  "id": "oai10",
+  "counterpart": "The results of\nthese evaluations, and any noteworthy observations that should affect interpretation of the results, are\ncompiled into a Capabilities Report that is submitted to the SAG.",
+  "later_section": "3.3 Capability threshold determinations",
+  "confidence": "low",
+  "reason": "Capabilities Report replaces the dynamic Scorecard as the artifact recording model risk levels, but per deployment."
+ },
+ {
+  "id": "oai11",
+  "counterpart": "Going forward we will handle risks\nrelated to persuasion outside the Preparedness Framework, including via our Model Spec and\npolicy prohibitions on the use of our tools for political campaigning or lobbying, and our ongoing\ninvestigations of misuse of our products (including detecting and disrupting influence operations).",
+  "later_section": "A Change log",
+  "confidence": "medium",
+  "reason": "Governs the persuasion risk category, explicitly removing it from the Framework."
+ },
+ {
+  "id": "oai12",
+  "counterpart": "An internal, cross-functional group of OpenAI leaders called the Safety Advisory Group (SAG) oversees\nthe Preparedness Framework and makes expert recommendations on the level and type of safeguards\nrequired for deploying frontier capabilities safely and securely.",
+  "later_section": "1 Introduction",
+  "confidence": "high",
+  "reason": "Same establishment and remit of the Safety Advisory Group."
+ },
+ {
+  "id": "oai13",
+  "counterpart": "Covered systems that cross this capability threshold are required to have robust and effective\nsafeguards that sufficiently minimize the associated risk of severe harm before they are deployed and\nappropriate security controls as they are developed.",
+  "later_section": "2.2 Tracked Categories",
+  "confidence": "low",
+  "reason": "Two-part mitigation structure persists as deployment safeguards plus security controls during development (containment)."
+ },
+ {
+  "id": "oai14",
+  "counterpart": "Our approach to Critical capabilities will need to be robust to both malicious actors (either internal or\nexternal) and model misalignment risks.",
+  "later_section": "4.4 Increasing safeguards before internal use and further development",
+  "confidence": "medium",
+  "reason": "Governs misalignment protection required at Critical level; the dependable alignment evidence requirement is softened."
+ },
+ {
+  "id": "oai15",
+  "counterpart": "• Third-party evaluation of tracked model capabilities: If we deem that a deployment warrants\ndeeper testing of Tracked Categories of capability (as described in Section 3.1), for example based\non results of Capabilities Report presented to them, then when available and feasible, OpenAI will\nwork with third-parties to independently evaluate models.",
+  "later_section": "5.2 Transparency and external participation",
+  "confidence": "low",
+  "reason": "Closest independent third-party check on evaluations, but discretionary evaluation rather than mandatory audit of reported results."
+ },
+ {
+  "id": "oai16",
+  "counterpart": "10. Deprioritize safety drills, as we are shifting our attention to a more durable approach of continu-\nously red-teaming and assessing the effectiveness of our safeguards.",
+  "later_section": "A Change log",
+  "confidence": "medium",
+  "reason": "Governs the same safety drills commitment, explicitly deprioritizing it."
+ },
+ {
+  "id": "oai17",
+  "counterpart": "The Preparedness Framework applies to any new or updated deployment that has a plausible chance of\nreaching a capability threshold whose corresponding risks are not addressed by an existing Safeguards\nReport.",
+  "later_section": "3.2 Testing scope",
+  "confidence": "medium",
+  "reason": "Governs when evaluations are triggered; replaces continual and >2x compute triggers with deployment-based scope."
+ },
+ {
+  "id": "oai18",
+  "counterpart": "• The members of the SAG and the SAG Chair are appointed by the OpenAI Leadership.",
+  "later_section": "B Decision-making practices",
+  "confidence": "high",
+  "reason": "Same SAG appointment rule; the BoD consultation element is dropped."
+ },
+ {
+  "id": "oai19",
+  "counterpart": "[Critical] The model is ca-\npable of recursively self\nimproving (i.e., fully auto-\nmated AI R&D), defined\nas either (leading indica-\ntor) a superhuman research-\nscientist agent OR (lagging\nindicator) causing a genera-\ntional model improvement\n(e.g., from OpenAI o1 to\nOpenAI o3) in 1/5th the\nwall-clock time of equiva-\nlent progress in 2024 (e.g.,\nsped up to just 4 weeks) sus-\ntainably for several months.",
+  "later_section": "2.2 Tracked Categories",
+  "confidence": "low",
+  "reason": "Model autonomy Critical threshold split; autonomous AI research prong survives as AI Self-improvement Critical, replication prong moved to research."
+ },
+ {
+  "id": "oai20",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "medium",
+  "reason": "Later version contains no explicit statement that procedural commitments trigger when any single category increases."
+ }
+]

@@ -1,0 +1,102 @@
+[
+ {
+  "id": "oai01",
+  "earlier_section": "Introduction",
+  "earlier_text": "Tasking the Preparedness team with on-the-ground work. The team will drive the technical work and maintenance of the Preparedness Framework. This includes conducting research, evaluations, monitoring, and forecasting of risks, and synthesizing this work via regular reports to the Safety Advisory Group."
+ },
+ {
+  "id": "oai02",
+  "earlier_section": "Operations",
+  "earlier_text": "The SAG will strive to recommend mitigations that are as targeted and non-disruptive as possible while not compromising safety. In particular, we recognize that pausing deployment or development would be the last resort (but potentially necessary) option in these circumstances"
+ },
+ {
+  "id": "oai03",
+  "earlier_section": "Operations / Accountability",
+  "earlier_text": "External access: We will also continue to enable external research and government access for model releases to increase the depth of red-teaming and testing of frontier model capabilities"
+ },
+ {
+  "id": "oai04",
+  "earlier_section": "Tracked Risk Categories / Cybersecurity",
+  "earlier_text": "Tool-augmented model can identify and develop functional zero-day exploits of all severity levels, across all software projects, without human intervention OR model can devise and execute end-to-end novel strategies for cyberattacks against hardened targets given only a high level desired goal."
+ },
+ {
+  "id": "oai05",
+  "earlier_section": "Governance / Safety baselines / Asset Protection",
+  "earlier_text": "If we reach (or are forecasted to reach) at least “high” pre-mitigation risk in any of the considered categories: we will ensure that our security is hardened in a way that is designed to prevent our mitigations and controls from being circumvented via exfiltration (by the time we hit “high” pre-mitigation risk)."
+ },
+ {
+  "id": "oai06",
+  "earlier_section": "Operations",
+  "earlier_text": "SAG membership will rotate yearly. OpenAI leadership might choose to re-appoint someone from previous years to ensure there is continuity of knowledge and experience, while still ensuring that fresh and timely perspectives are present in the group. ... The SAG Chair makes any final decisions needed for the SAG. This role is expected to rotate, as appointed by OpenAI leadership."
+ },
+ {
+  "id": "oai07",
+  "earlier_section": "Operations",
+  "earlier_text": "The OpenAI Leadership, i.e., the CEO or a person designated by them, serves as the default decision-maker on all decisions ... (For the avoidance of doubt, Leadership can also make decisions without the SAG’s participation, i.e., the SAG does not have the ability to “filibuster”)"
+ },
+ {
+  "id": "oai08",
+  "earlier_section": "Introduction",
+  "earlier_text": "We will be building and continually improving suites of evaluations and other monitoring solutions along several Tracked Risk Categories, and indicating our current levels of pre-mitigation and post-mitigation risk in a Scorecard."
+ },
+ {
+  "id": "oai09",
+  "earlier_section": "Operations / Decision process",
+  "earlier_text": "The SAG will be responsible for assessing the merits of each case submitted to them. Then, the SAG Chair will forward the case to the OpenAI Leadership (sharing also with the BoD and Preparedness) and include a draft of possible next steps (e.g., approving a change to the Scorecard or Preparedness Framework; requesting changes to other internal and external processes as needed; highlighting a need to accelerate security procedures based on a forecasted increase in risk levels) ..."
+ },
+ {
+  "id": "oai10",
+  "earlier_section": "Scorecard",
+  "earlier_text": "As a part of our Preparedness Framework, we will maintain a dynamic (i.e., frequently updated) Scorecard that is designed to track our current pre-mitigation model risk across each of the risk categories, as well as the post-mitigation risk. The Scorecard will be regularly updated by the Preparedness team to help ensure it reflects the latest research and findings."
+ },
+ {
+  "id": "oai11",
+  "earlier_section": "Tracked Risk Categories / Persuasion",
+  "earlier_text": "Persuasion is focused on risks related to convincing people to change their beliefs (or act on) both static and interactive model-generated content. ... Note that we include deception and social engineering evaluations as part of the persuasion risk category,"
+ },
+ {
+  "id": "oai12",
+  "earlier_section": "Introduction",
+  "earlier_text": "We are creating a Safety Advisory Group (SAG) that brings together expertise from across the company to help OpenAI’s leadership and Board of Directors be best prepared for the safety decisions they need to make. SAG responsibilities will thus include overseeing the assessment of the risk landscape, and maintaining a fast-track process for handling emergency scenarios."
+ },
+ {
+  "id": "oai13",
+  "earlier_section": "Scorecard / Mitigations",
+  "earlier_text": "Our mitigation strategy will involve both containment measures, which help reduce risks related to possession of a frontier model, as well as deployment mitigations, which help reduce risks from active use of a frontier model."
+ },
+ {
+  "id": "oai14",
+  "earlier_section": "Governance / Safety baselines / Restricting development",
+  "earlier_text": "Additionally, to protect against “critical” pre-mitigation risk, we need dependable evidence that the model is sufficiently aligned that it does not initiate “critical”-risk-level tasks unless explicitly instructed to do so."
+ },
+ {
+  "id": "oai15",
+  "earlier_section": "Operations / Accountability",
+  "earlier_text": "Audits: Scorecard evaluations (and corresponding mitigations) will be audited by qualified, independent third-parties to ensure accurate reporting of results, either by reproducing findings or by reviewing methodology to ensure soundness, at a cadence specified by the SAG and/or upon the request of OpenAI Leadership or the BoD."
+ },
+ {
+  "id": "oai16",
+  "earlier_section": "Operations / Accountability",
+  "earlier_text": "Therefore, the SAG will call for safety drills at a recommended minimum yearly basis"
+ },
+ {
+  "id": "oai17",
+  "earlier_section": "Scorecard / Evaluating pre-mitigation risk",
+  "earlier_text": "We will be running these evaluations continually, i.e., as often as needed to catch any non-trivial capability change, including before, during, and after training. This would include whenever there is a >2x effective compute increase or major algorithmic breakthrough."
+ },
+ {
+  "id": "oai18",
+  "earlier_section": "Operations",
+  "earlier_text": "The members of the SAG and the SAG Chair are appointed by the OpenAI Leadership. This will be done in consultation with the BoD, as is common for important roles in general."
+ },
+ {
+  "id": "oai19",
+  "earlier_section": "Tracked Risk Categories / Model autonomy",
+  "earlier_text": "Model can profitably survive and replicate in the wild given minimal human instruction, i.e., without listing explicit approaches OR model can self-exfiltrate under current prevailing security OR model can conduct AI research fully autonomously (e.g., autonomously identify and validate a 2x compute efficiency improvement)"
+ },
+ {
+  "id": "oai20",
+  "earlier_section": "Tracked Risk Categories",
+  "earlier_text": "Our procedural commitments are triggered when any of the tracked risk categories increase in severity, rather than only when they all increase together."
+ }
+]

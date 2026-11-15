@@ -1,0 +1,142 @@
+[
+ {
+  "id": "gdm01",
+  "counterpart": "Can fully automate the work\nof any team of researchers at\nGoogle focused on improving\nAI capabilities, with\napproximately comparable\nall-inclusive costs.",
+  "later_section": "Table 3.2.2.a: ML R&D CCLs and Security Mitigations",
+  "confidence": "high",
+  "reason": "Same ML R&D automation level 1 CCL, identical definition, renumbered table."
+ },
+ {
+  "id": "gdm02",
+  "counterpart": "Has been used to accelerate\nAI development, resulting in\nAI progress substantially\naccelerating from historical\nrates.",
+  "later_section": "Table 3.2.2.a: ML R&D CCLs and Security Mitigations",
+  "confidence": "high",
+  "reason": "Same ML R&D acceleration level 1 CCL, identical definition."
+ },
+ {
+  "id": "gdm03",
+  "counterpart": "These recommended security levels reflect our current thinking proportionate to the risks posed and\nmay be adjusted if our understanding of the risks changes. This may occur if, for example, a model does\nnot possess capabilities meaningfully different from other publicly available models that have weaker\nsecurity applied (in which case the marginal benefit of higher security is limited), or if we assess that the\nbenefits of the open release of model weights outweigh the risks.",
+  "later_section": "2.2 Misuse Capability Levels",
+  "confidence": "high",
+  "reason": "Verbatim same caveat on adjusting recommended misuse security levels."
+ },
+ {
+  "id": "gdm04",
+  "counterpart": "NONE",
+  "later_section": "",
+  "confidence": "medium",
+  "reason": "Later keeps only a Stealth and Situational Awareness TCL (absent mitigations); the higher level defeating monitoring is not retained."
+ },
+ {
+  "id": "gdm05",
+  "counterpart": "If the risk assessment deems the residual risk from internal deployment to\nbe unacceptable without additional safeguards (such as chain-of-thought monitoring on high-risk\ndeployments), these will be applied.",
+  "later_section": "3.2.1 Stealth and Situational Awareness Tracked Capability Level",
+  "confidence": "medium",
+  "reason": "Chain-of-thought monitoring for high-risk internal deployments of models with instrumental reasoning/stealth capability."
+ },
+ {
+  "id": "gdm06",
+  "counterpart": "To understand if a subsequent version of the model has meaningful new capabilities or material\nincreases in performance relative to the last checkpoint subject to a critical capability assessment, we\nconduct material capability change assessments on various checkpoints upon the completion of a\npost-training run.",
+  "later_section": "1.3.2 Inherent Risk Assessment",
+  "confidence": "medium",
+  "reason": "Same capability evaluations to detect new capabilities, triggered on completion of training runs on checkpoints."
+ },
+ {
+  "id": "gdm07",
+  "counterpart": "We conduct further analysis, including reviewing model-independent information, external\nevaluations, and post-market monitoring as appropriate.",
+  "later_section": "1.3.2 Inherent Risk Assessment",
+  "confidence": "high",
+  "reason": "Near-verbatim same further-analysis commitment."
+ },
+ {
+  "id": "gdm08",
+  "counterpart": "These mitigations are most effective when\nadopted by industry as a whole: our adoption of them would result in effective risk mitigation for society\nonly if all relevant organizations provide similar levels of protection.",
+  "later_section": "Overview",
+  "confidence": "high",
+  "reason": "Verbatim same industry-wide adoption statement."
+ },
+ {
+  "id": "gdm09",
+  "counterpart": "In our\nevaluations, we seek to apply appropriate scaffolding, inference compute, and other augmentations to\nalso assess the capabilities of systems that will likely be produced with the model based on the specific\nthreats and risk scenarios we have identified for the T/CCL.",
+  "later_section": "1.3.2 Inherent Risk Assessment",
+  "confidence": "high",
+  "reason": "Same elicitation commitment on scaffolding and augmentations, expanded with inference compute."
+ },
+ {
+  "id": "gdm10",
+  "counterpart": "The Frontier Safety Framework will be reviewed at least once a year—more frequently if we have\nreasonable grounds to believe the adequacy of the Framework or our adherence to it has been\nmaterially undermined.",
+  "later_section": "5.1 Updates",
+  "confidence": "high",
+  "reason": "Same annual framework revision commitment, 'updated' reworded to 'reviewed'."
+ },
+ {
+  "id": "gdm11",
+  "counterpart": "Security mitigations have been applied to the model weights reaching the\nrecommended security level stated below, or we otherwise assess that the level of\nsecurity applied is adequate, e.g. based on mitigations already in place, if they match or\nexceed the level of security applied to other models with similar capabilities or risk\nprofiles, or we assess that the benefits of the open release of model weights outweigh\nthe risks.",
+  "later_section": "1.3.5 Risk Acceptance Determination",
+  "confidence": "high",
+  "reason": "Same security risk-acceptance criterion, with added 'mitigations already in place' example."
+ },
+ {
+  "id": "gdm12",
+  "counterpart": "frequently or adjust alert thresholds if the rate of progress suggests our safety buffer is no longer\nadequate.",
+  "later_section": "1.3.2 Inherent Risk Assessment",
+  "confidence": "high",
+  "reason": "Same commitment to run early warning evaluations more often or adjust alert thresholds; sentence split by page break."
+ },
+ {
+  "id": "gdm13",
+  "counterpart": "We apply safety and security mitigations throughout the lifecycle of our models, including as part of our\ntraining and model development phase and, where appropriate, before T/CCLs are reached as described\nin the process below.",
+  "later_section": "1.3.3 Risk Mitigation",
+  "confidence": "high",
+  "reason": "Same lifecycle mitigation commitment, CCLs extended to T/CCLs."
+ },
+ {
+  "id": "gdm14",
+  "counterpart": "The following mitigation process for external deployments will be applied to models reaching a misuse\nT/CCL, allowing for iterative and flexible tailoring of mitigations to each risk and use case.",
+  "later_section": "2.1.2 Deployment Mitigations",
+  "confidence": "high",
+  "reason": "Same deployment mitigation process for misuse models; parallel ML R&D process also retained in 3.1.2."
+ },
+ {
+  "id": "gdm15",
+  "counterpart": "Possesses\nmanipulative capabilities\nsufficient to enable it to\nsystematically and\nsubstantially change beliefs\nand behavior in identified\nhigh stakes contexts over\nthe course of interactions\nwith the model, reasonably\nresulting in additional\nexpected harm at severe\nscale.",
+  "later_section": "Table 2.2.3.a: Harmful Manipulation CCL and Security Mitigations",
+  "confidence": "high",
+  "reason": "Identical harmful manipulation CCL definition."
+ },
+ {
+  "id": "gdm16",
+  "counterpart": "When a model reaches an alert threshold for a CCL, we will assess the proximity of the model to the CCL\nand analyze the risk posed, involving internal and external experts as needed. This will inform the\nformulation and application of a response plan.",
+  "later_section": "1.3.3 Risk Mitigation",
+  "confidence": "high",
+  "reason": "Verbatim same alert-threshold response plan commitment."
+ },
+ {
+  "id": "gdm17",
+  "counterpart": "Post-deployment processes: our residual risk assessments, safety cases and mitigations may\nbe updated as a result of post-market monitoring, including information about incidents relating\nto our frontier safety risk domains.",
+  "later_section": "2.1.2 Deployment Mitigations",
+  "confidence": "high",
+  "reason": "Same post-deployment update step for misuse deployment mitigations, expanded."
+ },
+ {
+  "id": "gdm18",
+  "counterpart": "Pre-deployment review of residual risk assessment: external deployments of a model take\nplace only after the appropriate governance function determines the residual risk to be\nacceptable (including a safety case where a CCL has been reached).",
+  "later_section": "2.1.2 Deployment Mitigations",
+  "confidence": "high",
+  "reason": "Same pre-deployment governance review gate, now framed around residual risk assessment plus safety case."
+ },
+ {
+  "id": "gdm19",
+  "counterpart": "However, if we assess that risks stemming from the\nmodel remain acceptable and model capabilities remain distant from a CCL, the response plan may\ninclude updating the alert threshold to ensure the safety buffer remains appropriate.",
+  "later_section": "1.3.3 Risk Mitigation",
+  "confidence": "medium",
+  "reason": "Same object: response plan content when capabilities remain distant from a CCL; content changed."
+ },
+ {
+  "id": "gdm20",
+  "counterpart": "Central to our critical capability assessments are “early warning evaluations,” which we use to test the\nspecific threats and risk scenarios identified through our threat modeling, determine a model’s capability,\nand assess the proximity of the model to a T/CCL. For CCLs, we define “alert thresholds,” which may\ndraw on evaluation results, expert assessments, and other sources of information; that are designed to\nflag when a CCL may be reached before a critical capability assessment is conducted again.",
+  "later_section": "1.3.2 Inherent Risk Assessment",
+  "confidence": "high",
+  "reason": "Same early warning evaluations and alert thresholds commitment, expanded."
+ }
+]
