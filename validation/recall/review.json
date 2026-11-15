@@ -1,0 +1,70 @@
+{
+ "reviewer": "M.R. (author, lawyer)",
+ "date": "2026-11-15",
+ "method": "Not blind. The reviewer saw the upstream quote, its context in the later document, the upstream reason, and the nearest passage that each model run listed. He did not see the earlier document on the page.",
+ "options": {
+  "M": "real miss",
+  "E": "not new",
+  "C": "not a commitment",
+  "D": "unit difference",
+  "U": "cannot tell"
+ },
+ "decisions": [
+  {
+   "item": "m01",
+   "id": "google-eval-trigger-95a2",
+   "version": "google-v3.0",
+   "pair": "google-v2.0_v3.0",
+   "code": "M"
+  },
+  {
+   "item": "m02",
+   "id": "google-mitigation-dff1",
+   "version": "google-v3.0",
+   "pair": "google-v2.0_v3.0",
+   "code": "M"
+  },
+  {
+   "item": "m03",
+   "id": "google-eval-trigger-a5de",
+   "version": "google-v3.1",
+   "pair": "google-v3.0_v3.1",
+   "code": "M"
+  },
+  {
+   "item": "m04",
+   "id": "google-eval-scope-692d",
+   "version": "google-v3.1",
+   "pair": "google-v3.0_v3.1",
+   "code": "M"
+  },
+  {
+   "item": "m05",
+   "id": "xai-eval-scope-98f4",
+   "version": "xai-2026-06-30",
+   "pair": "xai-2025-12-30_2026-06-30",
+   "code": "M"
+  },
+  {
+   "item": "m06",
+   "id": "xai-mitigation-98bd",
+   "version": "xai-2026-06-30",
+   "pair": "xai-2025-12-30_2026-06-30",
+   "code": "M"
+  },
+  {
+   "item": "m07",
+   "id": "xai-mitigation-3bad",
+   "version": "xai-2026-06-30",
+   "pair": "xai-2025-12-30_2026-06-30",
+   "code": "M"
+  },
+  {
+   "item": "m08",
+   "id": "xai-governance-d834",
+   "version": "xai-2026-06-30",
+   "pair": "xai-2025-12-30_2026-06-30",
+   "code": "M"
+  }
+ ]
+}
