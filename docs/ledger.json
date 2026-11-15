@@ -26620,7 +26620,7 @@
         {
           "event_id": "anthropic-third-party-cef3@anthropic-v3.2",
           "version_id": "anthropic-v3.2",
-          "status": "weakened",
+          "status": "strengthened",
           "quote": "We will select external reviewers that: ● Have significant experience and expertise regarding evaluations for dangerous AI capabilities and propensities. It’s particularly important that they be knowledgeable about potential ways such evaluations might be misleading (for example, alignment faking).",
           "section": "3.6.1. Selecting external reviewers",
           "section_changed": false,
@@ -26637,8 +26637,8 @@
           "wayback_timestamp": null,
           "sha256": "5410e3d986cf6917e9105c3d3a661ccc91bfbcb8672bca18b7752ca394e3f2a1",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:kept"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-third-party-cef3@anthropic-v3.3",

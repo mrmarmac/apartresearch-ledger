@@ -49,7 +49,7 @@ The ledger adds four things:
 | OpenAI | 51 | 2 | 1 |
 
 Recorded changes from the upstream coding: 161 weakened, 69 strengthened, 41 removed, 156 added, 8 relocated.
-Recorded changes from the ledger's own extension of Anthropic (model-coded, then checked by a person): 15 weakened, 3 strengthened.
+Recorded changes from the ledger's own extension of Anthropic (model-coded, then checked by a person): 14 weakened, 4 strengthened.
 
 ### The Anthropic extension
 
@@ -61,13 +61,13 @@ The ledger traces them itself. Each entry says who decided it (`coded_by`).
 | 1 | Text match: the same words are in the next version | 490 entries, status kept |
 | 2 | Model, two runs: find the counterpart of a changed commitment | 85 steps. The two runs found the same passage in all 85. No removal. |
 | 3 | Model, two runs: code the direction of each changed pair | 47 entries: 31 kept, 14 weakened, 2 strengthened. The runs agree on 43. |
-| 3b | One person: blind check of the 47 entries, then a second look at the 13 without agreement | Final: 29 kept, 15 weakened, 3 strengthened. 2 entries are open and have `needs_review`. |
+| 3b | One person: blind check of the 47 entries, then a second look at the 13 without agreement | Final: 29 kept, 14 weakened, 4 strengthened. 1 entry is open and has `needs_review`. |
 | 4 | Join a chain that ends at v2.2 with the upstream chain that starts at v2.2, when the texts overlap one to one | 14 chains joined. The former ID is in `former_ids`. |
 
 - 68 Anthropic commitments now reach v3.4. 11 of them have a history from v1.0 (2023) to v3.4 (2026).
 - 25 chains overlap an upstream chain, but not one to one. They are not joined. See `related_ids`.
 - The ledger does not detect commitments that are new in v2.1, v2.2 or v3.1 to v3.4.
-- One person (the author) checked the 47 model-coded entries blind. He agreed with the model on 34 of 44 decided entries (77%). He then took a second look at the others, not blind. Where the two model runs agreed, his final code is the model code in each decided entry. The final code differs from model run 1 in 4 entries, and those are the 4 entries where the two model runs disagreed.
+- One person (the author) checked the 47 model-coded entries blind. He agreed with the model on 34 of 44 decided entries (77%). He then took a second look at the others, not blind. Where the two model runs agreed, his final code is the model code in 41 of 42 decided entries. The one error that passed two runs was a phrase that moved outside the text that the model got. Where the two runs disagreed (4 entries), the final code differs from model run 1 in each one.
 - Data and prompts: `data/extension/anthropic/`.
 
 ## Validation
@@ -88,7 +88,7 @@ Full results: [`validation.md`](validation.md).
 
 1. **The codes are not ground truth.** A language model helped with the upstream coding, and one human author adjudicated it. Read each status as a reference.
 2. **Anthropic is joined in part only.** The upstream coding cut the v2.0 text and the v2.2 text into different units. The ledger joined 14 chains and already had 20. 55 chains stop at v2.2 with status `not_traced`, and 25 of those overlap an upstream chain that the ledger could not join one to one.
-3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries. 2 of 47 are open. New commitments in those versions are not detected.
+3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries. 1 of 47 is open. New commitments in those versions are not detected.
 4. **Nothing after July 2026.** The ledger is a seed dataset. It does not update automatically.
 5. **Frameworks only.** Model cards, usage policies and violations are not in the ledger. Watchtower covers those.
 6. **Commitments only.** Admissions and descriptions are not commitments, and are not in the ledger.

@@ -181,17 +181,18 @@ Where the two model runs agree with each other (42 decided entries), the human a
 
 ### Adjudication: a second look at the entries without agreement
 
-**Method.** Second look, not blind. The adjudicator saw both texts, the context, the two model answers with reasons, and his first answer. Page: `data/extension/anthropic/adjudication_page.html`. 12 entries adjudicated. 1 held open.
+**Method.** Second look, not blind. The adjudicator saw both texts, the context, the two model answers with reasons, and his first answer. Page: `data/extension/anthropic/adjudication_page.html`. 13 entries adjudicated. 0 held open.
 
 | Group | Entries | Final = model run 1 | Final = model run 2 | Final = first human answer |
 |---|---|---|---|---|
-| The two model runs agreed | 7 | 7 | 7 | 0 |
+| The two model runs agreed | 8 | 7 | 7 | 0 |
 | The two model runs disagreed | 4 | 0 | 3 | 2 |
 
-- **Where the two model runs agreed, the adjudicated code is the model code in 7 of 7 adjudicated entries.** Together with the 34 entries where the blind check agreed, the model code stands in each decided entry where the two runs agreed.
-- **Each final code that differs from model run 1 is an entry where the two model runs disagreed** (4 of 4). The rule "run two times, send disagreements to a person" found each of them.
-- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in 9 of 11 adjudicated entries.
-- Not coded on second look: e16 (cannot tell). Held open: e19.
+- **Where the two model runs agreed, the adjudicated code is the model code in 7 of 8 adjudicated entries.** With the 34 entries where the blind check agreed, that is 41 of 42 decided entries.
+- **One error passed two model runs (e19).** The two runs coded weakened, because a phrase was gone from the start of the passage. The phrase had moved to a new final sentence, outside the text that the model got, and it was stronger there. The blind human answer (kept) was also wrong. The error was found only when the full section was read.
+- **Where the two model runs disagreed, the final code differs from model run 1 in 4 of 4 entries.** The rule "run two times, send disagreements to a person" finds most errors, but not each one.
+- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in 10 of 12 adjudicated entries.
+- Not coded on second look: e16 (cannot tell). Held open: none.
 - **The second look was not blind.** The adjudicator saw the model's reasons. Agreement with the model after that is weaker evidence than blind agreement.
 
 | Item | Commitment | Version | Model run 1 | Model run 2 | First human answer | Final |
@@ -201,7 +202,7 @@ Where the two model runs agree with each other (42 decided entries), the human a
 | e01 | `anthropic-security-06a3` | v3.3 | kept | kept | cannot tell | kept |
 | e09 | `anthropic-governance-d559` | v3.4 | weakened | weakened | strengthened | weakened |
 | e16 | `anthropic-security-d7b4` | v2.2 | kept | kept | strengthened | cannot tell |
-| e19 | `anthropic-third-party-cef3` | v3.2 | weakened | weakened | kept | weakened (held, not applied) |
+| e19 | `anthropic-third-party-cef3` | v3.2 | weakened | weakened | kept | strengthened |
 | e25 | `anthropic-eval-scope-704a` | v3.1 | weakened | kept | strengthened | strengthened |
 | e26 | `anthropic-consequence-3e7e` | v3.1 | kept | strengthened | not the same thing | strengthened |
 | e34 | `anthropic-eval-trigger-5482` | v2.1 | kept | weakened | cannot tell | weakened |

@@ -42,9 +42,9 @@
    "item": "e19",
    "id": "anthropic-third-party-cef3",
    "version": "v3.2",
-   "final": "W",
-   "basis": "Adjudication page. Not applied: the assistant asked the adjudicator to confirm this answer.",
-   "held": true
+   "final": "S",
+   "basis": "In conversation. The page answer was weakened. The assistant showed the v3.1 and v3.2 wording (consultation with the LTBT became approval of the LTBT), and the adjudicator changed the answer to strengthened.",
+   "page_answer": "W"
   },
   {
    "item": "e25",

@@ -390,9 +390,12 @@ def human_report(folder):
             f"| The two model runs disagreed | {len(runs_differ)} | {sum(d['final'] == one[k(d)]['outcome'] for d in runs_differ)} | {sum(d['final'] == two[k(d)]['outcome'] for d in runs_differ)} | {sum(d['final'] == first[k(d)] for d in runs_differ)} |",
             "",
             f"- **Where the two model runs agreed, the adjudicated code is the model code in {sum(d['final'] == one[k(d)]['outcome'] for d in runs_agree)} of {len(runs_agree)} adjudicated entries.** "
-            "Together with the 34 entries where the blind check agreed, the model code stands in each decided entry where the two runs agreed.",
-            f"- **Each final code that differs from model run 1 is an entry where the two model runs disagreed** ({sum(d['final'] != one[k(d)]['outcome'] for d in runs_differ)} of {len(runs_differ)}). "
-            "The rule \"run two times, send disagreements to a person\" found each of them.",
+            f"With the 34 entries where the blind check agreed, that is {34 + sum(d['final'] == one[k(d)]['outcome'] for d in runs_agree)} of {34 + len(runs_agree)} decided entries.",
+            "- **One error passed two model runs (e19).** The two runs coded weakened, because a phrase was gone from the start of the passage. "
+            "The phrase had moved to a new final sentence, outside the text that the model got, and it was stronger there. The blind human answer (kept) was also wrong. "
+            "The error was found only when the full section was read.",
+            f"- **Where the two model runs disagreed, the final code differs from model run 1 in {sum(d['final'] != one[k(d)]['outcome'] for d in runs_differ)} of {len(runs_differ)} entries.** "
+            "The rule \"run two times, send disagreements to a person\" finds most errors, but not each one.",
             "- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in "
             f"{sum(d['final'] != first[k(d)] for d in coded)} of {len(coded)} adjudicated entries.",
             f"- Not coded on second look: {', '.join(d['item'] + ' (' + names[d['final']] + ')' for d in done if d['final'] not in 'RSW') or 'none'}. "
