@@ -38,7 +38,9 @@ def fetch():
 
 
 def do_build():
-    ledger = build(Corpus(CACHE), extension_folder=os.path.join(ROOT, "data", "extension", "anthropic"))
+    with open(os.path.join(ROOT, "data", "reuploads.json"), encoding="utf-8") as handle:
+        found = json.load(handle)["reuploads"]
+    ledger = build(Corpus(CACHE), extension_folder=os.path.join(ROOT, "data", "extension", "anthropic"), reuploads=found)
     ext = ledger.pop("_extension_stats")
     if ext:
         print("extension:", ", ".join(f"{k}={v}" for k, v in sorted(ext.items())))

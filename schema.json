@@ -85,7 +85,8 @@
               "label": { "type": "string" },
               "sha256": { "$ref": "#/$defs/sha256" },
               "source_url": { "type": "string" },
-              "wayback_timestamp": { "type": ["string", "null"] }
+              "wayback_timestamp": { "type": ["string", "null"] },
+              "note": { "type": "string" }
             }
           }
         }

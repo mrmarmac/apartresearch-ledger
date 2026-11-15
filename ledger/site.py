@@ -304,10 +304,12 @@ def _entry_html(c, i, versions):
         parts.append('<p class="note"><b>Coded by a model.</b> Two runs of a language model found this counterpart and coded this change.' + tail + '</p>')
     if h.get("gap_before"):
         parts.append('<p class="note"><b>Gap.</b> One or more versions before this entry are not traced.</p>')
+    later = [r for r in v.get("reuploads", []) if r.get("note")]
     src = [("Section", E(h["section"]) + (" (heading changed)" if h.get("section_changed") else "")) if h["section"] else None,
            ("Source", f'<a href="{E(h["source_url"])}">{E(_short(h["source_url"], 70))}</a>'
                       + (f' · <a href="{E(_wayback(h))}">Wayback</a>' if _wayback(h) else "")),
            ("SHA-256", f'<span class="mono">{h["sha256"]}</span>'),
+           ("Later file", "<br>".join(f'<a href="{E(r["source_url"])}">{E(_short(r["source_url"], 70))}</a> · SHA-256 <span class="mono">{r["sha256"][:16]}…</span><br>{E(r["note"])}' for r in later)) if later else None,
            ("Quote check", "Found in the hashed document" if h.get("quote_verified") else "Not found by the automatic check") if h["quote"] else None,
            ("Coded by", E(config.CODED_BY_LABEL[h.get("coded_by", "upstream")])),
            ("Confidence", E(h["confidence"])) if h.get("confidence") else None,

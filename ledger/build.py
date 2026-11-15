@@ -245,7 +245,7 @@ def build_lab(corpus, provider, lab):
     return versions, commitments, coverage
 
 
-def build(corpus, labs=None, extension_folder=None):
+def build(corpus, labs=None, extension_folder=None, reuploads=None):
     labs = labs or config.LABS
     ledger = {
         "schema_version": config.SCHEMA_VERSION,
@@ -270,6 +270,11 @@ def build(corpus, labs=None, extension_folder=None):
     assert len(ids) == len(set(ids)), "commitment IDs must be unique"
     for cov in ledger["labs"]:
         cov["extended_pairs"] = []
+    if reuploads:
+        by_id = {v["version_id"]: v for v in ledger["versions"]}
+        for item in reuploads:
+            item = dict(item)
+            by_id[item.pop("version_id")].setdefault("reuploads", []).append(item)
     from . import extend
     ledger["_extension_stats"] = dict(extend.apply(ledger, corpus, extension_folder, _tags)) if extension_folder else {}
     if not extension_folder:

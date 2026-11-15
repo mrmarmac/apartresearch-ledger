@@ -89,7 +89,7 @@ Full results: [`validation.md`](validation.md).
 A GitHub Action runs one time each day. It gets 10 addresses (framework files and the pages that list them) and compares a SHA-256 with the last one.
 If a hash is different, it opens an issue in this repository. Details and limits: [`watch/README.md`](watch/README.md).
 
-First result (15 November 2026): 4 of 5 framework files are identical to the corpus files. The xAI framework dated 30 June 2026 is a different file at a new address ([issue 1](https://github.com/mrmarmac/apartresearch-ledger/issues/1)). Nobody compared the words yet.
+First result (15 November 2026): 4 of 5 framework files are identical to the corpus files. The xAI framework dated 30 June 2026 is a different file at a new address ([issue 1](https://github.com/mrmarmac/apartresearch-ledger/issues/1)). The words are identical. The PDF title changed: the earlier file had the title "Privileged/Confidential DRAFT working FRAMEWORK DOC".
 
 ## Known limits
 

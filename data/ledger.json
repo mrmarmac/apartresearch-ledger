@@ -187,7 +187,16 @@
       "publication_date": "2026-06-30",
       "source_url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf",
       "wayback_timestamp": null,
-      "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53"
+      "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53",
+      "reuploads": [
+        {
+          "label": "2026-06-30-reupload-found-20261115",
+          "sha256": "4be128b1d79757b0d052990f995024126f3bcc9d72004ff245df82a993df2995",
+          "source_url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-f1f0c916.pdf",
+          "wayback_timestamp": null,
+          "note": "Found by the watcher on 15 November 2026. The corpus address gives HTTP 404. The text is identical to the corpus file (3,294 words, no difference). The PDF title changed from 'Privileged/Confidential DRAFT working FRAMEWORK DOC' to 'xAI Frontier Artificial Intelligence Framework (June 30, 2026)'."
+        }
+      ]
     },
     {
       "version_id": "anthropic-v1.0",

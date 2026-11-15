@@ -30,7 +30,7 @@ A difference in that first run means that the developer replaced the file after 
 | OpenAI Preparedness page | HTTP 403. The site blocks the watcher. |
 | Google DeepMind Frontier Safety page | No document links found in the page source. This entry does not detect a change. |
 
-The xAI result shows that the bytes are different. It does not show that the words are different. Nobody compared the two files yet.
+**The xAI files were compared on 15 November 2026. The words are identical** (3,294 words, no difference). The PDF title changed: the corpus file has the title "Privileged/Confidential DRAFT working FRAMEWORK DOC", and the new file has the title "xAI Frontier Artificial Intelligence Framework (June 30, 2026)". The new file is recorded in `data/reuploads.json`.
 
 ## Limits
 
