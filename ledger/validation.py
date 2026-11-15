@@ -302,6 +302,10 @@ def score(corpus, val_dir, model_name):
     if os.path.exists(extra):
         with open(extra, encoding="utf-8") as handle:
             lines += ["", handle.read().rstrip()]
+    extra = os.path.join(val_dir, "meta.md")
+    if os.path.exists(extra):
+        with open(extra, encoding="utf-8") as handle:
+            lines += ["", handle.read().rstrip()]
     out = os.path.join(os.path.dirname(val_dir), "validation.md")
     with open(out, "w", encoding="utf-8") as handle:
         handle.write("\n".join(lines) + "\n")

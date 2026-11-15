@@ -62,7 +62,7 @@ The ledger traces them itself. Each entry says who decided it (`coded_by`).
 | 1 | Text match: the same words are in the next version | 490 entries, status kept |
 | 2 | Model, two runs: find the counterpart of a changed commitment | 85 steps. The two runs found the same passage in all 85. No removal. |
 | 3 | Model, two runs: code the direction of each changed pair | 47 entries: 31 kept, 14 weakened, 2 strengthened. The runs agree on 43. |
-| 3b | One person: blind check of the 47 entries, then a second look at the 13 without agreement | Final: 29 kept, 14 weakened, 4 strengthened. 1 entry is open and has `needs_review`. |
+| 3b | One person: blind check of the 47 entries, then a second look at the 13 without agreement | Final: 29 kept, 14 weakened, 4 strengthened. No entry is open. For the last entry, the person compared the two PDFs. |
 | 4 | Join a chain that ends at v2.2 with the upstream chain that starts at v2.2, when the texts overlap one to one | 14 chains joined. The former ID is in `former_ids`. |
 
 - 68 Anthropic commitments now reach v3.4. 11 of them have a history from v1.0 (2023) to v3.4 (2026).
@@ -100,7 +100,7 @@ Meta published v2.1 after the upstream corpus was frozen. The ledger traces v2 â
 - **Alignment test.** Given one commitment and the full next version, the model found the same counterpart as upstream, or correctly found none, for 48 of 60 items (80%). Plain text matching: 37 of 60 (62%). Google DeepMind v3.0 to v3.1: 20 of 20. OpenAI Beta to v2, a full rewrite: 10 of 20.
 - **Watchtower check.** The ledger has 14 of the 17 sub-changes in the Watchtower entry for the xAI revision of June 2026.
 - **Quote check.** 1,459 of 1,475 quotes (99%) are in the text extraction of the hashed source document.
-- **Link check.** 21 of 23 source addresses give a file with the recorded SHA-256 (15 November 2026). The xAI address of 30 June 2026 gives HTTP 404, because xAI published the file again at a new address. The archive address for Meta v1.1 gives different bytes; nobody has examined why. See [`validation/links.md`](validation/links.md).
+- **Link check.** 21 of 23 source addresses give a file with the recorded SHA-256 (15 November 2026). The xAI address of 30 June 2026 gives HTTP 404, because xAI published the file again at a new address. The archive address for Meta v1.1 gives different bytes. A person opened it and saw the framework PDF. The cause of the different hash is not known. See [`validation/links.md`](validation/links.md).
 - **Tests.** `python run.py test` checks the ID rules, the history order, the hashes and the feed. One known defect: `google-eval-scope-6326` starts with a change, because the ledger did not find its earlier row.
 - **Count check.** The ledger has one event for each of the 636 upstream rows of the 5 labs.
 
@@ -115,7 +115,7 @@ First result (15 November 2026): 4 of 5 framework files are identical to the cor
 
 1. **The codes are not ground truth.** A language model helped with the upstream coding, and one human author adjudicated it. Read each status as a reference.
 2. **Anthropic is joined in part only.** The upstream coding cut the v2.0 text and the v2.2 text into different units. The ledger joined 14 chains and already had 20. 55 chains stop at v2.2 with status `not_traced`, and 25 of those overlap an upstream chain that the ledger could not join one to one.
-3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries. 1 of 47 is open. New commitments in those versions are not detected.
+3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries. The pair v2.0 â†’ v2.1 has no official redline from Anthropic. New commitments in those versions are not detected.
 3a. **Meta v2.1 is traced by the ledger, not by upstream.** One person confirmed the changes, but he saw the model answers first. The search for new commitments is not tested against a reference, so its miss rate is not known.
 4. **Nothing after July 2026.** The ledger is a seed dataset. A daily watcher reports when a framework file or page is different (see `watch/`), but a person must then trace the new version.
 5. **Frameworks only.** Model cards, usage policies and violations are not in the ledger. Watchtower covers those.
@@ -179,7 +179,7 @@ by Louis Yiven Zhu, [DOI 10.5281/zenodo.22670700](https://doi.org/10.5281/zenodo
 the data for [Silent Revision, arXiv:2609.08789](https://arxiv.org/abs/2609.08789). That coding is CC BY 4.0.
 
 - **Data** (`data/`, `validation/`, `docs/ledger.json`): CC BY 4.0. Credit this repository and the upstream corpus.
-- **Code:** MIT.
+- **Code:** MIT. See [`LICENSE`](LICENSE). Data licence: [`LICENSE-DATA.md`](LICENSE-DATA.md).
 - **Quotes** from provider documents are the property of their publishers. The ledger does not copy the documents. It links to them by URL and SHA-256.
 
-The idea for a commitment-level record comes from [Watchtower](https://www.themidasproject.com/watchtower) by The Midas Project. This project is independent of The Midas Project.
+Commitment Ledger builds on [Watchtower](https://www.themidasproject.com/watchtower) by The Midas Project. It extends the Watchtower idea to a record for each commitment. The Midas Project did not take part in this work and has not endorsed it.

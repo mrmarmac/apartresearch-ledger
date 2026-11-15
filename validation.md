@@ -185,14 +185,14 @@ Where the two model runs agree with each other (42 decided entries), the human a
 
 | Group | Entries | Final = model run 1 | Final = model run 2 | Final = first human answer |
 |---|---|---|---|---|
-| The two model runs agreed | 8 | 7 | 7 | 0 |
+| The two model runs agreed | 9 | 8 | 8 | 0 |
 | The two model runs disagreed | 4 | 0 | 3 | 2 |
 
-- **Where the two model runs agreed, the adjudicated code is the model code in 7 of 8 adjudicated entries.** With the 34 entries where the blind check agreed, that is 41 of 42 decided entries.
+- **Where the two model runs agreed, the adjudicated code is the model code in 8 of 9 adjudicated entries.** With the 34 entries where the blind check agreed, that is 42 of 43 decided entries.
 - **One error passed two model runs (e19).** The two runs coded weakened, because a phrase was gone from the start of the passage. The phrase had moved to a new final sentence, outside the text that the model got, and it was stronger there. The blind human answer (kept) was also wrong. The error was found only when the full section was read.
 - **Where the two model runs disagreed, the final code differs from model run 1 in 4 of 4 entries.** The rule "run two times, send disagreements to a person" finds most errors, but not each one.
-- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in 10 of 12 adjudicated entries.
-- Not coded on second look: e16 (cannot tell). Held open: none.
+- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in 11 of 13 adjudicated entries.
+- Not coded on second look: none. Held open: none.
 - **The second look was not blind.** The adjudicator saw the model's reasons. Agreement with the model after that is weaker evidence than blind agreement.
 
 | Item | Commitment | Version | Model run 1 | Model run 2 | First human answer | Final |
@@ -201,7 +201,7 @@ Where the two model runs agree with each other (42 decided entries), the human a
 | e29 | `anthropic-security-8ada` | v2.2 | weakened | weakened | strengthened | weakened |
 | e01 | `anthropic-security-06a3` | v3.3 | kept | kept | cannot tell | kept |
 | e09 | `anthropic-governance-d559` | v3.4 | weakened | weakened | strengthened | weakened |
-| e16 | `anthropic-security-d7b4` | v2.2 | kept | kept | strengthened | cannot tell |
+| e16 | `anthropic-security-d7b4` | v2.2 | kept | kept | strengthened | kept |
 | e19 | `anthropic-third-party-cef3` | v3.2 | weakened | weakened | kept | strengthened |
 | e25 | `anthropic-eval-scope-704a` | v3.1 | weakened | kept | strengthened | strengthened |
 | e26 | `anthropic-consequence-3e7e` | v3.1 | kept | strengthened | not the same thing | strengthened |
