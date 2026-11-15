@@ -276,6 +276,28 @@ def apply(ledger, corpus, folder, tags_for):
                         entry["needs_review"] = True
                     stats["human:" + entry["human_check"].split(":")[0]] += 1
 
+    # 4c. Adjudication: a second look by a person, not blind. The final code replaces the model code.
+    final = _load(folder, "adjudication.json")
+    if final:
+        names = {"R": "kept", "S": "strengthened", "W": "weakened"}
+        decided = {(d["id"], vid(d["version"])): d for d in final["decisions"]}
+        for item in ledger["commitments"]:
+            for old in [item["id"]] + item["former_ids"]:
+                for entry in item["history"]:
+                    decision = decided.get((old, entry["version_id"]))
+                    if decision is None or entry["coded_by"] != "model":
+                        continue
+                    code = decision["final"]
+                    if code in names:
+                        entry["status"] = names[code]
+                        entry["material"] = code != "R"
+                        entry["human_check"] = "adjudicated"
+                        entry["needs_review"] = False
+                    else:
+                        entry["human_check"] = "adjudicated:" + {"N": "not_same_thing", "U": "cannot_tell"}[code]
+                        entry["needs_review"] = True
+                    stats["adjudicated"] += 1
+
     # 5. Recompute the fields that depend on the history.
     last_traced = vid(FAMILIES["B"][-1])
     for item in ledger["commitments"]:

@@ -287,7 +287,11 @@ def _entry_html(c, i, versions):
         parts.append(f'<p class="note"><b>Disclosure:</b> {E(config.DISCLOSURE_LABEL[h["disclosure"]])}</p>')
     if h.get("coded_by") == "model":
         check = h.get("human_check")
-        if check == "agrees":
+        if check == "adjudicated":
+            tail = " One person checked it blind and did not agree with the model. He then took a second look, not blind. The status here is his final code."
+        elif check and check.startswith("adjudicated:"):
+            tail = " <b>One person took a second look and did not give a code (" + E(check.split(":")[1].replace("_", " ")) + "). This entry needs review.</b>"
+        elif check == "agrees":
             tail = " One person checked it blind and gave the same code."
         elif check and check.startswith("disagrees:"):
             tail = f' <b>One person checked it blind and coded it "{E(check.split(":")[1])}". Not resolved. This entry needs review.</b>'

@@ -11356,8 +11356,8 @@
           "wayback_timestamp": null,
           "sha256": "4807f3970c76968a75a6dffa55d8ffe547014522b63c67e261cd02f7b6fc1e39",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:strengthened"
+          "needs_review": false,
+          "human_check": "adjudicated"
         }
       ],
       "former_ids": [],
@@ -19713,8 +19713,8 @@
           "wayback_timestamp": null,
           "sha256": "b7e7cc1e72e9371949415522ae3c9e61103cc739c5df64579af32dd941624f42",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:strengthened"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-consequence-9c90@anthropic-v3.4",

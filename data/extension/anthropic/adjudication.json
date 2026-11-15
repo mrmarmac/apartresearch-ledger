@@ -1,0 +1,9 @@
+{
+ "adjudicator": "M.R. (author, lawyer)",
+ "date": "2026-11-15",
+ "method": "Second look, not blind. The adjudicator saw both texts, the context, the two model answers with reasons, and his first answer.",
+ "decisions": [
+  {"item": "e14", "id": "anthropic-consequence-9c90", "version": "v3.3", "final": "W", "basis": "In conversation: the trigger is now harder to reach."},
+  {"item": "e29", "id": "anthropic-security-8ada", "version": "v2.2", "final": "W", "basis": "In conversation: the exclusion is wider."}
+ ]
+}
