@@ -204,9 +204,10 @@ def render_index(ledger, labs):
         n = sum(1 for c in items if c["lab"] == cov["lab"])
         pairs = ", ".join(f'{E(vmap[a]["label"])} → {E(vmap[b]["label"])}' for a, b in cov["traced_pairs"])
         gaps = ", ".join(f'{E(vmap[a]["label"])} → {E(vmap[b]["label"])}' for a, b in cov["untraced_pairs"]) or "None"
-        cov_rows.append(f'<tr><th scope="row"><a href="?lab={cov["lab"]}">{E(cov["name"])}</a></th><td>{n}</td><td>{pairs}</td><td>{gaps}</td></tr>')
+        ext = ", ".join(f'{E(vmap[a]["label"])} → {E(vmap[b]["label"])}' for a, b in cov.get("extended_pairs", [])) or "None"
+        cov_rows.append(f'<tr><th scope="row"><a href="?lab={cov["lab"]}">{E(cov["name"])}</a></th><td>{n}</td><td>{pairs}</td><td>{ext}</td><td>{gaps}</td></tr>')
     coverage = ('<details class="cov"><summary>Coverage: which version pairs are traced</summary><div class="scroll"><table>'
-                '<thead><tr><th>Lab</th><th>Commitments</th><th>Traced</th><th>In the corpus, not traced</th></tr></thead><tbody>'
+                '<thead><tr><th>Lab</th><th>Commitments</th><th>Traced by upstream</th><th>Traced by the ledger (text and model)</th><th>Not traced</th></tr></thead><tbody>'
                 + "".join(cov_rows) + '</tbody></table></div>'
                 '<p class="note">A commitment that is "In force" is in the last traced version. Versions after July 2026 are not in the ledger.</p></details>')
     n_events = sum(1 for c in items for h in c["history"] if h["status"] in config.FEED_STATUSES)
@@ -280,9 +281,13 @@ def _entry_html(c, i, versions):
     if h.get("mixed"):
         parts.append('<p class="note"><b>Mixed change.</b> Stronger in one dimension and weaker in a different dimension. The status is then Weakened.</p>')
     if h.get("rationale") and h["status"] not in ("kept", "baseline"):
-        parts.append(f'<p class="note"><b>Why this status (upstream coder):</b> {E(h["rationale"])}</p>')
+        who = "model" if h.get("coded_by") == "model" else "upstream coder"
+        parts.append(f'<p class="note"><b>Why this status ({who}):</b> {E(h["rationale"])}</p>')
     if h.get("disclosure") in config.DISCLOSURE_LABEL and h["status"] in config.FEED_STATUSES:
         parts.append(f'<p class="note"><b>Disclosure:</b> {E(config.DISCLOSURE_LABEL[h["disclosure"]])}</p>')
+    if h.get("coded_by") == "model":
+        parts.append('<p class="note"><b>Coded by a model.</b> Two runs of a language model found this counterpart and coded this change. No person checked it.'
+                     + (' <b>The two runs did not agree. This entry needs review.</b>' if h.get("needs_review") else '') + '</p>')
     if h.get("gap_before"):
         parts.append('<p class="note"><b>Gap.</b> One or more versions before this entry are not traced.</p>')
     src = [("Section", E(h["section"]) + (" (heading changed)" if h.get("section_changed") else "")) if h["section"] else None,
@@ -290,6 +295,7 @@ def _entry_html(c, i, versions):
                       + (f' · <a href="{E(_wayback(h))}">Wayback</a>' if _wayback(h) else "")),
            ("SHA-256", f'<span class="mono">{h["sha256"]}</span>'),
            ("Quote check", "Found in the hashed document" if h.get("quote_verified") else "Not found by the automatic check") if h["quote"] else None,
+           ("Coded by", E(config.CODED_BY_LABEL[h.get("coded_by", "upstream")])),
            ("Confidence", E(h["confidence"])) if h.get("confidence") else None,
            ("Upstream row", f'<span class="mono">{E(h["source_row"])}</span>') if h.get("source_row") else None,
            ("Event ID", f'<span class="mono">{E(h["event_id"])}</span>')]
@@ -310,12 +316,18 @@ def render_commitment(c, versions, labs, later=False):
         headline = f'Last traced on {_date(versions[last["version_id"]]["publication_date"])}'
     tags = "".join(f'<a class="chip" href="../index.html?tag={E(t)}">{E(t)}</a>' for t in c["tags"])
     gone = " gone" if c["current_status"] == "removed" else ""
+    ids_note = ""
+    if c.get("former_ids"):
+        ids_note += '<p class="note"><b>Former ID:</b> ' + ", ".join(f'<span class="mono">{E(i)}</span>' for i in c["former_ids"]) + ". Two chains were joined into this one.</p>"
+    if c.get("related_ids"):
+        ids_note += '<p class="note"><b>Overlapping text:</b> ' + ", ".join(f'<a class="mono" href="{E(i)}.html">{E(i)}</a>' for i in c["related_ids"]) + ". These can be the same promise.</p>"
     body = f"""
 <p class="rmeta"><a href="../index.html?lab={c["lab"]}">{E(labs[c["lab"]])}</a><span>·</span><span>{E(config.TOPIC_LABEL[c["topic"]])}</span></p>
 <h1 class="quote{gone}" style="font-weight:400">{E(c["text"])}</h1>
 <div class="idline">{_badge(c["current_status"])}<span>{headline}</span></div>
 <div class="idline"><span class="mono" id="cid">{c["id"]}</span><button class="copy" type="button" data-copy="{c["id"]}">Copy ID</button>{_strip(c["history"])}</div>
 <div class="chips">{tags}</div>
+{ids_note}
 <h2>History, oldest first</h2>
 <ol class="timeline">{"".join(_entry_html(c, i, versions) for i in range(len(c["history"])))}</ol>
 <script>
@@ -346,7 +358,8 @@ def render_feed(ledger, labs):
             desc.append(f"<p><b>Before:</b> {E(before)}</p>")
         desc.append(f"<p><b>Now:</b> {E(h['quote'])}</p>" if h["quote"] else "<p><b>Now:</b> no counterpart in this version.</p>")
         desc.append(f"<p>{E(v['document'])}, version {E(v['label'])}. SHA-256 {h['sha256']}.</p>")
-        title = f"{labs[c['lab']]}: {config.STATUS_LABEL[h['status']]}: {_short(h['quote'] or before or c['text'], 90)}"
+        marker = " (model-coded)" if h.get("coded_by") == "model" else ""
+        title = f"{labs[c['lab']]}: {config.STATUS_LABEL[h['status']]}{marker}: {_short(h['quote'] or before or c['text'], 90)}"
         items.append(
             "<item>"
             f"<title>{x(title)}</title>"
@@ -389,6 +402,11 @@ def render(ledger, root, out):
     write("index.html", render_index(ledger, labs))
     for c in ledger["commitments"]:
         write(os.path.join("c", c["id"] + ".html"), render_commitment(c, versions, labs, later_untraced[c["lab"]]))
+    for c in ledger["commitments"]:
+        for old in c.get("former_ids", []):
+            body = (f'<h1>This ID was joined into a different commitment</h1><p class="lede"><span class="mono">{E(old)}</span> is now '
+                    f'<a class="mono" href="{c["id"]}.html">{c["id"]}</a>. The ledger does not use the former ID again.</p>')
+            write(os.path.join("c", old + ".html"), _page(f"{old} · {config.SITE_TITLE}", body, "../", f"Former ID {old}, now {c['id']}."))
     write("feed.xml", render_feed(ledger, labs))
     write(".nojekyll", "")
     shutil.copyfile(os.path.join(root, "data", "ledger.json"), os.path.join(out, "ledger.json"))

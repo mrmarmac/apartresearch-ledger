@@ -37,7 +37,10 @@ def fetch():
 
 
 def do_build():
-    ledger = build(Corpus(CACHE))
+    ledger = build(Corpus(CACHE), extension_folder=os.path.join(ROOT, "data", "extension", "anthropic"))
+    ext = ledger.pop("_extension_stats")
+    if ext:
+        print("extension:", ", ".join(f"{k}={v}" for k, v in sorted(ext.items())))
     os.makedirs(os.path.dirname(LEDGER), exist_ok=True)
     with open(LEDGER, "w", encoding="utf-8") as handle:
         json.dump(ledger, handle, indent=2, ensure_ascii=False)

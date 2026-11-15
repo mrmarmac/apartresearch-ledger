@@ -108,3 +108,9 @@ DISCLOSURE_LABEL = {
 }
 # Events that go into the feed. "kept" and "baseline" are not changes.
 FEED_STATUSES = ("added", "strengthened", "weakened", "removed", "relocated")
+
+CODED_BY_LABEL = {
+    "upstream": "Upstream coding (Zhu, 2026)",
+    "text_match": "Text match: the same words are in this version",
+    "model": "Model, two runs. Not checked by a person",
+}

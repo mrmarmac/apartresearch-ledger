@@ -31,7 +31,8 @@
         ]
       ],
       "last_traced_version_id": "xai-2026-06-30",
-      "untraced_pairs": []
+      "untraced_pairs": [],
+      "extended_pairs": []
     },
     {
       "lab": "anthropic",
@@ -72,7 +73,8 @@
           "anthropic-v3.3",
           "anthropic-v3.4"
         ]
-      ]
+      ],
+      "extended_pairs": []
     },
     {
       "lab": "google",
@@ -93,7 +95,8 @@
           "google-v1.0",
           "google-v2.0"
         ]
-      ]
+      ],
+      "extended_pairs": []
     },
     {
       "lab": "meta",
@@ -105,7 +108,8 @@
         ]
       ],
       "last_traced_version_id": "meta-v2",
-      "untraced_pairs": []
+      "untraced_pairs": [],
+      "extended_pairs": []
     },
     {
       "lab": "openai",
@@ -117,7 +121,8 @@
         ]
       ],
       "last_traced_version_id": "openai-v2",
-      "untraced_pairs": []
+      "untraced_pairs": [],
+      "extended_pairs": []
     }
   ],
   "versions": [
@@ -218,7 +223,9 @@
           "source_row": "XAI-1-037",
           "source_url": "https://web.archive.org/web/20250210221647id_/https://x.ai/documents/2025.02.10-RMF-Draft.pdf",
           "wayback_timestamp": "20250210221647",
-          "sha256": "5ba8859b6552d5d3acc929ed22cfb7f0459deb4cf076d5d70c8cf9b9e8ee050f"
+          "sha256": "5ba8859b6552d5d3acc929ed22cfb7f0459deb4cf076d5d70c8cf9b9e8ee050f",
+          "coded_by": "upstream",
+          "needs_review": false
         },
         {
           "event_id": "xai-governance-673f@xai-draft-2025-02-20",
@@ -238,7 +245,9 @@
           "source_row": "XAI-1-037",
           "source_url": "https://data.x.ai/2025.02.20-RMF-Draft.pdf",
           "wayback_timestamp": null,
-          "sha256": "89fafebb73757def5a9068105554e68799e3dcce55374a4179b7a62559b6bef9"
+          "sha256": "89fafebb73757def5a9068105554e68799e3dcce55374a4179b7a62559b6bef9",
+          "coded_by": "upstream",
+          "needs_review": false
         },
         {
           "event_id": "xai-governance-673f@xai-2025-08-20",
@@ -258,7 +267,9 @@
           "source_row": "XAI-2-037",
           "source_url": "https://web.archive.org/web/20250821224133id_/https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf",
           "wayback_timestamp": "20250821224133",
-          "sha256": "31eae94d448b5b359220cbb93673e22b11adc9e27b8e8eb87e7646521f322f8a"
+          "sha256": "31eae94d448b5b359220cbb93673e22b11adc9e27b8e8eb87e7646521f322f8a",
+          "coded_by": "upstream",
+          "needs_review": false
         },
         {
           "event_id": "xai-governance-673f@xai-2025-12-30",
@@ -278,7 +289,9 @@
           "source_row": "XAI-3-038",
           "source_url": "https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf",
           "wayback_timestamp": null,
-          "sha256": "aa01669c19fca50c85323595141d08f98076cf0c48ed8f4a114ad6420c1a1012"
+          "sha256": "aa01669c19fca50c85323595141d08f98076cf0c48ed8f4a114ad6420c1a1012",
+          "coded_by": "upstream",
+          "needs_review": false
         },
         {
           "event_id": "xai-governance-673f@xai-2026-06-30",
@@ -298,9 +311,13 @@
           "source_row": "XAI-4-042",
           "source_url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf",
           "wayback_timestamp": null,
-          "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53"
+          "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53",
+          "coded_by": "upstream",
+          "needs_review": false
         }
-      ]
+      ],
+      "former_ids": [],
+      "related_ids": []
     }
   ]
 }
