@@ -48,7 +48,8 @@
       "lab": "xai",
       "name": "Frontier Artificial Intelligence Framework, 30 June 2026, file",
       "kind": "file",
-      "url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf"
+      "url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-f1f0c916.pdf",
+      "note": "The corpus address (...-99c40684.pdf) gave HTTP 404 on 15 Nov 2026. The xAI safety page then linked this address. The first hash in state.json is from the corpus file."
     },
     {
       "id": "xai-safety-page",

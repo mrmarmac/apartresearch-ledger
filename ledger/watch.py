@@ -19,7 +19,8 @@ import urllib.request
 
 USER_AGENT = "commitment-ledger-watcher/0.1 (+https://github.com/mrmarmac/apartresearch-ledger)"
 DOC_LINK = re.compile(r"""(?:href|src)\s*=\s*["']([^"'#]+)["']""", re.I)
-DOC_HINT = re.compile(r"\.pdf(\?|$)|/files/|static-resource|/static/|framework|scaling-policy|preparedness", re.I)
+# Only links that point at a document file. Navigation links change too often.
+DOC_HINT = re.compile(r"\.pdf(\?|$)|/static-resource/|/static/[^/]*framework", re.I)
 FAILS_BEFORE_REPORT = 3
 
 
