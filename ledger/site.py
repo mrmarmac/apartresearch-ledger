@@ -287,8 +287,14 @@ def _entry_html(c, i, versions):
         parts.append(f'<p class="note"><b>Disclosure:</b> {E(config.DISCLOSURE_LABEL[h["disclosure"]])}</p>')
     if h.get("coded_by") == "model":
         check = h.get("human_check")
-        if check == "adjudicated":
-            tail = " One person checked it blind and did not agree with the model. He then took a second look, not blind. The status here is his final code."
+        if h["status"] == "added" and check != "adjudicated":
+            runs = h.get("found_by_runs", 1)
+            parts.append(f'<p class="note"><b>Candidate for a new commitment.</b> {"Two runs" if runs == 2 else "One of two runs"} of a language model found this passage and found no counterpart in the version before. <b>No person confirmed it. This entry needs review.</b></p>')
+            check = "skip"
+        if check == "skip":
+            pass
+        elif check == "adjudicated":
+            tail = " One person then reviewed it with the model's reasons in view (not blind). The status here is his final code."
         elif check and check.startswith("adjudicated:"):
             tail = " <b>One person took a second look and did not give a code (" + E(check.split(":")[1].replace("_", " ")) + "). This entry needs review.</b>"
         elif check == "agrees":
@@ -301,7 +307,9 @@ def _entry_html(c, i, versions):
             tail = " <b>One person checked it blind and could not decide from the extracted text. This entry needs review.</b>"
         else:
             tail = " No person checked it." + (" <b>The two runs did not agree. This entry needs review.</b>" if h.get("needs_review") else "")
-        parts.append('<p class="note"><b>Coded by a model.</b> Two runs of a language model found this counterpart and coded this change.' + tail + '</p>')
+        if check != "skip":
+            what = "found no counterpart for this commitment" if h["status"] == "removed" else ("found this passage" if h["status"] == "added" else "found this counterpart and coded this change")
+            parts.append(f'<p class="note"><b>Coded by a model.</b> Two runs of a language model {what}.' + tail + '</p>')
     if h.get("gap_before"):
         parts.append('<p class="note"><b>Gap.</b> One or more versions before this entry are not traced.</p>')
     later = [r for r in v.get("reuploads", []) if r.get("note")]

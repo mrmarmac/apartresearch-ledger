@@ -1,0 +1,100 @@
+[
+ {
+  "quote": "Additionally, as we've previously shared, we're building more formal governance within\nour board of directors around how we establish our policies in this area and adjust them\nover time.",
+  "section": "Preface to Version 2.1 (October 2026)",
+  "category": "G",
+  "why_new": "Searched v2 for board role in setting or adjusting framework policies; v2 only says the Board oversees product and regulatory compliance.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "We currently focus on three\nhigh-level mechanisms, where failure would pose catastrophic risk and the pathways to\nsuch an outcome are identifiable and measurable: one, our ability to understand system\nbehavior and capabilities before deployment; two, the ability of these systems to bypass\noversight throughout their operation; and three, our ability to prevent and contain\nbreakout during model training and evaluation.",
+  "section": "3.4.3 Loss of Control",
+  "category": "EC1",
+  "why_new": "v2 scoped only two control mechanisms; containment during training/evaluation appeared only as an illustrative emerging scenario, not an in-scope outcome.",
+  "confidence": "high"
+ },
+ {
+  "quote": "For Loss of Control 3, we will plan for the assessment to take place prior to model\ntraining or evaluation, which requires prospective assessment: informed estimation of\nthe expected capabilities of the model being trained or evaluated.",
+  "section": "4.2.3 Loss of Control",
+  "category": "EC2",
+  "why_new": "Searched v2 for any assessment required before training begins or prospective capability estimation; none found.",
+  "confidence": "high"
+ },
+ {
+  "quote": "The foreseeable high\nseverity risks identified through this assessment then must be mitigated prior to training\nor evaluation.",
+  "section": "4.2.3 Loss of Control",
+  "category": "EC6",
+  "why_new": "v2 ties mitigations to deployment or continued development, never to mitigation before a training or evaluation run starts.",
+  "confidence": "high"
+ },
+ {
+  "quote": "In both cases, we plan to extrapolate from available data on these evaluations to make\na best-guess prediction of the cyber offensive capabilities of the model prior to training.\nSince capabilities are challenging to predict, we will rely on conservative methodology –\nfor example, pre-RL capability thresholds which appear necessary, if not sufficient, for\nhigh-risk capabilities after RL in our training regime.",
+  "section": "Prospective Assessments",
+  "category": "EC3",
+  "why_new": "Searched v2 for extrapolation or pre-RL capability forecasting methods; v2 has no prospective prediction methodology.",
+  "confidence": "high"
+ },
+ {
+  "quote": "A projected pre-mitigation high risk\nassessment for Cyber 1 or Cyber 2 may be sufficient for a high risk determination for\nLoss of Control 3, while the extent of the mitigations required to sufficiently reduce the\nrisk depend on the Cyber risk as well as the risk determination for Loss of Control 2.",
+  "section": "Prospective Assessments",
+  "category": "EC2",
+  "why_new": "No Loss of Control 3 threshold exists in v2; v2 never links cyber results to a containment risk determination.",
+  "confidence": "high"
+ },
+ {
+  "quote": "For models with cyber\ncapabilities comparable to models currently considered frontier, environments\nused in reinforcement learning or evaluation will run in a sandbox whose\nconfiguration will be approved through a standardized internal process designed\nto ensure that they are resistant to realistic attempts by a model at reward\nseeking and breakout or with comparable security measures such as hardware\nisolation.",
+  "section": "Environment and Sandbox Quality",
+  "category": "S",
+  "why_new": "Searched v2 security commitments; v2 covers model weight security only, nothing on sandbox configuration for RL or evaluation.",
+  "confidence": "high"
+ },
+ {
+  "quote": "We plan to red-team for methods of\nexternal unauthorized action, including cybersecurity vulnerabilities, in all\nsandbox configurations before standardization and approval for use in training\nand evaluation of near frontier models. All sandboxes with detected high severity\nvulnerabilities will be remediated, mitigated with compensating measures such as\nhardware isolation, or removed from a reinforcement learning run prior to\ninitiation.",
+  "section": "Environment and Sandbox Quality",
+  "category": "S",
+  "why_new": "v2 red-teaming targets model capabilities and mitigations, not training/evaluation sandboxes; no sandbox remediation requirement found.",
+  "confidence": "high"
+ },
+ {
+  "quote": "We plan to red-team for problematic reinforcement\nlearning environments (e.g., those which give the model impossible tasks or are\neasily cheated). Environments deemed problematic will be remediated, manually\napproved, or removed from a reinforcement learning run prior to initiation.",
+  "section": "Environment and Sandbox Quality",
+  "category": "M",
+  "why_new": "Searched v2 for reward hacking measures; v2 only discloses reward hacking in preparedness reports, no RL environment red-teaming or removal.",
+  "confidence": "high"
+ },
+ {
+  "quote": "In our red-teaming pipelines, we will use models, methods, and compute budgets\nproportionate to the projected capabilities of the model, the opportunities for breakout or\nreward tampering in the planned training or evaluation run, and uncertainty in those\nassessments.",
+  "section": "Environment and Sandbox Quality",
+  "category": "EC3",
+  "why_new": "No v2 standard for sizing red-teaming resources to projected capabilities or breakout opportunities in training runs.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "All model\nrollouts must be logged to write-only data stores in real time to preserve their\nintegrity for analysis and offline monitoring.",
+  "section": "Rollout Monitoring",
+  "category": "M",
+  "why_new": "Searched v2 for logging of rollouts or chain-of-thought; v2 mentions logging only as a cyber deployment-level mitigation example.",
+  "confidence": "high"
+ },
+ {
+  "quote": "All training or\nevaluation runs that pose high risk or greater pre-mitigation require\nchain-of-thought and trajectory monitoring to be active for all rollouts, with any\nexceptions requiring manual approval by the Director of Alignment and Risk or\nthe Chief AI Officer.",
+  "section": "Rollout Monitoring",
+  "category": "EC6",
+  "why_new": "v2 has no monitoring requirement for training or evaluation runs triggered by a high-risk determination.",
+  "confidence": "high"
+ },
+ {
+  "quote": "We will develop monitoring systems capable\nof rapidly halting individual training or evaluation rollouts when high severity\nmisbehavior or breakout attempts are detected.",
+  "section": "Rollout Monitoring",
+  "category": "M",
+  "why_new": "Searched v2 for automated halting or shutoff of training rollouts; none found.",
+  "confidence": "high"
+ },
+ {
+  "quote": "We will require that our monitors\npass smoke tests in all sandboxes prior to their use in training or evaluation, in\nwhich they reliably detect attempts to escape by internal models attempting to\nescape.",
+  "section": "Rollout Monitoring",
+  "category": "M",
+  "why_new": "v2 has no requirement to test or validate monitors in sandboxes before training or evaluation use.",
+  "confidence": "high"
+ }
+]

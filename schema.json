@@ -157,6 +157,7 @@
           "description": "Result of a blind check by one person. null: not checked. agrees: same code as the entry. disagrees:<code>: the person gave a different code, and the entry keeps the model code. adjudicated: a person took a second look, not blind, and the entry has the final code. adjudicated:not_same_thing or adjudicated:cannot_tell: the second look did not give a code.",
           "type": ["string", "null"], "pattern": "^(agrees|not_same_thing|cannot_tell|disagrees:(kept|strengthened|weakened)|adjudicated|adjudicated:(not_same_thing|cannot_tell))$"
         },
+        "found_by_runs": { "type": "integer", "enum": [1, 2], "description": "For a new commitment that a model found: the number of independent runs that found it." },
         "gap_before": { "type": "boolean", "description": "One or more versions between the previous entry and this entry are not traced." },
         "quote_verified": { "type": ["boolean", "null"], "description": "The quote is in the text extraction of the hashed document." },
         "source_row": { "type": ["string", "null"], "description": "Row ID in the upstream coding sheet." },

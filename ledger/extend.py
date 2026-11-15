@@ -285,6 +285,46 @@ def apply(ledger, corpus, folder, tags_for):
             base["history"][0:0] = new
             stats[f"moved_back_to_{earlier[0]}"] += 1
 
+    # 4a. Candidates for new commitments: passages in the last version with no counterpart in the version before.
+    # Two model runs. A candidate is in the ledger with needs_review until a person confirms it.
+    run1, run2 = _load(folder, "added_run1.json"), _load(folder, "added_run2.json")
+    if run1 is not None and run2 is not None:
+        import hashlib
+        from . import config
+        rejected = set()
+        decisions = _load(folder, "adjudication.json")
+        for d in (decisions or {}).get("decisions", []):
+            if d.get("kind") == "added" and d["final"] != "A":
+                rejected.add(squash(d["quote"]))
+        label = LAST
+        taken = {c["id"] for c in ledger["commitments"]}
+        candidates = [(x, sum(same_passage(x["quote"], y["quote"]) for y in run2) > 0) for x in run1]
+        candidates += [(y, False) for y in run2 if not any(same_passage(x["quote"], y["quote"]) for x in run1)]
+        for cand, both in candidates:
+            quote = clean(cand["quote"])
+            if squash(quote) in rejected:
+                stats["added:rejected_by_person"] += 1
+                continue
+            topic = config.TOPIC[cand["category"]]
+            digest = hashlib.sha256(f"{LAB}|{vid(label)}|{squash(quote)}".encode()).hexdigest()
+            size = 4
+            while f"{LAB}-{topic}-{digest[:size]}" in taken:
+                size += 1
+            cid = f"{LAB}-{topic}-{digest[:size]}"
+            taken.add(cid)
+            entry = _entry(versions, label, {
+                "status": "added", "quote": quote, "coded_by": "model", "link": None,
+                "section": clean(cand.get("section", "")) or None, "verified": quote_in_text(quote, docs[label]),
+                "rationale": clean(cand.get("why_new", "")) or None, "needs_review": True})
+            entry["material"] = True
+            entry["found_by_runs"] = 2 if both else 1
+            ledger["commitments"].append({
+                "id": cid, "lab": LAB, "text": quote, "topic": topic, "tags": [], "current_status": "active",
+                "merged_into": None, "former_ids": [], "related_ids": [],
+                "first_version_id": vid(label), "last_version_id": vid(label), "history": [entry]})
+            stats["added:candidate"] += 1
+            stats["added:found_by_two_runs"] += both
+
     # 4b. One person checked the model-coded entries, blind. Record the result. Do not overwrite the model code.
     human = _load(folder, "human_check.json")
     if human:
@@ -320,13 +360,19 @@ def apply(ledger, corpus, folder, tags_for):
                     if decision is None or entry["coded_by"] != "model":
                         continue
                     code = decision["final"]
-                    if code in names:
+                    if code == "A" and entry["status"] == "added":
+                        entry["human_check"] = "adjudicated"
+                        entry["needs_review"] = False
+                    elif code == "X":
+                        entry.update(status="removed", quote=None, section=None, material=True,
+                                     human_check="adjudicated", needs_review=False)
+                    elif code in names:
                         entry["status"] = names[code]
                         entry["material"] = code != "R"
                         entry["human_check"] = "adjudicated"
                         entry["needs_review"] = False
                     else:
-                        entry["human_check"] = "adjudicated:" + {"N": "not_same_thing", "U": "cannot_tell"}[code]
+                        entry["human_check"] = "adjudicated:" + {"N": "not_same_thing", "U": "cannot_tell"}.get(code, "cannot_tell")
                         entry["needs_review"] = True
                     stats["adjudicated"] += 1
 

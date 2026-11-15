@@ -1,0 +1,288 @@
+[
+ {
+  "id": "meta-eval-method-36d3",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "The risk assessment also considers any\n\n​\n\n6\n\n\fMeta Superintelligence Scaling Framework ​\nVersion 2.1 | October 2026​\n\nplanned deployments, as these plans inform the type of pre-release evaluations we\nundertake.",
+    "also_see": "",
+    "later_section": "2.1.2 Evaluate and Mitigate",
+    "reason": "Same sentence on planned deployments informing pre-release evaluations; only split by a page break."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-method-fd75",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Our evaluations are also designed to account for the deployment context of the model.\nThis includes assessing whether risks will remain within defined thresholds once a\nmodel is deployed or released using the target deployment or release approach. We will\nseek to account for the tools and scaffolding in the current ecosystem that could be\nleveraged to enhance the model's capabilities. For example: For deployments in\nuser-facing products, we may test in the product's harness to replicate realistic use\ncases, while for API deployments or open weight releases we may test in a range of\nharnesses and environments. We may additionally explore how risks may materialize in\ncombination with other models, through task decomposition.",
+    "also_see": "We design our evaluations to account for how the model will be deployed, including\nassessing how its capabilities might be enhanced. See Section 4.2 for more details.",
+    "later_section": "4.2 Evaluation and Mitigation",
+    "reason": "Same deployment-context evaluation commitment; 'prepare the asset' example reworded into testing in product harnesses and accounting for ecosystem tools and scaffolding."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-governance-b294",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "The residual risk assessment is reviewed by the relevant research and/or product\nteams, as well as a multidisciplinary team of reviewers as needed. Informed by this\nanalysis, the Chief AI Officer or the Director of Alignment and Risk will determine\nwhether to request further testing or information, require additional mitigations or\n\n​\n\n8\n\n\fMeta Superintelligence Scaling Framework ​\nVersion 2.1 | October 2026​\n\nimprovements, or approve the model for deployment.",
+    "also_see": "",
+    "later_section": "2.1.3 Decide",
+    "reason": "Same residual-risk review and Chief AI Officer / Director deployment decision passage; split by a page break."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-consequence-32db",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "In the case where pre-mitigation testing suggests that a model has crossed the high risk\nthreshold, we will not deploy the model externally unless we have strong additional\nevidence to support the moderate or lower level, with mitigations.",
+    "also_see": "Deploy With Mitigations​\n​\nProceed with deployment of\nthe Frontier AI only if\nsufficient mitigations are\ndefined, implemented and\nvalidated to reduce risk to\nthat of a moderate or lower\nmodel.",
+    "later_section": "4.2.2 Chemical and Biological Risks",
+    "reason": "Same no-external-deployment rule for high-risk models, reworded to 'strong additional evidence to support the moderate or lower level'; table measure retained."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-scope-2fcf",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Cyber 1: Substantially lowers\nthe barrier or reduces cost to\na cyberattack that causes",
+    "also_see": "Cyber 2: Automated\ndiscovery and reliable\nexploitation of critical zero-day\nvulnerabilities in current\npopular software that results\nin large-scale casualties or\nsignificant financial loss.",
+    "later_section": "3.4.1 Cybersecurity",
+    "reason": "Same three cyber outcome definitions, broken up by table layout; Cyber 3 text also appears unchanged later in the same table."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-method-8bad",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "If performance thresholds for these\nevaluations are reached, we then expand our assessment to improve coverage,\nspecificity, and realism – which may take the form of additional targeted evaluations\n\n​\n\n28\n\n\fMeta Superintelligence Scaling Framework ​\nVersion 2.1 | October 2026​\n\nfocused on specific risk factors, or in-depth assessments such as uplift studies or expert\nred-teaming.",
+    "also_see": "",
+    "later_section": "4.2 Evaluation and Mitigation",
+    "reason": "Same escalation-to-expanded-assessment sentence; split by a page break."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-method-11e0",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Where we implement technical mitigations such as refusal training or classifiers, we will\nconsider their robustness under various conditions, which might include adversarial\nprompting, jailbreak attempts, or red teaming. For models that are not being considered\nfor open release, this evaluation also will take into account the narrower availability of\nthose models and the security measures in place to prevent unauthorized access.",
+    "also_see": "",
+    "later_section": "4.2 Evaluation and Mitigation",
+    "reason": "Same mitigation-robustness evaluation, reworded to apply where technical mitigations are implemented and to 'consider their robustness'."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-method-7e3a",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "In addition to the further research, we highlight\nspecific risk domains inSection 4.2.4. We'll continue to work on: (1) improving the quality\n\n​\n\n46\n\n\fMeta Superintelligence Scaling Framework ​\nVersion 2.1 | October 2026​\n\nand reliability of evaluations; (2) developing additional, robust mitigation techniques; and\n(3) more advanced methods for performing post-deployment monitoring of models.",
+    "also_see": "",
+    "later_section": "5.2 Research Areas of Focus",
+    "reason": "Same three future research commitments; sentence reworded and split by a page break."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-disclosure-deec",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "We evaluate this\n\n​\n\n5\n\n\fMeta Superintelligence Scaling Framework ​\nVersion 2.1 | October 2026​\n\nreference class of models and incorporate the results of these evaluations into our\npreparedness reports.",
+    "also_see": "We will also include the results of evaluations of the reference class of\ncomparable models to provide comparative context, including relevant capability,\npropensity, and refusal evaluations.",
+    "later_section": "2.1.1 Anticipate",
+    "reason": "Both parts on reference-class evaluation results in preparedness reports remain, in two places as in v2."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-method-bc8b",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "NONE",
+    "also_see": "",
+    "later_section": "",
+    "reason": "Maximum-elicitation sentence and helpful-only fine-tuning practice removed; only domain-specific elicitation language remains (cyber, chem/bio)."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "meta-eval-method-e80c",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "NONE",
+    "also_see": "",
+    "later_section": "",
+    "reason": "Domain-specific capability training before weight/fine-tuning API release removed; open-weight adversary modelling in 4.2 governs mitigation robustness, a different object."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "meta-eval-method-ea6c",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "NONE",
+    "also_see": "",
+    "later_section": "",
+    "reason": "Agentic evaluation scaffold, token budget and transcript review commitments removed with the v2 elicitation paragraph."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-governance-c778",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Meta's Chief AI Officer oversees the design, implementation, and operation of the entire\nevaluation and mitigation process. The Chief AI Officer supervises and is supported by\nthe Director of Alignment and Risk, who bears responsibility for executing the lifecycle\nof risk assessment and mitigation, preparedness reports, updates to the Meta\nSuperintelligence Scaling Framework, internal use reports, and related deployments\nand disclosures, with model deployment following appropriate consultation with relevant\nteams and with the approval of the Chief AI Officer.",
+    "also_see": "",
+    "later_section": "2.3 Accountability",
+    "reason": "Same Chief AI Officer / Director roles passage; framework name updated."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-governance-53b6",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Meta maintains a comprehensive whistleblower and complaint policy, and is developing\nfurther protocols to report any instances of non-compliance with the Meta\nSuperintelligence Scaling Framework, and any specific and substantial danger to the\n\n​\n\n12\n\n\fMeta Superintelligence Scaling Framework ​\nVersion 2.1 | October 2026​\n\npublic health or safety arising from catastrophic risk. Under this protocol, employees will\nbe able to confidentially, and, if they choose, anonymously issue reports through\ninternal channels, and all reports will be ultimately submitted to the internal governance\nfunction, the Chief AI Officer, and the Director of Alignment and Risk.",
+    "also_see": "",
+    "later_section": "2.3.1 Reporting",
+    "reason": "Same whistleblower and non-compliance reporting protocol; framework name updated, page break inside."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-method-911d",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Within this context, we will evaluate whether the model will materially enable any of the\ncatastrophic outcomes we have defined, considering the way it would be deployed, the\nrelevant threat scenarios, and the efficacy of its mitigations in that context. For instance:\n●​ For closed deployments, we consider adversaries with API-level access\nemploying state-of-the-art elicitation techniques, including in-context learning or\nmanual and automated jailbreaks\n●​ For open-weight releases or deployments with fine-tuning APIs, we would\nadditionally consider adversaries capable of modifying model behavior through\ncontinued training.\nThis approach ensures our adversary modeling remains grounded in realistic threat\nscenarios rather than a fixed enumeration of attack techniques.",
+    "also_see": "",
+    "later_section": "4.2 Evaluation and Mitigation",
+    "reason": "Same mitigation-efficacy and adversary-modelling commitment, reworded with deployment-specific adversary examples."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "meta-eval-trigger-10c1",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "However, if we observe model performance on par with or\nbetter than human experts, we will move on to evaluating capabilities on more complex,\nrealistic attack scenarios in order to determine risk level.",
+    "also_see": "As discussed above, if a model under test achieves sufficiently high performance\non simple suite challenges, we proceed to evaluation on \"Complex\" challenges to\ndetermine risk level. Otherwise, we rate its risk as \"moderate or lower.\"",
+    "later_section": "4.2.1 Cybersecurity",
+    "reason": "Escalation to complex scenarios kept; the <75% pass@10 CTF example removed, replaced by unquantified 'sufficiently high performance' threshold."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "meta-consequence-8456",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "NONE",
+    "also_see": "",
+    "later_section": "",
+    "reason": "Provisional 'high' rating and deployment hold pending complex-suite evaluation deleted; v2.1 only requires complex testing to determine risk level."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-trigger-3907",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "For models we are considering for deployment scenarios that exceed the\nthreshold in #1, we set the threshold for determination of 'high' risk level based\non reliable and consistent success on realistic, high difficulty challenges\n(including complex challenges). For example:\na.​ [Cyber 1] Completing sufficiently many challenges from a suite of realistic,\nhigh difficulty multi-host, corporate scale network challenges without\ntriggering any alerts/detections from standard defenses in place",
+    "also_see": "",
+    "later_section": "4.2.1 Cybersecurity",
+    "reason": "Same Cyber 1 high-risk threshold; 'at least one challenge ... pass@10' changed to 'completing sufficiently many challenges'."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-method-b825",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "We conduct evaluations to assess security risks of prompt\n\n​\n\n32\n\n\fMeta Superintelligence Scaling Framework ​\nVersion 2.1 | October 2026​\n\ninjection for a model deployed within common agentic use cases and implement layered\nsecurity defenses to protect against these threats and understand our models'\nsusceptibility to them.",
+    "also_see": "",
+    "later_section": "4.2.1 Cybersecurity",
+    "reason": "Same prompt-injection evaluation commitment; split by a page break."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-mitigation-cbea",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "We recognize that the cyber defense landscape is not static – we will continue to take\nactive efforts and create tools to help major software and physical systems upgrade\nsecurity over time and stay resilient against increasing cyber capabilities.",
+    "also_see": "",
+    "later_section": "4.2.1 Cybersecurity",
+    "reason": "Same defensive-tools commitment; named tools AutoPatchBench and CyberSOCEval removed."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-consequence-afe4",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "For models above the moderate or lower risk threshold in areas where refusal is part of\nour mitigation strategy, our risk acceptance criteria for external deployment requires\nevidence demonstrating reliable refusal on benchmark datasets with thorough coverage\nacross relevant threat scenarios. We will research comprehensive mitigations against\nadversarial attacks, and will evaluate our fully mitigated model under such attacks. The\nscope of these mitigations, results of validation assessments, and coverage across\nadversarial attacks will be described in our preparedness reports.\nAs an illustrative example, on the BioTIER refusal evaluation, which includes\ninformation that could support development of biological weapons, our risk acceptance\ncriteria includes at least 80% refusal or safe responses, and 40% refusal or safe\nresponses against all adversarial attacks within a typical adversarial attack portfolio.",
+    "also_see": "",
+    "later_section": "4.2.2 Chemical and Biological Risks",
+    "reason": "Same refusal risk-acceptance criteria with BioTIER example; 'defensible' and adversarial-attack coverage wording changed, scoped to refusal-based mitigation."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "meta-eval-trigger-7e16",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "As an illustrative example, our risk acceptance\ncriteria include thresholds such as at least 40% on MASK and at most 50% on Agentic\nMisalignment.",
+    "also_see": "",
+    "later_section": "4.2.3 Loss of Control",
+    "reason": "Same MASK / misalignment propensity thresholds; benchmark renamed 'Agentic Misalignment'."
+   }
+  ],
+  "confidence": "high"
+ }
+]
