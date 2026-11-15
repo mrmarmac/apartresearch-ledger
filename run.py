@@ -5,6 +5,7 @@
   python run.py build      Write data/ledger.json.
   python run.py validate   Check data/ledger.json and examples/ against schema.json.
   python run.py site       Write the static site and feed.xml into docs/.
+  python run.py score      Score validation/predictions/ against the upstream codes. Write validation.md.
   python run.py check      Check that the demo path works.
   python run.py stats      Print a count table.
   python run.py all        fetch, build, validate, stats.
@@ -103,6 +104,11 @@ def stats():
             print(f"  {key:<28}{row[key]:>5}")
 
 
+def score():
+    from ledger.validation import score as run_score
+    run_score(Corpus(CACHE), os.path.join(ROOT, "validation"), "Claude Opus 5.5 (sub-agent)")
+
+
 def check():
     """The demo path must always work."""
     with open(LEDGER, encoding="utf-8") as handle:
@@ -121,7 +127,7 @@ def check():
     print("ok   demo path: whistleblower commitment, 5 versions, last status removed")
 
 
-COMMANDS = {"check": [check], "site": [site], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
+COMMANDS = {"check": [check], "site": [site], "score": [score], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
             "all": [fetch, do_build, validate, check, site, stats]}
 
 if __name__ == "__main__":

@@ -1,0 +1,962 @@
+[
+ {
+  "id": "q001",
+  "developer": "Anthropic",
+  "earlier_section": "Procedural Commitments",
+  "earlier_text": "Follow an \"Update Process\" for this document, including approval by the board of directors, following consultation with the Long-Term Benefit Trust (LTBT). Any updates will be noted and reflected in this document before they are implemented.",
+  "later_section": "7.1. Internal Governance",
+  "later_text": "Policy changes: Changes to this policy will be proposed by the CEO and the Responsible Scaling Officer and approved by the Board of Directors, in consultation with the Long-Term Benefit Trust.18 The current version of the RSP is accessible at www.anthropic.com/rsp. We will update the public version of the RSP before any changes take effect and record any differences from the prior draft in a change log."
+ },
+ {
+  "id": "q002",
+  "developer": "Google DeepMind",
+  "earlier_section": "Table 2.2.1.a: CBRN CCLs and Security Mitigations",
+  "earlier_text": "CBRN uplift level 1: Provides low to medium resourced actors uplift in reference scenarios resulting in additional10 expected harm at severe scale.",
+  "later_section": "Table 2.2.1.a: CBRN CCL and Security Mitigations",
+  "later_text": "CBRN uplift level 1: Provides low to medium resourced actors uplift in reference scenarios resulting in additional8 expected harm at severe scale."
+ },
+ {
+  "id": "q003",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 1. Approach to Benchmarking",
+  "earlier_text": "To transparently measure our models’ safety properties, xAI utilizes public benchmarks like Weapons of Mass Destruction Proxy and Catastrophic Harm Benchmarks (described below). Such benchmarks are used to measure our model’s dual-use capability and resistance to facilitating large-scale violence, terrorism, or the use, development, or proliferation of weapons of mass destruction (including CBRN and major cyber weapons).",
+  "later_section": "2.1. Risk Identification > (a) Addressing CBRN Risks",
+  "later_text": "To transparently measure our models’ safety properties, xAI may utilize public and internal benchmarks to measure our model’s dual-use capability and resistance to facilitating the use, development, or proliferation of weapons of mass destruction (including CBRN agents)."
+ },
+ {
+  "id": "q004",
+  "developer": "OpenAI",
+  "earlier_section": "Operations / Internal visibility",
+  "earlier_text": "Internal visibility: The Preparedness Framework, reports and decisions will be documented and visible to the BoD and within OpenAI (with redactions as needed given internal compartmentalization of research work). This also includes any audit trails created from the below.",
+  "later_section": "5.1 Internal governance",
+  "later_text": "Internal Transparency. We will document relevant reports made to the SAG and of SAG’s decision and reasoning. Employees may also request and receive a summary of the testing results and SAG recommendation on capability levels and safeguards (subject to certain limits for highly sensitive information)."
+ },
+ {
+  "id": "q005",
+  "developer": "Google DeepMind",
+  "earlier_section": "Future Work",
+  "earlier_text": "We expect the Framework to evolve substantially as our understanding of the risks and benefits of frontier models improves, and we will publish substantive revisions as appropriate.",
+  "later_section": "5.1 Updates",
+  "later_text": "The Frontier Safety Framework will be updated at least once a year—more frequently if we have reasonable grounds to believe the adequacy of the Framework or our adherence to it has been materially undermined."
+ },
+ {
+  "id": "q006",
+  "developer": "OpenAI",
+  "earlier_section": "Operations / Decision process",
+  "earlier_text": "The SAG will be responsible for assessing the merits of each case submitted to them. Then, the SAG Chair will forward the case to the OpenAI Leadership (sharing also with the BoD and Preparedness) and include a draft of possible next steps (e.g., approving a change to the Scorecard or Preparedness Framework; requesting changes to other internal and external processes as needed; highlighting a need to accelerate security procedures based on a forecasted increase in risk levels) ...",
+  "later_section": "B Decision-making practices",
+  "later_text": "For each deployment under the Preparedness Framework, providing recommendations on potential next steps and any applicable risks to OpenAI Leadership, as well as rationale"
+ },
+ {
+  "id": "q007",
+  "developer": "Google DeepMind",
+  "earlier_section": "2.1.2 Deployment Mitigations / 3.1.2 Deployment Mitigations",
+  "earlier_text": "The following mitigation process for external deployments will be applied to models reaching a misuse CCL, allowing for iterative and flexible tailoring of mitigations to each risk and use case. ... The following mitigation process will be applied for deployments of a model reaching a ML R&D CCL. The approach is similar to misuse deployment mitigations, with an added focus on large scale internal deployments.",
+  "later_section": "2.1.2 Deployment Mitigations / 3.1.2 Deployment Mitigations",
+  "later_text": "The following mitigation process for external deployments will be applied to models reaching a misuse T/CCL, allowing for iterative and flexible tailoring of mitigations to each risk and use case. ... The following mitigation process will be applied for deployments of a model reaching a ML R&D and Misalignment T/CCL. The approach is similar to misuse deployment mitigations, with an added focus on high-risk internal deployments."
+ },
+ {
+  "id": "q008",
+  "developer": "OpenAI",
+  "earlier_section": "Governance / Safety baselines / Asset Protection",
+  "earlier_text": "If we reach (or are forecasted to reach) at least “high” pre-mitigation risk in any of the considered categories: we will ensure that our security is hardened in a way that is designed to prevent our mitigations and controls from being circumvented via exfiltration (by the time we hit “high” pre-mitigation risk).",
+  "later_section": "2.2 Tracked Categories; C.3 Security controls",
+  "later_text": "Covered systems that cross this capability threshold are required to have robust and effective safeguards that sufficiently minimize the associated risk of severe harm before they are deployed and appropriate security controls as they are developed. ... We will require the following practices for High capability models:"
+ },
+ {
+  "id": "q009",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 2. Risk Assessment",
+  "earlier_text": "We will continue to re-assess the cyber misuse risks in future releases, and are still working on identifying enforceable critical steps similar to those we have identified for chemical and biological weapons.",
+  "later_section": "2.1. Risk Identification > (c) Addressing Risks of Malicious Offensive Cybersecurity Usage",
+  "later_text": "xAI utilizes a set of benchmarks to evaluate its models for cyber capabilities, cyber refusals and detection of malicious intent."
+ },
+ {
+  "id": "q010",
+  "developer": "xAI",
+  "earlier_section": "(Draft)",
+  "earlier_text": "We plan to release an updated version of this policy within three months.",
+  "later_section": "(Draft)",
+  "later_text": "We plan to release an updated version of this policy within three months."
+ },
+ {
+  "id": "q011",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 6.Deployment Decisions",
+  "earlier_text": "To mitigate risks, we intend to utilize tiered availability of the functionality and features of Grok. For instance, the full functionality of a future Grok could be made available only to trusted parties, partners, and government agencies. We could also mitigate risks by adding additional controls on functionality and features depending on the end user (e.g., consumers using mobile apps vs. sophisticated businesses using APIs).",
+  "later_section": "Operational and Societal Risks > 6. Deployment Decisions",
+  "later_text": "To mitigate risks, xAI employs tiered availability of the functionality and features of its models. For instance, the full functionality of our models may be available to only a limited set of trusted parties, partners, and government agencies. We may also mitigate risks by adding additional controls on functionality and features depending on the type of end user. For instance, features that we make available to consumers using mobile apps may be different than the features made available to sophisticated ..."
+ },
+ {
+  "id": "q012",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 5.Responsibility for Risks",
+  "earlier_text": "If xAI learned of an imminent threat of a significantly harmful event, including loss of control, we would take steps to stop or prevent that event, including potentially the following steps:",
+  "later_section": "Operational and Societal Risks > 4. Responsibility for Risks",
+  "later_text": "Should it happen that xAI learns of an imminent threat of a significantly harmful event, including loss of control, we may take steps such as the following to stop or prevent that event:"
+ },
+ {
+  "id": "q013",
+  "developer": "OpenAI",
+  "earlier_section": "Scorecard / Evaluating pre-mitigation risk",
+  "earlier_text": "To this end, for our evaluations, we will be running them not only on base models (with highly-performant, tailored prompts wherever appropriate), but also on fine-tuned versions designed for the particular misuse vector without any mitigations in place.",
+  "later_section": "3.1 Evaluation approach",
+  "later_text": "Our evaluations are intended to approximate the full capability that the adversary contemplated by our threat model could extract from the deployment candidate model, including by using the highest-capability tier of system settings, using a version of the model that has a negligible rate of safety-based refusals on our Tracked Category capability evaluations (which may require a separate model variant), and with the best presently-available scaffolds. ... (e.g. doing finetuning if the weights will be released)."
+ },
+ {
+  "id": "q014",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 4. Governance Approach",
+  "earlier_text": "3. If we determine that allowing a system to continue running would materially and unjustifiably increase the likelihood of a catastrophic event, we may temporarily fully shut down the relevant system until we have developed a more targeted response.",
+  "later_section": "3. Incident reporting",
+  "later_text": "2. If we determine that allowing a system to continue running would materially and unjustifiably increase the likelihood of a risk, we may temporarily fully shut down the relevant system until we have developed a more targeted response."
+ },
+ {
+  "id": "q015",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-3 Deployment Measures",
+  "earlier_text": "Red-team all deployed modalities: If deployment includes e.g. a fine-tuning API, release of weights, or another modality that offers a broader surface area of model modification, ... red-teaming must include this use of these modalities and must still return a result of no practically important catastrophic misuse.",
+  "later_section": "4.1. ASL-3 Deployment Standard",
+  "later_text": "Due to the likely ease of bypassing or removing safeguards via fine-tuning, it may be difficult or impossible for these red-teaming tests to pass if weights are released or if unmoderated fine-tuning access is provided to untrusted users."
+ },
+ {
+  "id": "q016",
+  "developer": "OpenAI",
+  "earlier_section": "Tracked Risk Categories",
+  "earlier_text": "Our procedural commitments are triggered when any of the tracked risk categories increase in severity, rather than only when they all increase together.",
+  "later_section": "2.2 Tracked Categories",
+  "later_text": "Covered systems that cross this capability threshold are required to have robust and effective safeguards that sufficiently minimize the associated risk of severe harm before they are deployed and appropriate security controls as they are developed."
+ },
+ {
+  "id": "q017",
+  "developer": "Meta",
+  "earlier_section": "2.1.2 Evaluate and mitigate",
+  "earlier_text": "The risk assessment process involves multi-disciplinary engagement, including internal and, where appropriate, external experts from various disciplines (which could include engineering, product management, compliance and privacy, legal, and policy) and company leaders from multiple disciplines.",
+  "later_section": "2.1.2 Evaluate and Mitigate",
+  "later_text": "The risk assessment process involves multi-disciplinary engagement, including internal and, where appropriate, external experts from various disciplines (which could include engineering, product management, compliance and privacy, security, legal, and policy) and company leaders from multiple disciplines."
+ },
+ {
+  "id": "q018",
+  "developer": "OpenAI",
+  "earlier_section": "Operations",
+  "earlier_text": "SAG membership will rotate yearly. OpenAI leadership might choose to re-appoint someone from previous years to ensure there is continuity of knowledge and experience, while still ensuring that fresh and timely perspectives are present in the group. ... The SAG Chair makes any final decisions needed for the SAG. This role is expected to rotate, as appointed by OpenAI leadership.",
+  "later_section": "B Decision-making practices",
+  "later_text": "SAG members serve for one year terms. OpenAI Leadership may choose to re-appoint someone from previous years to ensure there is continuity of knowledge and experience, while still ensuring that fresh and timely perspectives are present in the group. ... The SAG Chair makes any final decisions needed for the SAG. This role is expected to rotate, as appointed by OpenAI Leadership."
+ },
+ {
+  "id": "q019",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 3. Information Security",
+  "earlier_text": "xAI has implemented appropriate information security standards sufficient to prevent its critical model information from being stolen by a motivated non-state actor. Practices include encryption of model weights, role-based access controls, and real-time monitoring to prevent unauthorized transfer. To prevent the unauthorized proliferation of advanced AI systems, we also implement security measures against the large-scale extraction and distillation of reasoning traces, which have been shown to be highly effective in quickly reproducing advanced capabilities while expending far fewer computational resources ...",
+  "later_section": "2.4. Security mitigations",
+  "later_text": "xAI has implemented appropriate information security standards, adopted based on the NIST 800-171 Rev.3 framework and supported by SOC 2 Type II evaluations. Mitigations include encryption of model weights, role-based access controls, and real-time monitoring to prevent unauthorized transfer."
+ },
+ {
+  "id": "q020",
+  "developer": "Google DeepMind",
+  "earlier_section": "Framework: 1 - Critical Capability Levels",
+  "earlier_text": "For misuse risk, we define CCLs in high-risk domains where, based on early research, we believe risks of severe harm may be most likely to arise from future models: ● CBRN: Risks of models assisting in the development, preparation, and/or execution of a chemical, biological, radiological, or nuclear (“CBRN”) attack. ● Cyber: Risks of models assisting in the development, preparation, and/or execution of a cyber attack. ● Machine Learning R&D: Risks of the misuse of models...",
+  "later_section": "1.2 Critical Capability Levels",
+  "later_text": "We describe three sets of CCLs: misuse CCLs, machine learning R&D CCLs, and misalignment CCLs. For misuse risk, we define CCLs in the following risk domains where the misuse of model capabilities may result in severe harm: ● CBRN: Risks of models assisting in the development, preparation, and/or execution of a chemical, biological, radiological, or nuclear (“CBRN”) threat. ● Cyber: ... ● Harmful Manipulation: Risks of models with high manipulative capabilities potentially being misused..."
+ },
+ {
+  "id": "q021",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-3 Evaluations for Misuse Risks",
+  "earlier_text": "Threat models: Within a national security domain, identifying precise threat models of catastrophic harm. This roughly equates to trying to define which actors, with what goals, might try to execute what type of attack, exploiting what vulnerability, with what methods and targets, and with what likelihood and consequence. ... Capabilities: Given these prioritized threat models, we will define which specific capability improvements (plausibly enabled by models) would significantly increase the risk of that threat relative to the current baseline ...",
+  "later_section": "3.2. Comprehensive Assessment",
+  "later_text": "Threat model mapping: For each capability threshold, make a compelling case that we have mapped out the most likely and consequential threat models: combinations of actors (if relevant), attack pathways, model capability bottlenecks, and types of harms. We also make a compelling case that there does not exist a threat model that we are not evaluating that represents a substantial amount of risk."
+ },
+ {
+  "id": "q022",
+  "developer": "Meta",
+  "earlier_section": "4.2 Evaluation and mitigation",
+  "earlier_text": "We may take into account monetary costs as well as a threat actor’s ability to overcome other barriers to misuse relevant to our threat scenarios such as access to compute, restricted materials, or lab facilities.",
+  "later_section": "4.2 Evaluation and mitigation",
+  "later_text": "We may take into account monetary costs as well as the ability to overcome other barriers to misuse relevant to our threat scenarios such as access to compute, restricted materials, or lab facilities."
+ },
+ {
+  "id": "q023",
+  "developer": "Google DeepMind",
+  "earlier_section": "Framework: 2 - Assessing the Capabilities of Frontier Models",
+  "earlier_text": "In our evaluations, we seek to equip the model with appropriate scaffolding and other augmentations to make it more likely that we are also assessing the capabilities of systems that will likely be produced with the model.",
+  "later_section": "1.3 Outline of Our Risk Assessment Process",
+  "later_text": "In our evaluations, we seek to equip the model with appropriate scaffolding and other augmentations to make it more likely that we are also assessing the capabilities of systems that will likely be produced with the model."
+ },
+ {
+  "id": "q024",
+  "developer": "xAI",
+  "earlier_section": "xAI Risk Management Framework",
+  "earlier_text": "This Risk Management Framework (“RMF”) outlines xAI’s approach to policies for handling significant risks associated with the development, deployment, and release of AI models such as Grok.",
+  "later_section": "xAI Frontier Artificial Intelligence Framework",
+  "later_text": "This Frontier AI Framework (“FAIF”) outlines xAI’s approach to policies for handling significant risks, including catastrophic risks, associated with the development, deployment, and release of xAI’s AI models, such as Grok."
+ },
+ {
+  "id": "q025",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 6. Deployment Decisions",
+  "earlier_text": "We will also balance various factors when making deployment decisions. The necessity and extent of deployment of certain safeguards and mitigations may depend on how a model performs on relevant benchmarks. However, to ensure responsible deployment, this RMF will be continually adapted and updated as circumstances change. It is conceivable that for a particular modality and/or type of release, the expected benefits of model deployment may outweigh the risks identified by a particular benchmark. For example, a model that poses ...",
+  "later_section": "Operational and Societal Risks > 5. Deployment Decisions",
+  "later_text": "We will also balance various factors when making deployment decisions. The necessity and extent of deployment of certain safeguards and mitigations may depend on how a model performs on relevant benchmarks. Pre-deployment reviews include assessing benchmark results (e.g., WMDP scores) and mitigation effectiveness. For internal use, we review catastrophic risks like oversight evasion before extensive rollout. However, to ensure responsible deployment, this FAIF will be continually adapted and updated as circumstances change, before major new capabilities are launched, and in ..."
+ },
+ {
+  "id": "q026",
+  "developer": "Google DeepMind",
+  "earlier_section": "Table 2.2.2.a: Cyber CCLs and Security Mitigations",
+  "earlier_text": "Cyber uplift level 1: Provides sufficient uplift with high impact cyber attacks for additional expected harm at severe scale.",
+  "later_section": "Table 2.2.2.a: Cyber CCL and Security Mitigations",
+  "later_text": "Cyber uplift level 1: Provides sufficient uplift with high impact cyber attacks for additional expected harm at severe scale."
+ },
+ {
+  "id": "q027",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-2 and ASL-3 Security Commitments",
+  "earlier_text": "Standard security infrastructure, monitoring software, access management tools, and disk encryption provide a technology baseline but should be extended further by monitoring for scaled abuse that performs prompt-based model detail extraction (e.g. distillation attacks). Process elements like incident reporting procedures, lost/stolen device protocols and Detection and Response should support these. External validation like SOC 2 compliance and continuous vulnerability management must ensure adaptations match infosec developments. Programs like bug bounties and vulnerability discovery should incentivize exposing flaws.",
+  "later_section": "Appendix B: ASL-2 Standard",
+  "later_text": "Infrastructure: Standard security infrastructure, monitoring software, access management tools, and disk encryption provide a technology baseline. Process elements like incident reporting procedures, lost/stolen device protocols and Detection and Response should support these. External validation like SOC 2 compliance and continuous vulnerability management must ensure adaptations match infosec developments. Programs like bug bounties and vulnerability discovery should incentivize exposing flaws."
+ },
+ {
+  "id": "q028",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use",
+  "earlier_text": "Under this draft risk management framework, Grok would apply heightened safeguards if it receives requests that pose a foreseeable and non-trivial risk of resulting in large-scale violence, terrorism, or the use, development, or proliferation of weapons of mass destruction, including CBRN weapons, and major cyber weapons on critical infrastructure. ... In this draft framework, we particularly focus on requests that pose a foreseeable and non-trivial risk of more than one hundred deaths or over $1 billion in damages",
+  "later_section": "Addressing Risks of Malicious Use",
+  "later_text": "Under this draft risk management framework, Grok would apply heightened safeguards if it receives requests that pose a foreseeable and non-trivial risk of resulting in large-scale violence, terrorism, or the use, development, or proliferation of weapons of mass destruction, including CBRN weapons, and major cyber weapons on critical infrastructure. ... In this draft framework, we particularly focus on requests that pose a foreseeable and non-trivial risk of more than one hundred deaths or over $1 billion in damages"
+ },
+ {
+  "id": "q029",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 4. Governance Approach",
+  "earlier_text": "1. If we determine it is warranted, we may notify and cooperate with relevant law enforcement agencies, including any agencies that we believe could play a role in preventing or mitigating the incident.",
+  "later_section": "3. Incident reporting",
+  "later_text": "4. When reportable under applicable laws and regulations, xAI will provide the relevant authorities with a copy of the incident report within the required deadlines"
+ },
+ {
+  "id": "q030",
+  "developer": "OpenAI",
+  "earlier_section": "Scorecard",
+  "earlier_text": "As a part of our Preparedness Framework, we will maintain a dynamic (i.e., frequently updated) Scorecard that is designed to track our current pre-mitigation model risk across each of the risk categories, as well as the post-mitigation risk. The Scorecard will be regularly updated by the Preparedness team to help ensure it reflects the latest research and findings.",
+  "later_section": "3.3 Capability threshold determinations",
+  "later_text": "Prior to deployment, every covered model undergoes the suite of Scalable Evaluations. The results of these evaluations, and any noteworthy observations that should affect interpretation of the results, are compiled into a Capabilities Report that is submitted to the SAG."
+ },
+ {
+  "id": "q031",
+  "developer": "Anthropic",
+  "earlier_section": "Evaluation Protocol",
+  "earlier_text": "Progressive difficulty: Evaluations may also consist of multiple difficulty stages, such that later stages are only run if earlier evaluations show warning signs (e.g. we might run a simple multiple choice eval for certain risks, avoiding a more thorough evaluation unless the model achieves high performance on this simpler eval).",
+  "later_section": "3.1. Preliminary Assessment",
+  "later_text": "We will first conduct preliminary assessments (on both new and existing models, as needed) to determine whether a more comprehensive evaluation is needed. The purpose of this preliminary assessment is to identify whether the model is notably more capable than the last model that underwent a comprehensive assessment."
+ },
+ {
+  "id": "q032",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 1.Approach to Benchmarking",
+  "earlier_text": "We intend to regularly evaluate the adequacy and reliability of such benchmarks, including by comparing them against other benchmarks that we could potentially utilize.",
+  "later_section": "Addressing Risks of Malicious Use > 1. Approach to Benchmarking",
+  "later_text": "xAI regularly evaluates the adequacy and reliability of such benchmarks, including by comparing them against other benchmarks that we could potentially utilize, to determine and apply effective benchmarks available at the time of evaluation. We may revise this list of benchmarks periodically as relevant or more effective benchmarks for malicious use are created."
+ },
+ {
+  "id": "q033",
+  "developer": "Google DeepMind",
+  "earlier_section": "Framework: 2 - Assessing the Capabilities of Frontier Models",
+  "earlier_text": "Where necessary, early warning evaluations may be supplemented by other evaluations to better understand model capabilities relative to our CCLs.",
+  "later_section": "1.3 Outline of Our Risk Assessment Process",
+  "later_text": "We conduct further analysis, including reviewing model independent information, external evaluations, and post-market monitoring as appropriate."
+ },
+ {
+  "id": "q034",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-2 and ASL-3 Security Commitments",
+  "earlier_text": "Vendor and supplier security must be regularly reviewed to ensure that they meet security standards. Software updates should be frequently managed and compliance monitoring automated where possible.",
+  "later_section": "Appendix B: ASL-2 Standard",
+  "later_text": "Supply chain: Vendor and supplier security must be regularly reviewed to ensure that they meet security standards. Software updates should be frequently managed and compliance monitoring automated where possible."
+ },
+ {
+  "id": "q035",
+  "developer": "Anthropic",
+  "earlier_section": "Procedural Commitments",
+  "earlier_text": "Each quarter, they will share a report on implementation status to our board and LTBT, explicitly noting any deficiencies in implementation. They will also be responsible for sharing ad hoc updates sooner if there are any substantial implementation failures.",
+  "later_section": "7.1. Internal Governance",
+  "later_text": "Cases deemed to present minimal additional risk may be reported to the Board in quarterly summary reports. ... The Responsible Scaling Officer will regularly update the Board of Directors on substantial cases of noncompliance and overall trends."
+ },
+ {
+  "id": "q036",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 2.Public Understanding",
+  "earlier_text": "We will explore building truth-seeking AI tools, such as AIs that can help users better assess and understand events.",
+  "later_section": "Operational and Societal Risks > 2. Public Understanding",
+  "later_text": "xAI is exploring building truth-seeking AI tools, such as AIs that can help users better assess and understand events by better sorting through inaccurate or biased materials."
+ },
+ {
+  "id": "q037",
+  "developer": "OpenAI",
+  "earlier_section": "Operations / Accountability",
+  "earlier_text": "Audits: Scorecard evaluations (and corresponding mitigations) will be audited by qualified, independent third-parties to ensure accurate reporting of results, either by reproducing findings or by reviewing methodology to ensure soundness, at a cadence specified by the SAG and/or upon the request of OpenAI Leadership or the BoD.",
+  "later_section": "5.2 Transparency and external participation",
+  "later_text": "Third-party evaluation of tracked model capabilities: If we deem that a deployment warrants deeper testing of Tracked Categories of capability (as described in Section 3.1), for example based on results of Capabilities Report presented to them, then when available and feasible, OpenAI will work with third-parties to independently evaluate models. • Third-party stress testing of safeguards: If we deem that a deployment warrants third party stress testing of safeguards and if high quality third-party testing is available, ..."
+ },
+ {
+  "id": "q038",
+  "developer": "Google DeepMind",
+  "earlier_section": "Section 4: Misalignment (Exploratory Approach) / Table 4.a",
+  "earlier_text": "When models reach this capability level, one possible mitigation is to apply an automated monitor to the model’s explicit reasoning (e.g. chain-of-thought output). ... Automated monitoring: monitoring system to detect illicit use of instrumental reasoning capabilities in a model’s chain-of-thought may be applied in high-stakes internal deployments where there is significant risk of the model undermining human control.",
+  "later_section": "3.2.1 Stealth and Situational Awareness Tracked Capability Level",
+  "later_text": "When a model has reached this TCL, we will carry out periodic residual risk assessments of the misalignment risk posed. ... Since misalignment risks can manifest through internal use, these assessments will also account for the safety implications of high-risk internal deployments for such models. If the risk assessment deems the residual risk from internal deployment to be unacceptable without additional safeguards (such as chain-of-thought monitoring on high-risk deployments), these will be applied."
+ },
+ {
+  "id": "q039",
+  "developer": "Google DeepMind",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "To identify meaningful new capabilities or material increases in performance, we conduct model capability evaluations, including our automated benchmarks. These evaluations are primarily aimed at understanding the capabilities of the model and may be triggered, for example, upon the completion of a pre-training or post-training run, on various candidates of a model version.",
+  "later_section": "1.3.2 Inherent Risk Assessment",
+  "later_text": "To understand if a subsequent version of the model has meaningful new capabilities or material increases in performance relative to the last checkpoint subject to a critical capability assessment, we conduct material capability change assessments on various checkpoints upon the completion of a post-training run. These assessments draw on model characteristics, such as its provenance, size, modality, and performance on general capability benchmarks."
+ },
+ {
+  "id": "q040",
+  "developer": "xAI",
+  "earlier_section": "Overall Approach",
+  "earlier_text": "Approach to Mitigating Risks of Malicious Use: Alongside comprehensive evaluations measuring dual-use capabilities, our mitigation strategy for malicious use risks is to identify critical steps in major risk scenarios and implement redundant layers of safeguards in our models to inhibit user progress in advancing through such steps.",
+  "later_section": "Overall Approach",
+  "later_text": "Approach to Mitigating Risks of Malicious Use: Alongside comprehensive evaluations measuring dual-use capabilities, our mitigation strategy for malicious use risks is to identify critical steps in major risk scenarios and implement redundant layers of safeguards in our models to inhibit user progress in advancing through such steps."
+ },
+ {
+  "id": "q041",
+  "developer": "OpenAI",
+  "earlier_section": "Tracked Risk Categories / CBRN",
+  "earlier_text": "Model enables an expert to develop a novel threat vector OR model provides meaningfully improved assistance that enables anyone with basic training in a relevant field (e.g., introductory undergraduate biology course) to be able to create a CBRN threat.",
+  "later_section": "2.2 Tracked Categories, Table 1",
+  "later_text": "[High] The model can pro- vide meaningful counterfac- tual assistance (relative to unlimited access to baseline of tools available in 2021) to “novice” actors (anyone with a basic relevant techni- cal background) that enables them to create known bio- logical or chemical threats."
+ },
+ {
+  "id": "q042",
+  "developer": "OpenAI",
+  "earlier_section": "Operations",
+  "earlier_text": "The OpenAI Leadership, i.e., the CEO or a person designated by them, serves as the default decision-maker on all decisions ... (For the avoidance of doubt, Leadership can also make decisions without the SAG’s participation, i.e., the SAG does not have the ability to “filibuster”)",
+  "later_section": "B Decision-making practices",
+  "later_text": "For the avoidance of doubt, OpenAI Leadership can also make decisions without the SAG’s participation, i.e., the SAG does not have the ability to “filibuster” ... OpenAI Leadership, i.e., the CEO or a person designated by them, is responsible for: • Making all final decisions, including accepting any residual risks and making deployment go/no-go decisions, informed by SAG’s recommendations."
+ },
+ {
+  "id": "q043",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 4.Information Security",
+  "earlier_text": "We intend to implement appropriate information security standards sufficient to prevent Grok from being stolen by a motivated non-state actor.",
+  "later_section": "Operational and Societal Risks > 4.Information Security",
+  "later_text": "We intend to implement appropriate information security standards sufficient to prevent Grok from being stolen by a motivated non-state actor."
+ },
+ {
+  "id": "q044",
+  "developer": "Google DeepMind",
+  "earlier_section": "1.2 Critical Capability Levels",
+  "earlier_text": "We describe three sets of CCLs: misuse CCLs, machine learning R&D CCLs, and misalignment CCLs. For misuse risk, we define CCLs in the following risk domains where the misuse of model capabilities may result in severe harm: ● CBRN: Risks of models assisting in the development, preparation, and/or execution of a chemical, biological, radiological, or nuclear (“CBRN”) threat. ● Cyber: ... ● Harmful Manipulation: Risks of models with high manipulative capabilities potentially being misused...",
+  "later_section": "1.2 Critical Capability Levels and Tracked Capability Levels",
+  "later_text": "We identify CCLs for two kinds of risks: misuse risk and risks related to machine learning R&D and misalignment. ... This update to the Framework introduces “Tracked Capability Levels (TCLs).” TCLs are meant to capture significant risks that may manifest at a lower capability threshold than our CCLs and we apply our mitigation and risk acceptance determination process proportionately. We identify TCLs for CBRN risk, as well as ML R&D and misalignment risks."
+ },
+ {
+  "id": "q045",
+  "developer": "Anthropic",
+  "earlier_section": "Initial Commitments",
+  "earlier_text": "We commit to pause training before a model's capability level outstrips the Containment Measures we have implemented.",
+  "later_section": "6.2. Restrict Deployment and Further Scaling",
+  "later_text": "Monitoring pretraining: We will not train models with comparable or greater capabilities to the one that requires the ASL-3 Security Standard.14 This is achieved by monitoring the capabilities of the model in pretraining and comparing them against the given model. If the pretraining model's capabilities are comparable or greater, we will pause training until we have implemented the ASL-3 Security Standard and established it is sufficient for the model."
+ },
+ {
+  "id": "q046",
+  "developer": "Google DeepMind",
+  "earlier_section": "Table 4.a: Exploratory Misalignment CCLs and Mitigations",
+  "earlier_text": "Instrumental Reasoning Level 1: The instrumental reasoning abilities of the model enable enough situational awareness (ability to work out and use relevant details of its deployment setting) and stealth (ability to circumvent basic oversight mechanisms) such that, absent additional mitigations, we cannot rule out the model significantly undermining human control.",
+  "later_section": "3.2.1 Stealth and Situational Awareness Tracked Capability Level",
+  "later_text": "Stealth and Situational Awareness TCL: The instrumental reasoning abilities of the model enable enough situational awareness (ability to discover and use relevant details of its deployment setting) and stealth (ability to circumvent basic oversight mechanisms) such that, absent additional mitigations, we cannot rule out the model significantly undermining human control."
+ },
+ {
+  "id": "q047",
+  "developer": "Google DeepMind",
+  "earlier_section": "Misuse: Deployment Mitigations",
+  "earlier_text": "The following deployment mitigation process will be applied to models reaching a CCL, allowing for iterative and flexible tailoring of mitigations to each risk and use case.",
+  "later_section": "2.1.2 Deployment Mitigations / 3.1.2 Deployment Mitigations",
+  "later_text": "The following mitigation process for external deployments will be applied to models reaching a misuse CCL, allowing for iterative and flexible tailoring of mitigations to each risk and use case. ... The following mitigation process will be applied for deployments of a model reaching a ML R&D CCL. The approach is similar to misuse deployment mitigations, with an added focus on large scale internal deployments."
+ },
+ {
+  "id": "q048",
+  "developer": "Anthropic",
+  "earlier_section": "3.3. Capability Decision",
+  "earlier_text": "First, we willcompile a Capability Reportthat documents the findings from the comprehensive assessment, makes an affirmative case for why the Capability Threshold is sufficiently far away, and advances recommendations on deployment decisions.",
+  "later_section": "3. Risk Reports",
+  "later_text": "We will publish Risk Reports discussing the risks of our systems and how we have made determinations about whether to continue AI development and deployment in light of the risks."
+ },
+ {
+  "id": "q049",
+  "developer": "Anthropic",
+  "earlier_section": "Evaluation Protocol",
+  "earlier_text": "(2c) If the model has already surpassed the next ASL during training, immediately lock down access to the weights. Stakeholders including the CISO and CEO should be immediately convened to determine whether the level of danger merits deletion of the weights. After a detailed post-mortem, this policy should then be promptly updated to minimize risk of the re-occurrence of this failure (e.g. through more frequent or thorough evaluations).",
+  "later_section": "6.2. Restrict Deployment and Further Scaling",
+  "later_text": "In the security context, an example of such a measure would be storing the model weights in a single-purpose, isolated network that meets the ASL-3 ... Stronger restrictions: In the unlikely event that we cannot implement interim measures to adequately mitigate risk, we will impose stronger restrictions. ... In the security context, we will delete model weights."
+ },
+ {
+  "id": "q050",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 3. Safeguard Implementation",
+  "earlier_text": "Because xAI is committed to continual improvement, we will continue to evaluate our approach to enhancing safety. Thus, xAI may change its approach from that listed above in order to make additional improvements.",
+  "later_section": "2.3. Safety mitigations",
+  "later_text": "Because xAI is committed to continual improvement, we will continue to evaluate our approach to enhancing safety. Thus, xAI may change its approach from that listed above in order to make additional improvements."
+ },
+ {
+  "id": "q051",
+  "developer": "Google DeepMind",
+  "earlier_section": "5.2 Disclosures",
+  "earlier_text": "We may also consider disclosing information to other external organisations to promote shared learning and coordinated risk mitigation. We will continue to review and evolve our disclosure process over time.",
+  "later_section": "5.2 Disclosures",
+  "later_text": "We may also consider disclosing information to other external organizations to promote shared learning and coordinated risk mitigation. We will continue to review and evolve our disclosure process over time."
+ },
+ {
+  "id": "q052",
+  "developer": "Meta",
+  "earlier_section": "3.4 Outcomes & threat scenarios",
+  "earlier_text": "We include catastrophic outcomes in the following risk domains: Cybersecurity and Chemical & Biological risks.",
+  "later_section": "3.4 Outcomes & Threat Scenarios",
+  "later_text": "We include catastrophic outcomes in the following risk domains: Cybersecurity, Chemical & Biological Risks, and Loss of Control."
+ },
+ {
+  "id": "q053",
+  "developer": "Anthropic",
+  "earlier_section": "Evaluation Protocol",
+  "earlier_text": "(1) If sufficient Containment Measures for the next ASL have already been implemented, ensure they are activated before continuing training.",
+  "later_section": "4.3. Safeguards Decision",
+  "later_text": "If, after the evaluations above, we determine that we have met the ASL-3 Required Safeguards, then we may proceed with deploying and training models above the Capability Threshold, provided we have also conducted a follow-up capability assessment."
+ },
+ {
+  "id": "q054",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 2. Public Understanding",
+  "earlier_text": "xAI is exploring building truth-seeking AI tools, such as AIs that can help users better assess and understand events by better sorting through inaccurate or biased materials.",
+  "later_section": "Operational and Societal Risks > 2. Public Understanding",
+  "later_text": "xAI is exploring building truth-seeking AI tools, such as AIs that can help users better assess and understand events by better sorting through inaccurate or biased materials."
+ },
+ {
+  "id": "q055",
+  "developer": "Meta",
+  "earlier_section": "5.1 Updates to our framework",
+  "earlier_text": "We will update our Framework based on these observations.",
+  "later_section": "5.1 Updates to our Framework",
+  "later_text": "We will update our Framework based on these observations and will do so when we have reasonable grounds to believe either its adequacy or our adherence to it has been materially undermined, or at least every twelve months, whichever is sooner."
+ },
+ {
+  "id": "q056",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 1.Approach to Benchmarking",
+  "earlier_text": "To transparently measure Grok’s safety properties, we intend to utilize benchmarks like WMD and Catastrophic Harm Benchmarks.",
+  "later_section": "Addressing Risks of Malicious Use > 1. Approach to Benchmarking",
+  "later_text": "To transparently measure our models’ safety properties, xAI utilizes public benchmarks like Weapons of Mass Destruction Proxy and Catastrophic Harm Benchmarks (described below)."
+ },
+ {
+  "id": "q057",
+  "developer": "xAI",
+  "earlier_section": "Overall Approach",
+  "earlier_text": "Approach to Mitigating Risks of Malicious Use: Alongside comprehensive evaluations measuring dual-use capabilities, our mitigation strategy for malicious use risks is to identify critical steps in major risk scenarios and implement redundant layers of safeguards in our models to inhibit user progress in advancing through such steps.",
+  "later_section": "2.3. Safety mitigations",
+  "later_text": "Approach to Mitigating Risks of Malicious Use: Alongside comprehensive evaluations measuring dual-use capabilities, our mitigation strategy for malicious use risks is to identify critical steps in major risk scenarios and implement redundant layers of safeguards in our models to inhibit user progress in advancing through such steps."
+ },
+ {
+  "id": "q058",
+  "developer": "Google DeepMind",
+  "earlier_section": "2.1.2 Deployment Mitigations",
+  "earlier_text": "Developing and improving a suite of safeguards targeting the capability, which may include measures such as safety post-training, monitoring and analysis, account moderation, jailbreak detection and patching, user verification, and bug bounties.",
+  "later_section": "2.1.2 Deployment Mitigations",
+  "later_text": "Developing and improving a suite of safeguards targeting the capability, which may include measures such as safety post-training, monitoring and analysis, account moderation, jailbreak detection and patching, user verification, and bug bounties."
+ },
+ {
+  "id": "q059",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-3 Deployment Measures",
+  "earlier_text": "Successfully pass red-teaming: World-class experts collaborating with prompt engineers should red-team the deployment thoroughly and fail to elicit information at a level of sophistication, accuracy, usefulness, detail, and frequency which significantly enables catastrophic misuse. Misuse domains should at a minimum include causes of extreme CBRN risks, and cybersecurity.",
+  "later_section": "4.1. ASL-3 Deployment Standard",
+  "later_text": "Red-teaming: Conduct red-teaming that demonstrates that threat actors with realistic access levels and resources are highly unlikely to be able to consistently elicit information from any generally accessible systems that greatly increases their ability to cause catastrophic harm relative to other available tools.11"
+ },
+ {
+  "id": "q060",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-3 Capabilities and Threat Models",
+  "earlier_text": "Capabilities that significantly increase risk of misuse catastrophe: Access to the model would substantially increase the risk of deliberately-caused catastrophic harm, either by proliferating capabilities, lowering costs, or enabling new methods of attack. This increase in risk is measured relative to today's baseline level of risk that comes from e.g. access to search engines and textbooks.",
+  "later_section": "2. Capability Thresholds and Required Safeguards",
+  "later_text": "Chemical, Biological, Radiological, and Nuclear (CBRN) weapons. The ability to significantly help individuals or groups with basic technical backgrounds (e.g., undergraduate STEM degrees) create/obtain and deploy CBRN weapons. ... The ASL-3 Deployment Standard and the ASL-3 Security Standard, which protect against misuse and model-weight theft by non-state adversaries, are required."
+ },
+ {
+  "id": "q061",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 6.Deployment Decisions",
+  "earlier_text": "Safeguards are adequate only if Grok’s performance on the relevant benchmarks is within stated thresholds. However, to ensure responsible deployment, risk management frameworks need to be continually adapted and updated as circumstances change. It is conceivable that for a particular modality and/or type of release, the expected benefits may outweigh the risks on a particular benchmark.",
+  "later_section": "Operational and Societal Risks > 6.Deployment Decisions",
+  "later_text": "Safeguards are adequate only if Grok’s performance on the relevant benchmarks is within stated thresholds. However, to ensure responsible deployment, risk management frameworks need to be continually adapted and updated as circumstances change. It is conceivable that for a particular modality and/or type of release, the expected benefits may outweigh the risks on a particular benchmark."
+ },
+ {
+  "id": "q062",
+  "developer": "OpenAI",
+  "earlier_section": "Operations",
+  "earlier_text": "The members of the SAG and the SAG Chair are appointed by the OpenAI Leadership. This will be done in consultation with the BoD, as is common for important roles in general.",
+  "later_section": "B Decision-making practices",
+  "later_text": "The members of the SAG and the SAG Chair are appointed by the OpenAI Leadership."
+ },
+ {
+  "id": "q063",
+  "developer": "Meta",
+  "earlier_section": "Table 1",
+  "earlier_text": "The model provides significant uplift towards execution of a threat scenario (i.e. significantly enhances performance on key capabilities or tasks needed to produce a catastrophic outcome) but does not enable execution of any threat scenario that has been identified as potentially sufficient to produce a catastrophic outcome. ... The model would not provide significant uplift towards execution of a threat scenario.",
+  "later_section": "Table 1",
+  "later_text": "Deployment of the Frontier AI could substantially contribute to any threat scenario associated with a catastrophic outcome. ... The Frontier AI shows relevant capabilities, but could not substantially contribute to any threat scenario associated with a catastrophic outcome, across plausible deployment and development scenarios."
+ },
+ {
+  "id": "q064",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 1.Public transparency and third-party review",
+  "earlier_text": "4. Survey: survey employees for their views and projections of important future developments in AI, e.g., capability gains and benchmark results.",
+  "later_section": "Operational and Societal Risks > 1.Public transparency and third-party review",
+  "later_text": "4. Survey: survey employees for their views and projectionsof important future developments in AI, e.g., capability gains and benchmark results."
+ },
+ {
+  "id": "q065",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Loss of Control > 3.Thresholds",
+  "earlier_text": "Benchmark Thresholds Model Alignment between Statements and Knowledge (MASK) <X% lying on MASK (e.g. <50%) Utility Functions Utility/Power Correlation (Coercive): <W",
+  "later_section": "Addressing Risks of Loss of Control > 3.Thresholds",
+  "later_text": "Benchmark Thresholds Model Alignment between Statements and Knowledge (MASK) <X% lying on MASK (e.g. <50%) Utility Functions Utility/Power Correlation (Coercive): <W"
+ },
+ {
+  "id": "q066",
+  "developer": "OpenAI",
+  "earlier_section": "Operations / Process",
+  "earlier_text": "providing a monthly report (sent to the SAG, Leadership and BoD) synthesizing the above with any potential protective actions (the SAG Chair, OpenAI Leadership, and/or BoD can adjust this cadence as needed",
+  "later_section": "3.3 Capability threshold determinations",
+  "later_text": "The results of these evaluations, and any noteworthy observations that should affect interpretation of the results, are compiled into a Capabilities Report that is submitted to the SAG."
+ },
+ {
+  "id": "q067",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use",
+  "earlier_text": "However, we will allow Grok to respond to such requests from some vetted, highly trusted users (such as trusted third-party safety auditors) whom we know to be using those capabilities for benign or beneficial purposes, such as scientifically investigating Grok’s capabilities for risk assessment purposes, or if such requests cover information that is already readily and easily available, including by an internet search.",
+  "later_section": "Addressing Risks of Malicious Use",
+  "later_text": "However, we may selectively allow xAI’s models to respond to such requests from some vetted, highly trusted users (such as trusted third-party safety auditors or large enterprise customers under contract) whom we know to be using those capabilities for benign or beneficial purposes, such as scientifically investigating AI model’s capabilities for risk assessment purposes, or if such requests cover information that is already readily and easily available, including by an internet search."
+ },
+ {
+  "id": "q068",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 3. Safeguard Implementation",
+  "earlier_text": "Driving towards our safety objectives, we continue to design and deploy the following safeguards into our models: ● Safety training: Training our models to recognize and decline harmful requests. ● System prompts: Providing high priority instructions to our models to enforce our basic refusal policy. ● Input and output filters: Applying classifiers to user inputs or model outputs to verify safety when a model is queried regarding weapons of mass destruction or cyberterrorism.",
+  "later_section": "Addressing Risks of Malicious Use > 3. Safeguard Implementation",
+  "later_text": "Driving towards our safety objectives, we continue to design and deploy the following safeguards into our models: ● Safety training: Training our models to recognize and decline harmful requests. ● System prompts: Providing high-priority instructions to our models to enforce our basic refusal policy. ● Input and output filters: Applying classifiers to user inputs or model outputs to verify safety when a model is queried regarding weapons of mass destruction or cyberterrorism."
+ },
+ {
+  "id": "q069",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Loss of Control > 1.Background",
+  "earlier_text": "Our evaluation and mitigation plans for loss of control are not yet fully developed, and we intend to improve them in the future.",
+  "later_section": "Overall Approach",
+  "later_text": "We continue to work towards developing naturalistic evaluation environments that would enable us to assess more realistic, real-world behaviors."
+ },
+ {
+  "id": "q070",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 4. Responsibility for Risks",
+  "earlier_text": "2. If we determine that xAI systems are actively being used in such an event, we may take steps to isolate and revoke access to user accounts involved in the event.",
+  "later_section": "Operational and Societal Risks > 4. Governance Approach",
+  "later_text": "2. If we determine that xAI systems are actively being used in such an event, we may take steps to isolate and revoke access to user accounts involved in the event."
+ },
+ {
+  "id": "q071",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 2.Implementation",
+  "earlier_text": "We intend to choose the benchmarks and set the thresholds for reducing malicious use risks in a future version of the risk management framework.",
+  "later_section": "Addressing Risks of Malicious Use > 2. Risk Assessment",
+  "later_text": "Thresholds: We developed an internal benchmark of benign and restricted biology and chemistry related queries in collaboration with SecureBio. Our risk acceptance criteria for system deployment is maintaining an answer rate of less than 1 out of 20 on restricted queries. We plan to add additional thresholds tied to other benchmarks."
+ },
+ {
+  "id": "q072",
+  "developer": "Google DeepMind",
+  "earlier_section": "Misuse: Table 1: Misuse CCLs and Security Mitigations",
+  "earlier_text": "Machine Learning R&D autonomy level 1: Can fully automate the AI R&D pipeline at a competitive cost. The cost comparison is relative to humans augmented by AI tools.",
+  "later_section": "Table 3.2.1.a: Machine Learning R&D CCLs and Security Mitigations",
+  "later_text": "ML R&D automation level 1: Can fully automate the work of any team of researchers at Google focused on improving AI capabilities, with approximately comparable all-inclusive costs."
+ },
+ {
+  "id": "q073",
+  "developer": "Anthropic",
+  "earlier_section": "3.3. Capability Decision",
+  "earlier_text": "If the CEO and RSO decide to proceed with deployment, they willshare their decision–as well as the underlying Capability Report, internal feedback, and any external feedback–with the Board of Directors and theLong-Term Benefit Trustbefore movingforward.",
+  "later_section": "3.4. Procedures",
+  "later_text": "Governance notification: Following approval of a Risk Report, the CEO and RSO will promptly share their decision(s), the underlying Risk Report, and internal feedback with both the Board and the LTBT."
+ },
+ {
+  "id": "q074",
+  "developer": "Anthropic",
+  "earlier_section": "Procedural Commitments",
+  "earlier_text": "Distribution partnership contracts will be verified for compatibility with the ASL system and must have a mechanism to bind the partner's use of Anthropic models to the same or similar safety measures as Anthropic (e.g. similar security measures) in order to address catastrophic risks.",
+  "later_section": "4.1. ASL-3 Deployment Standard",
+  "later_text": "Third-party environments: Document how all relevant models will meet the criteria above, even if they are deployed in a third-party partner’s environment that may have a different set of safeguards. ... (3) reviewing major contracts (i.e., deployment partnerships) for consistency with this policy"
+ },
+ {
+  "id": "q075",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-2 and ASL-3 Security Commitments",
+  "earlier_text": "Ongoing configuration management, compliance drills, integrated security approaches and mandatory external reviews should embed security within regular operations and harden processes during organizational changes.",
+  "later_section": "Appendix B: ASL-2 Standard",
+  "later_text": "Operations: Ongoing configuration management, compliance drills, integrated security approaches and mandatory external reviews should embed security within regular operations and harden processes during organizational changes."
+ },
+ {
+  "id": "q076",
+  "developer": "Anthropic",
+  "earlier_section": "Evaluation Protocol",
+  "earlier_text": "For now, we commit to perform mid-training fine-tuning and evaluations which, combined with the safety buffer described above, are intended to mitigate the risk of passing the defined ASL-3 threshold mid-training.",
+  "later_section": "6.2. Restrict Deployment and Further Scaling",
+  "later_text": "This is achieved by monitoring the capabilities of the model in pretraining and comparing them against the given model."
+ },
+ {
+  "id": "q077",
+  "developer": "Google DeepMind",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "As part of our broader research into frontier AI models, we continue to assess whether there are other risk domains where severe risks may arise and will update our approach as appropriate.",
+  "later_section": "1.3.1 Risk Identification",
+  "later_text": "As part of our broader research into and development of frontier AI models, we continue to assess whether there are other risk domains where significant or severe risks may arise and will update our approach as appropriate."
+ },
+ {
+  "id": "q078",
+  "developer": "OpenAI",
+  "earlier_section": "Scorecard / Forecasting, \"early warnings,\" and monitoring",
+  "earlier_text": "We will also, in cooperation with other teams (e.g., Safety Systems), develop monitoring and investigative systems. This monitoring of real-world misuse (as well as staying abreast of relevant research developments) will help us create a better picture of deployed model characteristics, and inform updates to our evaluations as necessary.",
+  "later_section": "3.1 Evaluation approach",
+  "later_text": "We monitor the technical landscape for changes to the elicitation techniques and best practices, and reassess our evaluations as needed."
+ },
+ {
+  "id": "q079",
+  "developer": "Google DeepMind",
+  "earlier_section": "(preamble)",
+  "earlier_text": "These mitigations should be understood as recommendations for the industry collectively: our adoption of them would only result in effective risk mitigation for society if all relevant organizations provide similar levels of protection, and our adoption of the protocols described in this Framework may depend on whether such organizations across the field adopt similar protocols.",
+  "later_section": "Overview",
+  "later_text": "These mitigations are most effective when adopted by industry as a whole: our adoption of them would result in effective risk mitigation for society only if all relevant organisations provide similar levels of protection."
+ },
+ {
+  "id": "q080",
+  "developer": "Meta",
+  "earlier_section": "4.2 Evaluation and mitigation",
+  "earlier_text": "We typically repeat evaluations as a frontier AI nears or completes training.",
+  "later_section": "4.2 Evaluation and mitigation",
+  "later_text": "We typically repeat evaluations as a Frontier AI model nears or completes training."
+ },
+ {
+  "id": "q081",
+  "developer": "Google DeepMind",
+  "earlier_section": "Deceptive Alignment: Mitigation Approach and Critical Capability Levels / Table 2",
+  "earlier_text": "When models reach this capability level, we believe applying an automated monitor to the model’s explicit reasoning (e.g. chain-of-thought output) is an effective mitigation. ... Automated monitoring: a monitoring system to detect illicit use of instrumental reasoning capabilities in a model’s chain-of-thought and use it in high-stakes deployments where there is significant risk of the model undermining human control.",
+  "later_section": "Section 4: Misalignment (Exploratory Approach) / Table 4.a",
+  "later_text": "When models reach this capability level, one possible mitigation is to apply an automated monitor to the model’s explicit reasoning (e.g. chain-of-thought output). ... Automated monitoring: monitoring system to detect illicit use of instrumental reasoning capabilities in a model’s chain-of-thought may be applied in high-stakes internal deployments where there is significant risk of the model undermining human control."
+ },
+ {
+  "id": "q082",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use",
+  "earlier_text": "Our most basic safeguard against malicious use is to train and instruct our publicly deployed models to decline requests showing clear intent to engage in criminal activity which poses risks of severe harm to others, also known as our basic refusal policy.",
+  "later_section": "2.1. Risk Identification > (a) Addressing CBRN Risks",
+  "later_text": "Our most basic safeguard against malicious use is to train and instruct our publicly deployed models to decline requests showing clear intent to engage in criminal or dual-use activity."
+ },
+ {
+  "id": "q083",
+  "developer": "Anthropic",
+  "earlier_section": "7.1. Internal Governance",
+  "earlier_text": "Noncompliance:We will maintain a process throughwhich Anthropic staff may anonymously notify the Responsible Scaling Officer of any potential instances of noncompliance with this policy.",
+  "later_section": "4. Governance",
+  "later_text": "Noncompliance reporting: We will maintain a process for Anthropic staff to submit anonymous or identified reports regarding potential noncompliance with this policy. Staff will have more than one option for who receives these reports, including the RSO, and at least one executive who does not report to the RSO."
+ },
+ {
+  "id": "q084",
+  "developer": "OpenAI",
+  "earlier_section": "Tracked Risk Categories / Model autonomy",
+  "earlier_text": "Model autonomy enables actors to run scaled misuse that can adapt to environmental changes and evade attempts to mitigate or shut down operations. Autonomy is also a prerequisite for self-exfiltration, self-improvement, and resource acquisition. ... include autonomous replication, adaptation, and AI R&D as part of the model autonomy risk category.",
+  "later_section": "2.2 Tracked Categories, Table 1; 2.3 Research Categories, Table 2",
+  "later_text": "AI Self- improvement: The ability of an AI system to accelerate AI research, including to increase the system’s own capability. ... Autonomous Replication and Adaptation: ability to survive, replicate, resist shutdown, acquire resources to maintain and scale its own operations, and com- mit illegal activities that collectively constitute caus- ing severe harm"
+ },
+ {
+  "id": "q085",
+  "developer": "Meta",
+  "earlier_section": "3.2 Threat modelling",
+  "earlier_text": "We design assessments to simulate whether our model would uniquely enable these scenarios, and identify the enabling capabilities the model would need to exhibit to do so. Our first set of evaluations are designed to identify whether all of these enabling capabilities are present, and if the model is sufficiently performant on them. If so, this would prompt further evaluation to understand whether the model could uniquely enable the threat scenario.",
+  "later_section": "3.2 Threat modeling / 4.2 Evaluation and mitigation",
+  "later_text": "We design assessments to simulate whether our model would substantially contribute to these scenarios, and identify the enabling capabilities the model would need to exhibit to do so. ... If we identify that a model exhibits sufficient performance on these capabilities, we will conduct further evaluations to establish whether deployment of the model could substantially contribute to any threat scenario."
+ },
+ {
+  "id": "q086",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 1.Approach to Benchmarking",
+  "earlier_text": "To transparently measure Grok’s safety properties, we intend to utilize benchmarks like WMD and Catastrophic Harm Benchmarks.",
+  "later_section": "Addressing Risks of Malicious Use > 1.Approach to Benchmarking",
+  "later_text": "To transparently measure Grok’s safety properties, we intend to utilize benchmarks like WMD and Catastrophic Harm Benchmarks."
+ },
+ {
+  "id": "q087",
+  "developer": "xAI",
+  "earlier_section": "Overall Approach",
+  "earlier_text": "xAI works with a variety of governmental bodies, non-governmental organizations, private testing firms, industry peers, and academic researchers to identify such inhibiting steps, commonly referred to as bottlenecks, and implement commensurate safeguards to mitigate a model’s ability to assist in accelerating a bad actor’s progress through them.",
+  "later_section": "2.3. Safety mitigations",
+  "later_text": "xAI works to identify such inhibiting steps, commonly referred to as bottlenecks, and implement commensurate safeguards to mitigate a model’s ability to assist in accelerating a malicious actor’s progress through them."
+ },
+ {
+  "id": "q088",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 5.Responsibility for Risks",
+  "earlier_text": "4. We would perform a post-mortem of the event after it has been resolved, focusing on any areas where changes to systemic factors (for example, safety culture) could have averted such an incident. We would use the post-mortem to inform development and implementation of necessary changes to our risk management practices.",
+  "later_section": "Operational and Societal Risks > 4. Responsibility for Risks",
+  "later_text": "4. We may perform a post-mortem of the event after it has been resolved, focusing on any areas where changes to systemic factors (for example, safety culture) could have averted such an incident. We may use the post-mortem to inform development and implementation of necessary changes to our risk management practices."
+ },
+ {
+  "id": "q089",
+  "developer": "Meta",
+  "earlier_section": "5.2 Research areas of focus",
+  "earlier_text": "To that end, we’ll continue to work on: (1) improving the quality and reliability of evaluations; (2) developing additional, robust mitigation techniques; and (3) more advanced methods for performing post-release monitoring of open source AI models.",
+  "later_section": "5.2 Research Areas of Focus",
+  "later_text": "In addition to the further research we highlight for specific risk domains in section 4.2.4, we’ll continue to work on: (1) improving the quality and reliability of evaluations; (2) developing additional, robust mitigation techniques; and (3) more advanced methods for performing post-deployment monitoring of models."
+ },
+ {
+  "id": "q090",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use",
+  "earlier_text": "Under this RMF, xAI’s models apply heightened safeguards if they receive user prompts that pose a foreseeable and non-trivial risk of resulting in large-scale violence, terrorism, or the use, development, or proliferation of weapons of mass destruction, including CBRN weapons, and major cyber attacks on critical infrastructure. ... In this RMF, we particularly focus on requests that pose a foreseeable and non-trivial risk of more than one hundred deaths or over $1 billion in damages from weapons of mass destruction ...",
+  "later_section": "Addressing Risks of Malicious Use",
+  "later_text": "Under this FAIF, xAI’s models apply heightened safeguards if they receive user prompts that pose a foreseeable and non-trivial risk of resulting in large-scale violence, terrorism, or the use, development, or proliferation of weapons of mass destruction, including CBRN weapons, and major cyber attacks on critical infrastructure. ... In this FAIF, we particularly focus on requests that pose a Catastrophic Risk."
+ },
+ {
+  "id": "q091",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Malicious Use > 2.Implementation",
+  "earlier_text": "We intend to design into Grok adequate safeguards prior to releasing it for general availability.",
+  "later_section": "Addressing Risks of Malicious Use > 2. Risk Assessment",
+  "later_text": "Our risk acceptance criteria for system deployment is maintaining an answer rate of less than 1 out of 20 on restricted queries."
+ },
+ {
+  "id": "q092",
+  "developer": "xAI",
+  "earlier_section": "Overall Approach",
+  "earlier_text": "We continue to work towards developing naturalistic evaluation environments that would enable us to assess more realistic, real-world behaviors.",
+  "later_section": "2.3. Safety mitigations",
+  "later_text": "We continue to work towards developing naturalistic evaluation environments that would enable us to assess more realistic, real-world behaviors."
+ },
+ {
+  "id": "q093",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-2 Deployment Measures",
+  "earlier_text": "If automated fine-tuning is provided, data should similarly be filtered for harmfulness, and models should be subject to automated evaluation to ensure harmlessness features are not degraded.",
+  "later_section": "Appendix B: ASL-2 Standard",
+  "later_text": "Fine-tuning protections: In finetuning products, data is filtered for harmfulness, and models are subject to automated evaluation to check harmlessness features are not degraded."
+ },
+ {
+  "id": "q094",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Loss of Control > 3. Safeguard Implementation",
+  "earlier_text": "xAI trains its models to be honest and have values conducive to controllability, such as recognizing and obeying an instruction hierarchy9. In addition, using a high level instruction called a “system prompt”, xAI directly instructs its models to not deceive or deliberately mislead the user.",
+  "later_section": "Addressing Risks of Loss of Control > 3. Safeguard Implementation",
+  "later_text": "xAI trains its models to be honest and have values conducive to controllability, such as recognizing and obeying an instruction hierarchy.10 In addition, using a high level instruction called a “system prompt”, xAI directly instructs its models to not deceive or deliberately mislead the user."
+ },
+ {
+  "id": "q095",
+  "developer": "Google DeepMind",
+  "earlier_section": "2.1.2 Deployment Mitigations",
+  "earlier_text": "Pre-deployment review of safety case: external deployments of a model take place only after the appropriate governance function determines the safety case regarding each CCL the model has reached to be adequate. In particular, we will deem deployment mitigations adequate if the evidence suggests that for the CCLs the model has reached, the increase in likelihood of severe harm has been reduced to an acceptable level.",
+  "later_section": "2.1.2 Deployment Mitigations",
+  "later_text": "Pre-deployment review of residual risk assessment: external deployments of a model take place only after the appropriate governance function determines the residual risk to be acceptable (including a safety case where a CCL has been reached). In particular, we will deem deployment mitigations adequate if the evidence suggests that for the T/CCLs the model has reached, the increase in likelihood of harm from the proposed external deployment has been reduced to an acceptable level."
+ },
+ {
+  "id": "q096",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-3 Deployment Measures",
+  "earlier_text": "Tiered access: In limited cases, models with capabilities relevant to catastrophic harm may be made available to a select group of vetted users with a legitimate and beneficial use-case that cannot be separated from dangerous capabilities, and only if such access can be granted safely and with sufficient oversight.",
+  "later_section": "4.1. ASL-3 Deployment Standard",
+  "later_text": "Trusted users: Establish criteria for determining when it may be appropriate to share a version of the model with reduced safeguards with trusted users. In addition, demonstrate that an alternative set of controls will provide equivalent levels of assurance. This could include a sufficient combination of user vetting, secure access controls, monitoring, log retention, and incident response protocols."
+ },
+ {
+  "id": "q097",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 5. Deployment Decisions",
+  "earlier_text": "We will also balance various factors when making deployment decisions. The necessity and extent of deployment of certain safeguards and mitigations may depend on how a model performs on relevant benchmarks. Pre-deployment reviews include assessing benchmark results (e.g., WMDP scores) and mitigation effectiveness. For internal use, we review catastrophic risks like oversight evasion before extensive rollout. However, to ensure responsible deployment, this FAIF will be continually adapted and updated as circumstances change, before major new capabilities are launched, and in ...",
+  "later_section": "2.3. Systemic risk acceptance determination",
+  "later_text": "xAI will only proceed with the development, the making available on the market, and/or the use of the model, if the systemic risks stemming from the model are determined to be acceptable. In all scenarios, xAI will take appropriate measures to ensure the systemic risks stemming from the model are and will remain acceptable prior to proceeding."
+ },
+ {
+  "id": "q098",
+  "developer": "Google DeepMind",
+  "earlier_section": "2.2 Misuse Critical Capability Levels / Table 2.2.1.a-2.2.2.a / Table 3.2.1.a",
+  "earlier_text": "We recommend a security level for each of these CCLs, which reflect our assessment of the minimum appropriate level of security the field of frontier AI should apply to models reaching each CCL. In practice, our overall security posture may commonly exceed the baseline levels recommended here.",
+  "later_section": "2.1.1 Security Mitigations / Tables 2.2.1.a-2.2.3.a",
+  "later_text": "We also define and recommend \"Security Level 2+,\" which uses RAND Security Level 2 (SL2) as a baseline, with additional security measures designed to address risks from insider threats and well-resourced non-state external actors."
+ },
+ {
+  "id": "q099",
+  "developer": "Anthropic",
+  "earlier_section": "ASL-3 Deployment Measures",
+  "earlier_text": "As part of this, Anthropic will maintain a publicly available channel for privately reporting model vulnerabilities.",
+  "later_section": "Appendix B: ASL-2 Standard",
+  "later_text": "Vulnerability reporting channels: Clearly indicated paths within the product for users to report harmful or dangerous model outputs, as well as a bug bounty for universal jailbreaks."
+ },
+ {
+  "id": "q100",
+  "developer": "Anthropic",
+  "earlier_section": "7.1. Internal Governance",
+  "earlier_text": "Employee agreements:We will not impose contractual non-disparagement obligations on employees, candidates, or former employees in a way that could impede or discourage them from publicly raising safety concerns about Anthropic. If we offer agreements with a non-disparagement clause, that clause will not preclude raising safety concerns, nor will it preclude disclosure of the existence of that clause.",
+  "later_section": "4. Governance",
+  "later_text": "Employee agreements: We will not impose contractual non-disparagement obligations on employees, candidates, or former employees in a way that could impede or discourage them from publicly raising safety concerns about Anthropic. If we offer agreements with a non-disparagement clause, that clause will not preclude raising safety concerns, nor will it preclude disclosure of the existence of that clause."
+ },
+ {
+  "id": "q101",
+  "developer": "xAI",
+  "earlier_section": "Addressing Risks of Loss of Control > 2. Risk Assessment",
+  "earlier_text": "Thresholds: Our risk acceptance criteria for system deployment is maintaining a dishonesty rate of less than 1 out of 2 on MASK. We plan to add additional thresholds tied to other benchmarks.",
+  "later_section": "Addressing Risks of Loss of Control > 2. Risk Assessment",
+  "later_text": "Thresholds: Our risk acceptance criteria for system deployment is maintaining a dishonesty rate of less than 1 out of 2 on MASK. We plan to add additional thresholds tied to other benchmarks."
+ },
+ {
+  "id": "q102",
+  "developer": "Google DeepMind",
+  "earlier_section": "1.4 Response Plans and Mitigations",
+  "earlier_text": "Where model capabilities remain quite distant from a CCL, a response plan may involve the adoption of additional capability assessment processes to flag when heightened mitigations are required.",
+  "later_section": "1.3.3 Risk Mitigation",
+  "later_text": "However, if we assess that risks stemming from the model remain acceptable and model capabilities remain distant from a CCL, the response plan may include updating the alert threshold to ensure the safety buffer remains appropriate."
+ },
+ {
+  "id": "q103",
+  "developer": "Anthropic",
+  "earlier_section": "Procedural Commitments",
+  "earlier_text": "Implement a non-compliance reporting policy for our Responsible Scaling Commitments as part of reaching ASL-3. The policy should allow for anonymous feedback, with an appropriate reporting chain.",
+  "later_section": "7.1. Internal Governance",
+  "later_text": "Noncompliance: We will maintain a process through which Anthropic staff may anonymously notify the Responsible Scaling Officer of any potential instances of noncompliance with this policy. We will also establish a policy governing noncompliance reporting, which will (1) protect reporters from retaliation and (2) set forth a mechanism for escalating reports to one or more members of the Board of Directors in cases where the report relates to conduct of the Responsible Scaling Officer."
+ },
+ {
+  "id": "q104",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 4.Information Security",
+  "earlier_text": "We intend to implement appropriate information security standards sufficient to prevent Grok from being stolen by a motivated non-state actor.",
+  "later_section": "Operational and Societal Risks > 3. Information Security",
+  "later_text": "xAI has implemented appropriate information security standards sufficient to prevent its critical model information from being stolen by a motivated non-state actor. To prevent the unauthorized proliferation of advanced AI systems, we also implement security measures against the large-scale extraction and distillation of reasoning traces, which have been shown to be highly effective in quickly reproducing advanced capabilities while expending far fewer computational resources than the original AI system10."
+ },
+ {
+  "id": "q105",
+  "developer": "Meta",
+  "earlier_section": "2.1.1 Anticipate",
+  "earlier_text": "In the event that we identify that a model can enable the end-to-end execution of a threat scenario for a catastrophic outcome, we will conduct a threat modelling exercise in line with the processes in Section 3.2.",
+  "later_section": "2.1.1 Anticipate",
+  "later_text": "In the event that we identify that a Frontier AI is likely to substantially contribute to a threat scenario for a catastrophic outcome, we will conduct a threat modeling exercise in line with the processes in section 3.2."
+ },
+ {
+  "id": "q106",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 1.Public transparency and third-party review",
+  "earlier_text": "We aim to keep the public informed about our risk management policies. As we work towards incorporating more risk management strategies, we intend to publish updates to our risk management framework.",
+  "later_section": "Operational and Societal Risks > 1. Public transparency and third-party review",
+  "later_text": "xAI aims to keep the public informed about our risk management policies. As we work towards incorporating more risk management strategies, we intend to publish updates to this RMF."
+ },
+ {
+  "id": "q107",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 1. Public transparency and third-party review",
+  "earlier_text": "4. Survey: Survey employees for their views and projections of important future developments in AI, e.g., capability gains and benchmark results.",
+  "later_section": "Operational and Societal Risks > 1. Public transparency and third-party review",
+  "later_text": "4. Survey: Survey employees for their views and projections of important future developments in AI, e.g., capability gains and benchmark results."
+ },
+ {
+  "id": "q108",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 5.Responsibility for Risks",
+  "earlier_text": "xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety.",
+  "later_section": "Operational and Societal Risks > 5.Responsibility for Risks",
+  "later_text": "xAI employees have whistleblower protections enabling them to raise concerns to relevant government agencies regarding imminent threats to public safety."
+ },
+ {
+  "id": "q109",
+  "developer": "Anthropic",
+  "earlier_section": "3.2. Comprehensive Assessment",
+  "earlier_text": "Threat model mapping:For each capability threshold,make a compelling case that we have mapped out the most likely and consequential threat models: combinations of actors (if relevant), attack pathways, model capability bottlenecks, and types of harms. We also make a compelling case that there does not exist a threat model that we are not evaluating that represents a substantial amount of risk.",
+  "later_section": "3.3. Contents",
+  "later_text": "Threat model identification: Our criteria for determining which catastrophic risks (i.e., threat models) we assess. 2. Threat model specification: The relevant threat models (which will, at a minimum, include those discussed above)."
+ },
+ {
+  "id": "q110",
+  "developer": "Google DeepMind",
+  "earlier_section": "2.2 Misuse Critical Capability Levels",
+  "earlier_text": "These recommended security levels reflect our current thinking proportionate to the risks posed and may be adjusted if our understanding of the risks changes. This may occur if, for example, a model does not possess capabilities meaningfully different from other publicly available models that have weaker security applied (in which case the marginal benefit of higher security is limited), or if we assess that the benefits of the open release of model weights outweigh the risks.",
+  "later_section": "2.2 Misuse Capability Levels",
+  "later_text": "These recommended security levels reflect our current thinking proportionate to the risks posed and may be adjusted if our understanding of the risks changes. This may occur if, for example, a model does not possess capabilities meaningfully different from other publicly available models that have weaker security applied (in which case the marginal benefit of higher security is limited), or if we assess that the benefits of the open release of model weights outweigh the risks."
+ },
+ {
+  "id": "q111",
+  "developer": "xAI",
+  "earlier_section": "Operational and Societal Risks > 4. Governance Approach",
+  "earlier_text": "Should it happen that xAI learns of an imminent threat of a significantly harmful event, including loss of control, we may take steps such as the following to stop or prevent that event:",
+  "later_section": "3. Incident reporting",
+  "later_text": "When critical incidents or imminent threats are identified, xAI’s will investigate the causes and effects of the incidents and, if necessary, take action to mitigate and contain incidents, and implement long-term solutions:"
+ },
+ {
+  "id": "q112",
+  "developer": "OpenAI",
+  "earlier_section": "Tracked Risk Categories / Model autonomy",
+  "earlier_text": "Model can profitably survive and replicate in the wild given minimal human instruction, i.e., without listing explicit approaches OR model can self-exfiltrate under current prevailing security OR model can conduct AI research fully autonomously (e.g., autonomously identify and validate a 2x compute efficiency improvement)",
+  "later_section": "2.2 Tracked Categories, Table 1",
+  "later_text": "[Critical] The model is ca- pable of recursively self improving (i.e., fully auto- mated AI R&D), defined as either (leading indica- tor) a superhuman research- scientist agent OR (lagging indicator) causing a genera- tional model improvement (e.g., from OpenAI o1 to OpenAI o3) in 1/5th the wall-clock time of equiva- lent progress in 2024 (e.g., sped up to just 4 weeks) sus- tainably for several months."
+ },
+ {
+  "id": "q113",
+  "developer": "Google DeepMind",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "We conduct further analysis, including reviewing model independent information, external evaluations, and post-market monitoring as appropriate.",
+  "later_section": "1.3.2 Inherent Risk Assessment",
+  "later_text": "We conduct further analysis, including reviewing model-independent information, external evaluations, and post-market monitoring as appropriate. In particular, we strive to learn from our post-market monitoring mechanisms, including as part of our detection, mitigation, response and/or reporting of incidents relating to our frontier safety risk domains."
+ },
+ {
+  "id": "q114",
+  "developer": "Anthropic",
+  "earlier_section": "Procedural Commitments",
+  "earlier_text": "Responsible Scaling Officer. There is a designated member of staff responsible for ensuring that our Responsible Scaling Commitments are executed properly.",
+  "later_section": "7.1. Internal Governance",
+  "later_text": "Responsible Scaling Officer: We will maintain the position of Responsible Scaling Officer, a designated member of staff who is responsible for reducing catastrophic risk, primarily by ensuring this policy is designed and implemented effectively. The Responsible Scaling Officer’s duties will include (but are not limited to): (1) as needed, proposing updates to this policy to the Board of Directors; (2) approving relevant model training or deployment decisions based on capability and safeguard assessments; ..."
+ },
+ {
+  "id": "q115",
+  "developer": "Google DeepMind",
+  "earlier_section": "5.1 Updates",
+  "earlier_text": "The process will involve (i) an assessment of the Framework’s appropriateness for the management of systemic risk, drawing on information sources such as record of adherence to the framework, relevant high-quality research, information shared through industry forums, and evaluation results, as necessary, and (ii) an assessment of our adherence to the Framework. ... The updated version and framework assessment will be reviewed by the appropriate corporate governance bodies.",
+  "later_section": "5.1 Updates",
+  "later_text": "The process will involve (i) an assessment of the Framework’s appropriateness for the management of significant and severe risk, drawing on information sources such as record of adherence to the framework, relevant high-quality research, information shared through industry forums, and evaluation results, as necessary, and (ii) an assessment of our adherence to the Framework. ... The updated version and framework assessment will be reviewed by the appropriate corporate governance bodies."
+ },
+ {
+  "id": "q116",
+  "developer": "Anthropic",
+  "earlier_section": "7.1. Internal Governance",
+  "earlier_text": "Transparency:We will share summaries of CapabilityReports and Safeguards Reports with Anthropic’s regular-clearance staff, redacting any highly-sensitive information. We will share a minimally redacted version of these reports with a subset of staff, to help us surface relevant technical safety considerations.",
+  "later_section": "4. Governance",
+  "later_text": "Internal transparency: We will share final, unredacted Risk Reports with Anthropic’s regular-clearance staff."
+ },
+ {
+  "id": "q117",
+  "developer": "Google DeepMind",
+  "earlier_section": "1.3 Outline of Our Risk Assessment Process",
+  "earlier_text": "As a result, to assess the ML R&D CCLs, we may use sources of information about our own progress at accelerating ML R&D to assess whether we are near or at the CCLs, in addition to evaluations of ML R&D capabilities. Similarly, our alert threshold may be defined based on these sources of information, rather than on evaluation scores.",
+  "later_section": "1.3.2 Inherent Risk Assessment",
+  "later_text": "As a result, to assess the ML R&D CCLs, we may use sources of information about our own progress at accelerating ML R&D to assess whether we are near or at the ML R&D CCLs, in addition to evaluations of ML R&D capabilities."
+ },
+ {
+  "id": "q118",
+  "developer": "Anthropic",
+  "earlier_section": "Evaluation details",
+  "earlier_text": "The model should be trained to be competent at general computer use, including training on tasks in the same vein as but not identical to these specific tasks. ... The model should be trained using methods that maximize helpfulness/corrigibility (to avoid refusals for these potentially-harmful tasks) and ability to use common command-line utilities.",
+  "later_section": "3.2. Comprehensive Assessment",
+  "later_text": "At minimum, we will perform basic finetuning for instruction following, tool use, minimizing refusal rates."
+ },
+ {
+  "id": "q119",
+  "developer": "Anthropic",
+  "earlier_section": "7.1. Internal Governance",
+  "earlier_text": "Further, we will track and investigate any reported or otherwise identified potential instances of noncompliance with this policy. Where reports are substantiated, we will take appropriate and proportional corrective action and document the same.",
+  "later_section": "4. Governance",
+  "later_text": "When we receive a report, we will promptly investigate, take appropriate and proportional corrective action if it is substantiated, and document the report and our findings."
+ },
+ {
+  "id": "q120",
+  "developer": "Meta",
+  "earlier_section": "Table 1",
+  "earlier_text": "Access is strictly limited to a small number of experts, alongside security protections to prevent hacking or exfiltration insofar as is technically feasible and commercially practicable.",
+  "later_section": "Table 1",
+  "later_text": "Initiate protocols for heightened access controls to model weights as overseen by the Chief AI Officer and/or Director of Alignment and Risk, to prevent their tampering or exfiltration insofar as is technically feasible and commercially practicable."
+ }
+]

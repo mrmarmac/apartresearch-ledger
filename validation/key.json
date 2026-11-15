@@ -1,0 +1,842 @@
+{
+ "q001": {
+  "source_row": "ANT-1-003",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q002": {
+  "source_row": "GDM-2-016",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q003": {
+  "source_row": "XAI-4-013",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q004": {
+  "source_row": "OAI-1-038",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q005": {
+  "source_row": "GDM-1-030",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q006": {
+  "source_row": "OAI-1-035",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q007": {
+  "source_row": "GDM-2-012",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q008": {
+  "source_row": "OAI-1-026",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q009": {
+  "source_row": "XAI-4-016",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": true
+ },
+ "q010": {
+  "source_row": "XAI-1-002",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q011": {
+  "source_row": "XAI-2-041",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q012": {
+  "source_row": "XAI-2-035",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q013": {
+  "source_row": "OAI-1-019",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": true
+ },
+ "q014": {
+  "source_row": "XAI-4-044",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q015": {
+  "source_row": "ANT-1-041",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q016": {
+  "source_row": "OAI-1-018",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q017": {
+  "source_row": "META-1-012",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q018": {
+  "source_row": "OAI-1-032",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q019": {
+  "source_row": "XAI-4-036",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q020": {
+  "source_row": "GDM-1-001",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q021": {
+  "source_row": "ANT-1-072",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q022": {
+  "source_row": "META-1-044",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q023": {
+  "source_row": "GDM-1-004",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q024": {
+  "source_row": "XAI-3-001",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q025": {
+  "source_row": "XAI-3-043",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q026": {
+  "source_row": "GDM-2-017",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q027": {
+  "source_row": "ANT-1-012",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q028": {
+  "source_row": "XAI-1-004",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q029": {
+  "source_row": "XAI-4-041",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q030": {
+  "source_row": "OAI-1-022",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q031": {
+  "source_row": "ANT-1-059",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q032": {
+  "source_row": "XAI-2-007",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q033": {
+  "source_row": "GDM-1-006",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q034": {
+  "source_row": "ANT-1-008",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q035": {
+  "source_row": "ANT-1-056",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q036": {
+  "source_row": "XAI-2-031",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q037": {
+  "source_row": "OAI-1-039",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q038": {
+  "source_row": "GDM-2-010",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": true
+ },
+ "q039": {
+  "source_row": "GDM-2-030",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": true
+ },
+ "q040": {
+  "source_row": "XAI-3-003",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q041": {
+  "source_row": "OAI-1-011",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q042": {
+  "source_row": "OAI-1-033",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q043": {
+  "source_row": "XAI-1-033",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q044": {
+  "source_row": "GDM-2-001",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q045": {
+  "source_row": "ANT-1-005",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": true
+ },
+ "q046": {
+  "source_row": "GDM-2-022",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q047": {
+  "source_row": "GDM-1-013",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q048": {
+  "source_row": "ANT-2-024",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": true
+ },
+ "q049": {
+  "source_row": "ANT-1-064",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": true
+ },
+ "q050": {
+  "source_row": "XAI-4-020",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q051": {
+  "source_row": "GDM-2-028",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q052": {
+  "source_row": "META-1-036",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q053": {
+  "source_row": "ANT-1-062",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q054": {
+  "source_row": "XAI-3-033",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q055": {
+  "source_row": "META-1-004",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q056": {
+  "source_row": "XAI-2-006",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q057": {
+  "source_row": "XAI-4-005",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q058": {
+  "source_row": "GDM-2-013",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q059": {
+  "source_row": "ANT-1-039",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q060": {
+  "source_row": "ANT-1-023",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q061": {
+  "source_row": "XAI-1-042",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q062": {
+  "source_row": "OAI-1-031",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q063": {
+  "source_row": "META-1-028",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q064": {
+  "source_row": "XAI-1-030",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q065": {
+  "source_row": "XAI-1-022",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q066": {
+  "source_row": "OAI-1-005",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q067": {
+  "source_row": "XAI-2-005",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": true
+ },
+ "q068": {
+  "source_row": "XAI-3-017",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q069": {
+  "source_row": "XAI-2-017",
+  "gold": "R",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q070": {
+  "source_row": "XAI-3-039",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q071": {
+  "source_row": "XAI-2-011",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q072": {
+  "source_row": "GDM-1-022",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": true
+ },
+ "q073": {
+  "source_row": "ANT-2-027",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q074": {
+  "source_row": "ANT-1-050",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q075": {
+  "source_row": "ANT-1-013",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q076": {
+  "source_row": "ANT-1-061",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q077": {
+  "source_row": "GDM-2-031",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q078": {
+  "source_row": "OAI-1-024",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q079": {
+  "source_row": "GDM-1-033",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q080": {
+  "source_row": "META-1-046",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q081": {
+  "source_row": "GDM-1-011",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q082": {
+  "source_row": "XAI-4-009",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q083": {
+  "source_row": "ANT-2-053",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q084": {
+  "source_row": "OAI-1-014",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q085": {
+  "source_row": "META-1-025",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q086": {
+  "source_row": "XAI-1-006",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q087": {
+  "source_row": "XAI-4-006",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q088": {
+  "source_row": "XAI-2-040",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q089": {
+  "source_row": "META-1-049",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q090": {
+  "source_row": "XAI-3-008",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": true
+ },
+ "q091": {
+  "source_row": "XAI-2-010",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q092": {
+  "source_row": "XAI-4-007",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q093": {
+  "source_row": "ANT-1-021",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q094": {
+  "source_row": "XAI-3-024",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q095": {
+  "source_row": "GDM-2-015",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q096": {
+  "source_row": "ANT-1-046",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": true
+ },
+ "q097": {
+  "source_row": "XAI-4-047",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q098": {
+  "source_row": "GDM-2-020",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q099": {
+  "source_row": "ANT-1-049",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q100": {
+  "source_row": "ANT-2-060",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q101": {
+  "source_row": "XAI-3-023",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q102": {
+  "source_row": "GDM-2-009",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q103": {
+  "source_row": "ANT-1-057",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q104": {
+  "source_row": "XAI-2-033",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q105": {
+  "source_row": "META-1-009",
+  "gold": "S",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q106": {
+  "source_row": "XAI-2-023",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q107": {
+  "source_row": "XAI-3-032",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q108": {
+  "source_row": "XAI-1-037",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q109": {
+  "source_row": "ANT-2-020",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q110": {
+  "source_row": "GDM-2-021",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q111": {
+  "source_row": "XAI-4-040",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q112": {
+  "source_row": "OAI-1-016",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "low",
+  "mixed": false
+ },
+ "q113": {
+  "source_row": "GDM-2-006",
+  "gold": "R",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q114": {
+  "source_row": "ANT-1-055",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q115": {
+  "source_row": "GDM-2-025",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q116": {
+  "source_row": "ANT-2-051",
+  "gold": "S",
+  "disputed_upstream": false,
+  "upstream_confidence": "high",
+  "mixed": false
+ },
+ "q117": {
+  "source_row": "GDM-2-033",
+  "gold": "R",
+  "disputed_upstream": false,
+  "upstream_confidence": "medium",
+  "mixed": false
+ },
+ "q118": {
+  "source_row": "ANT-1-068",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "medium",
+  "mixed": true
+ },
+ "q119": {
+  "source_row": "ANT-2-055",
+  "gold": "W",
+  "disputed_upstream": true,
+  "upstream_confidence": "high",
+  "mixed": true
+ },
+ "q120": {
+  "source_row": "META-1-030",
+  "gold": "W",
+  "disputed_upstream": false,
+  "upstream_confidence": "low",
+  "mixed": true
+ }
+}

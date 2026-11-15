@@ -147,7 +147,7 @@ def _page(title, body, root, description):
 <div class="wrap">
 <header class="top">
 <a class="home" href="{root}index.html">{E(config.SITE_TITLE)}</a>
-<nav><a href="{root}ledger.json">ledger.json</a><a href="{root}feed.xml">RSS</a><a href="{root}schema.json">Schema</a><a href="{config.REPO_URL}">GitHub</a></nav>
+<nav><a href="{root}ledger.json">ledger.json</a><a href="{root}feed.xml">RSS</a><a href="{config.REPO_URL}/blob/main/SCHEMA.md">Schema</a><a href="{config.REPO_URL}/blob/main/validation.md">Validation</a><a href="{config.REPO_URL}">GitHub</a></nav>
 </header>
 {body}
 <footer>

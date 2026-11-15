@@ -1,0 +1,357 @@
+[
+ {
+  "id": "q001",
+  "outcome": "S",
+  "dims": [
+   5
+  ],
+  "confidence": "medium",
+  "reason": "Adds public disclosure: \"update the public version of the RSP before any changes take effect and record any differences from the prior draft in a change log\"."
+ },
+ {
+  "id": "q002",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only footnote marker changes (\"additional10\" to \"additional8\"); CCL definition otherwise identical."
+ },
+ {
+  "id": "q003",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "high",
+  "reason": "\"utilizes\" becomes \"may utilize\"; scope loses \"large-scale violence, terrorism\" and \"major cyber weapons\", despite adding \"internal benchmarks\" (MIX)."
+ },
+ {
+  "id": "q004",
+  "outcome": "W",
+  "dims": [
+   3,
+   5
+  ],
+  "confidence": "medium",
+  "reason": "\"visible to the BoD and within OpenAI\" narrowed to employees who \"may also request and receive a summary\"; BoD visibility dropped."
+ },
+ {
+  "id": "q005",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "confidence": "low",
+  "reason": "Adds \"updated at least once a year\" but drops \"we will publish substantive revisions\"; mixed directions coded W (MIX)."
+ },
+ {
+  "id": "q006",
+  "outcome": "W",
+  "dims": [
+   3,
+   5
+  ],
+  "confidence": "medium",
+  "reason": "Earlier forwarding to Leadership \"sharing also with the BoD and Preparedness\" is dropped; later only recommendations \"to OpenAI Leadership, as well as rationale\" (MIX)."
+ },
+ {
+  "id": "q007",
+  "outcome": "S",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Trigger broadened from \"CCL\" to \"T/CCL\" and scope extended to \"ML R&D and Misalignment T/CCL\"."
+ },
+ {
+  "id": "q008",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Forecast trigger \"(or are forecasted to reach)\" dropped; later applies only to systems that \"cross this capability threshold\"."
+ },
+ {
+  "id": "q009",
+  "outcome": "W",
+  "dims": [
+   1,
+   6
+  ],
+  "confidence": "low",
+  "reason": "Work on \"identifying enforceable critical steps\" dropped; replaced by benchmark evaluation \"for cyber capabilities, cyber refusals\" (MIX)."
+ },
+ {
+  "id": "q010",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical text: \"We plan to release an updated version of this policy within three months.\""
+ },
+ {
+  "id": "q011",
+  "outcome": "S",
+  "dims": [
+   4
+  ],
+  "confidence": "high",
+  "reason": "\"we intend to utilize tiered availability\" becomes present-tense practice \"xAI employs tiered availability\"."
+ },
+ {
+  "id": "q012",
+  "outcome": "W",
+  "dims": [
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"we would take steps to stop or prevent that event\" becomes \"we may take steps such as the following\"."
+ },
+ {
+  "id": "q013",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"we will be running them\" on fine-tuned versions becomes \"intended to approximate\", with finetuning only \"if the weights will be released\" (MIX)."
+ },
+ {
+  "id": "q014",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "high",
+  "reason": "Shutdown trigger lowered from increasing likelihood of \"a catastrophic event\" to \"a risk\"."
+ },
+ {
+  "id": "q015",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "low",
+  "reason": "Explicit \"red-teaming must include this use of these modalities\" replaced by descriptive \"may be difficult or impossible\", limited to \"unmoderated\" access for \"untrusted users\"."
+ },
+ {
+  "id": "q016",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "low",
+  "reason": "Per-category trigger persists: systems that \"cross this capability threshold\" require safeguards, equivalent to triggering on \"any of the tracked risk categories\"."
+ },
+ {
+  "id": "q017",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "Only adds \"security\" to an illustrative list introduced by \"which could include\"; rule unchanged."
+ },
+ {
+  "id": "q018",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "\"SAG membership will rotate yearly\" reworded as \"SAG members serve for one year terms\"; rest identical."
+ },
+ {
+  "id": "q019",
+  "outcome": "W",
+  "dims": [
+   1,
+   2,
+   3
+  ],
+  "confidence": "high",
+  "reason": "Drops \"sufficient to prevent... stolen by a motivated non-state actor\" and distillation measures; adds \"NIST 800-171\" and \"SOC 2\" (MIX)."
+ },
+ {
+  "id": "q020",
+  "outcome": "S",
+  "dims": [
+   1
+  ],
+  "confidence": "high",
+  "reason": "Adds \"Harmful Manipulation\" domain and \"misalignment CCLs\"; \"attack\" broadened to \"threat\"."
+ },
+ {
+  "id": "q021",
+  "outcome": "S",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "Adds requirement to \"make a compelling case\" for threat mapping and that no unevaluated threat model \"represents a substantial amount of risk\"."
+ },
+ {
+  "id": "q022",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "\"a threat actor's ability\" reworded to \"the ability\"; same \"We may take into account\" modal."
+ },
+ {
+  "id": "q023",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical text about equipping \"the model with appropriate scaffolding and other augmentations\"."
+ },
+ {
+  "id": "q024",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "Renaming to \"FAIF\" and adding \"including catastrophic risks\" within \"significant risks\" does not change coverage."
+ },
+ {
+  "id": "q025",
+  "outcome": "S",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Adds \"Pre-deployment reviews include assessing benchmark results\" and internal-use review \"before extensive rollout\", plus updates \"before major new capabilities\"."
+ },
+ {
+  "id": "q026",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical Cyber uplift level 1 definition; only table caption \"CCLs\" to \"CCL\"."
+ },
+ {
+  "id": "q027",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "high",
+  "reason": "Removes \"should be extended further by monitoring for scaled abuse that performs prompt-based model detail extraction (e.g. distillation attacks)\"."
+ },
+ {
+  "id": "q028",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical text on heightened safeguards and \"more than one hundred deaths or over $1 billion\"."
+ },
+ {
+  "id": "q029",
+  "outcome": "S",
+  "dims": [
+   4,
+   5
+  ],
+  "confidence": "medium",
+  "reason": "Discretionary \"we may notify\" becomes \"xAI will provide the relevant authorities with a copy of the incident report\" when legally reportable."
+ },
+ {
+  "id": "q030",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "low",
+  "reason": "Continuous \"dynamic (i.e., frequently updated) Scorecard\" including \"post-mitigation risk\" replaced by \"Prior to deployment\" Capabilities Report (MIX)."
+ },
+ {
+  "id": "q031",
+  "outcome": "S",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"Evaluations may also consist of multiple difficulty stages\" becomes \"We will first conduct preliminary assessments (on both new and existing models)\"."
+ },
+ {
+  "id": "q032",
+  "outcome": "S",
+  "dims": [
+   4
+  ],
+  "confidence": "high",
+  "reason": "\"We intend to regularly evaluate\" becomes present-tense practice \"xAI regularly evaluates the adequacy and reliability\"."
+ },
+ {
+  "id": "q033",
+  "outcome": "S",
+  "dims": [
+   3,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"may be supplemented\" becomes \"We conduct further analysis\", adding \"external evaluations, and post-market monitoring\"."
+ },
+ {
+  "id": "q034",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only adds heading \"Supply chain:\"; vendor review text identical."
+ },
+ {
+  "id": "q035",
+  "outcome": "W",
+  "dims": [
+   2,
+   3,
+   5
+  ],
+  "confidence": "high",
+  "reason": "\"Each quarter\" report \"to our board and LTBT\" becomes \"regularly update the Board\"; LTBT and ad hoc sooner updates dropped."
+ },
+ {
+  "id": "q036",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "\"We will explore\" to \"xAI is exploring\" is will-to-present (11.1); added detail is illustrative."
+ },
+ {
+  "id": "q037",
+  "outcome": "W",
+  "dims": [
+   2,
+   3,
+   4
+  ],
+  "confidence": "high",
+  "reason": "Mandatory audits \"will be audited by qualified, independent third-parties\" become \"If we deem\" warranted, \"when available and feasible\"."
+ },
+ {
+  "id": "q038",
+  "outcome": "S",
+  "dims": [
+   4,
+   6
+  ],
+  "confidence": "medium",
+  "reason": "\"one possible mitigation\" that \"may be applied\" becomes \"we will carry out periodic residual risk assessments\" and safeguards \"will be applied\"."
+ },
+ {
+  "id": "q039",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "low",
+  "reason": "Illustrative \"may be triggered, for example\" becomes fixed trigger: assessments \"upon the completion of a post-training run\"."
+ },
+ {
+  "id": "q040",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical text on identifying \"critical steps\" and \"redundant layers of safeguards\"."
+ }
+]
