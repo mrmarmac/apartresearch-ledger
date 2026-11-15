@@ -1,10 +1,38 @@
 {
+ "anthropic-rsp-page": {
+  "fails": 0,
+  "links": [
+   "https://assets.claude.com/0bacdc8440ea96e62a8766d99ebe1d4eea6d5f3a.pdf",
+   "https://assets.claude.com/17310f6d70ae5627f55313ed067afc1a762a4068.pdf",
+   "https://assets.claude.com/1adf000c8f675958c2ee23805d91aaade1cd4613.pdf",
+   "https://assets.claude.com/28c6241900d90410628a8a2003a5572faae4365a.pdf",
+   "https://assets.claude.com/616dee633636e5bd309cb73aed8622e80fe47839.pdf",
+   "https://assets.claude.com/64cb0ac5eb0f8030187131f490827323e3d53308.pdf",
+   "https://assets.claude.com/7c534a9e7a82d4411dd568d85ffbcd14ac243a62.pdf",
+   "https://assets.claude.com/872c653b2d0501d6ab44cf87f43e1dc4853e4d37.pdf",
+   "https://assets.claude.com/bf04581e4f329735fd90634f6a1962c13c0bd351.pdf",
+   "https://assets.claude.com/c11e84981d0a7281a1b229f3fa6af0da66eaf43f.pdf",
+   "https://assets.claude.com/dd0ec579bee2cd144069c478ede3e35ea080ad02.pdf",
+   "https://assets.claude.com/ee775bdcf76b2e2af32d658c934f460383d07c46.pdf",
+   "https://assets.claude.com/f2986af8d052f26236f6251da62d16172cfabd6e.pdf",
+   "https://assets.claude.com/fbfdce5e4e825a3e089085205a842a9ae8ffac99.pdf",
+   "https://assets.claude.com/fed9cc193a14b84131812372d8d5857f8f304c52.pdf"
+  ],
+  "sha256": "aeebf30dc964b600bfbd1531f103f1181b286f5fa925e71cd2668b48b5649cfe",
+  "url": "https://www.anthropic.com/responsible-scaling-policy"
+ },
  "anthropic-rsp-v3.4": {
   "bytes": 304755,
   "fails": 0,
   "seed": "SHA-256 from the upstream corpus manifest (v3.4)",
   "sha256": "6247b9e4001fd342827526fabc476c9d4dd6b2041ac00055f0ccda26f4d0b07d",
   "url": "https://cdn.sanity.io/files/4zrzovbb/website/0bacdc8440ea96e62a8766d99ebe1d4eea6d5f3a.pdf"
+ },
+ "google-fsf-page": {
+  "fails": 0,
+  "links": [],
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "url": "https://deepmind.google/frontier-safety/"
  },
  "google-fsf-v3.1": {
   "bytes": 447155,
@@ -27,7 +55,7 @@
   "url": "https://research.meta.ai/static/meta-superintelligence-scaling-framework"
  },
  "openai-pf-page": {
-  "fails": 1,
+  "fails": 2,
   "last_error": "HTTP 403",
   "url": "https://openai.com/safety/preparedness"
  },
@@ -39,10 +67,24 @@
   "url": "https://cdn.openai.com/pdf/18a02b5d-6b67-4cec-ab64-68cdfbddebcd/preparedness-framework-v2.pdf"
  },
  "xai-faif-2026-06-30": {
-  "bytes": null,
+  "bytes": 204493,
   "fails": 0,
   "seed": "SHA-256 from the upstream corpus manifest (2026-06-30)",
-  "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53",
-  "url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf"
+  "sha256": "4be128b1d79757b0d052990f995024126f3bcc9d72004ff245df82a993df2995",
+  "url": "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-f1f0c916.pdf"
+ },
+ "xai-safety-page": {
+  "fails": 0,
+  "links": [
+   "https://data.x.ai/2025-08-20-grok-4-model-card.pdf",
+   "https://data.x.ai/2025-08-26-grok-code-fast-1-model-card.pdf",
+   "https://data.x.ai/2025-09-19-grok-4-fast-model-card.pdf",
+   "https://media.x.ai/v1/website/4p5-5184fdf9.pdf",
+   "https://media.x.ai/v1/website/card-4p6-4cd2dc57.pdf",
+   "https://media.x.ai/v1/website/card4p7-3a96f40b.pdf",
+   "https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-f1f0c916.pdf"
+  ],
+  "sha256": "754db8598b7f0c4c06ac85a30651d1ebee064b38adb38802cbbe3edb0f70cb5b",
+  "url": "https://x.ai/safety"
  }
 }
