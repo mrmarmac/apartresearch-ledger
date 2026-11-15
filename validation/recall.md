@@ -38,7 +38,7 @@ One person (the author) examined the 8 upstream additions that the model did not
 
 **Result: he classified all 8 as real misses.** None is a unit difference, and none is a disagreement about what a commitment is. The 76% is thus a fair measure of the step on these pairs, not an artefact of the match rule.
 
-The review was not blind. The page did not show the earlier document, so "not new" was hard to select. File: .
+The review was not blind. The page did not show the earlier document, so "not new" was hard to select. File: `validation/recall/review.json`.
 
 Limits: 34 additions, 2 developers. No full rewrite is in the test (Anthropic v3.0, Meta v2, OpenAI v2). The match rule depends on shared words; no person checked the matches. The model runs had access to the machine that holds the upstream files; the instructions told them to use the four given files only.
 
