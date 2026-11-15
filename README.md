@@ -2,7 +2,7 @@
 
 **What did each AI lab promise in its safety framework, and what happened to each promise?**
 
-An open ledger of 432 safety-framework commitments from 5 frontier AI developers, across 22 framework versions.
+An open ledger of 447 safety-framework commitments from 5 frontier AI developers, across 23 framework versions.
 Each commitment has one stable ID and a history: kept, strengthened, weakened, removed or relocated.
 
 - **Site:** https://mrmarmac.github.io/apartresearch-ledger/
@@ -45,11 +45,12 @@ The ledger adds four things:
 | xAI | 64 | 5 | 4 |
 | Anthropic | 156 | 9 | 2 by upstream, 6 by the ledger |
 | Google DeepMind | 55 | 4 | 2 |
-| Meta | 106 | 2 | 1 |
+| Meta | 121 | 3 | 1 by upstream, 1 by the ledger |
 | OpenAI | 51 | 2 | 1 |
 
 Recorded changes from the upstream coding: 161 weakened, 69 strengthened, 41 removed, 156 added, 8 relocated.
 Recorded changes from the ledger's own extension of Anthropic (model-coded, then checked by a person): 14 weakened, 4 strengthened.
+Recorded changes from the ledger's own trace of Meta v2 → v2.1 (model-coded, then confirmed by a person): 6 weakened, 4 removed, 15 added.
 
 ### The Anthropic extension
 
@@ -77,11 +78,28 @@ Full results: [`validation.md`](validation.md).
 - **Model test.** Claude Opus 5.5 coded 120 matched pairs as kept, strengthened or weakened.
   It agreed with the upstream code on 105 (88%, 95% CI 80 to 92). Cohen's kappa is 0.81.
   7 of the 120 had the opposite direction.
+### The Meta v2.1 trace
+
+Meta published v2.1 after the upstream corpus was frozen. The ledger traces v2 → v2.1 itself. This is the first pair where the ledger also looks for new commitments.
+
+| Step | Method | Result |
+|---|---|---|
+| 1 | Text match | 82 of 104 commitments have the same words in v2.1. Status kept. |
+| 2 | Model, two runs, full document: find the counterpart of the other 22 | 18 counterparts, 4 with none. The runs found the same passage for 16 of the 18. |
+| 3 | Model, two runs, full section: code the direction of the 18 pairs | 12 kept, 6 weakened. The runs agree on all 18. |
+| 4 | Model, two runs, both full documents: list passages in v2.1 with no counterpart in v2 | 15 candidates. 14 are in both runs. |
+| 5 | One person, not blind: decide the 6 weakened, the 4 removed, the 15 candidates and the 2 tracing disagreements | He confirmed all 26. No entry has `needs_review`. |
+
+- The person saw the two model answers and a note on the Watchtower entry. This step is a confirmation, not an independent check.
+- The 11 model-coded "kept" entries without a tracing disagreement were not checked by a person.
+- Comparison with the Watchtower entry for this revision: [`validation/watchtower_meta.md`](validation/watchtower_meta.md).
+- Files: `data/extension/meta/`.
+
 - **Stability.** A second run of the same model gave the same answer on 113 of 120 items (kappa 0.91). 2 of the 7 changes went to the opposite direction.
 - **Human check.** One lawyer (the author) coded 20 items blind: 10 where the model agreed with upstream and 10 where it disagreed. He coded 17, and rejected the pairing of 3. In the disagreed group (8 coded), he agreed with upstream on 4, with the model on 2, and with neither on 2. This is not a random sample.
 - **Alignment test.** Given one commitment and the full next version, the model found the same counterpart as upstream, or correctly found none, for 48 of 60 items (80%). Plain text matching: 37 of 60 (62%). Google DeepMind v3.0 to v3.1: 20 of 20. OpenAI Beta to v2, a full rewrite: 10 of 20.
 - **Watchtower check.** The ledger has 14 of the 17 sub-changes in the Watchtower entry for the xAI revision of June 2026.
-- **Quote check.** 1,344 of 1,360 quotes (99%) are in the text extraction of the hashed source document.
+- **Quote check.** 1,459 of 1,475 quotes (99%) are in the text extraction of the hashed source document.
 - **Count check.** The ledger has one event for each of the 636 upstream rows of the 5 labs.
 
 ## Change watcher
@@ -96,6 +114,7 @@ First result (15 November 2026): 4 of 5 framework files are identical to the cor
 1. **The codes are not ground truth.** A language model helped with the upstream coding, and one human author adjudicated it. Read each status as a reference.
 2. **Anthropic is joined in part only.** The upstream coding cut the v2.0 text and the v2.2 text into different units. The ledger joined 14 chains and already had 20. 55 chains stop at v2.2 with status `not_traced`, and 25 of those overlap an upstream chain that the ledger could not join one to one.
 3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries. 1 of 47 is open. New commitments in those versions are not detected.
+3a. **Meta v2.1 is traced by the ledger, not by upstream.** One person confirmed the changes, but he saw the model answers first. The search for new commitments is not tested against a reference, so its miss rate is not known.
 4. **Nothing after July 2026.** The ledger is a seed dataset. A daily watcher reports when a framework file or page is different (see `watch/`), but a person must then trace the new version.
 5. **Frameworks only.** Model cards, usage policies and violations are not in the ledger. Watchtower covers those.
 6. **Commitments only.** Admissions and descriptions are not commitments, and are not in the ledger.
@@ -134,7 +153,7 @@ SCHEMA.md            field definitions, status meanings, ID rules
 run.py               entry point
 ledger/              corpus reader, builder, site and feed, validation
 data/ledger.json     the dataset
-data/extension/      tracing and coding answers for the Anthropic pairs that upstream does not trace
+data/extension/      tracing and coding answers for the Anthropic and Meta pairs that upstream does not trace
 examples/            one full record
 validation/          test items, rules, prompt, model answers (2 runs), key, human check, Watchtower check
 validation.md        results

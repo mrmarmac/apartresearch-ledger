@@ -1,0 +1,219 @@
+{
+ "adjudicator": "M.R. (author, lawyer)",
+ "date": "2026-11-15",
+ "method": "One look, not blind. The adjudicator saw both texts, the context, the two model answers with reasons, and a note on the Watchtower entry.",
+ "decisions": [
+  {
+   "item": "k01",
+   "id": "meta-consequence-32db",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Review page."
+  },
+  {
+   "item": "k02",
+   "id": "meta-eval-scope-2fcf",
+   "version": "v2.1",
+   "final": "R",
+   "basis": "Review page."
+  },
+  {
+   "item": "k03",
+   "id": "meta-eval-method-11e0",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Review page."
+  },
+  {
+   "item": "k04",
+   "id": "meta-eval-method-bc8b",
+   "version": "v2.1",
+   "final": "X",
+   "basis": "Review page."
+  },
+  {
+   "item": "k05",
+   "id": "meta-eval-method-e80c",
+   "version": "v2.1",
+   "final": "X",
+   "basis": "Review page."
+  },
+  {
+   "item": "k06",
+   "id": "meta-eval-method-ea6c",
+   "version": "v2.1",
+   "final": "X",
+   "basis": "Review page."
+  },
+  {
+   "item": "k07",
+   "id": "meta-eval-method-911d",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Review page."
+  },
+  {
+   "item": "k08",
+   "id": "meta-eval-trigger-10c1",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Review page."
+  },
+  {
+   "item": "k09",
+   "id": "meta-consequence-8456",
+   "version": "v2.1",
+   "final": "X",
+   "basis": "Review page."
+  },
+  {
+   "item": "k10",
+   "id": "meta-eval-trigger-3907",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Review page."
+  },
+  {
+   "item": "k11",
+   "id": "meta-consequence-afe4",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Review page."
+  },
+  {
+   "item": "k12",
+   "id": "meta-governance-a27e",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "Additionally, as we've previously shared, we're building more formal governance within our board of directors around how we establish our policies in this area and adjust them over time."
+  },
+  {
+   "item": "k13",
+   "id": "meta-eval-scope-9f7e",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "We currently focus on three high-level mechanisms, where failure would pose catastrophic risk and the pathways to such an outcome are identifiable and measurable: one, our ability to understand system behavior and capabilities before deployment; two, the ability of these systems to bypass oversight throughout their operation; and three, our ability to prevent and contain breakout during model training and evaluation."
+  },
+  {
+   "item": "k14",
+   "id": "meta-eval-trigger-25d2",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "For Loss of Control 3, we will plan for the assessment to take place prior to model training or evaluation, which requires prospective assessment: informed estimation of the expected capabilities of the model being trained or evaluated."
+  },
+  {
+   "item": "k15",
+   "id": "meta-consequence-d229",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "The foreseeable high severity risks identified through this assessment then must be mitigated prior to training or evaluation."
+  },
+  {
+   "item": "k16",
+   "id": "meta-eval-method-c882",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "In both cases, we plan to extrapolate from available data on these evaluations to make a best-guess prediction of the cyber offensive capabilities of the model prior to training. Since capabilities are challenging to predict, we will rely on conservative methodology – for example, pre-RL capability thresholds which appear necessary, if not sufficient, for high-risk capabilities after RL in our training regime."
+  },
+  {
+   "item": "k17",
+   "id": "meta-eval-trigger-df00",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "A projected pre-mitigation high risk assessment for Cyber 1 or Cyber 2 may be sufficient for a high risk determination for Loss of Control 3, while the extent of the mitigations required to sufficiently reduce the risk depend on the Cyber risk as well as the risk determination for Loss of Control 2."
+  },
+  {
+   "item": "k18",
+   "id": "meta-security-7333",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "For models with cyber capabilities comparable to models currently considered frontier, environments used in reinforcement learning or evaluation will run in a sandbox whose configuration will be approved through a standardized internal process designed to ensure that they are resistant to realistic attempts by a model at reward seeking and breakout or with comparable security measures such as hardware isolation."
+  },
+  {
+   "item": "k19",
+   "id": "meta-security-5230",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "We plan to red-team for methods of external unauthorized action, including cybersecurity vulnerabilities, in all sandbox configurations before standardization and approval for use in training and evaluation of near frontier models. All sandboxes with detected high severity vulnerabilities will be remediated, mitigated with compensating measures such as hardware isolation, or removed from a reinforcement learning run prior to initiation."
+  },
+  {
+   "item": "k20",
+   "id": "meta-mitigation-e95d",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "We plan to red-team for problematic reinforcement learning environments (e.g., those which give the model impossible tasks or are easily cheated). Environments deemed problematic will be remediated, manually approved, or removed from a reinforcement learning run prior to initiation."
+  },
+  {
+   "item": "k21",
+   "id": "meta-eval-method-a199",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "In our red-teaming pipelines, we will use models, methods, and compute budgets proportionate to the projected capabilities of the model, the opportunities for breakout or reward tampering in the planned training or evaluation run, and uncertainty in those assessments."
+  },
+  {
+   "item": "k22",
+   "id": "meta-mitigation-8827",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "All model rollouts must be logged to write-only data stores in real time to preserve their integrity for analysis and offline monitoring."
+  },
+  {
+   "item": "k23",
+   "id": "meta-consequence-512f",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "All training or evaluation runs that pose high risk or greater pre-mitigation require chain-of-thought and trajectory monitoring to be active for all rollouts, with any exceptions requiring manual approval by the Director of Alignment and Risk or the Chief AI Officer."
+  },
+  {
+   "item": "k24",
+   "id": "meta-mitigation-b6a1",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "We will develop monitoring systems capable of rapidly halting individual training or evaluation rollouts when high severity misbehavior or breakout attempts are detected."
+  },
+  {
+   "item": "k25",
+   "id": "meta-mitigation-65f5",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "We will require that our monitors pass smoke tests in all sandboxes prior to their use in training or evaluation, in which they reliably detect attempts to escape by internal models attempting to escape."
+  },
+  {
+   "item": "k26",
+   "id": "meta-consequence-4b8e",
+   "version": "v2.1",
+   "final": "A",
+   "basis": "Review page.",
+   "kind": "added",
+   "quote": "On each front, we follow best practices, red-team our measures to validate them proportionately with projected model capabilities, and require remediation of all detected medium to high severity vulnerabilities before initiating new high- or critical-risk training runs with the impacted sandboxes."
+  }
+ ]
+}

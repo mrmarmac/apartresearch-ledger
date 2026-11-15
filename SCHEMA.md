@@ -51,7 +51,8 @@ ledger.json
 | `link` | enum or null | How the ledger connected this entry to the previous entry. See "Links". |
 | `coded_by` | enum | Who decided this entry. See "Coded by". |
 | `needs_review` | boolean | The two model runs did not agree on this entry, or a person checked it and did not agree. |
-| `human_check` | string or null | Result of a blind check by one person: `agrees`, `disagrees:<code>`, `not_same_thing`, `cannot_tell`. `null`: not checked. The ledger does not overwrite the entry. |
+| `human_check` | string or null | Result of a check by one person. Blind check: `agrees`, `disagrees:<code>`, `not_same_thing`, `cannot_tell`. The ledger does not overwrite the entry. Second look, not blind: `adjudicated` (the status is the person's final code) or `adjudicated:<reason>` (not decided). `null`: not checked. |
+| `found_by_runs` | 1 or 2 | Only for `added` entries that a model found: how many of the two runs listed the passage. |
 | `gap_before` | boolean | One or more versions before this entry are not traced. |
 | `quote_verified` | boolean or null | The quote is in the text extraction of the hashed document. |
 | `source_row` | string or null | Row ID in the upstream sheet, for example `XAI-4-042`. |
@@ -98,7 +99,7 @@ The full rules are in the upstream codebook, `codebook_v0.2_FROZEN.md`.
 | `text_match` | The same words are in this version. The status is `kept`. No judgement by a person or a model. |
 | `model` | A language model found the counterpart and coded the change. Two runs. See `human_check` for the result of a check by a person. |
 
-`labs[].extended_pairs` lists the version pairs that the ledger traced itself. In those pairs, the ledger does not detect new commitments.
+`labs[].extended_pairs` lists the version pairs that the ledger traced itself. For Anthropic, the ledger does not detect new commitments in those pairs. For Meta v2 → v2.1, it does: two model runs list the candidates, and a person confirms each one.
 
 ## Disclosure
 
