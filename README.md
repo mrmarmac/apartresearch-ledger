@@ -100,6 +100,8 @@ Meta published v2.1 after the upstream corpus was frozen. The ledger traces v2 â
 - **Alignment test.** Given one commitment and the full next version, the model found the same counterpart as upstream, or correctly found none, for 48 of 60 items (80%). Plain text matching: 37 of 60 (62%). Google DeepMind v3.0 to v3.1: 20 of 20. OpenAI Beta to v2, a full rewrite: 10 of 20.
 - **Watchtower check.** The ledger has 14 of the 17 sub-changes in the Watchtower entry for the xAI revision of June 2026.
 - **Quote check.** 1,459 of 1,475 quotes (99%) are in the text extraction of the hashed source document.
+- **Link check.** 21 of 23 source addresses give a file with the recorded SHA-256 (15 November 2026). The xAI address of 30 June 2026 gives HTTP 404, because xAI published the file again at a new address. The archive address for Meta v1.1 gives different bytes; nobody has examined why. See [`validation/links.md`](validation/links.md).
+- **Tests.** `python run.py test` checks the ID rules, the history order, the hashes and the feed. One known defect: `google-eval-scope-6326` starts with a change, because the ledger did not find its earlier row.
 - **Count check.** The ledger has one event for each of the 636 upstream rows of the 5 labs.
 
 ## Change watcher
