@@ -1,0 +1,92 @@
+[
+ {
+  "item": "g03",
+  "earlier_section": null,
+  "earlier_text": "In any scenario where we determine that a model requires ASL-3 Required Safeguards but we are unable to implement them immediately, we will act promptly to reduce interim risk to acceptable levels until the ASL-3 Required Safeguards are in place: ... Interim measures: The CEO and Responsible Scaling Officer may approve the use of interim measures that provide the same level of assurance as the relevant ASL-3 Standard but are faster or simpler to implement."
+ },
+ {
+  "item": "g06",
+  "earlier_section": null,
+  "earlier_text": "Public disclosures: We will publicly release key information related to the evaluation and deployment of our models (not including sensitive details). These include summaries of related Capability and Safeguards reports when we deploy a model18 as well as plans for current and future comprehensive capability assessments and deployment and security safeguards.19"
+ },
+ {
+  "item": "g09",
+  "earlier_section": null,
+  "earlier_text": "This criterion does not attempt to specify the exact red-teaming protocol (e.g., number of hours, level of access, or pass-fail criteria). Setting a principled pass-fail threshold will depend on other factors, such as the quality of our monitoring and ability to respond to jailbreaks rapidly."
+ },
+ {
+  "item": "g12",
+  "earlier_section": null,
+  "earlier_text": "At minimum, we will perform basic finetuning for instruction following, tool use, minimizing refusal rates."
+ },
+ {
+  "item": "g15",
+  "earlier_section": null,
+  "earlier_text": "We will consider it sufficient to rule out the possibility that a model has surpassed the two Autonomous AI R&D Capability Thresholds by considering an earlier (i.e., less capable) checkpoint: the ability to autonomously perform a wide range of 2-8 hour software engineering tasks. We would view this level of capability as an important checkpoint towards both Autonomous AI R&D as well as other capabilities that may warrant similar attention (for example, autonomous replication). We will test for this checkpoint and, by the time we reach it, we will (1) aim to have met (or be close to meeting) the ASL-3 Security Standard as an intermediate goal"
+ },
+ {
+  "item": "g18",
+  "earlier_section": null,
+  "earlier_text": "This testing and the subsequent capability decision should ideally be concluded within about a month of reaching the “notably more capable” threshold."
+ },
+ {
+  "item": "g21",
+  "earlier_section": null,
+  "earlier_text": "In addition to noncompliance processes, we will (1) establish pathways for Anthropic staff to raise any issues related to this policy, including the overall risk levels of our models and implementation challenges; and (2) regularly review our compliance with this policy’s procedural requirements."
+ },
+ {
+  "item": "g24",
+  "earlier_section": null,
+  "earlier_text": "Noncompliance: We will maintain a process through which Anthropic staff may anonymously notify the Responsible Scaling Officer of any potential instances of noncompliance with this policy. We will also establish a policy governing noncompliance reporting, which will (1) protect reporters from retaliation and (2) set forth a mechanism for escalating reports to one or more members of the Board of Directors in cases where the report relates to conduct of the Responsible Scaling Officer."
+ },
+ {
+  "item": "g27",
+  "earlier_section": null,
+  "earlier_text": "Defense in depth: Use a “defense in depth” approach by building a series of defensive layers, each designed to catch misuse attempts that might pass through previous barriers. As an example, this might entail achieving a high overall recall rate using harm refusal techniques. This is an area of active research, and new technologies may be added when ready."
+ },
+ {
+  "item": "g30",
+  "earlier_section": null,
+  "earlier_text": "Rapid remediation: Show that any compromises of the deployed system, such as jailbreaks or other attack pathways, will be identified and remediated promptly enough to prevent the overall system from meaningfully increasing an adversary’s ability to cause catastrophic harm."
+ },
+ {
+  "item": "g33",
+  "earlier_section": null,
+  "earlier_text": "Example techniques could include rapid vulnerability patching, the ability to escalate to law enforcement when appropriate, and any necessary retention of logs for these activities."
+ },
+ {
+  "item": "g36",
+  "earlier_section": null,
+  "earlier_text": "Trusted users: Establish criteria for determining when it may be appropriate to share a version of the model with reduced safeguards with trusted users. In addition, demonstrate that an alternative set of controls will provide equivalent levels of assurance. This could include a sufficient combination of user vetting, secure access controls, monitoring, log retention, and incident response protocols."
+ },
+ {
+  "item": "g39",
+  "earlier_section": null,
+  "earlier_text": "When a model must meet the ASL-3 Security Standard, we will evaluate whether the measures we have implemented make us highly protected against most attackers’ attempts at stealing model weights. ... The following groups are out of scope for the ASL-3 Security Standard because further testing (as discussed below) should confirm that the model would not meaningfully increase their ability to do harm: state-sponsored programs that specifically target us (e.g., through novel attack chains or insider compromise)"
+ },
+ {
+  "item": "g42",
+  "earlier_section": null,
+  "earlier_text": "Public disclosures: We will publicly release key information related to the evaluation and deployment of our models (not including sensitive details). These include summaries of related Capability and Safeguards reports when we deploy a model18 as well as plans for current and future comprehensive capability assessments and deployment and security safeguards.19"
+ },
+ {
+  "item": "g45",
+  "earlier_section": null,
+  "earlier_text": "Threat modeling: Follow risk governance best practices, such as use of the MITRE ATT&CK Framework to establish the relationship between the identified threats, sensitive assets, attack vectors and, in doing so, sufficiently capture the resulting risks that must be addressed to protect model weights from theft attempts. As part of this requirement, we should specify our plans for revising the resulting threat model over time."
+ },
+ {
+  "item": "g48",
+  "earlier_section": null,
+  "earlier_text": "Operations: Ongoing configuration management, compliance drills, integrated security approaches and mandatory external reviews should embed security within regular operations and harden processes during organizational changes."
+ },
+ {
+  "item": "g51",
+  "earlier_section": null,
+  "earlier_text": "Workforce: People-critical processes must represent a key aspect of cybersecurity. Mandatory periodic infosec training educates all employees on secure practices, like proper system configurations and strong passwords, and fosters a proactive “security mindset.” Fundamental infrastructure and policies promoting secure-by-design and secure-by-default principles should be incorporated into the engineering process. An insider risk program should tie access to job roles. Rapid incident response protocols must be deployed."
+ },
+ {
+  "item": "g54",
+  "earlier_section": null,
+  "earlier_text": "Lifecycle security: Securing links in the chain of systems and software used to develop models, to prevent compromised components from being introduced and to ensure only trusted code and hardware is used. We expect this will include a combination of software inventory, supply chain security, artifact integrity, binary authorization, hardware procurement, and secure research development lifecycle."
+ }
+]

@@ -1,0 +1,236 @@
+[
+ {
+  "item": "g02",
+  "counterpart": "Marginal risk and ecosystem analysis. If we determine that the absolute level of risk being imposed\nindustry-wide by AI systems such as ours is high, and are justifying our decision to move forward based partly\non a marginal risk analysis,5 we will additionally address the following:",
+  "section": "3.3. Contents",
+  "outcome": "W",
+  "dims": [
+   2,
+   3,
+   5,
+   6
+  ],
+  "mixed": true,
+  "searched": "lower Required Safeguards; competitor; marginal risk; race to the bottom; U.S. government; regulatory action; Appendix A",
+  "confidence": "medium",
+  "reason": "Old let Anthropic 'lower the Required Safeguards' only if another actor passed a threshold without equivalent safeguards; new conditions moving forward on any 'marginal risk analysis' when industry-wide risk is high (broader condition = W on consequence), while adding Board/LTBT approval and published competitive-landscape and 'Advocacy efforts' analysis (strengthening). Mixed."
+ },
+ {
+  "item": "g05",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "delete model weights; de-deploy; stronger restrictions; interim measures; isolated network; pause; delay",
+  "confidence": "medium",
+  "reason": "New has no commitment to de-deploy or 'delete model weights' when interim measures fail; the only 'delay AI development and deployment' commitments are in Appendix A competitor scenarios, which govern a different trigger."
+ },
+ {
+  "item": "g08",
+  "counterpart": "When we publicly deploy a model that we determine is significantly more capable than any of the models\ncovered in the most recent Risk Report, we will publish a discussion (in our System Card or elsewhere) of\nhow that model’s capabilities and propensities affect or change analysis in the Risk Report.",
+  "section": "3.1. Scope and Timing",
+  "outcome": "W",
+  "dims": [
+   1,
+   2,
+   6
+  ],
+  "mixed": false,
+  "searched": "preliminary assessment; notably more capable; more capable; comprehensive assessment; Effective Compute; six months",
+  "confidence": "low",
+  "reason": "The closest passage triggers on a model 'significantly more capable' than those in the last Risk Report, but only for public deployment and only requires a published 'discussion', not a preliminary assessment of new and existing models leading to comprehensive evaluation."
+ },
+ {
+  "item": "g11",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "safety mechanisms; harmlessness training; jailbreak; weight theft; elicitation; finetuning; without safeguards",
+  "confidence": "medium",
+  "reason": "New mentions 'capability and alignment evaluations' generically but never requires testing models without safety mechanisms or assuming jailbreaks/weight theft for elicitation."
+ },
+ {
+  "item": "g14",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "cyber; zero-day; malware; network intrusions; specialized evaluations; threat model",
+  "confidence": "high",
+  "reason": "No cyber operations threat model or testing commitment appears in new; the threat models listed are chem/bio, sabotage and automated R&D."
+ },
+ {
+  "item": "g17",
+  "counterpart": "Threat-specific risk assessment: For each threat model, we will analyze remaining absolute risk–i.e., the\nleftover risk after accounting for our mitigations. We will also discuss whether we believe we’ve crossed\nrelevant thresholds in our recommendations for industry-wide safety (see Section 1), and (as relevant)\nwhether we believe we’re meeting the risk mitigation standards corresponding to them.",
+  "section": "3.3. Contents",
+  "outcome": "W",
+  "dims": [
+   1,
+   2,
+   6
+  ],
+  "mixed": false,
+  "searched": "routinely test; Capability Thresholds; crossed relevant thresholds; ASL-2; capability evaluations; Risk Report every 3-6 months",
+  "confidence": "medium",
+  "reason": "Old required routine testing to be 'confident that the ASL-2 Standard remains appropriate' for all models; new only commits to 'discuss whether we believe we've crossed relevant thresholds' for in-scope models in periodic Risk Reports, with no tie to a required safeguard standard."
+ },
+ {
+  "item": "g20",
+  "counterpart": "Policy changes: Changes to the RSP will be proposed by the CEO and RSO, and approved by the Board in\nconsultation with the LTBT. If we update the RSP, we will publicly share the updated version prior to or on\nits effective date and will record the differences from the prior draft in the Change Log. We will maintain\nthe current version of the RSP on our website.",
+  "section": "4. Governance",
+  "outcome": "W",
+  "dims": [
+   5
+  ],
+  "mixed": false,
+  "searched": "policy changes; proposed by the CEO; Board; LTBT; change log; effective date; website",
+  "confidence": "high",
+  "reason": "Approval chain is unchanged, but publication moves from 'before any changes take effect' to 'prior to or on its effective date', loosening disclosure timing."
+ },
+ {
+  "item": "g23",
+  "counterpart": "Executive approval: The Risk Report, along with the internal feedback and any available external\nfeedback, will be sent to the CEO and Responsible Scaling Officer (RSO) for final review and approval. The\nCEO and RSO will make the ultimate determination regarding the adequacy of the risk assessment and\nany downstream deployment or development plans.",
+  "section": "3.4. Procedures",
+  "outcome": "W",
+  "dims": [
+   1,
+   2,
+   3,
+   6
+  ],
+  "mixed": true,
+  "searched": "Capability Report; Risk Report; CEO and RSO; ultimate determination; affirmative case; deployment decisions",
+  "confidence": "medium",
+  "reason": "CEO and RSO still 'make the ultimate determination', now also over 'development plans' with added internal reviewers and Board/LTBT approval in marginal-risk cases (strengthening), but the report no longer must make 'an affirmative case for why the Capability Threshold is sufficiently far away' and is periodic rather than per-model (weakening). Mixed."
+ },
+ {
+  "item": "g26",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "finetuning; fine-tuning; harmlessness; filtered; automated evaluation; ASL-2",
+  "confidence": "high",
+  "reason": "New has no commitment on filtering fine-tuning data or evaluating harmlessness degradation; ASL-2 standards are not restated."
+ },
+ {
+  "item": "g29",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (company plan column)",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": false,
+  "searched": "vulnerability reporting; report harmful outputs; bug bounty; universal jailbreaks; red-teaming",
+  "confidence": "low",
+  "reason": "Bug bounties survive only within 'our ASL-3 protections' for the chem/bio row; the 'clearly indicated paths within the product for users to report harmful' outputs are gone."
+ },
+ {
+  "item": "g32",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (company plan column)",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": false,
+  "searched": "harmlessness training; Constitutional AI; refuse requests; trust and safety; classifier guards; Usage Policy",
+  "confidence": "low",
+  "reason": "Only 'classifier guards at least as robust as our initial Constitutional Classifiers' within the ASL-3 protections resemble automated detection; refusal/harmlessness training for all models is not stated. Restrictions on model behaviour appear only as an industry-wide recommendation."
+ },
+ {
+  "item": "g35",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.\n\nSpecifics may change, but we will\nmaintain equally or more robust\nmeasures over time and will\npublish updates in our Risk\nReports.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (company plan column)",
+  "outcome": "W",
+  "dims": [
+   2,
+   6
+  ],
+  "mixed": false,
+  "searched": "monitoring; prespecify empirical evidence; jailbreak bounties; review cadence; logs; threat intelligence",
+  "confidence": "medium",
+  "reason": "ASL-3 monitoring persists as 'red-teaming, bug bounties, and threat intelligence for continually assessing the threat of jailbreaks', but the duty to 'prespecify empirical evidence' and define a review process is dropped and 'Specifics may change'."
+ },
+ {
+  "item": "g38",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (company plan column)",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": false,
+  "searched": "harmlessness training; Constitutional AI; refuse requests; trust and safety; classifier guards; Usage Policy",
+  "confidence": "low",
+  "reason": "Only 'classifier guards at least as robust as our initial Constitutional Classifiers' within the ASL-3 protections resemble automated detection; refusal/harmlessness training for all models is not stated."
+ },
+ {
+  "item": "g41",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.\n\nSpecifics may change, but we will\nmaintain equally or more robust\nmeasures over time and will\npublish updates in our Risk\nReports.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (company plan column)",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": false,
+  "searched": "perimeters; access controls; encryption; weight access; security controls; ASL-3",
+  "confidence": "low",
+  "reason": "New only commits to maintain ASL-3 protections including 'a number of noteworthy security controls' and 'Specifics may change'; the perimeter and access-control content is not specified."
+ },
+ {
+  "item": "g44",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.\n\nSpecifics may change, but we will\nmaintain equally or more robust\nmeasures over time and will\npublish updates in our Risk\nReports.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (company plan column)",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": false,
+  "searched": "monitoring; endpoint patching; intruder deception; log management; eyes on everything; security controls",
+  "confidence": "low",
+  "reason": "Security monitoring is only covered by maintaining ASL-3 protections with 'a number of noteworthy security controls' ('Specifics may change'); the 'eyes on everything' logging applies only at the automated R&D threshold."
+ },
+ {
+  "item": "g47",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "SOC 2; infrastructure; disk encryption; vulnerability management; incident reporting; bug bounties; ASL-2 Security",
+  "confidence": "medium",
+  "reason": "New does not restate the ASL-2 security baseline; no passage covers SOC 2, disk encryption or vulnerability management."
+ },
+ {
+  "item": "g50",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "compartmentalization; zero trust; weight copies; approved devices; restricted systems; blast radius",
+  "confidence": "medium",
+  "reason": "Compartmentalization appears only in the industry-wide recommendations column (non-commitment); no company commitment governs weight copies or zero trust."
+ },
+ {
+  "item": "g53",
+  "counterpart": "We will publish a public version of our Risk Report. We will aim to minimize redactions to the public version\nof the report.",
+  "section": "3.5. Publication and Redactions",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "mixed": true,
+  "searched": "public disclosures; publish; summaries; Capability Report; Risk Report; redactions; when we deploy",
+  "confidence": "medium",
+  "reason": "New publishes a fuller 'public version of our Risk Report' (more disclosure), but 'Risk Reports will not be published with each new model release' (every 3-6 months instead of 'when we deploy a model'). Mixed."
+ }
+]

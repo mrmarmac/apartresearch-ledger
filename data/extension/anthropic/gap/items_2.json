@@ -1,0 +1,92 @@
+[
+ {
+  "item": "g02",
+  "earlier_section": null,
+  "earlier_text": "It is possible at some point in the future that another actor in the frontier AI ecosystem will pass, or be on track to imminently pass, a Capability Threshold without implementing measures equivalent to the Required Safeguards such that their actions pose a serious risk for the world. In such a scenario, because the incremental increase in risk attributable to us would be small, we might decide to lower the Required Safeguards. ..."
+ },
+ {
+  "item": "g05",
+  "earlier_section": null,
+  "earlier_text": "In the security context, an example of such a measure would be storing the model weights in a single-purpose, isolated network that meets the ASL-3 ... Stronger restrictions: In the unlikely event that we cannot implement interim measures to adequately mitigate risk, we will impose stronger restrictions. ... In the security context, we will delete model weights."
+ },
+ {
+  "item": "g08",
+  "earlier_section": null,
+  "earlier_text": "We will first conduct preliminary assessments (on both new and existing models, as needed) to determine whether a more comprehensive evaluation is needed. The purpose of this preliminary assessment is to identify whether the model is notably more capable than the last model that underwent a comprehensive assessment."
+ },
+ {
+  "item": "g11",
+  "earlier_section": null,
+  "earlier_text": "We should assume that jailbreaks and model weight theft are possibilities, and therefore perform testing on models without safety mechanisms (such as harmlessness training) that could obscure these capabilities."
+ },
+ {
+  "item": "g14",
+  "earlier_section": null,
+  "earlier_text": "Cyber Operations: The ability to significantly enhance or automate sophisticated destructive cyber attacks, including but not limited to discovering novel zero-day exploit chains, developing complex malware, or orchestrating extensive hard-to-detect network intrusions. ... We will conduct either pre- or post-deployment testing, including specialized evaluations. We will document any salient results alongside our Capability Reports (see Section 3)."
+ },
+ {
+  "item": "g17",
+  "earlier_section": null,
+  "earlier_text": "We will routinely test models to determine whether their capabilities fall sufficiently far below the Capability Thresholds such that we are confident that the ASL-2 Standard remains appropriate."
+ },
+ {
+  "item": "g20",
+  "earlier_section": null,
+  "earlier_text": "Policy changes: Changes to this policy will be proposed by the CEO and the Responsible Scaling Officer and approved by the Board of Directors, in consultation with the Long-Term Benefit Trust.17 The current version of the RSP is accessible at www.anthropic.com/rsp. We will update the public version of the RSP before any changes take effect and record any differences from the prior draft in a change log."
+ },
+ {
+  "item": "g23",
+  "earlier_section": null,
+  "earlier_text": "First, we will compile a Capability Report that documents the findings from the comprehensive assessment, makes an affirmative case for why the Capability Threshold is sufficiently far away, and advances recommendations on deployment decisions. ... The report will be escalated to the CEO and the Responsible Scaling Officer, who will (1) make the ultimate determination as to whether we have sufficiently established that we are unlikely to reach the Capability Threshold and (2) decide any deployment-related issues."
+ },
+ {
+  "item": "g26",
+  "earlier_section": null,
+  "earlier_text": "Fine-tuning protections: In finetuning products, data is filtered for harmfulness, and models are subject to automated evaluation to check harmlessness features are not degraded."
+ },
+ {
+  "item": "g29",
+  "earlier_section": null,
+  "earlier_text": "Vulnerability reporting channels: Clearly indicated paths within the product for users to report harmful or dangerous model outputs, as well as a bug bounty for universal jailbreaks."
+ },
+ {
+  "item": "g32",
+  "earlier_section": null,
+  "earlier_text": "Harmlessness training and automated detection: Training models to refuse requests to aid in causing harm, such as with Constitutional AI or other improved techniques, and the use of model enhanced trust and safety detection and enforcement."
+ },
+ {
+  "item": "g35",
+  "earlier_section": null,
+  "earlier_text": "Monitoring: Prespecify empirical evidence that would show the system is operating within the accepted risk range and define a process for reviewing the system’s performance on a reasonable cadence. Process examples include monitoring responses to jailbreak bounties, doing historical analysis or background monitoring, and any necessary retention of logs for these activities."
+ },
+ {
+  "item": "g38",
+  "earlier_section": null,
+  "earlier_text": "Harmlessness training and automated detection: Training models to refuse requests to aid in causing harm, such as with Constitutional AI or other improved techniques, and the use of model enhanced trust and safety detection and enforcement."
+ },
+ {
+  "item": "g41",
+  "earlier_section": null,
+  "earlier_text": "Perimeters and access controls: Building strong perimeters and access controls around sensitive assets to ensure AI models and critical systems are protected from unauthorized access. We expect this will include a combination of physical security, encryption, cloud security, infrastructure policy, access management, and weight access minimization and monitoring."
+ },
+ {
+  "item": "g44",
+  "earlier_section": null,
+  "earlier_text": "Monitoring: Proactively identifying and mitigating threats through ongoing and effective monitoring, testing for vulnerabilities, and laying traps for potential attackers. We expect this will include a combination of endpoint patching, product security testing, log management, asset monitoring, and intruder deception techniques."
+ },
+ {
+  "item": "g47",
+  "earlier_section": null,
+  "earlier_text": "Infrastructure: Standard security infrastructure, monitoring software, access management tools, and disk encryption provide a technology baseline. Process elements like incident reporting procedures, lost/stolen device protocols and Detection and Response should support these. External validation like SOC 2 compliance and continuous vulnerability management must ensure adaptations match infosec developments. Programs like bug bounties and vulnerability discovery should incentivize exposing flaws."
+ },
+ {
+  "item": "g50",
+  "earlier_section": null,
+  "earlier_text": "Compartmentalization: Segmented system isolation must ensure limited blast radius. Features like zero trust architecture should require access from approved devices. Strict protocols must be deployed to regulate weight copies on company networks and limit storage to only approved, restricted systems."
+ },
+ {
+  "item": "g53",
+  "earlier_section": null,
+  "earlier_text": "Public disclosures: We will publicly release key information related to the evaluation and deployment of our models (not including sensitive details). These include summaries of related Capability and Safeguards reports when we deploy a model18 as well as plans for current and future comprehensive capability assessments and deployment and security safeguards.19"
+ }
+]

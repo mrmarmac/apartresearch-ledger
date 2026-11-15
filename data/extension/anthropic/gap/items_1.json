@@ -1,0 +1,97 @@
+[
+ {
+  "item": "g01",
+  "earlier_section": null,
+  "earlier_text": "In the deployment context, such measures might include blocking model responses, downgrading to a less-capable model in a particular domain, or increasing the sensitivity of automated monitoring.12 In the security context, an example of such a measure would be storing the model weights in a single-purpose, isolated network that meets the ASL-3 Standard. In either case, the CEO and Responsible Scaling Officer will share their plan with the Board of Directors and the Long-Term Benefit Trust. ● Stronger restrictions: In the unlikely event that we cannot implement interim measures to adequately mitigate risk, we will impose stronger restrictions. In the deployment context, we will de-deploy the model and replace it with a model that falls below the Capability Threshold. Once the ASL-3 Deployment Standard can be met, the model may be re-deployed."
+ },
+ {
+  "item": "g04",
+  "earlier_section": null,
+  "earlier_text": "We will test for this checkpoint and, by the time we reach it, we will (1) aim to have met (or be close to meeting) the ASL-3 Security Standard as an intermediate goal; (2) Responsible Scaling Policy, Anthropic 4 [[page 9]] share an update on our progress around that time; and (3) begin testing for the full Autonomous AI R&D Capability Threshold and any additional risks."
+ },
+ {
+  "item": "g07",
+  "earlier_section": null,
+  "earlier_text": "Evaluations: Design and run empirical tests that provide strong evidence that the model does not have the requisite skills; explain why the tests yielded such results; and check at test time that the results are attributable to the model’s capabilities rather than issues with the test design."
+ },
+ {
+  "item": "g10",
+  "earlier_section": null,
+  "earlier_text": "Due to the likely ease of bypassing or removing safeguards via fine-tuning, it may be difficult or impossible for these red-teaming tests to pass if weights are released or if unmoderated fine-tuning access is provided to untrusted users."
+ },
+ {
+  "item": "g13",
+  "earlier_section": null,
+  "earlier_text": "Elicitation: Demonstrate that, when given enough resources to extrapolate to realistic attackers, researchers cannot elicit sufficiently useful results from the model on the relevant tasks. ... We will also consider the possible performance increase from using resources that a realistic attacker would have access to, such as scaffolding, finetuning, and expert prompting. At minimum, we will perform basic finetuning for instruction following, tool use, minimizing refusal rates."
+ },
+ {
+  "item": "g16",
+  "earlier_section": null,
+  "earlier_text": "This is achieved by monitoring the capabilities of the model in pretraining and comparing them against the given model."
+ },
+ {
+  "item": "g19",
+  "earlier_section": null,
+  "earlier_text": "Autonomous AI Research and Development (AI R&D) AI R&D-4: The ability to fully automate the work of an entry-level, remote-only Researcher at Anthropic. The ASL-3 Security Standard is required. In addition, we will develop an affirmative case that (1) identifies the most immediate and relevant risks from models pursuing misaligned goals and (2) explains how we have mitigated these risks to acceptable levels. The affirmative case will describe, as relevant, evidence on model capabilities; evidence on AI alignment; mitigations (such as monitoring and other safeguards); and our overall reasoning. AI R&D-5: The ability to cause dramatic acceleration in the rate of effective scaling At minimum, the ASL-4 Security Standard (which would protect against model-weight theft by state-level adversaries) is required, although we expect a higher security standard may be required. As with AI R&D-4, we also expect an affirmative case will be required."
+ },
+ {
+  "item": "g22",
+  "earlier_section": null,
+  "earlier_text": "In either case, the CEO and Responsible Scaling Officer will share their plan with the Board of Directors and the Long-Term Benefit Trust."
+ },
+ {
+  "item": "g25",
+  "earlier_section": null,
+  "earlier_text": "We will set expectations with internal stakeholders about the potential for such pauses."
+ },
+ {
+  "item": "g28",
+  "earlier_section": null,
+  "earlier_text": "Enforcement of a Usage Policy that restricts, at a minimum, catastrophic and high harm use cases, including using the model to generate content that could cause severe risks to the continued existence of humankind, or direct and severe harm to individuals."
+ },
+ {
+  "item": "g31",
+  "earlier_section": null,
+  "earlier_text": "Threat modeling: Make a compelling case that the set of threats and the vectors through which an adversary could catastrophically misuse the deployed system have been sufficiently mapped out, and will commit to revising as necessary over time."
+ },
+ {
+  "item": "g34",
+  "earlier_section": null,
+  "earlier_text": "Vulnerability reporting channels: Clearly indicated paths within the product for users to report harmful or dangerous model outputs, as well as a bug bounty for universal jailbreaks."
+ },
+ {
+  "item": "g37",
+  "earlier_section": null,
+  "earlier_text": "There are a very limited number of use cases where this tooling is disabled. These are negotiated on a case by case basis and considered only for extremely low risk use cases that involve company personnel."
+ },
+ {
+  "item": "g40",
+  "earlier_section": null,
+  "earlier_text": "Perimeters and access controls: Building strong perimeters and access controls around sensitive assets to ensure AI models and critical systems are protected from unauthorized access. We expect this will include a combination of physical security, encryption, cloud security, infrastructure policy, access management, and weight access minimization and monitoring."
+ },
+ {
+  "item": "g43",
+  "earlier_section": null,
+  "earlier_text": "Offices: Physical security should entail visitor access logs and restrictions protect on-site assets. Highly sensitive interactions should utilize advanced authentication like security keys. Network visibility should be maintained and office access controls and communications should maximize on-site protections."
+ },
+ {
+  "item": "g46",
+  "earlier_section": "4.2. ASL-3 Security Standard",
+  "earlier_text": "We will implement robust controls to mitigate basic insider risk, but consider mitigating risks from sophisticated or state-compromised insiders to be out of scope for ASL-3. We define “basic insider risk” as risk from an insider who does not have persistent or time-limited access to systems that process model weights. We define “sophisticated insider risk” as risk from an insider who has persistent access or can request time-limited access to systems that process model weights. We are committed to further enhancing these protections as a part of our ongoing preparations for higher security levels."
+ },
+ {
+  "item": "g49",
+  "earlier_section": null,
+  "earlier_text": "Perimeters and access controls: Building strong perimeters and access controls around sensitive assets to ensure AI models and critical systems are protected from unauthorized access. We expect this will include a combination of physical security, encryption, cloud security, infrastructure policy, access management, and weight access minimization and monitoring."
+ },
+ {
+  "item": "g52",
+  "earlier_section": "4.2. ASL-3 Security Standard",
+  "earlier_text": "Existing guidance: Aligning where appropriate with existing guidance on securing model weights, including Securing AI Model Weights, Preventing Theft and Misuse of Frontier Models (2024) ; security recommendations like Deploying AI Systems Securely 11 We will implement robust controls to mitigate basic insider risk, but consider mitigating risks from sophisticated or state-compromised insiders to be out of scope for ASL-3. We define “basic insider risk” as risk from an insider who does not have persistent or time-limited access to systems that process model weights. We define “sophisticated insider risk” as risk from an insider who has persistent access or can request time-limited access to systems that process model weights. We are committed to further enhancing these protections as a part of our ongoing preparations for higher security levels. Responsible Scaling Policy, Anthropic 9 [[page 14]] (CISA/NSA/FBI/ASD/CCCS/GCSB /GCHQ), ISO 42001 , CSA’s AI Safety Initiative , and CoSAI ; and standards frameworks like SSDF , SOC 2 , NIST 800-53 ."
+ },
+ {
+  "item": "g55",
+  "earlier_section": null,
+  "earlier_text": "Findings from partner organizations and external evaluations of our models (or similar models) should also be incorporated into the final assessment, when available."
+ }
+]

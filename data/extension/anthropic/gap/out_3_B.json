@@ -1,0 +1,227 @@
+[
+ {
+  "item": "g03",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "interim; immediately; unable to implement; CEO and RSO approve; reduce interim risk; stronger restrictions",
+  "confidence": "high",
+  "reason": "new.txt has no provision for interim measures when required safeguards cannot be implemented; 'CEO and RSO' appear only in Risk Report approval (3.4) and policy changes, not in an 'interim measures' role."
+ },
+ {
+  "item": "g06",
+  "counterpart": "Timing. We will publish a Risk Report every 3-6 months. Note that unlike system cards, Risk Reports will not\nbe published with each new model release.",
+  "section": "3.1. Scope and Timing",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "mixed": true,
+  "searched": "publish; public version; Risk Report; redact; system card; roadmap; deploy",
+  "confidence": "medium",
+  "reason": "Old 'summaries of related Capability and Safeguards reports when we deploy a model' becomes a Risk Report 'every 3-6 months' that 'will not be published with each new model release' (timing trigger weakened), while Risk Reports and a published Roadmap expand disclosure content (strengthened); mixed, coded W."
+ },
+ {
+  "item": "g09",
+  "counterpart": "Develop our internal\nred-teaming of our\ndeployment safeguards to the\npoint where our internal\nred-teaming performs better\nat finding potential jailbreaks\nthan the collective abilities of\nthe participants in our\nestablished bug bounty\nprograms.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, row: Automated R&D in key domains, company column)",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "mixed": false,
+  "searched": "red-teaming; pass-fail; jailbreak; bug bounty; monitoring; protocol",
+  "confidence": "low",
+  "reason": "The old footnote left the red-teaming pass-fail criterion unspecified; new.txt sets a benchmark that internal red-teaming 'performs better at finding potential jailbreaks than the collective abilities of the participants in our established bug bounty programs', though only as a plan at the automated-R&D threshold; uncertain it governs the same object."
+ },
+ {
+  "item": "g12",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "finetuning; elicitation; instruction following; tool use; refusal; evaluations",
+  "confidence": "high",
+  "reason": "new.txt only requires 'capability and alignment evaluations' in Risk Reports; there is no minimum elicitation requirement such as 'basic finetuning for instruction following, tool use, minimizing refusal rates'."
+ },
+ {
+  "item": "g15",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "2-8 hour; software engineering; checkpoint; autonomous; ASL-3 Security Standard; intermediate goal",
+  "confidence": "high",
+  "reason": "The 2-8 hour software-engineering checkpoint and the associated aim to meet the ASL-3 Security Standard do not appear; the only checkpoint mention is in the historical Changelog, and the AI R&D threshold ('compress two years of 2018 – 2024 AI progress') is a different object."
+ },
+ {
+  "item": "g18",
+  "counterpart": "When we publicly deploy a model that we determine is significantly more capable than any of the models\ncovered in the most recent Risk Report, we will publish a discussion (in our System Card or elsewhere) of\nhow that model’s capabilities and propensities affect or change analysis in the Risk Report.",
+  "section": "3.1. Scope and Timing",
+  "outcome": "W",
+  "dims": [
+   2,
+   5,
+   6
+  ],
+  "mixed": true,
+  "searched": "notably more capable; significantly more capable; within 30 days; month; comprehensive testing; capability decision",
+  "confidence": "low",
+  "reason": "Closest passage ties a 'significantly more capable' model to a published discussion, but at public deployment rather than 'within about a month of reaching the \"notably more capable\" threshold', and no capability decision follows; the modal rises from 'should ideally' to 'will' and disclosure is added, so mixed, coded W."
+ },
+ {
+  "item": "g21",
+  "counterpart": "Internal review: We will regularly conduct an internal review of our implementation of this policy.",
+  "section": "4. Governance",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": false,
+  "searched": "pathways; raise issues; review compliance; internal review; concerns; procedural",
+  "confidence": "medium",
+  "reason": "Part (2) survives as 'We will regularly conduct an internal review of our implementation of this policy', but part (1), pathways to raise 'any issues related to this policy, including the overall risk levels of our models and implementation challenges', has no counterpart beyond noncompliance reporting, narrowing scope."
+ },
+ {
+  "item": "g24",
+  "counterpart": "Noncompliance reporting: We will maintain a process for Anthropic staff to submit anonymous or\nidentified reports regarding potential noncompliance with this policy. Staff will have more than one\noption for who receives these reports, including the RSO, and at least one executive who does not report to\nthe RSO. When we receive a report, we will promptly investigate, take appropriate and proportional\ncorrective action if it is substantiated, and document the report and our findings. We will provide quarterly\nupdates to the Board regarding reports of potential noncompliance, whether substantiated or not.",
+  "section": "4. Governance",
+  "outcome": "S",
+  "dims": [
+   3,
+   5,
+   6
+  ],
+  "mixed": false,
+  "searched": "noncompliance; anonymous; retaliation; Board; RSO; reporting",
+  "confidence": "high",
+  "reason": "New process adds 'more than one option for who receives these reports... at least one executive who does not report to the RSO', a duty to 'promptly investigate, take appropriate and proportional corrective action', and 'quarterly updates to the Board', while keeping anti-retaliation and Board recipient for reports on the RSO."
+ },
+ {
+  "item": "g27",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, row: Non-novel chemical/biological weapons production, company column)",
+  "outcome": "W",
+  "dims": [
+   6
+  ],
+  "mixed": false,
+  "searched": "defense in depth; layers; classifier; harm refusal; ASL-3 protections; recall",
+  "confidence": "low",
+  "reason": "New.txt keeps layered ASL-3 protections ('classifier guards at least as robust as our initial Constitutional Classifiers'; access controls; red-teaming) but no explicit defense-in-depth criterion, and the safeguards are no longer a precondition: 'we cannot make guarantees' replaces required showing before deployment."
+ },
+ {
+  "item": "g30",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, row: Non-novel chemical/biological weapons production, company column)",
+  "outcome": "W",
+  "dims": [
+   6
+  ],
+  "mixed": false,
+  "searched": "remediation; jailbreak; detect; promptly; threat intelligence; bug bounties; patch",
+  "confidence": "low",
+  "reason": "Only 'red-teaming, bug bounties, and threat intelligence for continually assessing the threat of jailbreaks' remains; the requirement to 'show' compromises 'will be identified and remediated promptly enough' is gone from the company column ('quickly detecting and acting' appears only as an industry recommendation)."
+ },
+ {
+  "item": "g33",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "vulnerability patching; law enforcement; logs; retention; escalate",
+  "confidence": "medium",
+  "reason": "None of the example techniques ('rapid vulnerability patching', escalation 'to law enforcement', log retention) appear; 'maintain logs' in the automated-R&D row concerns internal AI-development activity, a different object."
+ },
+ {
+  "item": "g36",
+  "counterpart": "access controls for\ntrusted users with exemptions to\nclassifier guards;",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, row: Non-novel chemical/biological weapons production, company column)",
+  "outcome": "W",
+  "dims": [
+   6
+  ],
+  "mixed": false,
+  "searched": "trusted users; reduced safeguards; access controls; user vetting; equivalent assurance; exemptions",
+  "confidence": "medium",
+  "reason": "New.txt keeps 'access controls for trusted users with exemptions to classifier guards' but drops the duty to 'establish criteria' and 'demonstrate that an alternative set of controls will provide equivalent levels of assurance' before sharing reduced-safeguard models."
+ },
+ {
+  "item": "g39",
+  "counterpart": "We will maintain or improve on\nour ASL-3 protections, which\ninclude classifier guards at least as\nrobust as our initial Constitutional\nClassifiers; access controls for\ntrusted users with exemptions to\nclassifier guards; red-teaming, bug\nbounties, and threat intelligence\nfor continually assessing the\nthreat of jailbreaks; and a number\nof noteworthy security controls.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, row: Non-novel chemical/biological weapons production, company column)",
+  "outcome": "W",
+  "dims": [
+   1,
+   6
+  ],
+  "mixed": false,
+  "searched": "stealing model weights; highly protected; most attackers; state-sponsored; security controls; theft; RAND SL",
+  "confidence": "low",
+  "reason": "The only company-side security commitment is 'a number of noteworthy security controls' within ASL-3 protections; the standard 'highly protected against most attackers' attempts at stealing model weights' with defined in/out-of-scope attackers is gone (stronger theft protection appears only as industry recommendations)."
+ },
+ {
+  "item": "g42",
+  "counterpart": "Timing. We will publish a Risk Report every 3-6 months. Note that unlike system cards, Risk Reports will not\nbe published with each new model release.",
+  "section": "3.1. Scope and Timing",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "mixed": true,
+  "searched": "publish; public version; Risk Report; redact; system card; roadmap; deploy",
+  "confidence": "medium",
+  "reason": "Old 'summaries of related Capability and Safeguards reports when we deploy a model' becomes a Risk Report 'every 3-6 months' that 'will not be published with each new model release' (timing trigger weakened), while Risk Reports and a published Roadmap expand disclosure content (strengthened); mixed, coded W."
+ },
+ {
+  "item": "g45",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "threat model; MITRE; ATT&CK; attack vectors; sensitive assets; model weights",
+  "confidence": "medium",
+  "reason": "No security threat-modelling requirement survives; 'threat model' in new.txt refers to catastrophic-risk threat models in Risk Reports, and 'a number of noteworthy security controls' does not govern this object."
+ },
+ {
+  "item": "g48",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "configuration management; compliance drills; external reviews; operations; security; organizational changes",
+  "confidence": "medium",
+  "reason": "No passage on operational security (configuration management, 'compliance drills', 'mandatory external reviews'); external review in new.txt concerns Risk Reports, not security operations."
+ },
+ {
+  "item": "g51",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "infosec training; insider risk; secure-by-design; incident response; employees; workforce",
+  "confidence": "medium",
+  "reason": "No workforce-security commitment; insiders appear only in industry-wide recommendations ('internal Usage Policy and strong internal compartmentalization') and the 'eyes on everything' logging plan, neither governing training, insider-risk access ties or incident response."
+ },
+ {
+  "item": "g54",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "supply chain; software inventory; hardware procurement; artifact integrity; software updates; lifecycle",
+  "confidence": "medium",
+  "reason": "No company commitment on lifecycle or supply-chain security; the nearest text, 'centralized controls on third-party applications and software updates', is an example in a non-binding industry recommendation."
+ }
+]

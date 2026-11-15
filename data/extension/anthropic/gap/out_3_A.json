@@ -1,0 +1,230 @@
+[
+ {
+  "item": "g03",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "interim; unable to implement; CEO and RSO approve; temporary; deviat; de-deploy; pause; same level of assurance",
+  "confidence": "medium",
+  "reason": "v3.0 has no provision for interim measures approved by the CEO and RSO when required safeguards cannot be implemented immediately; the nearest text ('track and report noteworthy changes and deviations', s.3.2) governs reporting on mitigation changes, not interim risk-reduction measures."
+ },
+ {
+  "item": "g06",
+  "counterpart": "We will publish a public version of our Risk Report. We will aim to minimize redactions to the public version of the report.",
+  "section": "3.5. Publication and Redactions",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "mixed": true,
+  "searched": "publish; publicly release; Risk Report; system card; redact; summaries; Roadmap",
+  "confidence": "medium",
+  "reason": "Old: summaries of Capability and Safeguards reports 'when we deploy a model' plus plans. New: full public Risk Report with aim to 'minimize redactions' (disclosure broader, dim 5 up), but published 'every 3-6 months' and 'will not be published with each new model release' (trigger weakened, dim 2). Mixed, coded W."
+ },
+ {
+  "item": "g09",
+  "counterpart": "We will maintain or improve on our ASL-3 protections, which include classifier guards at least as robust as our initial Constitutional Classifiers; access controls for trusted users with exemptions to classifier guards; red-teaming, bug bounties, and threat intelligence for continually assessing the threat of jailbreaks; and a number of noteworthy security controls. Specifics may change, but we will maintain equally or more robust measures over time and will publish updates in our Risk Reports.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, Non-novel chemical/biological weapons row, company plan column)",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "red-teaming; pass-fail; protocol; jailbreak; bug bounty; evaluations will determine",
+  "confidence": "low",
+  "reason": "The old caveat leaves the red-teaming protocol and pass-fail threshold unspecified; v3.0 keeps 'red-teaming, bug bounties, and threat intelligence for continually assessing the threat of jailbreaks' with no protocol either. Unclear that this governs the same object (a caveat on the old red-teaming criterion)."
+ },
+ {
+  "item": "g12",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "finetuning; fine-tun; elicitation; instruction following; tool use; refusal; capability evaluations",
+  "confidence": "high",
+  "reason": "No minimum-elicitation requirement (finetuning for instruction following, tool use, refusal minimisation) survives; v3.0 only says it will 'put significant effort into investigating (for example, via capability evaluations) the case for risk'."
+ },
+ {
+  "item": "g15",
+  "counterpart": "It may be sensible to add earlier, and/or easier-to-measure, thresholds that trigger less demanding versions of the mitigations for this threshold.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, Non-novel chemical/biological weapons row, company plan column) - Automated R&D in key domains row",
+  "outcome": "W",
+  "dims": [
+   1,
+   2,
+   4,
+   6
+  ],
+  "mixed": false,
+  "searched": "checkpoint; 2-8 hour; software engineering; earlier threshold; autonomous replication; AI R&D; ASL-3 Security Standard",
+  "confidence": "low",
+  "reason": "The 2-8 hour SWE checkpoint, the commitment to 'test for this checkpoint' and the linked ASL-3 security goal are gone; the only related text says earlier thresholds 'may be sensible', which is not a commitment."
+ },
+ {
+  "item": "g18",
+  "counterpart": "When we publicly deploy a model that we determine is significantly more capable than any of the models covered in the most recent Risk Report, we will publish a discussion (in our System Card or elsewhere) of how that model’s capabilities and propensities affect or change analysis in the Risk Report.",
+  "section": "3.1. Scope and Timing",
+  "outcome": "W",
+  "dims": [
+   2,
+   4,
+   5
+  ],
+  "mixed": true,
+  "searched": "notably more capable; within about a month; 30 days; significantly more capable; capability decision; timing",
+  "confidence": "low",
+  "reason": "The 'within about a month of reaching the notably more capable threshold' timing for testing is gone; the nearest provision is triggered only on public deployment of a 'significantly more capable' model. It uses 'will publish' (stronger than 'should ideally', and adds disclosure), so mixed, coded W."
+ },
+ {
+  "item": "g21",
+  "counterpart": "Internal review: We will regularly conduct an internal review of our implementation of this policy.",
+  "section": "4. Governance",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": true,
+  "searched": "pathways; raise issues; raise concerns; internal review; procedural compliance; implementation challenges",
+  "confidence": "medium",
+  "reason": "Regular review is kept and broadened from 'procedural requirements' to 'implementation of this policy', but the commitment to 'establish pathways for Anthropic staff to raise any issues ... including the overall risk levels of our models' has no counterpart beyond noncompliance reporting. Mixed, coded W."
+ },
+ {
+  "item": "g24",
+  "counterpart": "Noncompliance reporting: We will maintain a process for Anthropic staff to submit anonymous or identified reports regarding potential noncompliance with this policy. Staff will have more than one option for who receives these reports, including the RSO, and at least one executive who does not report to the RSO.",
+  "section": "4. Governance",
+  "outcome": "S",
+  "dims": [
+   3,
+   5
+  ],
+  "mixed": false,
+  "searched": "noncompliance; anonymous; retaliation; Board; RSO conduct; public notice",
+  "confidence": "high",
+  "reason": "Process retained ('anonymous or identified reports'); recipients broadened to 'at least one executive who does not report to the RSO', 'quarterly updates to the Board' on all reports, and 'we may provide public notice'; retaliation protection and Board recipient for RSO conduct retained."
+ },
+ {
+  "item": "g27",
+  "counterpart": "We will maintain or improve on our ASL-3 protections, which include classifier guards at least as robust as our initial Constitutional Classifiers; access controls for trusted users with exemptions to classifier guards; red-teaming, bug bounties, and threat intelligence for continually assessing the threat of jailbreaks; and a number of noteworthy security controls. Specifics may change, but we will maintain equally or more robust measures over time and will publish updates in our Risk Reports.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, Non-novel chemical/biological weapons row, company plan column)",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "defense in depth; layers; harm refusal; classifier; Constitutional Classifiers; ASL-3 protections",
+  "confidence": "low",
+  "reason": "'Defense in depth' is not named, but the layered ASL-3 deployment protections are maintained ('classifier guards at least as robust as our initial Constitutional Classifiers' and 'equally or more robust measures over time')."
+ },
+ {
+  "item": "g30",
+  "counterpart": "We will maintain or improve on our ASL-3 protections, which include classifier guards at least as robust as our initial Constitutional Classifiers; access controls for trusted users with exemptions to classifier guards; red-teaming, bug bounties, and threat intelligence for continually assessing the threat of jailbreaks; and a number of noteworthy security controls. Specifics may change, but we will maintain equally or more robust measures over time and will publish updates in our Risk Reports.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, Non-novel chemical/biological weapons row, company plan column)",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "mixed": false,
+  "searched": "remediat; rapid; patch; jailbreak; detect; compromise; ASL-3 protections",
+  "confidence": "low",
+  "reason": "v3.0's scope-defining list of ASL-3 protections covers identification ('continually assessing the threat of jailbreaks') but not the requirement to show compromises 'will be ... remediated promptly'; 'quickly detecting and acting' appears only in the non-binding industry recommendation column."
+ },
+ {
+  "item": "g33",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "patching; law enforcement; logs; retention; vulnerability; escalate",
+  "confidence": "medium",
+  "reason": "No mention of vulnerability patching, escalation to law enforcement or log retention for remediation; the only logs text ('gather, centralize, and maintain logs for all critical AI-development activities') governs internal AI development at the AI R&D threshold."
+ },
+ {
+  "item": "g36",
+  "counterpart": "We will maintain or improve on our ASL-3 protections, which include classifier guards at least as robust as our initial Constitutional Classifiers; access controls for trusted users with exemptions to classifier guards; red-teaming, bug bounties, and threat intelligence for continually assessing the threat of jailbreaks; and a number of noteworthy security controls. Specifics may change, but we will maintain equally or more robust measures over time and will publish updates in our Risk Reports.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, Non-novel chemical/biological weapons row, company plan column)",
+  "outcome": "W",
+  "dims": [
+   6
+  ],
+  "mixed": false,
+  "searched": "trusted users; reduced safeguards; access controls; exemptions; vetting; equivalent assurance",
+  "confidence": "medium",
+  "reason": "Trusted-user access is retained ('access controls for trusted users with exemptions to classifier guards'), but the requirements to 'establish criteria' and 'demonstrate that an alternative set of controls will provide equivalent levels of assurance' are dropped."
+ },
+ {
+  "item": "g39",
+  "counterpart": "We will maintain or improve on our ASL-3 protections, which include classifier guards at least as robust as our initial Constitutional Classifiers; access controls for trusted users with exemptions to classifier guards; red-teaming, bug bounties, and threat intelligence for continually assessing the threat of jailbreaks; and a number of noteworthy security controls. Specifics may change, but we will maintain equally or more robust measures over time and will publish updates in our Risk Reports.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, Non-novel chemical/biological weapons row, company plan column)",
+  "outcome": "W",
+  "dims": [
+   1,
+   6
+  ],
+  "mixed": false,
+  "searched": "ASL-3 Security Standard; stealing model weights; theft; state-sponsored; highly protected; security controls; out of scope",
+  "confidence": "low",
+  "reason": "ASL-3 security survives only as 'a number of noteworthy security controls'; the commitment to 'evaluate whether the measures ... make us highly protected against most attackers' attempts' and the defined in-scope/out-of-scope attacker groups are gone."
+ },
+ {
+  "item": "g42",
+  "counterpart": "We will publish a public version of our Risk Report. We will aim to minimize redactions to the public version of the report.",
+  "section": "3.5. Publication and Redactions",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "mixed": true,
+  "searched": "publish; publicly release; Risk Report; system card; redact; summaries; Roadmap",
+  "confidence": "medium",
+  "reason": "Old: summaries of Capability and Safeguards reports 'when we deploy a model' plus plans. New: full public Risk Report with aim to 'minimize redactions' (disclosure broader, dim 5 up), but published 'every 3-6 months' and 'will not be published with each new model release' (trigger weakened, dim 2). Mixed, coded W."
+ },
+ {
+  "item": "g45",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "MITRE; ATT&CK; threat model; attack vectors; risk governance; security framework",
+  "confidence": "medium",
+  "reason": "No security threat-modeling requirement; v3.0 'Threat model identification' (s.3.3) concerns catastrophic-risk threat models in Risk Reports, not threats to model weights."
+ },
+ {
+  "item": "g48",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "configuration management; compliance drills; external reviews; operations; organizational changes; security",
+  "confidence": "high",
+  "reason": "No provision on configuration management, compliance drills or mandatory external security reviews; the only security text is the general 'a number of noteworthy security controls'."
+ },
+ {
+  "item": "g51",
+  "counterpart": null,
+  "section": null,
+  "outcome": "X",
+  "dims": [],
+  "mixed": false,
+  "searched": "training; insider; incident response; secure-by-design; workforce; employees",
+  "confidence": "medium",
+  "reason": "No company commitment on infosec training, insider risk program or incident response; insider controls appear only in the non-binding industry recommendations ('internal Usage Policy and strong internal compartmentalization')."
+ },
+ {
+  "item": "g54",
+  "counterpart": "Precautions against opportunistic theft of model weights, such as centralized controls on third-party applications and software updates.",
+  "section": "1. Our Recommendations for Industry-Wide Safety (table, Non-novel chemical/biological weapons row, industry-wide recommendations column)",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "mixed": false,
+  "searched": "supply chain; software; hardware; lifecycle; third-party applications; trusted code",
+  "confidence": "low",
+  "reason": "The only related text sits in the 'ambitious industry-wide recommendations' column, which Anthropic says it 'cannot unilaterally and unconditionally commit to', and covers only 'third-party applications and software updates' (effectively relocation to a non-binding recommendation)."
+ }
+]

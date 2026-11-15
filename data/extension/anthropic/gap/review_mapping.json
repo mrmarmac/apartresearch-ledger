@@ -1,0 +1,222 @@
+{
+ "h01": {
+  "item": "g06",
+  "id": "anthropic-disclosure-07ca"
+ },
+ "h02": {
+  "item": "g09",
+  "id": "anthropic-eval-method-7cd5"
+ },
+ "h03": {
+  "item": "g15",
+  "id": "anthropic-eval-trigger-4f67"
+ },
+ "h04": {
+  "item": "g17",
+  "id": "anthropic-eval-trigger-c5d7"
+ },
+ "h05": {
+  "item": "g19",
+  "id": "anthropic-eval-trigger-efa4"
+ },
+ "h06": {
+  "item": "g22",
+  "id": "anthropic-governance-987f"
+ },
+ "h07": {
+  "item": "g27",
+  "id": "anthropic-mitigation-2ffc"
+ },
+ "h08": {
+  "item": "g28",
+  "id": "anthropic-mitigation-3c76"
+ },
+ "h09": {
+  "item": "g42",
+  "id": "anthropic-security-4ca8"
+ },
+ "h10": {
+  "item": "g46",
+  "id": "anthropic-security-8ada"
+ },
+ "h11": {
+  "item": "g47",
+  "id": "anthropic-security-8e7f"
+ },
+ "h12": {
+  "item": "g50",
+  "id": "anthropic-security-a666"
+ },
+ "h13": {
+  "item": "g52",
+  "id": "anthropic-security-d7b4"
+ },
+ "h14": {
+  "item": "g54",
+  "id": "anthropic-security-fcf8"
+ },
+ "h15": {
+  "item": "g55",
+  "id": "anthropic-third-party-1a1d"
+ },
+ "h16": {
+  "item": "g01",
+  "id": "anthropic-consequence-0dc5"
+ },
+ "h17": {
+  "item": "g02",
+  "id": "anthropic-consequence-2765"
+ },
+ "h18": {
+  "item": "g03",
+  "id": "anthropic-consequence-7c83"
+ },
+ "h19": {
+  "item": "g04",
+  "id": "anthropic-consequence-a1d2"
+ },
+ "h20": {
+  "item": "g05",
+  "id": "anthropic-consequence-fafe"
+ },
+ "h21": {
+  "item": "g07",
+  "id": "anthropic-eval-method-0457"
+ },
+ "h22": {
+  "item": "g08",
+  "id": "anthropic-eval-method-1bd9"
+ },
+ "h23": {
+  "item": "g10",
+  "id": "anthropic-eval-method-aa29"
+ },
+ "h24": {
+  "item": "g11",
+  "id": "anthropic-eval-method-d630"
+ },
+ "h25": {
+  "item": "g12",
+  "id": "anthropic-eval-method-d921"
+ },
+ "h26": {
+  "item": "g13",
+  "id": "anthropic-eval-method-e372"
+ },
+ "h27": {
+  "item": "g14",
+  "id": "anthropic-eval-scope-8f12"
+ },
+ "h28": {
+  "item": "g16",
+  "id": "anthropic-eval-trigger-5c44"
+ },
+ "h29": {
+  "item": "g18",
+  "id": "anthropic-eval-trigger-e0f7"
+ },
+ "h30": {
+  "item": "g20",
+  "id": "anthropic-governance-37e6"
+ },
+ "h31": {
+  "item": "g21",
+  "id": "anthropic-governance-532b"
+ },
+ "h32": {
+  "item": "g23",
+  "id": "anthropic-governance-c539"
+ },
+ "h33": {
+  "item": "g24",
+  "id": "anthropic-governance-dea3"
+ },
+ "h34": {
+  "item": "g25",
+  "id": "anthropic-governance-ec69"
+ },
+ "h35": {
+  "item": "g26",
+  "id": "anthropic-mitigation-155a"
+ },
+ "h36": {
+  "item": "g29",
+  "id": "anthropic-mitigation-4357"
+ },
+ "h37": {
+  "item": "g30",
+  "id": "anthropic-mitigation-4b2d"
+ },
+ "h38": {
+  "item": "g31",
+  "id": "anthropic-mitigation-4c05"
+ },
+ "h39": {
+  "item": "g32",
+  "id": "anthropic-mitigation-522b"
+ },
+ "h40": {
+  "item": "g33",
+  "id": "anthropic-mitigation-749b"
+ },
+ "h41": {
+  "item": "g34",
+  "id": "anthropic-mitigation-7cd2"
+ },
+ "h42": {
+  "item": "g35",
+  "id": "anthropic-mitigation-aaf7"
+ },
+ "h43": {
+  "item": "g36",
+  "id": "anthropic-mitigation-c7c8"
+ },
+ "h44": {
+  "item": "g37",
+  "id": "anthropic-mitigation-cebe"
+ },
+ "h45": {
+  "item": "g38",
+  "id": "anthropic-mitigation-f2e1"
+ },
+ "h46": {
+  "item": "g39",
+  "id": "anthropic-security-114e"
+ },
+ "h47": {
+  "item": "g40",
+  "id": "anthropic-security-1990"
+ },
+ "h48": {
+  "item": "g41",
+  "id": "anthropic-security-4b01"
+ },
+ "h49": {
+  "item": "g43",
+  "id": "anthropic-security-62ba"
+ },
+ "h50": {
+  "item": "g44",
+  "id": "anthropic-security-7a97"
+ },
+ "h51": {
+  "item": "g45",
+  "id": "anthropic-security-89f3"
+ },
+ "h52": {
+  "item": "g48",
+  "id": "anthropic-security-8e90"
+ },
+ "h53": {
+  "item": "g49",
+  "id": "anthropic-security-919b"
+ },
+ "h54": {
+  "item": "g51",
+  "id": "anthropic-security-b4d6"
+ },
+ "h55": {
+  "item": "g53",
+  "id": "anthropic-security-fa49"
+ }
+}
