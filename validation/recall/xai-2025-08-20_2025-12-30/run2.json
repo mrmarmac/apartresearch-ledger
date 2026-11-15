@@ -1,0 +1,51 @@
+[
+ {
+  "quote": "This FAIF complies with California's Transparency in Frontier Artificial Intelligence Act (the\n“TFAIA”, California Business and Professions Code § 22757.10 et seq.).",
+  "section": "xAI Frontier Artificial Intelligence Framework (preamble)",
+  "category": "G",
+  "why_new": "Searched old.txt for 'California', 'TFAIA', 'comply/complies', 'law'/'statute': no statement that the framework complies with any statute; old only states xAI plans to review and adjust the RMF.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "xAI references standards such as NIST's AI Risk Management Framework, ISO/IEC 42001 for\nAI management systems, and industry best practices from the Frontier Model Forum (e.g.,\nred-teaming protocols). We evaluate these during annual reviews and integrate them into\nbenchmarks (e.g., aligning WMDP with biosecurity consensus) and safeguards.",
+  "section": "Overall Approach",
+  "category": "G",
+  "why_new": "Searched old.txt for 'NIST' (only as a bio-steps collaborator), 'ISO', 'Frontier Model Forum', 'annual', 'standards': no commitment to reference external risk-management standards or evaluate them in annual reviews. Old 'regularly evaluates the adequacy and reliability of such benchmarks' concerns benchmarks, not external standards.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Practices include\nencryption of model weights, role-based access controls, and real-time monitoring to prevent\nunauthorized transfer.",
+  "section": "3. Information Security",
+  "category": "S",
+  "why_new": "Searched old.txt for 'encryption', 'access control', 'model weights', 'real-time monitoring', 'transfer': old has only a general statement of security standards against a non-state actor and anti-distillation measures; no named weight-security practices. Could be read as an elaboration of the old infosec commitment.",
+  "confidence": "low"
+ },
+ {
+  "quote": "Risk owners are also\nresponsible for periodic audits to enforce framework implementation.",
+  "section": "4. Governance Approach",
+  "category": "G",
+  "why_new": "Searched old.txt for 'audit' (only 'third-party safety auditors' as trusted users), 'risk owners' (designation only), 'enforce', 'implementation': old designates risk owners and says xAI will regularly review adherence, but does not make risk owners responsible for periodic audits enforcing implementation.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Risk owners are also\nresponsible for monitoring for critical incidents or imminent threats, which may be identified\nthrough:\n\n-​\nRed-teaming and internal testing;\n-​\nReal-time monitoring, telemetry, and alerting of threshold breaches via internal tooling;\n-​\nMonitoring and alerting of public comments from the X platform.",
+  "section": "4. Governance Approach",
+  "category": "G",
+  "why_new": "Searched old.txt for 'critical incident', 'telemetry', 'alerting', 'threshold breach', 'red-teaming', 'internal testing': none. Old says xAI monitors public interaction with Grok on X and covers what happens once xAI 'learns of an imminent threat', but assigns no incident-monitoring responsibility and names no red-teaming or telemetry channel.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Pre-deployment reviews include assessing benchmark\nresults (e.g., WMDP scores) and mitigation effectiveness.",
+  "section": "5. Deployment Decisions",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'pre-deployment', 'review', 'mitigation effectiveness', 'before deploy': old has deployment risk-acceptance thresholds and says safeguards 'may depend on how a model performs on relevant benchmarks', but no pre-deployment review step assessing benchmark results and mitigation effectiveness. Partial overlap with the threshold passages.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "For internal use, we review\ncatastrophic risks like oversight evasion before extensive rollout.",
+  "section": "5. Deployment Decisions",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'internal use', 'internal deployment', 'oversight evasion', 'rollout': old only mentions internal AI usage as a metric (percent of code); no review of catastrophic risks before internal rollout.",
+  "confidence": "high"
+ }
+]

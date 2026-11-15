@@ -1,0 +1,79 @@
+[
+ {
+  "quote": "Harmful Manipulation: Risks of models with high manipulative capabilities potentially being misused in ways that could reasonably result in large scale harm.",
+  "section": "1.2 Critical Capability Levels",
+  "category": "EC1",
+  "why_new": "Searched old.txt for 'manipulat', 'persuasion', 'belief', 'deception of users'. Old misuse domains are only CBRN, Cyber and ML R&D; no manipulation domain.",
+  "confidence": "high"
+ },
+ {
+  "quote": "The lower velocity of harm scenarios associated with this CCL and the viability of social defenses against large scale misuse of such models count against security mitigations with substantial costs to innovation.",
+  "section": "2.2.3 Harmful Manipulation",
+  "category": "S",
+  "why_new": "Searched old.txt for 'manipulat', 'social defenses', 'velocity of harm' and Table 1 security levels. No security level is assigned to any manipulation CCL in old.txt (new assigns Security level 2).",
+  "confidence": "medium"
+ },
+ {
+  "quote": "We conduct a risk assessment for the first external deployment of a new frontier AI model.",
+  "section": "1.3 Outline of Our Risk Assessment Process",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'first external', 'deployment', 'before deployment', 'regularly'. Old only commits to evaluating most powerful models 'regularly' and models with an exceptional capability increase; no deployment-triggered risk assessment.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "To identify meaningful new capabilities or material increases in performance, we conduct model capability evaluations, including our automated benchmarks. These evaluations are primarily aimed at understanding the capabilities of the model and may be triggered, for example, upon the completion of a pre-training or post-training run, on various candidates of a model version.",
+  "section": "1.3 Outline of Our Risk Assessment Process",
+  "category": "EC3",
+  "why_new": "Searched old.txt for 'benchmark', 'general capability', 'pre-training', 'post-training', 'during training'. Old has only 'assess the likelihood of such capabilities and risks before and during training'; no general capability-evaluation screen with automated benchmarks.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "We conduct further analysis, including reviewing model independent information, external evaluations, and post-market monitoring as appropriate.",
+  "section": "1.3 Outline of Our Risk Assessment Process",
+  "category": "EC3",
+  "why_new": "Searched old.txt for 'model independent', 'post-market', 'monitoring', 'external evaluators'. Old has external evaluators (counterpart for that element) but no model-independent information or post-market monitoring as inputs to risk analysis.",
+  "confidence": "low"
+ },
+ {
+  "quote": "As a result, to assess the ML R&D CCLs, we may use sources of information about our own progress at accelerating ML R&D to assess whether we are near or at the CCLs, in addition to evaluations of ML R&D capabilities.",
+  "section": "1.3 Outline of Our Risk Assessment Process",
+  "category": "EC3",
+  "why_new": "Searched old.txt for 'own progress', 'accelerating', 'alert threshold', 'sources of information'. Old ML R&D CCL mentions acceleration only as a CCL definition; no method using internal progress data or non-score alert thresholds.",
+  "confidence": "high"
+ },
+ {
+  "quote": "We apply safety and security mitigations throughout the lifecycle of our models, including as part of our training and model development phase and, where appropriate, before CCLs are reached as described in the process below.",
+  "section": "1.4 Response Plans and Mitigations",
+  "category": "M",
+  "why_new": "Searched old.txt for 'lifecycle', 'training', 'before CCLs', 'more stringent mitigations'. Old only notes other considerations 'may result in more stringent mitigations' and applies mitigations to models reaching CCLs; no commitment to apply mitigations throughout lifecycle/pre-CCL.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Security mitigations: security infrastructure at Google is subject to penetration testing and other kinds of assessments, and is continually improved based on these results.",
+  "section": "1.5 Evaluating Mitigations",
+  "category": "S",
+  "why_new": "Searched old.txt for 'penetration', 'security infrastructure', 'assess', 'reviewed periodically'. Old has periodic review of mitigation efficacy drawing on misuse incidents and post-mitigation testing, but no testing of security infrastructure.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "A model for which risk assessment indicates no CCL is reached will be deemed to pose an acceptable level of severe risk for further development and deployment, because it should not possess the capabilities required to substantially contribute to severe risk scenarios.",
+  "section": "1.6 Summary of Risk Acceptance Criteria",
+  "category": "EC6",
+  "why_new": "Searched old.txt for 'acceptable', 'acceptance', 'no CCL', 'distant from a CCL'. Old has no risk acceptance criteria; only that distant models may get additional capability assessment.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "The following mitigation process will be applied for deployments of a model reaching a ML R&D CCL. The approach is similar to misuse deployment mitigations, with an added focus on large scale internal deployments.",
+  "section": "3.1.2 Deployment Mitigations",
+  "category": "EC6",
+  "why_new": "Searched old.txt for 'internal', 'internal deployment', 'general availability', 'pre-deployment review'. Old gates only general availability (public) deployment; no gating of large scale internal deployment.",
+  "confidence": "high"
+ },
+ {
+  "quote": "Material updates to a safety case will be submitted to the appropriate governance function for review.",
+  "section": "2.1.2 Deployment Mitigations",
+  "category": "G",
+  "why_new": "Searched old.txt for 'post-deployment', 'updated', 'governance body', 'review'. Old says the safety case will be updated through red-teaming and threat model revisions, but no submission of updates to a governance function.",
+  "confidence": "medium"
+ }
+]

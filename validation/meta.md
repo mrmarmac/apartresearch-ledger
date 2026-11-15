@@ -14,5 +14,5 @@ How to read this:
 
 - The review is a confirmation. The person saw the two model answers, their reasons, and a note on the Watchtower entry. He did not code blind.
 - 11 model-coded "kept" entries had no review by a person.
-- There is no reference for new commitments in this pair. The ledger cannot give a miss rate for the candidate search.
+- There is no reference for new commitments in this pair. The recall test above gives the miss rate on 4 other pairs: 8 of 34.
 - Comparison with Watchtower: 15 of 17 listed changes are in the ledger, and the other 2 are not commitments. See [`validation/watchtower_meta.md`](validation/watchtower_meta.md). The mapping is AI-made.

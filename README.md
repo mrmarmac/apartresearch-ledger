@@ -100,6 +100,7 @@ Meta published v2.1 after the upstream corpus was frozen. The ledger traces v2 â
 - **Alignment test.** Given one commitment and the full next version, the model found the same counterpart as upstream, or correctly found none, for 48 of 60 items (80%). Plain text matching: 37 of 60 (62%). Google DeepMind v3.0 to v3.1: 20 of 20. OpenAI Beta to v2, a full rewrite: 10 of 20.
 - **Watchtower check.** The ledger has 14 of the 17 sub-changes in the Watchtower entry for the xAI revision of June 2026.
 - **Quote check.** 1,459 of 1,475 quotes (99%) are in the text extraction of the hashed source document.
+- **Recall test.** The model step that finds new commitments found 26 of 34 upstream additions in 4 pairs (76%). About 1 listed passage in 4 has a counterpart according to upstream.
 - **Link check.** 21 of 23 source addresses give a file with the recorded SHA-256 (15 November 2026). The xAI address of 30 June 2026 gives HTTP 404, because xAI published the file again at a new address. The archive address for Meta v1.1 gives different bytes. A person opened it and saw the framework PDF. The cause of the different hash is not known. See [`validation/links.md`](validation/links.md).
 - **Tests.** `python run.py test` checks the ID rules, the history order, the hashes and the feed. One known defect: `google-eval-scope-6326` starts with a change, because the ledger did not find its earlier row.
 - **Count check.** The ledger has one event for each of the 636 upstream rows of the 5 labs.
@@ -116,7 +117,7 @@ First result (15 November 2026): 4 of 5 framework files are identical to the cor
 1. **The codes are not ground truth.** A language model helped with the upstream coding, and one human author adjudicated it. Read each status as a reference.
 2. **Anthropic is joined in part only.** The upstream coding cut the v2.0 text and the v2.2 text into different units. The ledger joined 14 chains and already had 20. 55 chains stop at v2.2 with status `not_traced`, and 25 of those overlap an upstream chain that the ledger could not join one to one.
 3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries. The pair v2.0 â†’ v2.1 has no official redline from Anthropic. New commitments in those versions are not detected.
-3a. **Meta v2.1 is traced by the ledger, not by upstream.** One person confirmed the changes, but he saw the model answers first. The search for new commitments is not tested against a reference, so its miss rate is not known.
+3a. **Meta v2.1 is traced by the ledger, not by upstream.** One person confirmed the changes, but he saw the model answers first. In a test on 4 other pairs, the search for new commitments found 26 of 34 upstream additions (76%). The 15 new Meta commitments are thus a lower bound.
 4. **Nothing after July 2026.** The ledger is a seed dataset. A daily watcher reports when a framework file or page is different (see `watch/`), but a person must then trace the new version.
 5. **Frameworks only.** Model cards, usage policies and violations are not in the ledger. Watchtower covers those.
 6. **Commitments only.** Admissions and descriptions are not commitments, and are not in the ledger.

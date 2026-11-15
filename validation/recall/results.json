@@ -1,0 +1,138 @@
+{
+ "pairs": {
+  "google-v2.0_v3.0": {
+   "version": "google-v3.0",
+   "upstream_added": 8,
+   "run_sizes": [
+    11,
+    13
+   ],
+   "verbatim": [
+    11,
+    13
+   ],
+   "found_run1": 6,
+   "found_run2": 6,
+   "found_both": 6,
+   "found_either": 6,
+   "candidates": [
+    {
+     "match_added": 6,
+     "match_other": 4,
+     "no_row": 1
+    },
+    {
+     "match_added": 6,
+     "match_other": 6,
+     "no_row": 1
+    }
+   ],
+   "missed": [
+    "google-eval-trigger-95a2",
+    "google-mitigation-dff1"
+   ]
+  },
+  "google-v3.0_v3.1": {
+   "version": "google-v3.1",
+   "upstream_added": 11,
+   "run_sizes": [
+    14,
+    12
+   ],
+   "verbatim": [
+    14,
+    12
+   ],
+   "found_run1": 9,
+   "found_run2": 9,
+   "found_both": 9,
+   "found_either": 9,
+   "candidates": [
+    {
+     "match_added": 10,
+     "match_other": 3,
+     "no_row": 1
+    },
+    {
+     "match_added": 9,
+     "match_other": 2,
+     "no_row": 1
+    }
+   ],
+   "missed": [
+    "google-eval-trigger-a5de",
+    "google-eval-scope-692d"
+   ]
+  },
+  "xai-2025-08-20_2025-12-30": {
+   "version": "xai-2025-12-30",
+   "upstream_added": 5,
+   "run_sizes": [
+    8,
+    7
+   ],
+   "verbatim": [
+    8,
+    7
+   ],
+   "found_run1": 5,
+   "found_run2": 5,
+   "found_both": 5,
+   "found_either": 5,
+   "candidates": [
+    {
+     "match_added": 7,
+     "match_other": 1,
+     "no_row": 0
+    },
+    {
+     "match_added": 6,
+     "match_other": 1,
+     "no_row": 0
+    }
+   ],
+   "missed": []
+  },
+  "xai-2025-12-30_2026-06-30": {
+   "version": "xai-2026-06-30",
+   "upstream_added": 10,
+   "run_sizes": [
+    23,
+    15
+   ],
+   "verbatim": [
+    23,
+    15
+   ],
+   "found_run1": 6,
+   "found_run2": 5,
+   "found_both": 5,
+   "found_either": 6,
+   "candidates": [
+    {
+     "match_added": 9,
+     "match_other": 5,
+     "no_row": 9
+    },
+    {
+     "match_added": 7,
+     "match_other": 2,
+     "no_row": 6
+    }
+   ],
+   "missed": [
+    "xai-eval-scope-98f4",
+    "xai-mitigation-98bd",
+    "xai-mitigation-3bad",
+    "xai-governance-d834"
+   ]
+  }
+ },
+ "total": {
+  "up": 34,
+  "r1": 26,
+  "r2": 25,
+  "both": 25,
+  "either": 26
+ }
+}

@@ -1,0 +1,107 @@
+[
+ {
+  "quote": "We\nalso assess risks of models with high manipulative capabilities potentially being misused in\nways that could reasonably result in large scale harm (“Harmful Manipulation Risks”)",
+  "section": "1. Introduction",
+  "category": "EC1",
+  "why_new": "Searched old.txt for 'manipulat', 'persuasion', 'influence', 'harmful manipulation': old only mentions models resisting 'attempted manipulation' by adversaries (robustness), never manipulation capability as a risk domain. Old risk domains are malicious use (CBRN, cyber) and loss of control only.",
+  "confidence": "high"
+ },
+ {
+  "quote": "xAI applies its risk management process, as appropriate, throughout the entire model lifecycle:\nduring the various phases of model training, on various checkpoints or versions of a model, both\nprior to and after deployment (including through post-market monitoring).",
+  "section": "2. Risk Management Framework",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'lifecycle', 'training', 'checkpoint', 'prior to'/'before': old only has pre-deployment reviews and review of internal-use risks 'before extensive rollout'; no commitment to apply risk management during training phases or on checkpoints across the lifecycle.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "xAI will conduct a full systemic risk assessment and mitigation process of our frontier models at\nleast once a year.",
+  "section": "2. Risk Management Framework",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'annual', 'once a year', 'cadence', 'regularly': old's only annual item is reviewing external standards (NIST/ISO) during annual reviews, and 'regularly review our adherence'; no annual full risk assessment of models.",
+  "confidence": "high"
+ },
+ {
+  "quote": "xAI may also conduct smaller-scale model evaluations at appropriate trigger\npoints to determine whether additional systemic risk mitigations may be required or if an\nevaluation report update is required. These trigger points may include (1) the release of an\nupdated model, (2) in the event of a serious incident, (3) if the model’s use or integrations into\nxAI’s systems materially increase risk, or (4) where xAI has reason to believe that the basis for\nconsidering the model’s systemic risks acceptable has materially changed.",
+  "section": "2. Risk Management Framework",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'trigger', 'serious incident', 'updated model', 'release': old says the FAIF will be updated before major capabilities and in response to incidents, and cyber risk re-assessed 'in future releases', but has no trigger points for model evaluations.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Results of our systemic risk assessment and mitigation processes and measures will be\ndocumented.",
+  "section": "2. Risk Management Framework",
+  "category": "EC5",
+  "why_new": "Searched old.txt for 'document', 'record', 'results', 'publish': old covers publishing/sharing benchmark results with audiences, but has no commitment to document risk assessment and mitigation results.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "As xAI advances frontier model development, we continuously evaluate whether emerging risk\ndomains meet our significance and severity thresholds, and update our control architectures\naccordingly.",
+  "section": "2.1. Risk Identification",
+  "category": "EC1",
+  "why_new": "Searched old.txt for 'emerging', 'other risk', 'new risk domain', 'severity': old only revises benchmark lists and re-assesses cyber risk; no ongoing evaluation of whether new risk domains meet significance/severity thresholds.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "This process\ninvolves (a) compiling a taxonomy of risks involved in the model’s training or deployment, (b)\nanalysing relevant characteristics of these risks, (c) identifying systemic risks stemming from the\nmodel and (d) developing systemic risk scenarios and mitigations for each identified systemic\nrisk.",
+  "section": "2.1. Risk Identification",
+  "category": "EC3",
+  "why_new": "Searched old.txt for 'taxonomy', 'risk scenario', 'identify', 'threat model': old uses threat modelling for bio/chem steps only; no general risk-identification process of compiling a taxonomy, analysing characteristics and developing systemic risk scenarios for each risk.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "xAI’s practice on loss of control centers around\nscalable model oversight, training against high-risk model behaviors such as deception\nand sycophancy, and robust evaluation and red-teaming of model-driven agents in\ncontrolled sandboxes.",
+  "section": "2.1. Risk Identification (b) Addressing Risks of Loss of Control",
+  "category": "EC3",
+  "why_new": "Searched old.txt for 'sandbox', 'agent', 'red-team', 'oversight': old LoC method is MASK/sycophancy benchmarks, honesty training and monitoring on X; no scalable oversight or red-teaming of model-driven agents in controlled sandboxes (red-teaming in old appears only as incident-detection channel and FMF protocols reference). Deception/sycophancy training part has old counterpart.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "(1)​model-independent information: xAI collects information relevant to the specific risk\n\nassessment, using methods such as web searches, literature reviews, market analysis,\nreviews of training data, historical incident data and incident databases, forecasting of\ngeneral trends, expert interviews and/or panels and/or lay interviews, surveys,\ncommunity consultations, or other participatory research methods investigating, e.g. the\neffects of models on natural persons, including vulnerable groups.",
+  "section": "2.2. Systemic risk analysis",
+  "category": "EC3",
+  "why_new": "Searched old.txt for 'literature', 'market analysis', 'incident data', 'forecast', 'survey', 'interview': old has expert collaboration on bio steps and an employee survey on AI projections (disclosure item, different object); no collection of model-independent information for risk assessment.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "(4)​estimating the systemic risk: xAI estimates the the probability and severity of harm for\n\nthe systemic risk using state-of-the-art risk estimation methods and taking into account\nthe information gathered throughout the risk management process.",
+  "section": "2.2. Systemic risk analysis",
+  "category": "EC3",
+  "why_new": "Searched old.txt for 'probability', 'severity', 'estimat', 'likelihood': old only states a conclusion that nuclear risk is acceptable and uses answer-rate thresholds; no commitment to estimate probability and severity of harm.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "When analyzing whether a threshold has been reached, we also take into account additional\nevidence to validate the findings of evaluations, such as human expert red-teaming. These\nresults help determine whether the threshold has been reached. The final decision also reflects\nan overall judgment based on all the available evidence, including how robust and reliable the\nevaluation methods were.",
+  "section": "2.3. Systemic risk acceptance determination",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'threshold', 'additional evidence', 'red-teaming', 'judgment': old thresholds are fixed rates (1 in 20 restricted queries, 1 in 2 MASK dishonesty) with no rule for validating with additional evidence or weighing evaluation reliability.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "(3)​conduct another round of systemic risk identification, analysis and systemic risk\n\n## acceptance determination.",
+  "section": "2.3. Systemic risk acceptance determination",
+  "category": "EC6",
+  "why_new": "Searched old.txt for 'another round', 're-assess', 'not acceptable', 'iterate': old's deployment decision options are tiered availability and user-type controls; no commitment to repeat risk identification/analysis/acceptance when risk is not acceptable.",
+  "confidence": "low"
+ },
+ {
+  "quote": "xAI will maintain a documented Security Goal that identifies the threat actors against which\nmitigations are designed to protect against, including sophisticated non-state actors, insider\nthreats, state-sponsored actors and other foreseeable actors. The Security Goal will be\nreviewed at least every year.",
+  "section": "2.4. Security mitigations",
+  "category": "S",
+  "why_new": "Searched old.txt for 'Security Goal', 'threat actor', 'insider', 'state-sponsored', 'reviewed': old states security is sufficient against 'a motivated non-state actor' but has no documented Security Goal covering insiders/state actors, nor annual review.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Security for our AI services and processing systems is structured around comprehensive\ntechnical and organizational measures designed to protect the security, confidentiality, integrity,\nand availability of personal data and user content, along with encryption, access restrictions,\nand personnel safeguards. Access is tightly managed through least-privilege principles,\nrole-based authorization, and regular reviews.",
+  "section": "2.4. Security mitigations",
+  "category": "S",
+  "why_new": "Searched old.txt for 'personal data', 'least-privilege', 'confidentiality', 'access': old security is about model weights (encryption, role-based access, monitoring); no measures for personal data/user content or least-privilege with regular access reviews.",
+  "confidence": "low"
+ },
+ {
+  "quote": "4.​ When reportable under applicable laws and regulations, xAI will provide the relevant\nauthorities with a copy of the incident report within the required deadlines",
+  "section": "3. Incident reporting",
+  "category": "G",
+  "why_new": "Searched old.txt for 'incident report', 'authorities', 'regulat', 'deadline': old only says xAI may notify law enforcement to prevent an imminent threat; no commitment to file incident reports with authorities within legal deadlines.",
+  "confidence": "medium"
+ }
+]

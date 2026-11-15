@@ -1,0 +1,58 @@
+[
+ {
+  "quote": "This FAIF complies with California's Transparency in Frontier Artificial Intelligence Act (the\n“TFAIA”, California Business and Professions Code § 22757.10 et seq.).",
+  "section": "xAI Frontier Artificial Intelligence Framework",
+  "category": "G",
+  "why_new": "Searched old.txt for 'California', 'comply/complies', 'TFAIA', 'law/statute': no statement of statutory compliance; only 'comply with their guiding principles' about models.",
+  "confidence": "low"
+ },
+ {
+  "quote": "xAI references standards such as NIST's AI Risk Management Framework, ISO/IEC 42001 for\nAI management systems, and industry best practices from the Frontier Model Forum (e.g.,\nred-teaming protocols).",
+  "section": "Overall Approach",
+  "category": "EC3",
+  "why_new": "Searched old.txt for 'NIST', 'ISO', 'Frontier Model Forum', 'standard', 'best practices': NIST appears only as a collaborator on bio critical steps; no reference to external risk-management standards or FMF red-teaming protocols.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "We evaluate these during annual reviews and integrate them into\nbenchmarks (e.g., aligning WMDP with biosecurity consensus) and safeguards.",
+  "section": "Overall Approach",
+  "category": "G",
+  "why_new": "Searched old.txt for 'annual', 'review', 'integrate', 'standards': old has 'regularly evaluates the adequacy and reliability of such benchmarks' (comparison against other benchmarks) and 'Regularly review our adherence', but no annual review of external standards integrated into benchmarks and safeguards.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Practices include\nencryption of model weights, role-based access controls, and real-time monitoring to prevent\nunauthorized transfer.",
+  "section": "3. Information Security",
+  "category": "S",
+  "why_new": "Searched old.txt for 'encrypt', 'access control', 'weights', 'monitoring' in the security section: old commits generally to 'appropriate information security standards' against a non-state actor, but names no specific practices (weight encryption, role-based access, real-time transfer monitoring). Possibly an elaboration of that counterpart.",
+  "confidence": "low"
+ },
+ {
+  "quote": "Risk owners are also\nresponsible for periodic audits to enforce framework implementation.",
+  "section": "4. Governance Approach",
+  "category": "G",
+  "why_new": "Searched old.txt for 'audit', 'risk owner', 'periodic', 'adherence': old has risk owners for mitigating risks and 'Regularly review our adherence with this RMF', but no audits assigned to risk owners to enforce implementation. Adherence review may be a partial counterpart.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Risk owners are also\nresponsible for monitoring for critical incidents or imminent threats, which may be identified\nthrough:",
+  "section": "4. Governance Approach",
+  "category": "G",
+  "why_new": "Searched old.txt for 'incident', 'telemetry', 'threshold breach', 'alerting', 'red-teaming', 'risk owner': old monitors public interaction with Grok on X and describes response steps to imminent threats, but assigns no incident-monitoring responsibility and no internal telemetry/threshold-breach alerting or red-teaming as detection channels.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Pre-deployment reviews include assessing benchmark\nresults (e.g., WMDP scores) and mitigation effectiveness.",
+  "section": "5. Deployment Decisions",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'pre-deployment', 'before deploy', 'review', 'mitigation effectiveness', 'WMDP': old says safeguards 'may depend on how a model performs on relevant benchmarks' and sets 'risk acceptance criteria for system deployment', but no pre-deployment review step assessing benchmark results and mitigation effectiveness. Old deployment criteria may count as a partial counterpart.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "For internal use, we review\ncatastrophic risks like oversight evasion before extensive rollout.",
+  "section": "5. Deployment Decisions",
+  "category": "EC2",
+  "why_new": "Searched old.txt for 'internal use', 'internal deploy', 'rollout', 'oversight evasion', 'before': old covers internal AI usage only as a metric (percent of code generated); no review of catastrophic risks before internal rollout.",
+  "confidence": "high"
+ }
+]

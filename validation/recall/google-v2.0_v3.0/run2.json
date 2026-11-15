@@ -1,0 +1,93 @@
+[
+ {
+  "quote": "Harmful Manipulation: Risks of models with high manipulative capabilities potentially being\nmisused in ways that could reasonably result in large scale harm.",
+  "section": "1.2 Critical Capability Levels",
+  "category": "EC1",
+  "why_new": "Searched old.txt for 'manipulat', 'persuasion', 'belief', 'influence': no hits. Old risk domains are only CBRN, Cyber, ML R&D (and deceptive alignment). Harmful manipulation is a new evaluated domain.",
+  "confidence": "high"
+ },
+ {
+  "quote": "We conduct a risk assessment for the\nfirst external deployment of a new frontier AI model.",
+  "section": "1.3 Outline of Our Risk Assessment Process",
+  "category": "EC2",
+  "why_new": "Searched 'first external', 'deployment', 'before deployment', 'regularly': old.txt only commits to evaluating most powerful models 'regularly' and those with 'exceptional increase in capabilities'; no risk assessment triggered by first external deployment.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "To identify meaningful new capabilities or material increases in performance, we conduct model\ncapability evaluations, including our automated benchmarks. These evaluations are primarily aimed at\nunderstanding the capabilities of the model and may be triggered, for example, upon the completion of\na pre-training or post-training run, on various candidates of a model version.",
+  "section": "1.3 Outline of Our Risk Assessment Process",
+  "category": "EC3",
+  "why_new": "Searched 'automated benchmark', 'pre-training', 'post-training', 'general capability': no hits. Old only says it may 'assess the likelihood of such capabilities and risks before and during training'; no screening capability-evaluation step deciding whether a risk assessment is needed.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "We conduct further analysis, including reviewing model independent\ninformation, external evaluations, and post-market monitoring as appropriate.",
+  "section": "1.3 Outline of Our Risk Assessment Process",
+  "category": "EC3",
+  "why_new": "Searched 'post-market', 'model independent', 'monitoring', 'external evaluators': old has 'We may use additional external evaluators' (counterpart for external evaluations) but nothing on model-independent information or post-market monitoring as risk-assessment inputs. Partial counterpart.",
+  "confidence": "low"
+ },
+ {
+  "quote": "As a result, to assess the\nML R&D CCLs, we may use sources of information about our own progress at accelerating ML R&D to\nassess whether we are near or at the CCLs, in addition to evaluations of ML R&D capabilities.",
+  "section": "1.3 Outline of Our Risk Assessment Process",
+  "category": "EC3",
+  "why_new": "Searched 'own progress', 'sources of information', 'internal', 'Machine Learning R&D' assessment: old assesses ML R&D only via early warning evaluations; no use of internal progress data as evidence or basis for alert thresholds.",
+  "confidence": "high"
+ },
+ {
+  "quote": "We apply safety and security mitigations throughout the lifecycle of our models, including as part of our\ntraining and model development phase and, where appropriate, before CCLs are reached as described\nin the process below.",
+  "section": "1.4 Response Plans and Mitigations",
+  "category": "M",
+  "why_new": "Searched 'lifecycle', 'before CCLs', 'training', 'development phase': old ties mitigations to models reaching an alert threshold or CCL; no commitment to apply mitigations through the lifecycle/before CCLs.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Security mitigations: security infrastructure at Google is subject to penetration testing and\nother kinds of assessments, and is continually improved based on these results.",
+  "section": "1.5 Evaluating Mitigations",
+  "category": "S",
+  "why_new": "Searched 'penetration', 'security assess', 'security test', 'infrastructure': no hits. Old describes RAND security levels but no testing of security infrastructure.",
+  "confidence": "high"
+ },
+ {
+  "quote": "A model for which risk assessment indicates no CCL is reached will be deemed to pose an\nacceptable level of severe risk for further development and deployment, because it should not\npossess the capabilities required to substantially contribute to severe risk scenarios.",
+  "section": "1.6 Summary of Risk Acceptance Criteria",
+  "category": "EC6",
+  "why_new": "Searched 'acceptable level', 'risk acceptance', 'no CCL', 'distant from a CCL': old has no explicit acceptance criterion for models below all CCLs (only that distant models may get additional assessment processes).",
+  "confidence": "medium"
+ },
+ {
+  "quote": "The scope of the deployment. For example, small scale and private deployments\nmay pose substantially less risk than large scale or public deployments.",
+  "section": "2.1.2 Deployment Mitigations",
+  "category": "EC6",
+  "why_new": "Searched 'scope of the deployment', 'small scale', 'private deployment', 'factors such as': old safety case factors are only 'likelihood and consequences of misuse'; deployment scope as a safety-case factor is absent.",
+  "confidence": "low"
+ },
+ {
+  "quote": "What capabilities and mitigations are available on other publicly available\nmodels. For example, whether another (non-Google) publicly deployed model is\nat the same CCL, and has mitigations that are less effective at preventing misuse\nthan that of the model being assessed, in which case the deployment of this\nmodel is less likely to materially increase risk.",
+  "section": "2.1.2 Deployment Mitigations",
+  "category": "EC6",
+  "why_new": "Searched 'other publicly', 'widely available', 'marginal', 'non-Google': old uses 'other widely available models' only to adjust recommended security levels, not as a factor in the deployment-mitigation safety case. New object (marginal risk for deployment decision).",
+  "confidence": "medium"
+ },
+ {
+  "quote": "Material updates to a safety case will be submitted to the\nappropriate governance function for review.",
+  "section": "2.1.2 Deployment Mitigations",
+  "category": "G",
+  "why_new": "Searched 'governance', 'review', 'post-deployment', 'safety case will be updated': old says the safety case will be updated through red-teaming post-deployment, but no submission of updates to a governance body; governance review only of pre-deployment safety case and response plans.",
+  "confidence": "medium"
+ },
+ {
+  "quote": "The following mitigation process will be applied for deployments of a model reaching a ML R&D CCL. The\napproach is similar to misuse deployment mitigations, with an added focus on large scale internal\ndeployments.",
+  "section": "3.1.2 Deployment Mitigations",
+  "category": "EC6",
+  "why_new": "Searched 'internal deploy', 'internal', 'large scale', 'general availability': old deployment process gates only general availability deployment; no gating of large scale internal deployments of ML R&D CCL models.",
+  "confidence": "high"
+ },
+ {
+  "quote": "The updated version and framework assessment will be reviewed by the appropriate corporate\ngovernance bodies.",
+  "section": "5.1 Updates",
+  "category": "G",
+  "why_new": "Searched 'review the Framework', 'governance bodies', 'AGI Safety Council', 'implementation': old has periodic framework review and AGI Safety Council periodic review of implementation, but no governance-body review of updated framework versions. Partial counterpart.",
+  "confidence": "low"
+ }
+]
