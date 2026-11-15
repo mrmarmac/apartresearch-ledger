@@ -50,15 +50,17 @@
    "item": "e25",
    "id": "anthropic-eval-scope-704a",
    "version": "v3.1",
-   "final": "S",
-   "basis": "Adjudication page."
+   "final": "W",
+   "basis": "First decision on the adjudication page: strengthened. Changed in conversation after the full-document rerun: the change goes in two directions, and the codebook codes a mixed change as weakened.",
+   "mixed": true
   },
   {
    "item": "e26",
    "id": "anthropic-consequence-3e7e",
    "version": "v3.1",
-   "final": "S",
-   "basis": "Adjudication page."
+   "final": "W",
+   "basis": "First decision on the adjudication page: strengthened. Changed in conversation after the full-document rerun: the change goes in two directions, and the codebook codes a mixed change as weakened.",
+   "mixed": true
   },
   {
    "item": "e34",

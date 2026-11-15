@@ -186,12 +186,12 @@ Where the two model runs agree with each other (42 decided entries), the human a
 | Group | Entries | Final = model run 1 | Final = model run 2 | Final = first human answer |
 |---|---|---|---|---|
 | The two model runs agreed | 9 | 8 | 8 | 0 |
-| The two model runs disagreed | 4 | 0 | 3 | 2 |
+| The two model runs disagreed | 4 | 1 | 2 | 1 |
 
 - **Where the two model runs agreed, the adjudicated code is the model code in 8 of 9 adjudicated entries.** With the 34 entries where the blind check agreed, that is 42 of 43 decided entries.
 - **One error passed two model runs (e19).** The two runs coded weakened, because a phrase was gone from the start of the passage. The phrase had moved to a new final sentence, outside the text that the model got, and it was stronger there. The blind human answer (kept) was also wrong. The error was found only when the full section was read.
-- **Where the two model runs disagreed, the final code differs from model run 1 in 4 of 4 entries.** The rule "run two times, send disagreements to a person" finds most errors, but not each one.
-- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in 11 of 13 adjudicated entries.
+- **Where the two model runs disagreed, the final code differs from model run 1 in 3 of 4 entries.** The rule "run two times, send disagreements to a person" finds most errors, but not each one.
+- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in 12 of 13 adjudicated entries.
 - Not coded on second look: none. Held open: none.
 - **The second look was not blind.** The adjudicator saw the model's reasons. Agreement with the model after that is weaker evidence than blind agreement.
 
@@ -203,8 +203,8 @@ Where the two model runs agree with each other (42 decided entries), the human a
 | e09 | `anthropic-governance-d559` | v3.4 | weakened | weakened | strengthened | weakened |
 | e16 | `anthropic-security-d7b4` | v2.2 | kept | kept | strengthened | kept |
 | e19 | `anthropic-third-party-cef3` | v3.2 | weakened | weakened | kept | strengthened |
-| e25 | `anthropic-eval-scope-704a` | v3.1 | weakened | kept | strengthened | strengthened |
-| e26 | `anthropic-consequence-3e7e` | v3.1 | kept | strengthened | not the same thing | strengthened |
+| e25 | `anthropic-eval-scope-704a` | v3.1 | weakened | kept | strengthened | weakened |
+| e26 | `anthropic-consequence-3e7e` | v3.1 | kept | strengthened | not the same thing | weakened |
 | e34 | `anthropic-eval-trigger-5482` | v2.1 | kept | weakened | cannot tell | weakened |
 | e40 | `anthropic-third-party-38ba` | v3.1 | weakened | weakened | kept | weakened |
 | e41 | `anthropic-consequence-a1d2` | v2.1 | weakened | weakened | kept | weakened |
@@ -343,7 +343,7 @@ Limits: one entry, one developer, one person, no second coder. The seed versions
 
 ## Rerun of the Anthropic coding with the full documents
 
-One error (entry e19) passed two model runs and a blind check by a person, because a phrase moved outside the extract that the model got. This test codes the same 47 entries again. Each run gets the two full documents and must search the full later document before it codes "weakened". Two independent runs. The runs did not see the earlier answers or the final codes. Reference: the final codes after the person's adjudication (29 kept, 14 weakened, 4 strengthened).
+One error (entry e19) passed two model runs and a blind check by a person, because a phrase moved outside the extract that the model got. This test codes the same 47 entries again. Each run gets the two full documents and must search the full later document before it codes "weakened". Two independent runs. The runs did not see the earlier answers or the final codes. Reference: the final codes as they were before this rerun (29 kept, 14 weakened, 4 strengthened).
 
 | | Extract, run 1 | Extract, run 2 | Full documents, run A | Full documents, run B |
 |---|---|---|---|---|
@@ -358,7 +358,7 @@ One error (entry e19) passed two model runs and a blind check by a person, becau
 **Result: the full documents corrected the known error. They did not increase the agreement with the final codes.**
 
 - **Entry e19** (`anthropic-third-party-cef3`, v3.2): the two extract runs coded "weakened". The two full-document runs code "strengthened", which is the final code. Each found the moved phrase.
-- **Two entries where the two full-document runs agree with each other and not with the final code:** `anthropic-consequence-3e7e` and `anthropic-eval-scope-704a`, both v3.1. The final code is "strengthened". The two runs code "weakened", because they find a change in two directions, and the codebook codes a mixed change as weakened. These are open for the adjudicator.
+- **Two entries where the two full-document runs agree with each other and not with the final code:** `anthropic-consequence-3e7e` and `anthropic-eval-scope-704a`, both v3.1. The final code is "strengthened". The two runs code "weakened", because they find a change in two directions, and the codebook codes a mixed change as weakened. The adjudicator then examined the two entries and changed both to "weakened" (mixed). The final codes are now 29 kept, 16 weakened, 2 strengthened. Against these codes, the agreement is 43 and 44 of 47 for the extract runs, and 45 and 44 of 47 for the full-document runs. That comparison is not independent, because the rerun caused the change.
 - **Run B codes "weakened" more often** (19, against 14 in the final codes). Three of its "weakened" codes have no support from the other three runs.
 
 How to read this: the reference favours the extract runs, because the adjudicator saw the extract answers on his second look. The test has 47 entries and one developer. It shows that the full-document method corrects the one known error of this type. It does not show a general gain.

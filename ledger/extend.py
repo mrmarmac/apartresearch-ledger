@@ -369,6 +369,8 @@ def apply(ledger, corpus, folder, tags_for):
                     elif code in names:
                         entry["status"] = names[code]
                         entry["material"] = code != "R"
+                        if decision.get("mixed"):
+                            entry["mixed"] = True
                         entry["human_check"] = "adjudicated"
                         entry["needs_review"] = False
                     else:

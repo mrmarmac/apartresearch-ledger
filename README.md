@@ -49,7 +49,7 @@ The ledger adds four things:
 | OpenAI | 51 | 2 | 1 |
 
 Recorded changes from the upstream coding: 161 weakened, 69 strengthened, 41 removed, 156 added, 8 relocated.
-Recorded changes from the ledger's own extension of Anthropic (model-coded, then checked by a person): 14 weakened, 4 strengthened.
+Recorded changes from the ledger's own extension of Anthropic (model-coded, then checked by a person): 16 weakened, 2 strengthened.
 Recorded changes from the ledger's own trace of Meta v2 → v2.1 (model-coded, then confirmed by a person): 6 weakened, 4 removed, 15 added.
 
 ### The Anthropic extension
@@ -62,13 +62,14 @@ The ledger traces them itself. Each entry says who decided it (`coded_by`).
 | 1 | Text match: the same words are in the next version | 490 entries, status kept |
 | 2 | Model, two runs: find the counterpart of a changed commitment | 85 steps. The two runs found the same passage in all 85. No removal. |
 | 3 | Model, two runs: code the direction of each changed pair | 47 entries: 31 kept, 14 weakened, 2 strengthened. The runs agree on 43. |
-| 3b | One person: blind check of the 47 entries, then a second look at the 13 without agreement | Final: 29 kept, 14 weakened, 4 strengthened. No entry is open. For the last entry, the person compared the two PDFs. |
+| 3b | One person: blind check of the 47 entries, then a second look at the 13 without agreement | Final: 29 kept, 16 weakened, 2 strengthened. No entry is open. For one entry, the person compared the two PDFs. He changed two entries from strengthened to weakened (mixed) after the full-document rerun. |
 | 4 | Join a chain that ends at v2.2 with the upstream chain that starts at v2.2, when the texts overlap one to one | 14 chains joined. The former ID is in `former_ids`. |
 
 - 68 Anthropic commitments now reach v3.4. 11 of them have a history from v1.0 (2023) to v3.4 (2026).
 - 25 chains overlap an upstream chain, but not one to one. They are not joined. See `related_ids`.
 - The ledger does not detect commitments that are new in v2.1, v2.2 or v3.1 to v3.4.
-- One person (the author) checked the 47 model-coded entries blind. He agreed with the model on 34 of 44 decided entries (77%). He then took a second look at the others, not blind. Where the two model runs agreed, his final code is the model code in 41 of 42 decided entries. The one error that passed two runs was a phrase that moved outside the text that the model got. Where the two runs disagreed (4 entries), the final code differs from model run 1 in each one.
+- One person (the author) checked the 47 model-coded entries blind. He agreed with the model on 34 of 44 decided entries (77%). He then took a second look at the others, not blind. Where the two model runs agreed, his final code is the model code in 41 of 42 decided entries. The one error that passed two runs was a phrase that moved outside the text that the model got. Where the two runs disagreed (4 entries), the final code differs from model run 1 in 3.
+- **Full-document rerun.** Two new runs coded the 47 entries again with the two full documents. They corrected the one known error of the moved-phrase type (e19). Their agreement with the final codes was not higher than before (42 and 43 of 47, against 42 and 45). See `validation.md`.
 - Data and prompts: `data/extension/anthropic/`.
 
 ## Validation
