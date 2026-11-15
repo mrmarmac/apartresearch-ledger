@@ -199,6 +199,115 @@ def fig8():
     save(fig, "fig8_survival_of_first_commitments.png")
 
 
+# Figure 9: one row for each xAI commitment, one column for each version.
+def fig9():
+    from matplotlib.patches import Patch
+    versions = [v for v in L["versions"] if v["lab"] == "xai"]
+    vids = [v["version_id"] for v in versions]
+    items = [c for c in L["commitments"] if c["lab"] == "xai"]
+    colour = {"baseline": "#DDDDDD", "kept": "#DDDDDD", "added": C["added"], "strengthened": C["strengthened"],
+              "weakened": C["weakened"], "removed": C["removed"], "merged": "#888888"}
+    rank = {"removed": 0, "weakened": 1, "merged": 2, "kept": 3, "baseline": 3, "strengthened": 4, "added": 5}
+
+    def key(c):
+        last = c["history"][-1]["status"]
+        return (vids.index(c["first_version_id"]), rank.get(last, 3), -len(c["history"]))
+    items.sort(key=key)
+    fig, ax = plt.subplots(figsize=(7.5, 10.5))
+    for y, c in enumerate(items):
+        by = {h["version_id"]: h["status"] for h in c["history"]}
+        for x, vid in enumerate(vids):
+            status = by.get(vid)
+            if status is None:
+                continue
+            ax.add_patch(plt.Rectangle((x + 0.04, y + 0.1), 0.92, 0.8, color=colour.get(status, "#DDDDDD"), lw=0))
+        if c["merged_into"]:
+            x = vids.index(c["last_version_id"]) + 1
+            if x < len(vids):
+                ax.add_patch(plt.Rectangle((x + 0.04, y + 0.1), 0.92, 0.8, color=colour["merged"], lw=0))
+        ax.text(-0.08, y + 0.5, c["id"].replace("xai-", ""), ha="right", va="center", fontsize=5.5, family="monospace")
+    ax.set_xlim(0, len(vids))
+    ax.set_ylim(len(items), 0)
+    ax.set_xticks([x + 0.5 for x in range(len(vids))],
+                  [v["label"].replace("draft-", "draft\n") for v in versions], fontsize=8)
+    ax.xaxis.tick_top()
+    ax.set_yticks([])
+    for side in ("left", "bottom", "top"):
+        ax.spines[side].set_visible(False)
+    ax.tick_params(length=0)
+    handles = [Patch(color="#DDDDDD", label="present, no material change"), Patch(color=C["added"], label="added"),
+               Patch(color=C["strengthened"], label="strengthened"), Patch(color=C["weakened"], label="weakened"),
+               Patch(color=C["removed"], label="removed"), Patch(color="#888888", label="merged into another row")]
+    ax.legend(handles=handles, ncol=3, frameon=False, fontsize=8, loc="upper center", bbox_to_anchor=(0.45, -0.01))
+    ax.set_title("64 xAI commitments across 5 versions: one row is one commitment", pad=28)
+    save(fig, "fig9_xai_commitment_strip.png")
+
+
+# Figure 10: validation results in two groups.
+def fig10():
+    groups = [("Model against a reference", [
+                  ("Stability: model run 2 = run 1", 113, 120),
+                  ("Direction: model = upstream code", 105, 120),
+                  ("Counterpart: model = upstream", 48, 60),
+                  ("Counterpart: text matching only (baseline)", 37, 60),
+                  ("Direction: blind human = model (Anthropic)", 34, 44),
+                  ("New commitments: model finds upstream additions", 26, 34)]),
+              ("Ledger against an independent tracker", [
+                  ("Watchtower Meta changes that are in the ledger", 15, 17),
+                  ("Watchtower xAI changes that are in the ledger", 14, 17)])]
+    fig, axes = plt.subplots(2, 1, figsize=(8.5, 4.8), sharex=True, gridspec_kw={"height_ratios": [6, 2]})
+    for ax, (title, rows) in zip(axes, groups):
+        rows = rows[::-1]
+        for y, (name, k, n) in enumerate(rows):
+            lo, hi = wilson(k, n)
+            base = "baseline" in name
+            ax.plot([lo, hi], [y, y], color="#666666", lw=1.5)
+            ax.plot(100 * k / n, y, "o", color=C["upstream"] if base else C["strengthened"], ms=7)
+            ax.text(101.5, y, f"{k} of {n}", va="center", fontsize=8)
+        ax.set_yticks(range(len(rows)), [r[0] for r in rows])
+        ax.set_ylim(-0.6, len(rows) - 0.4)
+        ax.set_xlim(40, 100)
+        ax.grid(axis="x", color="#EEEEEE")
+        ax.set_title(title, loc="left", fontsize=10)
+    axes[-1].set_xlabel("Agreement, percent. Line: 95% interval (Wilson). Do not compare the two groups.")
+    fig.suptitle("No check reaches 100%, and small samples give wide intervals", fontweight="bold", fontsize=12, x=0.5)
+    save(fig, "fig10_validation_two_groups.png")
+
+
+# Figure 11: one commitment, two versions, the change marked. The texts are verbatim.
+# Each marked phrase is on its own line, so that the figure needs no text measurement.
+def fig11():
+    old = [("For example, if a model under test achieves", False),
+           ("< 75% pass@10 success on all categories", True),
+           ("of simple capture the flag (CTF) challenges", False),
+           ("in unguided mode, we conclude that it does", False),
+           ('not exceed the "moderate or lower" risk level.', False)]
+    new = [("As discussed above, if a model under test achieves", False),
+           ("sufficiently high performance", True),
+           ("on simple suite challenges, we proceed to", False),
+           ('evaluation on "Complex" challenges to determine', False),
+           ('risk level. Otherwise, we rate its risk as', False),
+           ('"moderate or lower."', False)]
+    fig, axes = plt.subplots(1, 2, figsize=(9.5, 3.6))
+    panels = [("Version 2, April 2026", old, C["removed"], "#F6DCD6"),
+              ("Version 2.1, October 2026", new, C["weakened"], "#FFE9C2")]
+    for ax, (head, lines, colour, tint) in zip(axes, panels):
+        ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
+        ax.add_patch(plt.Rectangle((0, 0), 1, 1, color="#F7F7F7", lw=0))
+        ax.text(0.05, 0.9, head, fontsize=10, fontweight="bold", va="center")
+        y = 0.74
+        for line, flag in lines:
+            ax.text(0.05, y, line, fontsize=10, va="center", family="serif", color=colour if flag else "#222222",
+                    fontweight="bold" if flag else "normal",
+                    bbox=dict(facecolor=tint, edgecolor="none", pad=2.5) if flag else None)
+            y -= 0.105
+    fig.suptitle('A number becomes a judgement: "75% pass@10" is now "sufficiently high performance"',
+                 fontweight="bold", fontsize=12)
+    fig.text(0.5, -0.03, "Meta, cyber risk threshold. Commitment meta-eval-trigger-10c1. Ledger status at v2.1: weakened. "
+             "Texts are verbatim; footnote marks are left out.", ha="center", fontsize=8, color="#555555")
+    save(fig, "fig11_meta_text_change.png")
+
+
 if __name__ == "__main__":
-    for make in (fig3, fig4, fig5, fig6, fig7, fig8):
+    for make in (fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11):
         make()
