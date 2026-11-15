@@ -107,9 +107,14 @@
           "meta-v2"
         ]
       ],
-      "last_traced_version_id": "meta-v2",
+      "last_traced_version_id": "meta-v2.1",
       "untraced_pairs": [],
-      "extended_pairs": []
+      "extended_pairs": [
+        [
+          "meta-v2",
+          "meta-v2.1"
+        ]
+      ]
     },
     {
       "lab": "openai",

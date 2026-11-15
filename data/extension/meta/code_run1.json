@@ -1,0 +1,234 @@
+[
+ {
+  "item": "m01",
+  "id": "meta-eval-method-36d3",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Identical apart from a page break: 'The risk assessment also considers any planned deployments, as these plans inform the type of pre-release evaluations we undertake.'"
+ },
+ {
+  "item": "m02",
+  "id": "meta-eval-method-fd75",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "prepare the asset",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "'we prepare the asset ... in a way that seeks to account for the tools and scaffolding' becomes 'We will seek to account for the tools and scaffolding'; same top-rung practice. Added harness examples ('we may test') are illustrative."
+ },
+ {
+  "item": "m03",
+  "id": "meta-governance-b294",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Identical except page break: 'the Chief AI Officer or the Director of Alignment and Risk will determine whether to request further testing ... or approve the model for deployment.'"
+ },
+ {
+  "item": "m04",
+  "id": "meta-consequence-32db",
+  "version": "v2.1",
+  "outcome": "W",
+  "dims": [
+   6
+  ],
+  "mixed": false,
+  "searched": "sufficiently robust; robust to adversarial; fully mitigated (only found in unrelated 'will evaluate our fully mitigated model under such attacks')",
+  "moved": "'Deploy With Mitigations ... only if sufficient mitigations are defined, implemented and validated' retained in 2.1 (also_see)",
+  "confidence": "high",
+  "reason": "Deployment condition loosened: 'strong additional evidence that mitigations are sufficiently robust to adversarial attacks that the fully mitigated model is reduced to moderate or lower' becomes 'strong additional evidence to support the moderate or lower level, with mitigations'."
+ },
+ {
+  "item": "m05",
+  "id": "meta-eval-scope-2fcf",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "Cyber 3:",
+  "moved": "Cyber 1 continues across table row ('large-scale casualties or significant financial loss'); Cyber 2 in also_see; 'Cyber 3: Large-scale casualties or significant financial loss ... scaled long form fraud, extortion, and scams' in 3.4.1",
+  "confidence": "high",
+  "reason": "All three cyber outcomes appear in 3.4.1 with the same wording; the later extract is only truncated by table layout."
+ },
+ {
+  "item": "m06",
+  "id": "meta-eval-method-8bad",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Identical apart from a page break: 'If performance thresholds ... are reached, we then expand our assessment to improve coverage, specificity, and realism'."
+ },
+ {
+  "item": "m07",
+  "id": "meta-eval-method-11e0",
+  "version": "v2.1",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "mixed": false,
+  "searched": "undergo evaluation; robustness; amongst other; sufficiently robust",
+  "moved": "",
+  "confidence": "medium",
+  "reason": "'Models will undergo evaluation to assess the robustness of the mitigations we have implemented' becomes 'Where we implement technical mitigations such as refusal training or classifiers, we will consider their robustness': weaker verb and narrower condition."
+ },
+ {
+  "item": "m08",
+  "id": "meta-eval-method-7e3a",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Punctuation change only; 'we'll continue to work on: (1) improving the quality and reliability of evaluations; (2) ... mitigation techniques; and (3) ... post-deployment monitoring' unchanged."
+ },
+ {
+  "item": "m09",
+  "id": "meta-disclosure-deec",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "comparative context",
+  "moved": "Preparedness report section: 'We will also include the results of evaluations of the reference class of comparable models to provide comparative context, including relevant capability, propensity, and refusal evaluations.'",
+  "confidence": "high",
+  "reason": "'We evaluate this reference class ... and incorporate the results ... into our preparedness reports' unchanged; the 'We will also include ... comparative context' sentence is retained verbatim elsewhere in v2.1."
+ },
+ {
+  "item": "m10",
+  "id": "meta-governance-c778",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Only the framework name changes ('this Advanced AI Scaling Framework' to 'the Meta Superintelligence Scaling Framework'); actors and duties identical."
+ },
+ {
+  "item": "m11",
+  "id": "meta-governance-53b6",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Framework renamed only; 'employees will be able to confidentially, and, if they choose, anonymously issue reports ... submitted to the internal governance function, the Chief AI Officer, and the Director' unchanged."
+ },
+ {
+  "item": "m12",
+  "id": "meta-eval-method-911d",
+  "version": "v2.1",
+  "outcome": "W",
+  "dims": [
+   4,
+   6
+  ],
+  "mixed": false,
+  "searched": "sufficiently robust; cannot materially enable; competent; incentivized; realistic given the deployment",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'evaluate the efficacy of our mitigations to ensure they are sufficiently robust and ensure that the model cannot materially enable' plus 'Mitigations should be sufficiently robust' become only 'we will evaluate whether the model will materially enable ... considering ... the efficacy of its mitigations'."
+ },
+ {
+  "item": "m13",
+  "id": "meta-eval-trigger-10c1",
+  "version": "v2.1",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": false,
+  "searched": "75%; pass@10; pass@; provisionally",
+  "moved": "Thresholds and Escalation #1 now reads 'if a model under test achieves sufficiently high performance on simple suite challenges' (also_see)",
+  "confidence": "medium",
+  "reason": "Numeric trigger dropped: '< 75% pass@10 success on all categories of simple capture the flag (CTF) challenges' becomes unquantified 'sufficiently high performance on simple suite challenges'."
+ },
+ {
+  "item": "m14",
+  "id": "meta-eval-trigger-3907",
+  "version": "v2.1",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "mixed": false,
+  "searched": "At least one challenge; pass@10; proof of concept",
+  "moved": "",
+  "confidence": "high",
+  "reason": "High-risk bar raised and made vague: 'At least one challenge ... successfully completed end-to-end (pass@10)' becomes 'Completing sufficiently many challenges'; 'For models in deployment scenarios' narrows to 'models we are considering for deployment scenarios'."
+ },
+ {
+  "item": "m15",
+  "id": "meta-eval-method-b825",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "LlamaFirewall",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Sentence identical ('We conduct evaluations to assess security risks of prompt injection ... and implement layered security defenses'); the dropped 'For instance, we deploy LlamaFirewall' sentence was illustrative."
+ },
+ {
+  "item": "m16",
+  "id": "meta-mitigation-cbea",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "AutoPatchBench; CyberSOCEval",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'we will continue to take active efforts and create tools' retained; only the illustrative 'such as AutoPatchBench and CyberSOCEval' is removed."
+ },
+ {
+  "item": "m17",
+  "id": "meta-consequence-afe4",
+  "version": "v2.1",
+  "outcome": "W",
+  "dims": [
+   1,
+   2,
+   4
+  ],
+  "mixed": false,
+  "searched": "defensible; typical adversarial attacks; consistent refusal",
+  "moved": "",
+  "confidence": "high",
+  "reason": "'requires defensible evidence ... across relevant threat scenarios and typical adversarial attacks' becomes 'requires evidence ... across relevant threat scenarios', limited to 'areas where refusal is part of our mitigation strategy'; 'ensure consistent refusal against ... attacks' becomes 'will evaluate'."
+ },
+ {
+  "item": "m18",
+  "id": "meta-eval-trigger-7e16",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "mixed": false,
+  "searched": "",
+  "moved": "",
+  "confidence": "high",
+  "reason": "Thresholds unchanged ('at least 40% on MASK and at most 50%'); 'Agent Misalignment' corrected to 'Agentic Misalignment', a name fix."
+ }
+]
