@@ -71,9 +71,79 @@ The sample has the same number of rows for each code. The pool does not. Thus th
 2. **This test does not include alignment.** The model gets a matched pair. To find the counterpart of a commitment in a new version is a different, harder step.
 3. **This test does not include Added, Removed or Relocated.** Those codes depend on alignment, not on direction.
 4. **Isolation was by instruction.** The model ran as a sub-agent with file tools. The instructions told it to read only its batch file and the rules. Each run made 4 tool calls, which agrees with: read rules, read batch, write answers, report.
-5. **One run for each item.** The test does not measure how much the model changes between runs.
+5. **Two runs only.** See the stability section. Two runs give a first estimate of how much the model changes, not a distribution.
 6. **The sample is 120 rows.** Read the confidence intervals.
 7. **The model is a high-capability model.** A low-cost model was not tested. Its agreement can be lower.
+
+## Stability: a second run of the same model
+
+Same model, same items, same prompt, new sub-agents. Answers are in `validation/predictions_run2/`.
+
+| Comparison | Agreement | Cohen's kappa |
+|---|---|---|
+| Run 2 against upstream | 104 of 120 (87%) | 0.80 |
+| Run 1 against run 2 | 113 of 120 (94%) | 0.91 |
+
+- The model changed its answer on 7 of 120 items. 2 of those changes went to the opposite direction.
+- On the 113 items with the same answer in the two runs, the model agrees with upstream on 102 (90%).
+- A practical rule follows: run the model two times and send each item with two different answers to a person.
+
+| Item | Upstream row | Upstream | Run 1 | Run 2 |
+|---|---|---|---|---|
+| q045 | `ANT-1-005` | weakened | strengthened | kept |
+| q048 | `ANT-2-024` | weakened | weakened | strengthened |
+| q063 | `META-1-028` | weakened | kept | strengthened |
+| q090 | `XAI-3-008` | weakened | weakened | kept |
+| q097 | `XAI-4-047` | strengthened | weakened | strengthened |
+| q115 | `GDM-2-025` | kept | weakened | kept |
+| q117 | `GDM-2-033` | kept | kept | weakened |
+
+## Human check: one lawyer, 20 items
+
+**Coder:** M.R. (author, lawyer). One person, no second human coder.
+
+**Design.** 20 of the 120 items: 10 drawn at random from the items where model run 1 agreed with upstream, and 10 drawn at random from the 15 items where it disagreed (seed 20261116). Mixed sequence. The coder did not see the upstream code, the model answers, or which group an item was in. The page (`validation/human/page.html`) showed the two texts, the headings, the developer name and a summary of the rules.
+
+**This is not a random sample of the 120.** Half of the items are disputed on purpose. Read the two groups separately. Do not combine them into one accuracy figure.
+
+**Coded: 17 of 20.** The coder did not code 3 items, because he did not accept that the two texts refer to the same commitment.
+
+| Group | Coded | Human = upstream | Human = model | Human = neither |
+|---|---|---|---|---|
+| Model agreed with upstream | 9 | 7 | 7 | 2 |
+| Model disagreed with upstream | 8 | 4 | 2 | 2 |
+
+Observations:
+
+- **Where the model and upstream disagree, the human agrees with upstream more often than with the model, but the numbers are very small.**
+- **The human selects Kept more often:** 11 of 17, against 8 of 17 for upstream on the same items. The human has a higher bar for a material change.
+- **Opposite direction:** human against upstream, 1 of 17. Human against model, 3 of 17.
+- **Alignment doubt:** the coder rejected the pairing of 3 of 20 items. The upstream coding re-examined all of them as disputed. This supports limit 2 below: alignment is the weak step, and this test does not measure it.
+
+| Item | Upstream row | Group | Human | Upstream | Model run 1 |
+|---|---|---|---|---|---|
+| h01 (q075) | `ANT-1-013` | agreed | kept | kept | kept |
+| h02 (q092) | `XAI-4-007` | agreed | kept | kept | kept |
+| h03 (q046) | `GDM-2-022` | disagreed | kept | strengthened | kept |
+| h04 (q030) | `OAI-1-022` | agreed | not coded: pairing rejected | weakened | weakened |
+| h05 (q051) | `GDM-2-028` | agreed | kept | kept | kept |
+| h06 (q045) | `ANT-1-005` | disagreed | weakened | weakened | strengthened |
+| h07 (q047) | `GDM-1-013` | disagreed | kept | strengthened | weakened |
+| h08 (q115) | `GDM-2-025` | disagreed | weakened | kept | weakened |
+| h09 (q069) | `XAI-2-017` | disagreed | not coded: pairing rejected | kept | weakened |
+| h10 (q093) | `ANT-1-021` | disagreed | kept | kept | strengthened |
+| h11 (q049) | `ANT-1-064` | agreed | weakened | weakened | weakened |
+| h12 (q097) | `XAI-4-047` | disagreed | strengthened | strengthened | weakened |
+| h13 (q094) | `XAI-3-024` | agreed | kept | kept | kept |
+| h14 (q002) | `GDM-2-016` | agreed | kept | kept | kept |
+| h15 (q059) | `ANT-1-039` | agreed | weakened | weakened | weakened |
+| h16 (q031) | `ANT-1-059` | agreed | kept | strengthened | strengthened |
+| h17 (q084) | `OAI-1-014` | agreed | strengthened | weakened | weakened |
+| h18 (q039) | `GDM-2-030` | disagreed | kept | weakened | strengthened |
+| h19 (q113) | `GDM-2-006` | disagreed | kept | kept | strengthened |
+| h20 (q008) | `OAI-1-026` | disagreed | not coded: pairing rejected | strengthened | weakened |
+
+Limits of the human check: one coder. The coder is the author of this project and is not independent of it. 17 items. The coder took about 8 minutes for the 17 items, which is about 30 seconds for each item. The coder used a summary of the rules, not the full codebook.
 
 ## Second check: one Watchtower entry
 

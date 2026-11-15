@@ -1,0 +1,30 @@
+{
+ "coder": "M.R. (author, lawyer)",
+ "date": "2026-11-15",
+ "first_answer_utc": "2026-11-15T04:25:06Z",
+ "last_answer_utc": "2026-11-15T04:33:04Z",
+ "answers": {
+  "h01": "R",
+  "h02": "R",
+  "h03": "R",
+  "h05": "R",
+  "h06": "W",
+  "h07": "R",
+  "h08": "W",
+  "h10": "R",
+  "h11": "W",
+  "h12": "S",
+  "h13": "R",
+  "h14": "R",
+  "h15": "W",
+  "h16": "R",
+  "h17": "S",
+  "h18": "R",
+  "h19": "R"
+ },
+ "not_coded": {
+  "h04": "coder did not accept that the two texts are counterparts",
+  "h09": "coder did not accept that the two texts are counterparts",
+  "h20": "coder did not accept that the two texts are counterparts"
+ }
+}

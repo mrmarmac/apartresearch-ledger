@@ -89,6 +89,101 @@ def _wilson(k, n, z=1.96):
     return (centre - half, centre + half)
 
 
+def _load_run(folder):
+    out = {}
+    if not os.path.isdir(folder):
+        return out
+    for name in sorted(os.listdir(folder)):
+        if name.endswith(".json"):
+            with open(os.path.join(folder, name), encoding="utf-8") as handle:
+                for item in json.load(handle):
+                    out[item["id"]] = item
+    return out
+
+
+def _stability(val_dir, key, run1):
+    run2 = _load_run(os.path.join(val_dir, "predictions_run2"))
+    if not run2:
+        return []
+    ids = sorted(q for q in key if q in run1 and q in run2)
+    n = len(ids)
+    same = [q for q in ids if run1[q]["outcome"] == run2[q]["outcome"]]
+    flips = [q for q in ids if q not in same]
+    opposite = sum({run1[q]["outcome"], run2[q]["outcome"]} == {"S", "W"} for q in flips)
+    gold2 = sum(run2[q]["outcome"] == key[q]["gold"] for q in ids)
+    stable_ok = sum(run1[q]["outcome"] == key[q]["gold"] for q in same)
+    lines = [
+        "", "## Stability: a second run of the same model", "",
+        "Same model, same items, same prompt, new sub-agents. Answers are in `validation/predictions_run2/`.", "",
+        "| Comparison | Agreement | Cohen's kappa |", "|---|---|---|",
+        f"| Run 2 against upstream | {gold2} of {n} ({100 * gold2 / n:.0f}%) | {_kappa([(key[q]['gold'], run2[q]['outcome']) for q in ids]):.2f} |",
+        f"| Run 1 against run 2 | {len(same)} of {n} ({100 * len(same) / n:.0f}%) | {_kappa([(run1[q]['outcome'], run2[q]['outcome']) for q in ids]):.2f} |",
+        "",
+        f"- The model changed its answer on {len(flips)} of {n} items. {opposite} of those changes went to the opposite direction.",
+        f"- On the {len(same)} items with the same answer in the two runs, the model agrees with upstream on {stable_ok} ({100 * stable_ok / len(same):.0f}%).",
+        "- A practical rule follows: run the model two times and send each item with two different answers to a person.",
+        "", "| Item | Upstream row | Upstream | Run 1 | Run 2 |", "|---|---|---|---|---|",
+    ]
+    for q in flips:
+        lines.append(f"| {q} | `{key[q]['source_row']}` | {NAMES[key[q]['gold']]} | {NAMES[run1[q]['outcome']]} | {NAMES[run2[q]['outcome']]} |")
+    return lines
+
+
+def _human(val_dir, key, run1):
+    folder = os.path.join(val_dir, "human")
+    if not os.path.exists(os.path.join(folder, "answers.json")):
+        return []
+    with open(os.path.join(folder, "answers.json"), encoding="utf-8") as handle:
+        record = json.load(handle)
+    with open(os.path.join(folder, "mapping.json"), encoding="utf-8") as handle:
+        mapping = json.load(handle)
+    answers = record["answers"]
+    lines = [
+        "", "## Human check: one lawyer, 20 items", "",
+        f"**Coder:** {record['coder']}. One person, no second human coder.", "",
+        "**Design.** 20 of the 120 items: 10 drawn at random from the items where model run 1 agreed with upstream, "
+        "and 10 drawn at random from the 15 items where it disagreed (seed 20261116). Mixed sequence. "
+        "The coder did not see the upstream code, the model answers, or which group an item was in. "
+        "The page (`validation/human/page.html`) showed the two texts, the headings, the developer name and a summary of the rules.", "",
+        "**This is not a random sample of the 120.** Half of the items are disputed on purpose. Read the two groups separately. Do not combine them into one accuracy figure.", "",
+        f"**Coded: {len(answers)} of {len(mapping)}.** The coder did not code {len(record['not_coded'])} items, because he did not accept that the two texts refer to the same commitment.", "",
+        "| Group | Coded | Human = upstream | Human = model | Human = neither |", "|---|---|---|---|---|",
+    ]
+    for group, label in (("model_agreed", "Model agreed with upstream"), ("model_disagreed", "Model disagreed with upstream")):
+        ids = [h for h in answers if mapping[h]["stratum"] == group]
+        up = sum(answers[h] == key[mapping[h]["qid"]]["gold"] for h in ids)
+        mo = sum(answers[h] == run1[mapping[h]["qid"]]["outcome"] for h in ids)
+        neither = sum(answers[h] != key[mapping[h]["qid"]]["gold"] and answers[h] != run1[mapping[h]["qid"]]["outcome"] for h in ids)
+        lines.append(f"| {label} | {len(ids)} | {up} | {mo} | {neither} |")
+    kept = sum(v == "R" for v in answers.values())
+    kept_up = sum(key[mapping[h]["qid"]]["gold"] == "R" for h in answers)
+    opp_up = sum({answers[h], key[mapping[h]["qid"]]["gold"]} == {"S", "W"} for h in answers)
+    opp_mo = sum({answers[h], run1[mapping[h]["qid"]]["outcome"]} == {"S", "W"} for h in answers)
+    lines += [
+        "",
+        "Observations:", "",
+        "- **Where the model and upstream disagree, the human agrees with upstream more often than with the model, but the numbers are very small.**",
+        f"- **The human selects Kept more often:** {kept} of {len(answers)}, against {kept_up} of {len(answers)} for upstream on the same items. "
+        "The human has a higher bar for a material change.",
+        f"- **Opposite direction:** human against upstream, {opp_up} of {len(answers)}. Human against model, {opp_mo} of {len(answers)}.",
+        f"- **Alignment doubt:** the coder rejected the pairing of {len(record['not_coded'])} of {len(mapping)} items. "
+        "The upstream coding re-examined all of them as disputed. This supports limit 2 below: alignment is the weak step, and this test does not measure it.",
+        "", "| Item | Upstream row | Group | Human | Upstream | Model run 1 |", "|---|---|---|---|---|---|",
+    ]
+    for h in sorted(mapping):
+        q = mapping[h]["qid"]
+        human = NAMES[answers[h]] if h in answers else "not coded: pairing rejected"
+        group = "agreed" if mapping[h]["stratum"] == "model_agreed" else "disagreed"
+        lines.append(f"| {h} ({q}) | `{key[q]['source_row']}` | {group} | {human} | {NAMES[key[q]['gold']]} | {NAMES[run1[q]['outcome']]} |")
+    lines += [
+        "",
+        "Limits of the human check: one coder. The coder is the author of this project and is not independent of it. "
+        f"{len(answers)} items. The coder took about 8 minutes for the {len(answers)} items, which is about 30 seconds for each item. "
+        "The coder used a summary of the rules, not the full codebook.",
+    ]
+    return lines
+
+
 def score(corpus, val_dir, model_name):
     items, key, pool = _sample(corpus)
     text = {i["id"]: i for i in items}
@@ -184,7 +279,7 @@ def score(corpus, val_dir, model_name):
         "3. **This test does not include Added, Removed or Relocated.** Those codes depend on alignment, not on direction.",
         "4. **Isolation was by instruction.** The model ran as a sub-agent with file tools. The instructions told it to read only its batch file and the rules. "
         "Each run made 4 tool calls, which agrees with: read rules, read batch, write answers, report.",
-        "5. **One run for each item.** The test does not measure how much the model changes between runs.",
+        "5. **Two runs only.** See the stability section. Two runs give a first estimate of how much the model changes, not a distribution.",
         "6. **The sample is 120 rows.** Read the confidence intervals.",
         "7. **The model is a high-capability model.** A low-cost model was not tested. Its agreement can be lower.",
     ]
@@ -194,6 +289,8 @@ def score(corpus, val_dir, model_name):
         json.dump(key, handle, indent=1)
     with open(os.path.join(val_dir, "items.json"), "w", encoding="utf-8") as handle:
         json.dump(items, handle, indent=1, ensure_ascii=False)
+    lines += _stability(val_dir, key, preds)
+    lines += _human(val_dir, key, preds)
     extra = os.path.join(val_dir, "watchtower.md")
     if os.path.exists(extra):
         with open(extra, encoding="utf-8") as handle:

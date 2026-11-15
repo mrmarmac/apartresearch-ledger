@@ -1,0 +1,82 @@
+{
+ "h01": {
+  "qid": "q075",
+  "stratum": "model_agreed"
+ },
+ "h02": {
+  "qid": "q092",
+  "stratum": "model_agreed"
+ },
+ "h03": {
+  "qid": "q046",
+  "stratum": "model_disagreed"
+ },
+ "h04": {
+  "qid": "q030",
+  "stratum": "model_agreed"
+ },
+ "h05": {
+  "qid": "q051",
+  "stratum": "model_agreed"
+ },
+ "h06": {
+  "qid": "q045",
+  "stratum": "model_disagreed"
+ },
+ "h07": {
+  "qid": "q047",
+  "stratum": "model_disagreed"
+ },
+ "h08": {
+  "qid": "q115",
+  "stratum": "model_disagreed"
+ },
+ "h09": {
+  "qid": "q069",
+  "stratum": "model_disagreed"
+ },
+ "h10": {
+  "qid": "q093",
+  "stratum": "model_disagreed"
+ },
+ "h11": {
+  "qid": "q049",
+  "stratum": "model_agreed"
+ },
+ "h12": {
+  "qid": "q097",
+  "stratum": "model_disagreed"
+ },
+ "h13": {
+  "qid": "q094",
+  "stratum": "model_agreed"
+ },
+ "h14": {
+  "qid": "q002",
+  "stratum": "model_agreed"
+ },
+ "h15": {
+  "qid": "q059",
+  "stratum": "model_agreed"
+ },
+ "h16": {
+  "qid": "q031",
+  "stratum": "model_agreed"
+ },
+ "h17": {
+  "qid": "q084",
+  "stratum": "model_agreed"
+ },
+ "h18": {
+  "qid": "q039",
+  "stratum": "model_disagreed"
+ },
+ "h19": {
+  "qid": "q113",
+  "stratum": "model_disagreed"
+ },
+ "h20": {
+  "qid": "q008",
+  "stratum": "model_disagreed"
+ }
+}

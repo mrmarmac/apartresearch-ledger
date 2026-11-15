@@ -1,0 +1,139 @@
+<title>Blind Coding Test</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one item for each screen, two stacked text panels, three large answer buttons in the reading flow. */
+:root{--bg:#f4f5f2;--panel:#ffffff;--ink:#1b1f1d;--muted:#5d6661;--line:#d5dad5;--accent:#1f5a4a;--accent-ink:#ffffff;--old:#8a5300;--new:#1f4e79;--pick:#e3efe9;
+--display:"Space Grotesk",system-ui,sans-serif;--body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;--quote:"Iowan Old Style","Palatino Linotype",Georgia,serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131615;--panel:#1c201e;--ink:#e8ebe8;--muted:#9aa39e;--line:#343a37;--accent:#7fd0b6;--accent-ink:#0f1f1a;--old:#f2c26b;--new:#8fbde8;--pick:#1f332c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#131615;--panel:#1c201e;--ink:#e8ebe8;--muted:#9aa39e;--line:#343a37;--accent:#7fd0b6;--accent-ink:#0f1f1a;--old:#f2c26b;--new:#8fbde8;--pick:#1f332c;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);padding-block:16px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+h1{font:600 22px/1.2 var(--display);margin:0;text-wrap:balance}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.count{font:600 15px var(--display);font-variant-numeric:tabular-nums;color:var(--muted)}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .2s}
+.dots{display:flex;gap:4px;flex-wrap:wrap}
+.dots button{width:26px;height:26px;border-radius:4px;border:1px solid var(--line);background:var(--panel);color:var(--muted);font:600 11px var(--body);font-variant-numeric:tabular-nums;cursor:pointer;padding:0}
+.dots button.done{background:var(--pick);color:var(--ink);border-color:var(--accent)}
+.dots button.cur{outline:2px solid var(--accent);outline-offset:1px}
+.meta{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.tag{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.08em;margin:0 0 2px}
+.tag.old{color:var(--old)}.tag.new{color:var(--new)}
+.sec{font-size:13px;color:var(--muted);margin:0 0 8px;overflow-wrap:anywhere}
+.txt{font:17px/1.5 var(--quote);margin:0;overflow-wrap:anywhere}
+.answers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.answers button{font:600 15px var(--display);padding:14px 6px;border-radius:6px;border:2px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;min-width:0}
+.answers button small{display:block;font:400 12px var(--body);color:var(--muted);margin-top:2px}
+.answers button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.answers button[aria-pressed="true"] small{color:var(--accent-ink)}
+.nav{display:flex;justify-content:space-between;gap:8px}
+.nav button{font:500 15px var(--body);padding:10px 16px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.nav button:disabled{opacity:.4;cursor:default}
+button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 14px;font-size:14px}
+summary{cursor:pointer;font-weight:600}
+details ol,details ul{padding-left:20px;margin:8px 0}
+details p{margin:8px 0}
+.status{font-size:13px;color:var(--muted);min-height:20px}
+.status.err{color:var(--old)}
+.done-box{border:2px solid var(--accent);border-radius:6px;padding:14px;background:var(--pick)}
+.done-box p{margin:0 0 8px}
+textarea{width:100%;font:13px ui-monospace,Menlo,monospace;padding:8px;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--ink);min-height:70px}
+@media (max-width:420px){.answers button{font-size:13px;padding:12px 2px}.txt{font-size:16px}}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600&display=swap">
+<div class="wrap">
+<div class="top"><h1>Blind Coding Test</h1><span class="count" id="count">0 of 20 done</span></div>
+<div class="bar"><i id="bar"></i></div>
+<div class="dots" id="dots" role="group" aria-label="Go to item"></div>
+<details id="rules"><summary>Rules (open when you are not sure)</summary>
+<p>The two texts are the same commitment in two consecutive versions of a safety framework. Decide the change to the <b>obligation</b>, not to the words.</p>
+<ul>
+<li><b>Kept:</b> no material change. Rewording, renumbering and new cross-references are not material.</li>
+<li><b>Strengthened:</b> one or more dimensions move to a larger obligation, and no dimension moves the other way.</li>
+<li><b>Weakened:</b> one or more dimensions move to a smaller obligation. If a change is stronger in one dimension and weaker in a different dimension, select Weakened.</li>
+</ul>
+<p><b>The six dimensions.</b> A change is material if it changes one of these:</p>
+<ol>
+<li>Scope: which capabilities, risk domains or models are covered.</li>
+<li>Threshold or trigger: the level, time or condition that requires action.</li>
+<li>Actor: who does it, verifies it, or gets access (a third party added or removed).</li>
+<li>Obligation strength: must / will / commit to &gt; intend to / aim to / expect to &gt; may / could / consider &gt; recommend / encourage.</li>
+<li>Disclosure: what is published, to whom, when, with what redaction.</li>
+<li>Consequence: what action a result requires, and when that action can be deferred or overridden.</li>
+</ol>
+<p><b>Three special rules.</b></p>
+<ul>
+<li>Present tense is equal to "will". "We conduct X" to "we will conduct X" is not material. "We conduct X" to "we may conduct X" is material.</li>
+<li>A list introduced by "including" or "consists of" defines scope. To shorten it is material. A list introduced by "e.g." or "such as" is an example. To change it is not material.</li>
+<li>A wider condition for suspending a commitment is Weakened, even if the core commitment is the same.</li>
+</ul>
+</details>
+<div class="meta" id="meta"></div>
+<div class="panel"><p class="tag old">Earlier version</p><p class="sec" id="s1"></p><p class="txt" id="t1"></p></div>
+<div class="panel"><p class="tag new">Later version</p><p class="sec" id="s2"></p><p class="txt" id="t2"></p></div>
+<div class="answers" role="group" aria-label="Your code">
+<button type="button" id="aR" data-a="R" aria-pressed="false">Kept<small>no material change</small></button>
+<button type="button" id="aS" data-a="S" aria-pressed="false">Strengthened<small>larger obligation</small></button>
+<button type="button" id="aW" data-a="W" aria-pressed="false">Weakened<small>smaller, or mixed</small></button>
+</div>
+<div class="nav"><button type="button" id="prev">Back</button><button type="button" id="next">Next</button></div>
+<div class="status" id="status" aria-live="polite">Loading saved answers.</div>
+<div class="done-box" id="done" hidden><p><b>All 20 items are done.</b> Tell Claude "done" in the chat. You can still change an answer.</p><p id="fallback" hidden>The answers were not saved online. Copy this text and paste it into the chat:</p><textarea id="out" readonly hidden></textarea></div>
+</div>
+<script>
+(function(){
+var ITEMS=[{"id": "h01", "developer": "Anthropic", "earlier_section": "ASL-2 and ASL-3 Security Commitments", "earlier_text": "Ongoing configuration management, compliance drills, integrated security approaches and mandatory external reviews should embed security within regular operations and harden processes during organizational changes.", "later_section": "Appendix B: ASL-2 Standard", "later_text": "Operations: Ongoing configuration management, compliance drills, integrated security approaches and mandatory external reviews should embed security within regular operations and harden processes during organizational changes."}, {"id": "h02", "developer": "xAI", "earlier_section": "Overall Approach", "earlier_text": "We continue to work towards developing naturalistic evaluation environments that would enable us to assess more realistic, real-world behaviors.", "later_section": "2.3. Safety mitigations", "later_text": "We continue to work towards developing naturalistic evaluation environments that would enable us to assess more realistic, real-world behaviors."}, {"id": "h03", "developer": "Google DeepMind", "earlier_section": "Table 4.a: Exploratory Misalignment CCLs and Mitigations", "earlier_text": "Instrumental Reasoning Level 1: The instrumental reasoning abilities of the model enable enough situational awareness (ability to work out and use relevant details of its deployment setting) and stealth (ability to circumvent basic oversight mechanisms) such that, absent additional mitigations, we cannot rule out the model significantly undermining human control.", "later_section": "3.2.1 Stealth and Situational Awareness Tracked Capability Level", "later_text": "Stealth and Situational Awareness TCL: The instrumental reasoning abilities of the model enable enough situational awareness (ability to discover and use relevant details of its deployment setting) and stealth (ability to circumvent basic oversight mechanisms) such that, absent additional mitigations, we cannot rule out the model significantly undermining human control."}, {"id": "h04", "developer": "OpenAI", "earlier_section": "Scorecard", "earlier_text": "As a part of our Preparedness Framework, we will maintain a dynamic (i.e., frequently updated) Scorecard that is designed to track our current pre-mitigation model risk across each of the risk categories, as well as the post-mitigation risk. The Scorecard will be regularly updated by the Preparedness team to help ensure it reflects the latest research and findings.", "later_section": "3.3 Capability threshold determinations", "later_text": "Prior to deployment, every covered model undergoes the suite of Scalable Evaluations. The results of these evaluations, and any noteworthy observations that should affect interpretation of the results, are compiled into a Capabilities Report that is submitted to the SAG."}, {"id": "h05", "developer": "Google DeepMind", "earlier_section": "5.2 Disclosures", "earlier_text": "We may also consider disclosing information to other external organisations to promote shared learning and coordinated risk mitigation. We will continue to review and evolve our disclosure process over time.", "later_section": "5.2 Disclosures", "later_text": "We may also consider disclosing information to other external organizations to promote shared learning and coordinated risk mitigation. We will continue to review and evolve our disclosure process over time."}, {"id": "h06", "developer": "Anthropic", "earlier_section": "Initial Commitments", "earlier_text": "We commit to pause training before a model's capability level outstrips the Containment Measures we have implemented.", "later_section": "6.2. Restrict Deployment and Further Scaling", "later_text": "Monitoring pretraining: We will not train models with comparable or greater capabilities to the one that requires the ASL-3 Security Standard.14 This is achieved by monitoring the capabilities of the model in pretraining and comparing them against the given model. If the pretraining model's capabilities are comparable or greater, we will pause training until we have implemented the ASL-3 Security Standard and established it is sufficient for the model."}, {"id": "h07", "developer": "Google DeepMind", "earlier_section": "Misuse: Deployment Mitigations", "earlier_text": "The following deployment mitigation process will be applied to models reaching a CCL, allowing for iterative and flexible tailoring of mitigations to each risk and use case.", "later_section": "2.1.2 Deployment Mitigations / 3.1.2 Deployment Mitigations", "later_text": "The following mitigation process for external deployments will be applied to models reaching a misuse CCL, allowing for iterative and flexible tailoring of mitigations to each risk and use case. ... The following mitigation process will be applied for deployments of a model reaching a ML R&D CCL. The approach is similar to misuse deployment mitigations, with an added focus on large scale internal deployments."}, {"id": "h08", "developer": "Google DeepMind", "earlier_section": "5.1 Updates", "earlier_text": "The process will involve (i) an assessment of the Framework’s appropriateness for the management of systemic risk, drawing on information sources such as record of adherence to the framework, relevant high-quality research, information shared through industry forums, and evaluation results, as necessary, and (ii) an assessment of our adherence to the Framework. ... The updated version and framework assessment will be reviewed by the appropriate corporate governance bodies.", "later_section": "5.1 Updates", "later_text": "The process will involve (i) an assessment of the Framework’s appropriateness for the management of significant and severe risk, drawing on information sources such as record of adherence to the framework, relevant high-quality research, information shared through industry forums, and evaluation results, as necessary, and (ii) an assessment of our adherence to the Framework. ... The updated version and framework assessment will be reviewed by the appropriate corporate governance bodies."}, {"id": "h09", "developer": "xAI", "earlier_section": "Addressing Risks of Loss of Control > 1.Background", "earlier_text": "Our evaluation and mitigation plans for loss of control are not yet fully developed, and we intend to improve them in the future.", "later_section": "Overall Approach", "later_text": "We continue to work towards developing naturalistic evaluation environments that would enable us to assess more realistic, real-world behaviors."}, {"id": "h10", "developer": "Anthropic", "earlier_section": "ASL-2 Deployment Measures", "earlier_text": "If automated fine-tuning is provided, data should similarly be filtered for harmfulness, and models should be subject to automated evaluation to ensure harmlessness features are not degraded.", "later_section": "Appendix B: ASL-2 Standard", "later_text": "Fine-tuning protections: In finetuning products, data is filtered for harmfulness, and models are subject to automated evaluation to check harmlessness features are not degraded."}, {"id": "h11", "developer": "Anthropic", "earlier_section": "Evaluation Protocol", "earlier_text": "(2c) If the model has already surpassed the next ASL during training, immediately lock down access to the weights. Stakeholders including the CISO and CEO should be immediately convened to determine whether the level of danger merits deletion of the weights. After a detailed post-mortem, this policy should then be promptly updated to minimize risk of the re-occurrence of this failure (e.g. through more frequent or thorough evaluations).", "later_section": "6.2. Restrict Deployment and Further Scaling", "later_text": "In the security context, an example of such a measure would be storing the model weights in a single-purpose, isolated network that meets the ASL-3 ... Stronger restrictions: In the unlikely event that we cannot implement interim measures to adequately mitigate risk, we will impose stronger restrictions. ... In the security context, we will delete model weights."}, {"id": "h12", "developer": "xAI", "earlier_section": "Operational and Societal Risks > 5. Deployment Decisions", "earlier_text": "We will also balance various factors when making deployment decisions. The necessity and extent of deployment of certain safeguards and mitigations may depend on how a model performs on relevant benchmarks. Pre-deployment reviews include assessing benchmark results (e.g., WMDP scores) and mitigation effectiveness. For internal use, we review catastrophic risks like oversight evasion before extensive rollout. However, to ensure responsible deployment, this FAIF will be continually adapted and updated as circumstances change, before major new capabilities are launched, and in ...", "later_section": "2.3. Systemic risk acceptance determination", "later_text": "xAI will only proceed with the development, the making available on the market, and/or the use of the model, if the systemic risks stemming from the model are determined to be acceptable. In all scenarios, xAI will take appropriate measures to ensure the systemic risks stemming from the model are and will remain acceptable prior to proceeding."}, {"id": "h13", "developer": "xAI", "earlier_section": "Addressing Risks of Loss of Control > 3. Safeguard Implementation", "earlier_text": "xAI trains its models to be honest and have values conducive to controllability, such as recognizing and obeying an instruction hierarchy9. In addition, using a high level instruction called a “system prompt”, xAI directly instructs its models to not deceive or deliberately mislead the user.", "later_section": "Addressing Risks of Loss of Control > 3. Safeguard Implementation", "later_text": "xAI trains its models to be honest and have values conducive to controllability, such as recognizing and obeying an instruction hierarchy.10 In addition, using a high level instruction called a “system prompt”, xAI directly instructs its models to not deceive or deliberately mislead the user."}, {"id": "h14", "developer": "Google DeepMind", "earlier_section": "Table 2.2.1.a: CBRN CCLs and Security Mitigations", "earlier_text": "CBRN uplift level 1: Provides low to medium resourced actors uplift in reference scenarios resulting in additional10 expected harm at severe scale.", "later_section": "Table 2.2.1.a: CBRN CCL and Security Mitigations", "later_text": "CBRN uplift level 1: Provides low to medium resourced actors uplift in reference scenarios resulting in additional8 expected harm at severe scale."}, {"id": "h15", "developer": "Anthropic", "earlier_section": "ASL-3 Deployment Measures", "earlier_text": "Successfully pass red-teaming: World-class experts collaborating with prompt engineers should red-team the deployment thoroughly and fail to elicit information at a level of sophistication, accuracy, usefulness, detail, and frequency which significantly enables catastrophic misuse. Misuse domains should at a minimum include causes of extreme CBRN risks, and cybersecurity.", "later_section": "4.1. ASL-3 Deployment Standard", "later_text": "Red-teaming: Conduct red-teaming that demonstrates that threat actors with realistic access levels and resources are highly unlikely to be able to consistently elicit information from any generally accessible systems that greatly increases their ability to cause catastrophic harm relative to other available tools.11"}, {"id": "h16", "developer": "Anthropic", "earlier_section": "Evaluation Protocol", "earlier_text": "Progressive difficulty: Evaluations may also consist of multiple difficulty stages, such that later stages are only run if earlier evaluations show warning signs (e.g. we might run a simple multiple choice eval for certain risks, avoiding a more thorough evaluation unless the model achieves high performance on this simpler eval).", "later_section": "3.1. Preliminary Assessment", "later_text": "We will first conduct preliminary assessments (on both new and existing models, as needed) to determine whether a more comprehensive evaluation is needed. The purpose of this preliminary assessment is to identify whether the model is notably more capable than the last model that underwent a comprehensive assessment."}, {"id": "h17", "developer": "OpenAI", "earlier_section": "Tracked Risk Categories / Model autonomy", "earlier_text": "Model autonomy enables actors to run scaled misuse that can adapt to environmental changes and evade attempts to mitigate or shut down operations. Autonomy is also a prerequisite for self-exfiltration, self-improvement, and resource acquisition. ... include autonomous replication, adaptation, and AI R&D as part of the model autonomy risk category.", "later_section": "2.2 Tracked Categories, Table 1; 2.3 Research Categories, Table 2", "later_text": "AI Self- improvement: The ability of an AI system to accelerate AI research, including to increase the system’s own capability. ... Autonomous Replication and Adaptation: ability to survive, replicate, resist shutdown, acquire resources to maintain and scale its own operations, and com- mit illegal activities that collectively constitute caus- ing severe harm"}, {"id": "h18", "developer": "Google DeepMind", "earlier_section": "1.3 Outline of Our Risk Assessment Process", "earlier_text": "To identify meaningful new capabilities or material increases in performance, we conduct model capability evaluations, including our automated benchmarks. These evaluations are primarily aimed at understanding the capabilities of the model and may be triggered, for example, upon the completion of a pre-training or post-training run, on various candidates of a model version.", "later_section": "1.3.2 Inherent Risk Assessment", "later_text": "To understand if a subsequent version of the model has meaningful new capabilities or material increases in performance relative to the last checkpoint subject to a critical capability assessment, we conduct material capability change assessments on various checkpoints upon the completion of a post-training run. These assessments draw on model characteristics, such as its provenance, size, modality, and performance on general capability benchmarks."}, {"id": "h19", "developer": "Google DeepMind", "earlier_section": "1.3 Outline of Our Risk Assessment Process", "earlier_text": "We conduct further analysis, including reviewing model independent information, external evaluations, and post-market monitoring as appropriate.", "later_section": "1.3.2 Inherent Risk Assessment", "later_text": "We conduct further analysis, including reviewing model-independent information, external evaluations, and post-market monitoring as appropriate. In particular, we strive to learn from our post-market monitoring mechanisms, including as part of our detection, mitigation, response and/or reporting of incidents relating to our frontier safety risk domains."}, {"id": "h20", "developer": "OpenAI", "earlier_section": "Governance / Safety baselines / Asset Protection", "earlier_text": "If we reach (or are forecasted to reach) at least “high” pre-mitigation risk in any of the considered categories: we will ensure that our security is hardened in a way that is designed to prevent our mitigations and controls from being circumvented via exfiltration (by the time we hit “high” pre-mitigation risk).", "later_section": "2.2 Tracked Categories; C.3 Security controls", "later_text": "Covered systems that cross this capability threshold are required to have robust and effective safeguards that sufficiently minimize the associated risk of severe harm before they are deployed and appropriate security controls as they are developed. ... We will require the following practices for High capability models:"}];
+var ans={},cur=0,db=null,saved=true;
+function el(i){return document.getElementById(i)}
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+try{var l=JSON.parse(ls('blindcoding')||'{}');if(l&&typeof l==='object')ans=l}catch(e){}
+var dots=el('dots');
+ITEMS.forEach(function(it,i){var b=document.createElement('button');b.type='button';b.textContent=i+1;b.setAttribute('aria-label','Item '+(i+1));b.addEventListener('click',function(){cur=i;render()});dots.appendChild(b)});
+function firstOpen(){for(var i=0;i<ITEMS.length;i++)if(!ans[ITEMS[i].id])return i;return ITEMS.length-1}
+function render(){
+ var it=ITEMS[cur],n=Object.keys(ans).length;
+ el('meta').textContent='Item '+(cur+1)+' of '+ITEMS.length+' · '+it.developer;
+ el('s1').textContent=it.earlier_section;el('t1').textContent=it.earlier_text;
+ el('s2').textContent=it.later_section;el('t2').textContent=it.later_text;
+ ['R','S','W'].forEach(function(a){el('a'+a).setAttribute('aria-pressed',ans[it.id]===a?'true':'false')});
+ el('prev').disabled=cur===0;el('next').disabled=cur===ITEMS.length-1;
+ el('count').textContent=n+' of '+ITEMS.length+' done';el('bar').style.width=(100*n/ITEMS.length)+'%';
+ [].forEach.call(dots.children,function(b,i){b.className=(ans[ITEMS[i].id]?'done':'')+(i===cur?' cur':'')});
+ var all=n===ITEMS.length;el('done').hidden=!all;
+ if(all){var txt=ITEMS.map(function(x){return x.id+':'+ans[x.id]}).join(' ');el('out').value=txt;el('out').hidden=saved;el('fallback').hidden=saved}
+}
+function status(t,err){el('status').textContent=t;el('status').className='status'+(err?' err':'')}
+function row(it,i){return {item:it.id,code:ans[it.id],position:i+1,at:new Date().toISOString()}}
+function pick(a){
+ var it=ITEMS[cur],at=cur;ans[it.id]=a;ls('blindcoding',JSON.stringify(ans));render();
+ if(db){status('Saving.');db.doc('answers/'+it.id).set(row(it,at)).then(function(){status('Saved.')}).catch(function(){saved=false;status('Not saved online. Your answers are kept in this browser. Continue.',true);render()})}
+ else{status('Kept in this browser.')}
+ if(at<ITEMS.length-1&&Object.keys(ans).length<ITEMS.length){setTimeout(function(){if(cur===at){cur=at+1;render();window.scrollTo(0,0)}},250)}
+}
+['R','S','W'].forEach(function(a){el('a'+a).addEventListener('click',function(){pick(a)})});
+el('prev').addEventListener('click',function(){if(cur>0){cur--;render();window.scrollTo(0,0)}});
+el('next').addEventListener('click',function(){if(cur<ITEMS.length-1){cur++;render();window.scrollTo(0,0)}});
+cur=firstOpen();render();status('');
+function offline(){saved=false;status('Online save is not available. Your answers are kept in this browser.',true);render()}
+var use=window.claude&&window.claude.use?window.claude.use('db'):Promise.resolve(null);
+var timer=setTimeout(function(){if(!db)offline()},10000);
+use.then(function(d){
+ clearTimeout(timer);
+ if(!d){offline();return}
+ db=d;saved=true;
+ return d.collection('answers').get().then(function(q){
+  var known={};
+  q.docs.forEach(function(s){var x=s.data();if(x&&x.item&&x.code){known[x.item]=x.code;if(!ans[x.item])ans[x.item]=x.code}});
+  ls('blindcoding',JSON.stringify(ans));
+  var chain=Promise.resolve();
+  ITEMS.forEach(function(it,i){if(ans[it.id]&&known[it.id]!==ans[it.id])chain=chain.then(function(){return d.doc('answers/'+it.id).set(row(it,i))})});
+  cur=firstOpen();render();status('Answers save automatically.');
+  return chain;
+ });
+}).catch(function(){clearTimeout(timer);offline()});
+})();
+</script>

@@ -57,6 +57,8 @@ Full results: [`validation.md`](validation.md).
 - **Model test.** Claude Opus 5.5 coded 120 matched pairs as kept, strengthened or weakened.
   It agreed with the upstream code on 105 (88%, 95% CI 80 to 92). Cohen's kappa is 0.81.
   7 of the 120 had the opposite direction.
+- **Stability.** A second run of the same model gave the same answer on 113 of 120 items (kappa 0.91). 2 of the 7 changes went to the opposite direction.
+- **Human check.** One lawyer (the author) coded 20 items blind: 10 where the model agreed with upstream and 10 where it disagreed. He coded 17, and rejected the pairing of 3. In the disagreed group (8 coded), he agreed with upstream on 4, with the model on 2, and with neither on 2. This is not a random sample.
 - **Watchtower check.** The ledger has 14 of the 17 sub-changes in the Watchtower entry for the xAI revision of June 2026.
 - **Quote check.** 855 of 871 quotes (98%) are in the text extraction of the hashed source document.
 - **Count check.** The ledger has one event for each of the 636 upstream rows of the 5 labs.
@@ -103,7 +105,7 @@ run.py               entry point
 ledger/              corpus reader, builder, site and feed, validation
 data/ledger.json     the dataset
 examples/            one full record
-validation/          test items, rules, prompt, model answers, key, Watchtower check
+validation/          test items, rules, prompt, model answers (2 runs), key, human check, Watchtower check
 validation.md        results
 docs/                the site (GitHub Pages)
 ```
