@@ -1,0 +1,190 @@
+[
+ {
+  "id": "anthropic-consequence-313a",
+  "from_version": "v3.0",
+  "earlier_text": "Anthropic in the lead. We have developed or will imminently develop a highly capable7 model; and we have clear evidence that no other competitor will soon develop such a model. We will require a strong argument that catastrophic risk is contained, along the lines of our recommendations for industry-wide safety (see Section 1). We will delay AI development and deployment as needed to achieve this, until and unless we no longer believe we have a significant lead.",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-governance-d559",
+  "from_version": "v3.3",
+  "earlier_text": "Risk mitigations: For each in-scope model, the mitigations we are implementing across security, deployment safeguards, and alignment domains, along with discussion of their effectiveness.",
+  "later_versions": [
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-governance-98c3",
+  "from_version": "v3.3",
+  "earlier_text": "Internal transparency: We will share final, unredacted Risk Reports with Anthropic’s regular-clearance staff.",
+  "later_versions": [
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-governance-4adb",
+  "from_version": "v3.0",
+  "earlier_text": "Review and feedback: Separate internal reviewers will provide comprehensive feedback on the report, focusing on identifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence or clarification.",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-consequence-9c90",
+  "from_version": "v3.2",
+  "earlier_text": "Novel chemical/biological weapons production. AI systems with the ability to significantly help threat actors (for example, moderately resourced expert-backed teams) create/obtain and deploy chemical and/or biological weapons with potential for catastrophic damages far beyond those of past catastrophes such as COVID-19. We will apply protections at least as strong as our ASL-3 protections (see previous row) to an expanded set of potential use cases for AI, covering the most likely vectors for this threat.",
+  "later_versions": [
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-consequence-3e7e",
+  "from_version": "v3.0",
+  "earlier_text": "Our working operationalization is to trigger this risk threshold at the point where we determine that a model could compress two years of 2018 – 2024 AI progress into a single year. ... We will: ● Resource and complete significant “moonshot R&D for security” projects, to explore ambitious and possibly unconventional ways to achieve unprecedented levels of security against the world’s best-resourced attackers.",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-third-party-38ba",
+  "from_version": "v3.0",
+  "earlier_text": "Review and feedback: Separate internal reviewers will provide comprehensive feedback on the report, focusing on identifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence or clarification. We will usually also seek feedback from trusted external parties with relevant expertise.",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-consequence-f721",
+  "from_version": "v3.0",
+  "earlier_text": "Anthropic in the lead. We have developed or will imminently develop a highly capable7 model; and we have clear evidence that no other competitor will soon develop such a model. We will require a strong argument that catastrophic risk is contained, along the lines of our recommendations for industry-wide safety (see Section 1). We will delay AI development and deployment as needed to achieve this, until and unless we no longer believe we have a significant lead.",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-consequence-0707",
+  "from_version": "v3.0",
+  "earlier_text": "Anthropic in the lead. We have developed or will imminently develop a highly capable7 model; and we have clear evidence that no other competitor will soon develop such a model. We will require a strong argument that catastrophic risk is contained, along the lines of our recommendations for industry-wide safety (see Section 1). We will delay AI development and deployment as needed to achieve this, until and unless we no longer believe we have a significant lead.",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-consequence-d94b",
+  "from_version": "v3.0",
+  "earlier_text": "Marginal risk and ecosystem analysis. If we determine that the absolute level of risk being imposed industry-wide by AI systems such as ours is high, and are justifying our decision to move forward based partly on a marginal risk analysis,5 we will additionally address the following: ... Advocacy efforts: The steps we took to raise public awareness of the relevant risks and to encourage appropriate regulatory action, including our engagement with policymakers and other AI developers.",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-governance-2046",
+  "from_version": "v3.3",
+  "earlier_text": "If we update the RSP, we will publicly share the updated version prior to or on its effective date and will record the differences from the prior draft in the Change Log. We will maintain the current version of the RSP on our website.",
+  "later_versions": [
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-disclosure-c35f",
+  "from_version": "v3.1",
+  "earlier_text": "Timing. We will publish a Risk Report every 3-6 months. Note that unlike system cards, Risk Reports will not be published with each new model release. Additionally: ● When we publicly deploy a model that we determine is significantly more capable than any of the models covered in the most recent Risk Report, we will publish a discussion (in our System Card or elsewhere) of how that model’s capabilities and propensities affect or change analysis in the Risk Report.",
+  "later_versions": [
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-eval-scope-704a",
+  "from_version": "v3.0",
+  "earlier_text": "Scope. A Risk Report will cover all publicly deployed models at the time of its publication. It will also cover internally deployed models when we determine that these models could pose significant risks4 above and beyond those posed by our public models. While there are a variety of reasons we might classify an internal model this way, this will—at a minimum—include any internal models that we are deploying for large-scale, fully autonomous research.",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-disclosure-8902",
+  "from_version": "v3.1",
+  "earlier_text": "When we publicly deploy a model that we determine is significantly more capable than any of the models covered in the most recent Risk Report, we will publish a discussion (in our System Card or elsewhere) of how that model’s capabilities and propensities affect or change analysis in the Risk Report.",
+  "later_versions": [
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-disclosure-9cdb",
+  "from_version": "v3.2",
+  "earlier_text": "Within 30 days of determining that we have an internally deployed model that is in-scope (per the description above), we will publish a discussion (in a System Card or elsewhere) of how that model’s capabilities and propensities affect or change the analysis in the Risk Report.",
+  "later_versions": [
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-disclosure-79be",
+  "from_version": "v3.3",
+  "earlier_text": "We will publish a public version of our Risk Report. We will aim to minimize redactions to the public version of the report. Reasons we may redact material include but are not limited to:",
+  "later_versions": [
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-third-party-cef3",
+  "from_version": "v3.1",
+  "earlier_text": "In consultation with the Board and LTBT, we will select external reviewers that: ● Have significant experience and expertise regarding evaluations for dangerous AI capabilities and propensities. It’s particularly important that they be knowledgeable about potential ways such evaluations might be misleading (for example, alignment faking).",
+  "later_versions": [
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-third-party-1866",
+  "from_version": "v3.0",
+  "earlier_text": "For purposes of external review, the only redactions to the Risk Report will be those necessary to comply with legal prohibitions or to maintain our legal rights.6",
+  "later_versions": [
+   "v3.1",
+   "v3.2",
+   "v3.3",
+   "v3.4"
+  ]
+ },
+ {
+  "id": "anthropic-security-06a3",
+  "from_version": "v3.2",
+  "earlier_text": "Achieve an “eyes on everything” state for our internal AI development. We will comprehensively gather, centralize, and maintain logs for all critical AI-development activities, and use AI to analyze them for issues including security threats, concerning behavior by insiders (humans as well as AI systems themselves), and training processes or data that are out of line with the public Constitution that shapes and defines our AI models.",
+  "later_versions": [
+   "v3.3",
+   "v3.4"
+  ]
+ }
+]

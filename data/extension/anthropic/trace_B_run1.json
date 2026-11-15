@@ -1,0 +1,446 @@
+[
+ {
+  "id": "anthropic-consequence-313a",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​8​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "Anthropic in the lead. We have developed or will\nimminently develop a highly capable8 model; and we\nhave clear evidence that no other competitor will\nsoon develop such a model.\n\nWe will require a strong argument that catastrophic\nrisk is contained, along the lines of our\nrecommendations for industry-wide safety (see\nSection 1). We will delay AI development and\ndeployment as needed to achieve this, until and\nunless we no longer believe we have a significant\nlead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​11​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​13​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-governance-d559",
+  "steps": [
+   {
+    "version": "v3.4",
+    "counterpart": "Risk mitigations:​​For each in-scope model, the mitigations​​we have implemented as of the coverage date​\n​across security, deployment safeguards, and alignment domains, along with discussion of their​\n​effectiveness.",
+    "later_section": "3.3. Contents",
+    "reason": "Same Risk Report content item on mitigations; now 'implemented as of the coverage date' instead of 'are implementing'."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-governance-98c3",
+  "steps": [
+   {
+    "version": "v3.4",
+    "counterpart": "Internal transparency:​​We will share final, unredacted​​Risk Reports with a large number of Anthropic​\n​employees (at least 200). We will share minimally-redacted Risk Reports with all of Anthropic’s​\n​regular-clearance staff.",
+    "later_section": "4. Governance",
+    "reason": "Same internal-transparency item; unredacted reports now to 200+ employees, minimally-redacted to all regular-clearance staff."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-governance-4adb",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "Review and feedback:​​We will solicit comprehensive internal feedback on the report, focusing on​\n​identifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence​\n​or clarification.",
+    "later_section": "3.4. Procedures",
+    "reason": "Same internal review-and-feedback step of the Risk Report procedure, reworded to 'solicit comprehensive internal feedback'."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "Review and feedback: We will solicit comprehensive internal feedback on the report, focusing on\nidentifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence\nor clarification.",
+    "later_section": "3.4. Procedures",
+    "reason": "Same internal review-and-feedback step of the Risk Report procedure, reworded to 'solicit comprehensive internal feedback'."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "Review and feedback:​​We will solicit comprehensive​​internal feedback on the report, focusing on​\n​identifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence​\n​or clarification.",
+    "later_section": "3.4. Procedures",
+    "reason": "Same internal review-and-feedback step of the Risk Report procedure, reworded to 'solicit comprehensive internal feedback'."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Review and feedback:​​We will solicit comprehensive​​internal feedback on the report, focusing on​\n​identifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence​\n​or clarification.",
+    "later_section": "3.4. Procedures",
+    "reason": "Same internal review-and-feedback step of the Risk Report procedure, reworded to 'solicit comprehensive internal feedback'."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-consequence-9c90",
+  "steps": [
+   {
+    "version": "v3.3",
+    "counterpart": "Novel chemical/biological​\n​weapons production.​​AI systems​\n​that can functionally substitute for​\n​the scarce human expertise that is​\n​currently the primary barrier to​\n​novel development of chemical and​\n​biological weapons with potential​\n​for catastrophic harm.​​4​​That is, a​\n​well-resourced team​​5​​could, using​\n​the model, accomplish the​\n​end-to-end agent design and​\n​deployment (including, as relevant,​\n​agent design, verification and​\n​validation, formulation, and​\n​dissemination) that would​\n​otherwise​​6​​require recruiting one​\n​of a small number​​7​​of​\n​world-leading specialists.​\n\n​We will apply protections at least​\n​as strong as our ASL-3 protections​\n​(see previous row) to an expanded​\n​set of potential use cases for AI,​\n​covering the most likely vectors​\n​for this threat.",
+    "later_section": "1. Our Recommendations for Industry-Wide Safety",
+    "reason": "Same chem/bio threshold row and ASL-3-plus protections commitment; threshold definition reworded to expertise substitution."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Novel chemical/biological​\n​weapons production.​​AI systems​\n​that can functionally substitute for​\n​the scarce human expertise that is​\n​currently the primary barrier to​\n​novel development of chemical and​\n​biological weapons with potential​\n​for catastrophic harm.​​4​​That is, a​\n​well-resourced team​​5​​could, using​\n​the model, accomplish the​\n​end-to-end agent design and​\n​deployment (including, as relevant,​\n​agent design, verification and​\n​validation, formulation, and​\n​dissemination) that would​\n​otherwise​​6​​require recruiting one​\n​of a small number​​7​​of​\n​world-leading specialists.​\n\n​We will apply protections at least​\n​as strong as our ASL-3 protections​\n​(see previous row) to an expanded​\n​set of potential use cases for AI,​\n​covering the most likely vectors​\n​for this threat.",
+    "later_section": "1. Our Recommendations for Industry-Wide Safety",
+    "reason": "Unchanged from v3.3: same chem/bio threshold and expanded ASL-3 protections commitment."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "anthropic-consequence-3e7e",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "We will:​\n\n​●​\n​Resource and complete​\n​significant “moonshot R&D​\n​for security” projects, to​\n​explore ambitious and​\n​possibly unconventional ways​\n​to achieve unprecedented​\n​levels of security against the​\n​world’s best-resourced​\n​attackers.",
+    "later_section": "1. Our Recommendations for Industry-Wide Safety",
+    "reason": "Same moonshot R&D for security commitment under the automated R&D threshold; operationalization wording changed separately."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "We will:\n\n●​\nResource and complete\nsignificant “moonshot R&D\nfor security” projects, to\nexplore ambitious and\npossibly unconventional ways\nto achieve unprecedented\nlevels of security against the\nworld’s best-resourced\nattackers.",
+    "later_section": "1. Our Recommendations for Industry-Wide Safety",
+    "reason": "Same moonshot R&D for security commitment under the automated R&D threshold; operationalization wording changed separately."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "We will:​\n\n​●​\n​Resource and complete​\n​significant “moonshot R&D​\n​for security” projects, to​\n​explore ambitious and​\n​possibly unconventional ways​\n​to achieve unprecedented​\n​levels of security against the​\n​world’s best-resourced​\n​attackers.",
+    "later_section": "1. Our Recommendations for Industry-Wide Safety",
+    "reason": "Same moonshot R&D for security commitment under the automated R&D threshold; operationalization wording changed separately."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "We will:​\n\n​●​\n​Resource and complete​\n​significant “moonshot R&D​\n​for security” projects, to​\n​explore ambitious and​\n​possibly unconventional ways​\n​to achieve unprecedented​\n​levels of security against the​\n​world’s best-resourced​\n​attackers.",
+    "later_section": "1. Our Recommendations for Industry-Wide Safety",
+    "reason": "Same moonshot R&D for security commitment under the automated R&D threshold; operationalization wording changed separately."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "anthropic-third-party-38ba",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "Review and feedback:​​We will solicit comprehensive internal feedback on the report, focusing on​\n​identifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence​\n​or clarification. We may also​​use this feedback to improve or refine the report itself. We will usually also​\n​seek feedback from trusted external parties with relevant expertise.",
+    "later_section": "3.4. Procedures",
+    "reason": "Same review step including usual feedback from trusted external parties; internal reviewer wording changed."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "Review and feedback: We will solicit comprehensive internal feedback on the report, focusing on\nidentifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence\nor clarification. We may also use this feedback to improve or refine the report itself. We will usually also\nseek feedback from trusted external parties with relevant expertise.",
+    "later_section": "3.4. Procedures",
+    "reason": "Same review step including usual feedback from trusted external parties; internal reviewer wording changed."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "Review and feedback:​​We will solicit comprehensive​​internal feedback on the report, focusing on​\n​identifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence​\n​or clarification. We may also​​use this feedback to​​improve or refine the report itself. We will usually also​\n​seek feedback from trusted external parties with relevant expertise.",
+    "later_section": "3.4. Procedures",
+    "reason": "Same review step including usual feedback from trusted external parties; internal reviewer wording changed."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Review and feedback:​​We will solicit comprehensive​​internal feedback on the report, focusing on​\n​identifying potential methodological weaknesses, analytical gaps, or areas requiring additional evidence​\n​or clarification. We may also​​use this feedback to​​improve or refine the report itself. We will usually also​\n​seek feedback from trusted external parties with relevant expertise.",
+    "later_section": "3.4. Procedures",
+    "reason": "Same review step including usual feedback from trusted external parties; internal reviewer wording changed."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-consequence-f721",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​8​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "Anthropic in the lead. We have developed or will\nimminently develop a highly capable8 model; and we\nhave clear evidence that no other competitor will\nsoon develop such a model.\n\nWe will require a strong argument that catastrophic\nrisk is contained, along the lines of our\nrecommendations for industry-wide safety (see\nSection 1). We will delay AI development and\ndeployment as needed to achieve this, until and\nunless we no longer believe we have a significant\nlead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​11​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​13​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-consequence-0707",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​8​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "Anthropic in the lead. We have developed or will\nimminently develop a highly capable8 model; and we\nhave clear evidence that no other competitor will\nsoon develop such a model.\n\nWe will require a strong argument that catastrophic\nrisk is contained, along the lines of our\nrecommendations for industry-wide safety (see\nSection 1). We will delay AI development and\ndeployment as needed to achieve this, until and\nunless we no longer believe we have a significant\nlead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​11​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Anthropic in the lead.​​We have developed or will​\n​imminently develop a​​highly capable​​13​​model; and we​\n​have clear evidence that no other competitor will​\n​soon develop such a model.​\n\n​We will require a strong argument that catastrophic​\n​risk is contained, along the lines of our​\n​recommendations for industry-wide safety (see​\n​Section 1). We will delay AI development and​\n​deployment as needed to achieve this, until and​\n​unless we no longer believe we have a significant​\n​lead.",
+    "later_section": "Appendix A: Commitments Related to Competitors",
+    "reason": "Same 'Anthropic in the lead' scenario and commitment; only the footnote number differs."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-consequence-d94b",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "Marginal risk and ecosystem analysis.​​If we determine​​that the absolute level of risk being imposed​\n​industry-wide by AI systems such as ours is high, and are justifying our decision to move forward based partly​\n​on a marginal risk analysis,​​6​​we will additionally address the following:​\n\n​1.​\n​Competitive landscape analysis:​​What we know about​​how our current and future model capabilities and​\n​risk mitigations compare to those of relevant competitors.​\n\n​2.​\n​Role in risk assessment:​​How these comparisons factored​​into our risk assessment.​\n\n​3.​\n​Benefits analysis:​​The benefits, if any, of continuing​​to maintain our existing models or of advancing​\n​frontier capabilities, including considerations related to our mission and our ability to contribute to AI​\n​safety research and policy development.​\n\n​4.​\n​Advocacy efforts:​​The steps we took to raise public​​awareness of the relevant risks and to encourage​\n​appropriate regulatory action, including our engagement with policymakers and other AI developers.",
+    "later_section": "3.3. Contents",
+    "reason": "Same marginal-risk analysis section with the advocacy-efforts item; only footnote number differs."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "Marginal risk and ecosystem analysis. If we determine that the absolute level of risk being imposed\nindustry-wide by AI systems such as ours is high, and are justifying our decision to move forward based partly\non a marginal risk analysis,6 we will additionally address the following:\n\n1.​\nCompetitive landscape analysis: What we know about how our current and future model capabilities and\nrisk mitigations compare to those of relevant competitors.\n\n2.​\nRole in risk assessment: How these comparisons factored into our risk assessment.\n\n3.​\nBenefits analysis: The benefits, if any, of continuing to maintain our existing models or of advancing\nfrontier capabilities, including considerations related to our mission and our ability to contribute to AI\nsafety research and policy development.\n\n4.​\nAdvocacy efforts: The steps we took to raise public awareness of the relevant risks and to encourage\nappropriate regulatory action, including our engagement with policymakers and other AI developers.",
+    "later_section": "3.3. Contents",
+    "reason": "Same marginal-risk analysis section with the advocacy-efforts item; only footnote number differs."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "Marginal risk and ecosystem analysis.​​If we determine​​that the absolute level of risk being imposed​\n​industry-wide by AI systems such as ours is high, and are justifying our decision to move forward based partly​\n​on a marginal risk analysis,​​9​​we will additionally address the following:​\n\n​1.​\n​Competitive landscape analysis:​​What we know about​​how our current and future model capabilities and​\n​risk mitigations compare to those of relevant competitors.​\n\n​2.​\n​Role in risk assessment:​​How these comparisons factored​​into our risk assessment.​\n\n​3.​\n​Benefits analysis:​​The benefits, if any, of continuing​​to maintain our existing models or of advancing​\n​frontier capabilities, including considerations related to our mission and our ability to contribute to AI​\n​safety research and policy development.​\n\n​4.​\n​Advocacy efforts:​​The steps we took to raise public​​awareness of the relevant risks and to encourage​\n​appropriate regulatory action, including our engagement with policymakers and other AI developers.",
+    "later_section": "3.3. Contents",
+    "reason": "Same marginal-risk analysis section with the advocacy-efforts item; only footnote number differs."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Marginal risk and ecosystem analysis.​​If we determine​​that the absolute level of risk being imposed​\n​industry-wide by AI systems such as ours is high, and are justifying our decision to move forward based partly​\n​on a marginal risk analysis,​​11​​we will additionally​​address the following:​\n\n​1.​\n​Competitive landscape analysis:​​What we know about​​how our current and future model capabilities and​\n​risk mitigations compare to those of relevant competitors.​\n\n​2.​\n​Role in risk assessment:​​How these comparisons factored​​into our risk assessment.​\n\n​3.​\n​Benefits analysis:​​The benefits, if any, of continuing​​to maintain our existing models or of advancing​\n​frontier capabilities, including considerations related to our mission and our ability to contribute to AI​\n​safety research and policy development.​\n\n​4.​\n​Advocacy efforts:​​The steps we took to raise public​​awareness of the relevant risks and to encourage​\n​appropriate regulatory action, including our engagement with policymakers and other AI developers.",
+    "later_section": "3.3. Contents",
+    "reason": "Same marginal-risk analysis section with the advocacy-efforts item; only footnote number differs."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-governance-2046",
+  "steps": [
+   {
+    "version": "v3.4",
+    "counterpart": "If we update the RSP, we will publicly share the updated version prior to or on​\n\n​Responsible Scaling Policy, Anthropic​\n​16​\n\n\n[[page 17]]\n\n​its effective date and will record the differences from the prior draft in the Change Log. We will maintain​\n​the current version of the RSP on our website.",
+    "later_section": "4. Governance",
+    "reason": "Same policy-change publication commitment, unchanged but split across a page break."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-disclosure-c35f",
+  "steps": [
+   {
+    "version": "v3.2",
+    "counterpart": "Timing. We will publish a Risk Report every 3-6 months. Note that unlike system cards, Risk Reports will not\nbe published with each new model release. Additionally:\n\n●​\nWhen we publicly deploy a model that we determine is significantly more capable than any of the models\ncovered in the most recent Risk Report, we will publish a discussion (in our System Card or elsewhere) of\nhow that model’s capabilities and propensities affect or change the analysis in the Risk Report.",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Same timing paragraph and significantly-more-capable deployment bullet; 'the analysis' wording tweak."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "Timing.​​We will publish a Risk Report every 3-6 months. Note that unlike system cards, Risk Reports will not​\n​be published with each new model release.​\n\n​Off-cycle updates.​​Separate from our publication of Risk Reports, we will publish an analysis of an individual​\n​model’s relevant risks (e.g., how the model’s capabilities and propensities affect or change prior analyses) in​\n​the following circumstances:​\n\n​●​\n​When we publicly deploy a model that we determine is (1) significantly more capable than (2) all models​\n​for which we have publicly analyzed risks related to chemical/biological weapons production, high-stakes​\n​misalignment, or automated R&D (e.g., in a prior Risk Report, System Card, or other public artifact).",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Timing kept; the public-deployment bullet moved under new 'Off-cycle updates' with a changed comparison baseline."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Timing.​​We will publish a Risk Report every 3-6 months.​​Note that unlike system cards, Risk Reports will not​\n​be published with each new model release.​\n\n​Off-cycle updates.​​Separate from our publication of​​Risk Reports, we will publish an analysis of an individual​\n​model’s relevant risks (e.g., how the model’s capabilities and propensities affect or change prior analyses) in​\n​the following circumstances:​\n\n​●​\n​When we publicly deploy a model that we determine is (1) significantly more capable than (2) all models​\n​for which we have publicly analyzed risks related to chemical/biological weapons production, high-stakes​\n​misalignment, or automated R&D (e.g., in a prior Risk Report, System Card, or other public artifact).",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Unchanged from v3.3: timing and off-cycle public-deployment analysis bullet."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "anthropic-eval-scope-704a",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "Scope.​​A Risk Report will cover all publicly deployed​​models at the time of its publication. It will also cover​\n​internally deployed models when we determine that these models could pose significant risks​​5​​beyond those​\n​posed by models that are covered by a prior Risk Report. While there are a variety of reasons we might classify​\n​an internal model this way, this will—at a minimum—include any internal models that we are deploying for​\n​large-scale, fully autonomous research.",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Same Risk Report scope paragraph; internal models now judged against models covered by a prior Risk Report."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "Scope. A Risk Report will cover all publicly deployed models at the time of its publication. It will also cover\ninternally deployed models when we determine that these models could pose significant risks5 beyond those\nposed by models that are covered by a prior Risk Report. While there are a variety of reasons we might classify\nan internal model this way, this will—at a minimum—include any internal models that we are deploying for\nlarge-scale, fully autonomous research.",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Unchanged from v3.1: same Risk Report scope paragraph."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "Scope.​​A Risk Report will cover all publicly deployed​​models at the time of its publication. It will also cover​\n​internally deployed models that we determine (1)  could pose risks related to high-stakes misalignment or​\n​automated R&D that (2) significantly exceed those posed by models covered by a prior Risk Report. While​\n​there are a variety of reasons we might classify an internal model this way, this will—at a minimum—include​\n​any internal models that we are deploying for large-scale, fully autonomous research.",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Same scope paragraph; internal-model trigger narrowed to misalignment or automated R&D risks."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Scope.​​A Risk Report will cover the risks of Anthropic's​​models and actions as of a given coverage date, which​\n​will be no more than 30 days prior to the publication of the report.​​10​​It will cover all publicly deployed​​models​\n​as of the coverage date, as well as any internally deployed models as of the coverage date that, by the time of​\n​the report’s publication, we have determined (1) could pose risks related to high-stakes misalignment or​\n​automated R&D that (2) significantly exceed those posed by models covered by a prior Risk Report. While​\n​there are a variety of reasons we might classify an internal model this way, this will—at a minimum—include​\n​any internal models that we are deploying for large-scale, fully autonomous research.",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Same scope paragraph, now defined by a coverage date within 30 days of publication."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-disclosure-8902",
+  "steps": [
+   {
+    "version": "v3.2",
+    "counterpart": "When we publicly deploy a model that we determine is significantly more capable than any of the models\ncovered in the most recent Risk Report, we will publish a discussion (in our System Card or elsewhere) of\nhow that model’s capabilities and propensities affect or change the analysis in the Risk Report.",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Same public-deployment discussion bullet; 'the analysis' wording tweak."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "When we publicly deploy a model that we determine is (1) significantly more capable than (2) all models​\n​for which we have publicly analyzed risks related to chemical/biological weapons production, high-stakes​\n​misalignment, or automated R&D (e.g., in a prior Risk Report, System Card, or other public artifact).",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Same trigger, now under Off-cycle updates, comparing to all models with publicly analyzed relevant risks."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "When we publicly deploy a model that we determine is (1) significantly more capable than (2) all models​\n​for which we have publicly analyzed risks related to chemical/biological weapons production, high-stakes​\n​misalignment, or automated R&D (e.g., in a prior Risk Report, System Card, or other public artifact).",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Unchanged from v3.3."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-disclosure-9cdb",
+  "steps": [
+   {
+    "version": "v3.3",
+    "counterpart": "Within 30 days of determining that we have an internally deployed model that (1) could pose risks related​\n​to high-stakes misalignment or automated R&D that (2) significantly exceed those of all models for which​\n​we have publicly analyzed such risks (e.g., in a prior Risk Report, System Card, or other public artifact).",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Same 30-day internal-deployment disclosure bullet, now under Off-cycle updates with a redefined trigger."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Within 30 days of determining that we have an internally deployed model that (1) could pose risks related​\n​to high-stakes misalignment or automated R&D that (2) significantly exceed those of all models for which​\n​we have publicly analyzed such risks (e.g., in a prior Risk Report, System Card, or other public artifact).",
+    "later_section": "3.1. Scope and Timing",
+    "reason": "Unchanged from v3.3."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-disclosure-79be",
+  "steps": [
+   {
+    "version": "v3.4",
+    "counterpart": "We will publish a public version of our Risk Report.​​We will aim to minimize redactions to the public​​version​\n​of the report or to the version of the report shared with all regular-clearance Anthropic employees. Reasons we​\n​may redact material include but are not limited to:",
+    "later_section": "3.5. Publication and Redactions",
+    "reason": "Same public Risk Report and redaction-minimization commitment, extended to the version shared with regular-clearance employees."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-third-party-cef3",
+  "steps": [
+   {
+    "version": "v3.2",
+    "counterpart": "We will select external reviewers that:\n\n●​\nHave significant experience and expertise regarding evaluations for dangerous AI capabilities and\npropensities. It’s particularly important that they be knowledgeable about potential ways such evaluations\nmight be misleading (for example, alignment faking).",
+    "later_section": "3.6.1. Selecting external reviewers",
+    "reason": "Same reviewer-selection criterion on evaluation expertise; Board/LTBT consultation moved to a separate sentence."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "We will select external reviewers that:​\n\n​●​\n​Have significant experience and expertise regarding evaluations for dangerous AI capabilities and​\n​propensities. It’s particularly important that they be knowledgeable about potential ways such evaluations​\n​might be misleading (for example,​​alignment faking​).",
+    "later_section": "3.6.1. Selecting external reviewers",
+    "reason": "Unchanged from v3.2."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "We will select external reviewers that:​\n\n​●​\n​Have significant experience and expertise regarding evaluations for dangerous AI capabilities and​\n​propensities. It’s particularly important that they be knowledgeable about potential ways such evaluations​\n​might be misleading (for example,​​alignment faking​).",
+    "later_section": "3.6.1. Selecting external reviewers",
+    "reason": "Unchanged from v3.3."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-third-party-1866",
+  "steps": [
+   {
+    "version": "v3.1",
+    "counterpart": "For purposes of external review, the only redactions to the Risk Report will be those necessary to comply with​\n​legal prohibitions or to maintain our legal rights.",
+    "later_section": "3.6.2. Timing and access",
+    "reason": "Same limit on redactions for external review; footnote renumbered."
+   },
+   {
+    "version": "v3.2",
+    "counterpart": "For purposes of external review, the only redactions to the Risk Report will be those necessary to comply with\nlegal prohibitions or to maintain our legal rights.",
+    "later_section": "3.6.2. Timing and access",
+    "reason": "Same limit on redactions for external review; footnote renumbered."
+   },
+   {
+    "version": "v3.3",
+    "counterpart": "For purposes of external review, the only redactions to the Risk Report will be those necessary to comply with​\n​legal prohibitions or to maintain our legal rights.",
+    "later_section": "3.6.2. Timing and access",
+    "reason": "Same limit on redactions for external review; footnote renumbered."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "For purposes of​\n​external review, the only redactions to the Risk Report will be those necessary to comply with legal​\n​prohibitions or to maintain our legal rights.",
+    "later_section": "3.6.2. Timing and access",
+    "reason": "Same limit on redactions for external review; footnote renumbered and preceded by a new sentence."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-security-06a3",
+  "steps": [
+   {
+    "version": "v3.3",
+    "counterpart": "Achieve an “eyes on​\n​everything” state for our​\n​internal AI development. We​\n​will comprehensively gather,​\n​centralize, and maintain logs",
+    "later_section": "1. Our Recommendations for Industry-Wide Safety",
+    "reason": "Same eyes-on-everything bullet; text continues after a page break (unchanged), so only the first part is copied."
+   },
+   {
+    "version": "v3.4",
+    "counterpart": "Achieve an “eyes on​\n​everything” state for our​\n​internal AI development. We​\n​will comprehensively gather,​\n​centralize, and maintain logs",
+    "later_section": "1. Our Recommendations for Industry-Wide Safety",
+    "reason": "Unchanged from v3.3; bullet again split by a page break."
+   }
+  ],
+  "confidence": "medium"
+ }
+]

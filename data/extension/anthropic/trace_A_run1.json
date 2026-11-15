@@ -1,0 +1,278 @@
+[
+ {
+  "id": "anthropic-eval-trigger-5482",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "In parallel with upgrading a model to the Required Safeguards, we will (1) update this policy to include any\nadditional Capability Thresholds for which the Required Safeguards would be insufficient; and (2) conduct a\nfollow-up capability assessment to determine that the model’s capabilities fall sufficiently far away from those\nCapability Thresholds, following the procedures outlined in Section 3.",
+    "later_section": "5. Follow-Up Capability Assessment",
+    "reason": "Fixed ASL-4 threshold promise replaced by general duty to add further thresholds and assess against them when upgrading safeguards."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "In parallel with upgrading a model to the Required Safeguards, we will (1) update this policy to include any‬\n‭additional Capability Thresholds for which the Required Safeguards would be insufficient; and (2) conduct a‬\n‭follow-up capability assessment to determine that the model’s capabilities fall sufficiently far away from those‬\n‭Capability Thresholds, following the procedures outlined in‬‭Section 3‬‭.",
+    "later_section": "5. Follow-Up Capability Assessment",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "anthropic-governance-37e6",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Policy changes: Changes to this policy will be proposed by the CEO and the Responsible Scaling\nOfficer and approved by the Board of Directors, in consultation with the Long-Term Benefit Trust.17\nThe current version of the RSP is accessible at www.anthropic.com/rsp. We will update the public\nversion of the RSP before any changes take effect and record any differences from the prior draft in a\nchange log.",
+    "later_section": "7.1. Internal Governance",
+    "reason": "Same policy-change approval and public change-log commitment; only footnote number changed."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "Policy changes:‬‭Changes to this policy will be proposed‬‭by the CEO and the Responsible Scaling‬\n‭Officer and approved by the Board of Directors, in consultation with the Long-Term Benefit Trust.‬‭17‬\n\n‭The current version of the RSP is accessible at‬‭www.anthropic.com/rsp‬‭.‬‭We will update the public‬\n‭version of the RSP before any changes take effect and record any differences from the prior draft in a‬\n‭change log.",
+    "later_section": "7.1. Internal Governance",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-security-4ca8",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Public disclosures: We will publicly release key information related to the evaluation and deployment\nof our models (not including sensitive details). These include summaries of related Capability and\nSafeguards reports when we deploy a model18 as well as plans for current and future comprehensive\ncapability assessments and deployment and security safeguards.19",
+    "later_section": "7.2. Transparency and External Input",
+    "reason": "Same public disclosure commitment on capability and safeguards report summaries; footnote numbers changed."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "Public disclosures:‬‭We will publicly release key information‬‭related to the evaluation and deployment‬\n‭of our models (not including sensitive details). These include summaries of related Capability and‬\n‭Safeguards reports when we deploy a model‬‭18‬‭as well‬‭as plans for current and future comprehensive‬\n‭capability assessments and deployment and security safeguards.‬‭19",
+    "later_section": "7.2. Transparency and External Input",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-security-fa49",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Public disclosures: We will publicly release key information related to the evaluation and deployment\nof our models (not including sensitive details). These include summaries of related Capability and\nSafeguards reports when we deploy a model18 as well as plans for current and future comprehensive\ncapability assessments and deployment and security safeguards.19",
+    "later_section": "7.2. Transparency and External Input",
+    "reason": "Same public disclosure commitment on capability and safeguards report summaries; footnote numbers changed."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "Public disclosures:‬‭We will publicly release key information‬‭related to the evaluation and deployment‬\n‭of our models (not including sensitive details). These include summaries of related Capability and‬\n‭Safeguards reports when we deploy a model‬‭18‬‭as well‬‭as plans for current and future comprehensive‬\n‭capability assessments and deployment and security safeguards.‬‭19",
+    "later_section": "7.2. Transparency and External Input",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-eval-trigger-bc57",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Chemical,\nBiological,\nRadiological,\nand Nuclear\n(CBRN)\nweapons\n\nCBRN-3:  The ability to significantly\nhelp individuals or groups with basic\ntechnical backgrounds (e.g.,\nundergraduate STEM degrees)\ncreate/obtain and deploy CBRN\nweapons.\n\nThis capability could greatly increase the\nnumber of actors who could cause this sort of\ndamage, and there is no clear reason to expect\nan offsetting improvement in defensive\ncapabilities. The ASL-3 Deployment Standard\nand the ASL-3 Security Standard, which protect\nagainst misuse and model-weight theft by\nnon-state adversaries, are required.",
+    "later_section": "2. Capability Thresholds and Required Safeguards",
+    "reason": "Same CBRN threshold and ASL-3 safeguards, now labelled CBRN-3 in the table."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "Chemical,‬\n‭Biological,‬\n‭Radiological,‬\n‭and Nuclear‬\n‭(CBRN)‬\n‭weapons‬\n\n‭CBRN-3:‬ ‭The ability to significantly‬\n‭help individuals or groups with basic‬\n‭technical backgrounds (e.g.,‬\n‭undergraduate STEM degrees)‬\n‭create/obtain and deploy CBRN‬\n‭weapons.‬\n\n‭This capability could greatly increase the‬\n‭number of actors who could cause this sort of‬\n‭damage, and there is no clear reason to expect‬\n‭an offsetting improvement in defensive‬\n‭capabilities. The‬‭ASL-3 Deployment Standard‬\n‭and the‬‭ASL-3 Security Standard‬‭, which protect‬\n‭against misuse and model-weight theft by‬\n‭non-state adversaries, are required.",
+    "later_section": "2. Capability Thresholds and Required Safeguards",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-eval-trigger-4f67",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "We will consider it sufficient to rule out the possibility that a model has surpassed the two Autonomous AI\nR&D Capability Thresholds by considering an earlier (i.e., less capable) checkpoint: the ability to autonomously\nperform a wide range of 2-8 hour software engineering tasks. We would view this level of capability as an\nimportant checkpoint towards both Autonomous AI R&D as well as other capabilities that may warrant similar\nattention (for example, autonomous replication). We will test for this checkpoint and, by the time we reach it,\nwe will (1) aim to have met (or be close to meeting) the ASL-3 Security Standard as an intermediate goal",
+    "later_section": "2. Capability Thresholds and Required Safeguards",
+    "reason": "Same 2-8 hour software engineering checkpoint, now covering the two AI R&D thresholds."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "We will consider it sufficient to rule out the possibility that a model has surpassed the two Autonomous AI‬\n‭R&D Capability Thresholds by considering an earlier (i.e., less capable) checkpoint: the ability to autonomously‬\n‭perform a wide range of 2-8 hour software engineering tasks. We would view this level of capability as an‬\n‭important checkpoint towards both Autonomous AI R&D as well as other capabilities that may warrant similar‬\n‭attention (for example, autonomous replication). We will test for this checkpoint and, by the time we reach it,‬\n‭we will (1) aim to have met (or be close to meeting) the ASL-3 Security Standard as an intermediate goal",
+    "later_section": "2. Capability Thresholds and Required Safeguards",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-security-8ada",
+  "steps": [
+   {
+    "version": "v2.2",
+    "counterpart": "We will implement robust controls to mitigate basic insider risk, but consider mitigating risks from sophisticated or‬\n‭state-compromised insiders to be out of scope for ASL-3. We define “basic insider risk” as risk from an insider who does not have‬\n‭persistent or time-limited access to systems that process model weights. We define “sophisticated insider risk” as risk from an insider‬\n‭who has persistent access or can request time-limited access to systems that process model weights. We are committed to further‬\n‭enhancing these protections as a part of our ongoing preparations for higher security levels.",
+    "later_section": "4.2. ASL-3 Security Standard",
+    "reason": "Same ASL-3 insider-risk scope footnote, narrowed to basic insiders with sophisticated insiders now out of scope."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-disclosure-07ca",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Public disclosures: We will publicly release key information related to the evaluation and deployment\nof our models (not including sensitive details). These include summaries of related Capability and\nSafeguards reports when we deploy a model18 as well as plans for current and future comprehensive\ncapability assessments and deployment and security safeguards.19",
+    "later_section": "7.2. Transparency and External Input",
+    "reason": "Same public disclosure commitment on capability and safeguards report summaries; footnote numbers changed."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "Public disclosures:‬‭We will publicly release key information‬‭related to the evaluation and deployment‬\n‭of our models (not including sensitive details). These include summaries of related Capability and‬\n‭Safeguards reports when we deploy a model‬‭18‬‭as well‬‭as plans for current and future comprehensive‬\n‭capability assessments and deployment and security safeguards.‬‭19",
+    "later_section": "7.2. Transparency and External Input",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-governance-fab3",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "The Responsible Scaling Officer will regularly update the Board of\nDirectors on substantial cases of noncompliance and overall trends.\n\n16 In cases where this policy is unintentionally ambiguous, we will act in accordance with the Responsible Scaling Officer or\nCEO’s judgment, and aim to clarify the ambiguity in the next policy update.\n\n15 Cases deemed to present minimal additional risk may be reported to the Board in quarterly summary reports.",
+    "later_section": "7.1. Internal Governance",
+    "reason": "Same Board reporting on noncompliance, RSO updates sentence and its quarterly-summary footnote, with footnote renumbered."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "The Responsible Scaling Officer will regularly update the Board of‬\n‭Directors on substantial cases of noncompliance and overall trends.‬\n\n‭16‬‭In cases where this policy is unintentionally ambiguous, we will act in accordance with the Responsible Scaling Officer or‬\n‭CEO’s judgment, and aim to clarify the ambiguity in the next policy update.‬\n\n‭15‬‭Cases deemed to present minimal additional risk may be reported to the Board in quarterly summary reports.",
+    "later_section": "7.1. Internal Governance",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "anthropic-eval-trigger-8bfa",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "For models requiring comprehensive testing, we will assess whether the model is unlikely to reach any\nrelevant Capability Thresholds absent surprising advances in widely accessible post-training\nenhancements.6 To make the required showing, we will need to satisfy the following criteria:",
+    "later_section": "3.2. Comprehensive Assessment",
+    "reason": "Same comprehensive assessment standard and criteria lead-in; footnote number changed."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "For models requiring comprehensive testing, we will assess whether the model is unlikely to reach any‬\n‭relevant Capability Thresholds absent surprising advances in widely accessible post-training‬\n‭enhancements.‬‭6‬‭To make the required showing, we will‬‭need to satisfy the following criteria:",
+    "later_section": "3.2. Comprehensive Assessment",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-eval-trigger-4281",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "The model is notably more performant on automated tests in risk-relevant domains (defined as 4x or\nmore in Effective Compute3).\n2.​\nSix months’ worth of finetuning and other capability elicitation methods have accumulated.4 This is\nmeasured in calendar time, since we do not yet have a metric to estimate the impact of these\nimprovements more precisely.5",
+    "later_section": "3.1. Preliminary Assessment",
+    "reason": "Same 'notably more capable' triggers; six-month item adds calendar-time measurement sentence."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "The model is notably more performant on automated tests in risk-relevant domains (defined as 4x or‬\n‭more in Effective Compute‬‭3‬‭).‬\n‭2.‬\n‭Six months’ worth of finetuning and other capability elicitation methods have accumulated.‬‭4‬‭This is‬\n‭measured in calendar time, since we do not yet have a metric to estimate the impact of these‬\n‭improvements more precisely.‬‭5",
+    "later_section": "3.1. Preliminary Assessment",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-consequence-0dc5",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "In the deployment context, such measures might include blocking model\nresponses, downgrading to a less-capable model in a particular domain, or increasing the sensitivity\nof automated monitoring.12 In the security context, an example of such a measure would be storing the\nmodel weights in a single-purpose, isolated network that meets the ASL-3 Standard. In either case,\nthe CEO and Responsible Scaling Officer will share their plan with the Board of Directors and the\nLong-Term Benefit Trust.\n\n●​\nStronger restrictions: In the unlikely event that we cannot implement interim measures to\nadequately mitigate risk, we will impose stronger restrictions. In the deployment context, we will\nde-deploy the model and replace it with a model that falls below the Capability Threshold. Once the\nASL-3 Deployment Standard can be met, the model may be re-deployed.",
+    "later_section": "6.2. Restrict Deployment and Further Scaling",
+    "reason": "Same interim deployment measures and de-deployment restriction; footnote renumbered."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "In the deployment context, such measures might include blocking model‬\n‭responses, downgrading to a less-capable model in a particular domain, or increasing the sensitivity‬\n‭of automated monitoring.‬‭12‬‭In the security context,‬‭an example of such a measure would be storing the‬\n‭model weights in a single-purpose, isolated network that meets the ASL-3 Standard. In either case,‬\n‭the CEO and Responsible Scaling Officer will share their plan with the Board of Directors and the‬\n‭Long-Term Benefit Trust.‬\n\n‭●‬\n‭Stronger restrictions:‬‭In the unlikely event that‬‭we cannot implement interim measures to‬\n‭adequately mitigate risk, we will impose stronger restrictions. In the deployment context, we will‬\n‭de-deploy the model and replace it with a model that falls below the Capability Threshold. Once the‬\n‭ASL-3 Deployment Standard can be met, the model may be re-deployed.",
+    "later_section": "6.2. Restrict Deployment and Further Scaling",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-eval-method-8a23",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Forecasting: Make informal forecasts about the likelihood that further training and elicitation will\nimprove test results between the time of testing and the next expected round of comprehensive\ntesting.7",
+    "later_section": "3.2. Comprehensive Assessment",
+    "reason": "Same informal forecasting criterion; only footnote number changed."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "Forecasting:‬‭Make informal forecasts about the likelihood that further training and elicitation will‬\n‭improve test results between the time of testing and the next expected round of comprehensive‬\n‭testing.‬‭7",
+    "later_section": "3.2. Comprehensive Assessment",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-eval-trigger-efa4",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "Autonomous\nAI Research\nand\nDevelopment\n(AI R&D)\n\nAI R&D-4:  The ability to fully\nautomate the work of an entry-level,\nremote-only Researcher at Anthropic.\n\nThe ASL-3 Security Standard is required. In\naddition, we will develop an affirmative case\nthat (1) identifies the most immediate and\nrelevant risks from models pursuing\nmisaligned goals and (2) explains how we have\nmitigated these risks to acceptable levels. The\naffirmative case will describe, as relevant,\nevidence on model capabilities; evidence on AI\nalignment; mitigations (such as monitoring\nand other safeguards); and our overall\nreasoning.\n\nAI R&D-5: The ability to cause\ndramatic acceleration in the rate of\neffective scaling\n\nAt minimum, the ASL-4 Security Standard\n(which would protect against model-weight\ntheft by state-level adversaries) is required,\nalthough we expect a higher security standard\nmay be required. As with AI R&D-4, we also\nexpect an affirmative case will be required.",
+    "later_section": "2. Capability Thresholds and Required Safeguards",
+    "reason": "Single AI R&D threshold split into AI R&D-4 and AI R&D-5 with revised required safeguards."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "Autonomous‬\n‭AI Research‬\n‭and‬\n‭Development‬\n‭(AI R&D)‬\n\n‭AI R&D-4:‬ ‭The ability to fully‬\n‭automate the work of an entry-level,‬\n‭remote-only Researcher at Anthropic.‬\n\n‭The‬‭ASL-3 Security Standard‬‭is required. In‬\n‭addition, we will develop an affirmative case‬\n‭that (1) identifies the most immediate and‬\n‭relevant risks from models pursuing‬\n‭misaligned goals and (2) explains how we have‬\n‭mitigated these risks to acceptable levels. The‬\n‭affirmative case will describe, as relevant,‬\n‭evidence on model capabilities; evidence on AI‬\n‭alignment; mitigations (such as monitoring‬\n‭and other safeguards); and our overall‬\n‭reasoning.‬\n\n‭AI R&D-5:‬‭The ability to cause‬\n‭dramatic acceleration in the rate of‬\n‭effective scaling‬\n\n‭At minimum, the ASL-4 Security Standard‬\n‭(which would protect against model-weight‬\n‭theft by state-level adversaries) is required,‬\n‭although we expect a higher security standard‬\n‭may be required. As with AI R&D-4, we also‬\n‭expect an affirmative case will be required.",
+    "later_section": "2. Capability Thresholds and Required Safeguards",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "high"
+ },
+ {
+  "id": "anthropic-consequence-a1d2",
+  "steps": [
+   {
+    "version": "v2.1",
+    "counterpart": "We will test for this checkpoint and, by the time we reach it,\nwe will (1) aim to have met (or be close to meeting) the ASL-3 Security Standard as an intermediate goal; (2)\n\nResponsible Scaling Policy, Anthropic​\n4\n\n\n[[page 9]]\n\n\nshare an update on our progress around that time; and (3) begin testing for the full Autonomous AI R&D\nCapability Threshold and any additional risks.",
+    "later_section": "2. Capability Thresholds and Required Safeguards",
+    "reason": "Same checkpoint consequences, restructured; safeguards-specification clause replaced by testing for full threshold and additional risks."
+   },
+   {
+    "version": "v2.2",
+    "counterpart": "We will test for this checkpoint and, by the time we reach it,‬\n‭we will (1) aim to have met (or be close to meeting) the ASL-3 Security Standard as an intermediate goal; (2)‬\n\n‭Responsible Scaling Policy, Anthropic‬\n‭4‬\n\n\n[[page 9]]\n\n‭share an update on our progress around that time; and (3) begin testing for the full Autonomous AI R&D‬\n‭Capability Threshold and any additional risks.",
+    "later_section": "2. Capability Thresholds and Required Safeguards",
+    "reason": "Same passage carried over from v2.1 without substantive change."
+   }
+  ],
+  "confidence": "medium"
+ },
+ {
+  "id": "anthropic-security-d7b4",
+  "steps": [
+   {
+    "version": "v2.2",
+    "counterpart": "Existing guidance:‬‭Aligning where appropriate with‬‭existing guidance on securing model‬\n‭weights, including‬‭Securing AI Model Weights, Preventing‬‭Theft and Misuse of Frontier‬\n‭Models (2024)‬‭; security recommendations like‬‭Deploying‬‭AI Systems Securely‬\n\n‭11‬‭We will implement robust controls to mitigate basic insider risk, but consider mitigating risks from sophisticated or‬\n‭state-compromised insiders to be out of scope for ASL-3. We define “basic insider risk” as risk from an insider who does not have‬\n‭persistent or time-limited access to systems that process model weights. We define “sophisticated insider risk” as risk from an insider‬\n‭who has persistent access or can request time-limited access to systems that process model weights. We are committed to further‬\n‭enhancing these protections as a part of our ongoing preparations for higher security levels.‬\n\n‭Responsible Scaling Policy, Anthropic‬\n‭9‬\n\n\n[[page 14]]\n\n‭(CISA/NSA/FBI/ASD/CCCS/GCSB /GCHQ),‬‭ISO 42001‬‭, CSA’s‬‭AI Safety Initiative‬‭, and‬‭CoSAI‬‭; and‬\n‭standards frameworks like‬‭SSDF‬‭,‬‭SOC 2‬‭,‬‭NIST 800-53‬‭.",
+    "later_section": "4.2. ASL-3 Security Standard",
+    "reason": "Same existing-guidance security criterion, text split by footnote 11 and page break."
+   }
+  ],
+  "confidence": "medium"
+ }
+]

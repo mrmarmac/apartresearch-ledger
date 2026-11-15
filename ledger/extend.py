@@ -166,7 +166,8 @@ def apply(ledger, corpus, folder, tags_for):
         for entry in item["history"]:
             entry.setdefault("coded_by", "upstream")
             entry.setdefault("needs_review", False)
-    if not os.path.isdir(folder) or _load(folder, "trace_A_run1.json") is None:
+    # Apply nothing until the tracing answers and the coding answers are both in the folder.
+    if not os.path.isdir(folder) or _load(folder, "trace_A_run1.json") is None or _load(folder, "code_run1.json") is None:
         return stats
     docs = _docs(corpus)
     trace, code = _answers(folder, "trace"), _answers(folder, "code")

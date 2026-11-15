@@ -1,0 +1,144 @@
+[
+ {
+  "id": "anthropic-eval-trigger-5482",
+  "from_version": "v2.0",
+  "earlier_text": "We will update this policy with the Capability Thresholds for the ASL-4 Required Safeguards. We are currently working on defining any further Capability Thresholds that would mandate ASL-4 Required Safeguards. ... As noted, before deploying any model that passes the Capability Thresholds for the ASL-3 Required Safeguards, we will conduct a capability assessment against the forthcoming Capability Thresholds for the ASL-4 Required Safeguards.",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-governance-37e6",
+  "from_version": "v2.0",
+  "earlier_text": "Policy changes: Changes to this policy will be proposed by the CEO and the Responsible Scaling Officer and approved by the Board of Directors, in consultation with the Long-Term Benefit Trust.18 The current version of the RSP is accessible at www.anthropic.com/rsp. We will update the public version of the RSP before any changes take effect and record any differences from the prior draft in a change log.",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-security-4ca8",
+  "from_version": "v2.0",
+  "earlier_text": "Public disclosures: We will publicly release key information related to the evaluation and deployment of our models (not including sensitive details). These include summaries of related Capability and Safeguards reports when we deploy a model19 as well as plans for current and future ... comprehensive capability assessments and deployment and security safeguards.20",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-security-fa49",
+  "from_version": "v2.0",
+  "earlier_text": "Public disclosures: We will publicly release key information related to the evaluation and deployment of our models (not including sensitive details). These include summaries of related Capability and Safeguards reports when we deploy a model19 as well as plans for current and future ... comprehensive capability assessments and deployment and security safeguards.20",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-eval-trigger-bc57",
+  "from_version": "v2.0",
+  "earlier_text": "Chemical, Biological, Radiological, and Nuclear (CBRN) weapons. The ability to significantly help individuals or groups with basic technical backgrounds (e.g., undergraduate STEM degrees) create/obtain and deploy CBRN weapons. ... The ASL-3 Deployment Standard and the ASL-3 Security Standard, which protect against misuse and model-weight theft by non-state adversaries, are required.",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-eval-trigger-4f67",
+  "from_version": "v2.0",
+  "earlier_text": "We will consider it sufficient to rule out the possibility that a model has surpassed the Autonomous AI R&D Capability Threshold by considering an earlier (i.e., less capable) checkpoint: the ability to autonomously perform a wide range of 2-8 hour software engineering tasks. ... We will test for this checkpoint and, by the time we reach it, we aim to have met (or be close to meeting) the ASL-3 Security Standard as an intermediate goal",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-security-8ada",
+  "from_version": "v2.1",
+  "earlier_text": "We will implement robust insider risk controls to mitigate most insider risk, but consider mitigating risks from highly sophisticated state-compromised insiders to be out of scope for ASL-3. We are committed to further enhancing these protections as a part of our ASL-4 preparations.",
+  "later_versions": [
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-disclosure-07ca",
+  "from_version": "v2.0",
+  "earlier_text": "Public disclosures: We will publicly release key information related to the evaluation and deployment of our models (not including sensitive details). These include summaries of related Capability and Safeguards reports when we deploy a model19 as well as plans for current and future ... comprehensive capability assessments and deployment and security safeguards.20",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-governance-fab3",
+  "from_version": "v2.0",
+  "earlier_text": "Cases deemed to present minimal additional risk may be reported to the Board in quarterly summary reports. ... The Responsible Scaling Officer will regularly update the Board of Directors on substantial cases of noncompliance and overall trends.",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-eval-trigger-8bfa",
+  "from_version": "v2.0",
+  "earlier_text": "For models requiring comprehensive testing, we will assess whether the model is unlikely to reach any relevant Capability Thresholds absent surprising advances in widely accessible post-training enhancements.7 To make the required showing, we will need to satisfy the following criteria:",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-eval-trigger-4281",
+  "from_version": "v2.0",
+  "earlier_text": "The term “notably more capable” is operationalized as at least one of the following: 1. The model is notably more performant on automated tests in risk-relevant domains (defined as 4x or more in Effective Compute4). 2. Six months’ worth of finetuning and other capability elicitation methods have accumulated.5",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-consequence-0dc5",
+  "from_version": "v2.0",
+  "earlier_text": "In the deployment context, such measures might include blocking model responses, downgrading to a less-capable model in a particular domain, or increasing the sensitivity of automated monitoring.13 ... In the deployment context, we will de-deploy the model and replace it with a model that falls below the Capability Threshold. Once the ASL-3 Deployment Standard can be met, the model may be re-deployed.",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-eval-method-8a23",
+  "from_version": "v2.0",
+  "earlier_text": "Forecasting: Make informal forecasts about the likelihood that further training and elicitation will improve test results between the time of testing and the next expected round of comprehensive testing.8",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-eval-trigger-efa4",
+  "from_version": "v2.0",
+  "earlier_text": "Autonomous AI Research and Development (AI R&D): The ability to either fully automate the work of an entry-level remote-only Researcher at Anthropic, or cause dramatic acceleration in the rate of effective scaling. ... At minimum, the ASL-3 Security Standard is required, although we expect a higher security standard (which would protect against model-weight theft by state-level adversaries) will be required, especially in the case of dramatic acceleration.",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-consequence-a1d2",
+  "from_version": "v2.0",
+  "earlier_text": "We will test for this checkpoint and, by the time we reach it, we aim to have met (or be close to meeting) the ASL-3 Security Standard as an intermediate goal, and we will share an update on our progress around that time. At that point, we will also specify Required Safeguards for this Capability Threshold in more detail, update our list of Capability Thresholds to consider additional risks that may arise ...",
+  "later_versions": [
+   "v2.1",
+   "v2.2"
+  ]
+ },
+ {
+  "id": "anthropic-security-d7b4",
+  "from_version": "v2.1",
+  "earlier_text": "Existing guidance: Aligning where appropriate with existing guidance on securing model weights, including Securing AI Model Weights, Preventing Theft and Misuse of Frontier Models (2024); security recommendations like Deploying AI Systems Securely (CISA/NSA/FBI/ASD/CCCS/GCSB /GCHQ), ISO 42001, CSA’s AI Safety Initiative, and CoSAI; and standards frameworks like SSDF, SOC 2, NIST 800-53.",
+  "later_versions": [
+   "v2.2"
+  ]
+ }
+]
