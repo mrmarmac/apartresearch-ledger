@@ -33,6 +33,7 @@ def quote_in_text(quote, squashed_source):
 def clean(text):
     """Tidy white space for display. Words do not change."""
     text = re.sub("[\u200b\u200c\u200d\ufeff]", "", text)  # invisible characters from PDF extraction
+    text = re.sub("[\u202a-\u202e\u2066-\u2069]+", " ", text)  # direction marks: some PDFs use them where a space is
     return re.sub(r"\s+", " ", text).strip()
 
 

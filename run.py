@@ -182,7 +182,23 @@ def check():
     print("ok   demo path: whistleblower commitment, 5 versions, last status removed")
 
 
-COMMANDS = {"check": [check], "site": [site], "score": [score], "align": [align], "watch": [watch], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
+def links():
+    from ledger import links as module
+    rows = module.check(ROOT)
+    path, ok = module.report(ROOT, rows)
+    for version, url, result in rows:
+        print(f"{result:28s} {version}")
+    print(f"wrote {os.path.relpath(path, ROOT)}: {ok} of {len(rows)} same file")
+
+
+def test():
+    import subprocess
+    for name in sorted(os.listdir(os.path.join(ROOT, "tests"))):
+        if name.startswith("test_") and name.endswith(".py"):
+            subprocess.run([sys.executable, os.path.join(ROOT, "tests", name)], check=True)
+
+
+COMMANDS = {"links": [links], "test": [test], "check": [check], "site": [site], "score": [score], "align": [align], "watch": [watch], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
             "all": [fetch, do_build, validate, check, site, stats]}
 
 if __name__ == "__main__":
