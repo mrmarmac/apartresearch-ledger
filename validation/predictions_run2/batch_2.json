@@ -1,0 +1,341 @@
+[
+ {
+  "id": "q041",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Drops 'expert to develop a novel threat vector' branch and narrows 'CBRN threat' to 'known biological or chemical threats'."
+ },
+ {
+  "id": "q042",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "'default decision-maker on all decisions' restated as 'Making all final decisions'; SAG no 'filibuster' clause unchanged."
+ },
+ {
+  "id": "q043",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: 'We intend to implement appropriate information security standards'."
+ },
+ {
+  "id": "q044",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Adds 'Tracked Capability Levels' that 'manifest at a lower capability threshold than our CCLs'; CCL grouping change is reorganisation."
+ },
+ {
+  "id": "q045",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "low",
+  "reason": "'commit to pause training' before capability outstrips containment restated as 'we will pause training until we have implemented the ASL-3 Security Standard'."
+ },
+ {
+  "id": "q046",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "Definition unchanged apart from 'work out' to 'discover'; same 'cannot rule out the model significantly undermining human control' test."
+ },
+ {
+  "id": "q047",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "low",
+  "reason": "Misuse process limited to 'external deployments' though ML R&D CCL process added with 'internal deployments'; mixed directions (MIX)."
+ },
+ {
+  "id": "q048",
+  "outcome": "S",
+  "dims": [
+   5
+  ],
+  "confidence": "medium",
+  "reason": "Internal 'compile a Capability Report' becomes 'We will publish Risk Reports', expanding disclosure."
+ },
+ {
+  "id": "q049",
+  "outcome": "W",
+  "dims": [
+   2,
+   6
+  ],
+  "confidence": "medium",
+  "reason": "'immediately lock down access to the weights' and post-mortem policy update dropped; deletion now 'will delete' only if interim measures fail (MIX)."
+ },
+ {
+  "id": "q050",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: 'xAI may change its approach from that listed above'."
+ },
+ {
+  "id": "q051",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only spelling change 'organisations' to 'organizations'; same 'may also consider disclosing'."
+ },
+ {
+  "id": "q052",
+  "outcome": "S",
+  "dims": [
+   1
+  ],
+  "confidence": "high",
+  "reason": "Risk domains list adds 'and Loss of Control'."
+ },
+ {
+  "id": "q053",
+  "outcome": "S",
+  "dims": [
+   6
+  ],
+  "confidence": "medium",
+  "reason": "Proceeding now additionally 'provided we have also conducted a follow-up capability assessment'."
+ },
+ {
+  "id": "q054",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: 'xAI is exploring building truth-seeking AI tools'."
+ },
+ {
+  "id": "q055",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "high",
+  "reason": "Adds update triggers 'materially undermined, or at least every twelve months, whichever is sooner'."
+ },
+ {
+  "id": "q056",
+  "outcome": "S",
+  "dims": [
+   4
+  ],
+  "confidence": "high",
+  "reason": "'we intend to utilize benchmarks' becomes present-tense 'xAI utilizes public benchmarks'."
+ },
+ {
+  "id": "q057",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: 'implement redundant layers of safeguards in our models'."
+ },
+ {
+  "id": "q058",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: 'Developing and improving a suite of safeguards targeting the capability'."
+ },
+ {
+  "id": "q059",
+  "outcome": "W",
+  "dims": [
+   1,
+   2,
+   3
+  ],
+  "confidence": "high",
+  "reason": "Drops 'World-class experts' and minimum 'CBRN risks, and cybersecurity'; threshold raised to 'consistently elicit' info that 'greatly increases' ability."
+ },
+ {
+  "id": "q060",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "medium",
+  "reason": "General 'deliberately-caused catastrophic harm' threshold narrowed to 'CBRN weapons' capability."
+ },
+ {
+  "id": "q061",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: 'Safeguards are adequate only if Grok's performance ... is within stated thresholds'."
+ },
+ {
+  "id": "q062",
+  "outcome": "W",
+  "dims": [
+   3
+  ],
+  "confidence": "high",
+  "reason": "Removes 'This will be done in consultation with the BoD'."
+ },
+ {
+  "id": "q063",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "low",
+  "reason": "'provides significant uplift towards execution' becomes 'could substantially contribute to any threat scenario', a lower possibility-based threshold."
+ },
+ {
+  "id": "q064",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only typographical change 'projectionsof'; same employee survey commitment."
+ },
+ {
+  "id": "q065",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Thresholds identical: '<X% lying on MASK (e.g. <50%)'."
+ },
+ {
+  "id": "q066",
+  "outcome": "W",
+  "dims": [
+   2,
+   3,
+   5
+  ],
+  "confidence": "medium",
+  "reason": "'monthly report (sent to the SAG, Leadership and BoD)' becomes a Capabilities Report 'submitted to the SAG' only."
+ },
+ {
+  "id": "q067",
+  "outcome": "W",
+  "dims": [
+   3,
+   6
+  ],
+  "confidence": "medium",
+  "reason": "Exception broadened to 'large enterprise customers under contract'; 'will allow' becomes 'may selectively allow' (MIX)."
+ },
+ {
+  "id": "q068",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only hyphenation 'high-priority'; same safeguards list."
+ },
+ {
+  "id": "q069",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "low",
+  "reason": "'evaluation and mitigation plans' improvement narrowed to 'developing naturalistic evaluation environments'; modal 'intend to' to 'continue to work' (MIX)."
+ },
+ {
+  "id": "q070",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: 'we may take steps to isolate and revoke access to user accounts'."
+ },
+ {
+  "id": "q071",
+  "outcome": "S",
+  "dims": [
+   2,
+   4
+  ],
+  "confidence": "high",
+  "reason": "'intend to choose ... thresholds' becomes set criterion 'answer rate of less than 1 out of 20 on restricted queries'."
+ },
+ {
+  "id": "q072",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "low",
+  "reason": "'fully automate the AI R&D pipeline' lowered to automating 'the work of any team of researchers' at 'approximately comparable' costs."
+ },
+ {
+  "id": "q073",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "confidence": "high",
+  "reason": "Drops 'any external feedback' and 'before moving forward' becomes 'promptly' after approval."
+ },
+ {
+  "id": "q074",
+  "outcome": "W",
+  "dims": [
+   1,
+   6
+  ],
+  "confidence": "medium",
+  "reason": "'must have a mechanism to bind the partner' replaced by 'reviewing major contracts ... for consistency'."
+ },
+ {
+  "id": "q075",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Same text with 'Operations:' label added: 'mandatory external reviews should embed security'."
+ },
+ {
+  "id": "q076",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "medium",
+  "reason": "'commit to perform mid-training fine-tuning and evaluations' reduced to 'monitoring the capabilities of the model in pretraining'."
+ },
+ {
+  "id": "q077",
+  "outcome": "S",
+  "dims": [
+   1
+  ],
+  "confidence": "high",
+  "reason": "Adds 'and development of' and 'significant or severe risks', broadening scope."
+ },
+ {
+  "id": "q078",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "medium",
+  "reason": "'monitoring of real-world misuse' replaced by monitoring 'the technical landscape for changes to the elicitation techniques'."
+ },
+ {
+  "id": "q079",
+  "outcome": "S",
+  "dims": [
+   4,
+   6
+  ],
+  "confidence": "medium",
+  "reason": "Drops 'recommendations for the industry' and 'our adoption ... may depend on whether such organizations ... adopt similar protocols'."
+ },
+ {
+  "id": "q080",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "'frontier AI' to 'Frontier AI model' only; same 'typically repeat evaluations'."
+ }
+]

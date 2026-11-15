@@ -1,0 +1,354 @@
+[
+ {
+  "id": "q081",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "high",
+  "reason": "\"we believe ... is an effective mitigation\" and \"use it\" become \"one possible mitigation\" and \"may be applied\"; scope narrowed to \"internal deployments\"."
+ },
+ {
+  "id": "q082",
+  "outcome": "S",
+  "dims": [
+   1
+  ],
+  "confidence": "medium",
+  "reason": "Refusal scope broadens from \"criminal activity which poses risks of severe harm\" to \"criminal or dual-use activity\", dropping the severe-harm qualifier."
+ },
+ {
+  "id": "q083",
+  "outcome": "S",
+  "dims": [
+   3
+  ],
+  "confidence": "high",
+  "reason": "Adds \"anonymous or identified reports\" and \"more than one option\" for recipients, including \"at least one executive who does not report to the RSO\"."
+ },
+ {
+  "id": "q084",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "medium",
+  "reason": "Autonomous replication and adaptation moves from the tracked autonomy category to \"2.3 Research Categories\", leaving only AI self-improvement tracked."
+ },
+ {
+  "id": "q085",
+  "outcome": "S",
+  "dims": [
+   2,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "Trigger lowered from \"uniquely enable\" to \"substantially contribute\"; \"would prompt further evaluation\" becomes \"we will conduct further evaluations\"."
+ },
+ {
+  "id": "q086",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: \"we intend to utilize benchmarks like WMD and Catastrophic Harm Benchmarks.\""
+ },
+ {
+  "id": "q087",
+  "outcome": "W",
+  "dims": [
+   3
+  ],
+  "confidence": "high",
+  "reason": "Removes \"works with a variety of governmental bodies, non-governmental organizations, private testing firms, industry peers, and academic researchers\"; third parties dropped."
+ },
+ {
+  "id": "q088",
+  "outcome": "W",
+  "dims": [
+   4
+  ],
+  "confidence": "high",
+  "reason": "\"We would perform a post-mortem\" and \"would use\" become \"We may perform\" and \"We may use\"."
+ },
+ {
+  "id": "q089",
+  "outcome": "S",
+  "dims": [
+   1
+  ],
+  "confidence": "medium",
+  "reason": "Monitoring research broadens from \"post-release monitoring of open source AI models\" to \"post-deployment monitoring of models\"."
+ },
+ {
+  "id": "q090",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "low",
+  "reason": "Explicit \"more than one hundred deaths or over $1 billion\" replaced by defined term \"Catastrophic Risk\"; safeguard trigger otherwise identical."
+ },
+ {
+  "id": "q091",
+  "outcome": "S",
+  "dims": [
+   2,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"We intend to design ... adequate safeguards\" becomes a concrete present-tense criterion: \"answer rate of less than 1 out of 20 on restricted queries\"."
+ },
+ {
+  "id": "q092",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: \"We continue to work towards developing naturalistic evaluation environments\"."
+ },
+ {
+  "id": "q093",
+  "outcome": "S",
+  "dims": [
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"data should similarly be filtered\" becomes present-tense practice \"data is filtered for harmfulness, and models are subject to automated evaluation\"."
+ },
+ {
+  "id": "q094",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only footnote number changes; \"xAI trains its models to be honest\" text otherwise identical."
+ },
+ {
+  "id": "q095",
+  "outcome": "S",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Review extends to \"residual risk\" and \"T/CCLs\" rather than only CCLs, and \"severe harm\" broadens to \"harm\"."
+ },
+ {
+  "id": "q096",
+  "outcome": "W",
+  "dims": [
+   6
+  ],
+  "confidence": "medium",
+  "reason": "Drops \"In limited cases\" and \"use-case that cannot be separated from dangerous capabilities\" conditions, though adds \"demonstrate ... equivalent levels of assurance\" (MIX)."
+ },
+ {
+  "id": "q097",
+  "outcome": "S",
+  "dims": [
+   4,
+   6
+  ],
+  "confidence": "medium",
+  "reason": "\"balance various factors\" becomes \"xAI will only proceed ... if the systemic risks ... are determined to be acceptable\"."
+ },
+ {
+  "id": "q098",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "low",
+  "reason": "Both remain recommendations: \"We recommend a security level\" vs \"We also define and recommend 'Security Level 2+'\"; no change in obligation."
+ },
+ {
+  "id": "q099",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Reporting channel moves from ASL-3 to \"ASL-2 Standard\", applying earlier, and adds \"a bug bounty for universal jailbreaks\"."
+ },
+ {
+  "id": "q100",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: \"We will not impose contractual non-disparagement obligations\"."
+ },
+ {
+  "id": "q101",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: \"dishonesty rate of less than 1 out of 2 on MASK\"."
+ },
+ {
+  "id": "q102",
+  "outcome": "W",
+  "dims": [
+   6
+  ],
+  "confidence": "low",
+  "reason": "Response shifts from \"adoption of additional capability assessment processes\" to \"updating the alert threshold\" when risks \"remain acceptable\"."
+ },
+ {
+  "id": "q103",
+  "outcome": "S",
+  "dims": [
+   3,
+   4,
+   6
+  ],
+  "confidence": "high",
+  "reason": "\"should allow for anonymous feedback\" becomes \"We will maintain\", adding protection \"from retaliation\" and escalation to \"the Board of Directors\"."
+ },
+ {
+  "id": "q104",
+  "outcome": "S",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "high",
+  "reason": "\"We intend to implement\" becomes \"xAI has implemented\", scope widens to \"critical model information\" plus measures \"against ... extraction and distillation\"."
+ },
+ {
+  "id": "q105",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Trigger lowered from \"can enable the end-to-end execution\" to \"is likely to substantially contribute\"."
+ },
+ {
+  "id": "q106",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "\"We aim\" to \"xAI aims\" and \"our risk management framework\" to \"this RMF\" are rewording only."
+ },
+ {
+  "id": "q107",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: \"Survey employees for their views and projections\"."
+ },
+ {
+  "id": "q108",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: \"xAI employees have whistleblower protections\"."
+ },
+ {
+  "id": "q109",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "Drops \"make a compelling case\" and the case \"that there does not exist a threat model that we are not evaluating\"; now only listing criteria."
+ },
+ {
+  "id": "q110",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: \"These recommended security levels ... may be adjusted if our understanding of the risks changes.\""
+ },
+ {
+  "id": "q111",
+  "outcome": "S",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"we may take steps\" becomes \"xAI will investigate ... and, if necessary, take action\", covering \"critical incidents or imminent threats\"."
+ },
+ {
+  "id": "q112",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "high",
+  "reason": "Drops \"survive and replicate\" and \"self-exfiltrate\" triggers; AI R&D bar raised to \"superhuman research-scientist agent\" from \"2x compute efficiency improvement\"."
+ },
+ {
+  "id": "q113",
+  "outcome": "S",
+  "dims": [
+   1
+  ],
+  "confidence": "low",
+  "reason": "Core sentence unchanged; adds \"we strive to learn from our post-market monitoring mechanisms\" including incident detection, response and reporting."
+ },
+ {
+  "id": "q114",
+  "outcome": "S",
+  "dims": [
+   3,
+   6
+  ],
+  "confidence": "medium",
+  "reason": "Adds \"We will maintain the position\" with duties including \"approving relevant model training or deployment decisions\" and proposing updates to the Board."
+ },
+ {
+  "id": "q115",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "low",
+  "reason": "Only \"systemic risk\" changes to \"significant and severe risk\"; process and review by \"corporate governance bodies\" otherwise identical."
+ },
+ {
+  "id": "q116",
+  "outcome": "S",
+  "dims": [
+   5
+  ],
+  "confidence": "high",
+  "reason": "\"summaries ... redacting any highly-sensitive information\" becomes \"final, unredacted Risk Reports with Anthropic's regular-clearance staff\"."
+ },
+ {
+  "id": "q117",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "confidence": "low",
+  "reason": "Removes \"our alert threshold may be defined based on these sources of information, rather than on evaluation scores\"; coverage narrows to CCLs only."
+ },
+ {
+  "id": "q118",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"should\" becomes \"will\" (stronger) but \"competent at general computer use\" and \"maximize helpfulness\" shrink to \"basic finetuning\" (MIX)."
+ },
+ {
+  "id": "q119",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "medium",
+  "reason": "\"reported or otherwise identified\" narrows to \"When we receive a report\", though \"promptly\" is added (MIX)."
+ },
+ {
+  "id": "q120",
+  "outcome": "W",
+  "dims": [
+   1,
+   3,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "\"Access is strictly limited to a small number of experts\" becomes \"Initiate protocols for heightened access controls\", though CAIO oversight is added (MIX)."
+ }
+]

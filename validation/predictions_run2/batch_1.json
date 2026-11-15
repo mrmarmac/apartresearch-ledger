@@ -1,0 +1,352 @@
+[
+ {
+  "id": "q001",
+  "outcome": "S",
+  "dims": [
+   3,
+   5
+  ],
+  "confidence": "medium",
+  "reason": "Adds 'proposed by the CEO and the Responsible Scaling Officer' and 'update the public version ... record any differences ... in a change log'."
+ },
+ {
+  "id": "q002",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only footnote marker changes ('additional10' to 'additional8'); CCL wording identical."
+ },
+ {
+  "id": "q003",
+  "outcome": "W",
+  "dims": [
+   1,
+   4
+  ],
+  "confidence": "high",
+  "reason": "'xAI utilizes' becomes 'xAI may utilize'; 'large-scale violence, terrorism' and 'major cyber weapons' dropped from scope."
+ },
+ {
+  "id": "q004",
+  "outcome": "W",
+  "dims": [
+   5
+  ],
+  "confidence": "medium",
+  "reason": "'visible to the BoD and within OpenAI' narrows to employees who 'may also request and receive a summary'; audit trails dropped."
+ },
+ {
+  "id": "q005",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "confidence": "medium",
+  "reason": "MIX: 'updated at least once a year' strengthens timing, but 'we will publish substantive revisions' is dropped."
+ },
+ {
+  "id": "q006",
+  "outcome": "W",
+  "dims": [
+   3,
+   5
+  ],
+  "confidence": "medium",
+  "reason": "Earlier 'sharing also with the BoD and Preparedness' is dropped; later only 'recommendations ... to OpenAI Leadership'."
+ },
+ {
+  "id": "q007",
+  "outcome": "S",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Trigger broadens from 'CCL' to 'T/CCL' and scope adds 'and Misalignment' to ML R&D deployment mitigations."
+ },
+ {
+  "id": "q008",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Earlier trigger 'reach (or are forecasted to reach)' high risk loses forecast prong; later applies to systems 'that cross this capability threshold'."
+ },
+ {
+  "id": "q009",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "low",
+  "reason": "MIX: adds 'utilizes a set of benchmarks', but drops 'working on identifying enforceable critical steps' and 're-assess ... in future releases'."
+ },
+ {
+  "id": "q010",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical: 'We plan to release an updated version of this policy within three months.'"
+ },
+ {
+  "id": "q011",
+  "outcome": "S",
+  "dims": [
+   4
+  ],
+  "confidence": "high",
+  "reason": "'we intend to utilize tiered availability' becomes present-tense 'xAI employs tiered availability'."
+ },
+ {
+  "id": "q012",
+  "outcome": "W",
+  "dims": [
+   4
+  ],
+  "confidence": "high",
+  "reason": "'we would take steps to stop or prevent that event' becomes 'we may take steps'."
+ },
+ {
+  "id": "q013",
+  "outcome": "W",
+  "dims": [
+   2,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "'we will be running them ... on fine-tuned versions' becomes 'evaluations are intended to approximate', with finetuning only 'if the weights will be released'."
+ },
+ {
+  "id": "q014",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Shutdown trigger lowered from increasing likelihood of 'a catastrophic event' to 'a risk'."
+ },
+ {
+  "id": "q015",
+  "outcome": "W",
+  "dims": [
+   4
+  ],
+  "confidence": "medium",
+  "reason": "'red-teaming must include this use of these modalities' replaced by descriptive 'it may be difficult or impossible for these red-teaming tests to pass'."
+ },
+ {
+  "id": "q016",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "low",
+  "reason": "Per-category trigger kept: 'any of the tracked risk categories' maps to systems that 'cross this capability threshold' in each category."
+ },
+ {
+  "id": "q017",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only adds 'security' to the illustrative 'which could include' list of disciplines."
+ },
+ {
+  "id": "q018",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "'membership will rotate yearly' reworded as 'serve for one year terms'; 'might choose' to 'may choose' is the same rung."
+ },
+ {
+  "id": "q019",
+  "outcome": "W",
+  "dims": [
+   1,
+   2,
+   3
+  ],
+  "confidence": "medium",
+  "reason": "MIX: adds 'NIST 800-171' and 'SOC 2 Type II', but drops 'sufficient to prevent ... stolen by a motivated non-state actor' and the anti-distillation measures."
+ },
+ {
+  "id": "q020",
+  "outcome": "S",
+  "dims": [
+   1
+  ],
+  "confidence": "high",
+  "reason": "Adds 'Harmful Manipulation' domain and 'misalignment CCLs'; CBRN broadens from 'attack' to 'threat'."
+ },
+ {
+  "id": "q021",
+  "outcome": "S",
+  "dims": [
+   1
+  ],
+  "confidence": "medium",
+  "reason": "Now 'for each capability threshold' must 'make a compelling case' that no unevaluated threat model 'represents a substantial amount of risk'."
+ },
+ {
+  "id": "q022",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "'a threat actor's ability' to 'the ability' is a rewording; still 'We may take into account'."
+ },
+ {
+  "id": "q023",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical; only the section number changes."
+ },
+ {
+  "id": "q024",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "Rename to FAIF; 'including catastrophic risks' only clarifies 'significant risks'; scope is otherwise unchanged."
+ },
+ {
+  "id": "q025",
+  "outcome": "S",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Adds 'Pre-deployment reviews include assessing benchmark results', internal-use review 'before extensive rollout', and updates 'before major new capabilities are launched'."
+ },
+ {
+  "id": "q026",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "CCL text identical; only the table title changes from 'CCLs' to 'CCL'."
+ },
+ {
+  "id": "q027",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "high",
+  "reason": "Drops 'should be extended further by monitoring for scaled abuse that performs prompt-based model detail extraction (e.g. distillation attacks)'."
+ },
+ {
+  "id": "q028",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical, including 'more than one hundred deaths or over $1 billion in damages'."
+ },
+ {
+  "id": "q029",
+  "outcome": "S",
+  "dims": [
+   4
+  ],
+  "confidence": "medium",
+  "reason": "'we may notify and cooperate with relevant law enforcement' becomes 'xAI will provide the relevant authorities with a copy of the incident report'."
+ },
+ {
+  "id": "q030",
+  "outcome": "W",
+  "dims": [
+   2,
+   5
+  ],
+  "confidence": "medium",
+  "reason": "MIX: Capabilities Report 'submitted to the SAG' added, but the 'dynamic (i.e., frequently updated) Scorecard' tracking post-mitigation risk is dropped."
+ },
+ {
+  "id": "q031",
+  "outcome": "S",
+  "dims": [
+   4
+  ],
+  "confidence": "medium",
+  "reason": "'Evaluations may also consist of multiple difficulty stages' becomes 'We will first conduct preliminary assessments'."
+ },
+ {
+  "id": "q032",
+  "outcome": "S",
+  "dims": [
+   4
+  ],
+  "confidence": "high",
+  "reason": "'We intend to regularly evaluate' becomes present-tense 'xAI regularly evaluates the adequacy and reliability of such benchmarks'."
+ },
+ {
+  "id": "q033",
+  "outcome": "S",
+  "dims": [
+   3,
+   4
+  ],
+  "confidence": "medium",
+  "reason": "'may be supplemented by other evaluations' becomes 'We conduct further analysis, including ... external evaluations, and post-market monitoring'."
+ },
+ {
+  "id": "q034",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Only adds the 'Supply chain:' label; 'must be regularly reviewed' is unchanged."
+ },
+ {
+  "id": "q035",
+  "outcome": "W",
+  "dims": [
+   2,
+   3,
+   5
+  ],
+  "confidence": "high",
+  "reason": "Quarterly report 'to our board and LTBT' becomes cases that 'may be reported to the Board' and 'regularly update the Board'; LTBT dropped."
+ },
+ {
+  "id": "q036",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "'We will explore' becomes present-tense 'xAI is exploring', the same rung under rule 11.1; only the example is extended."
+ },
+ {
+  "id": "q037",
+  "outcome": "W",
+  "dims": [
+   2,
+   4,
+   6
+  ],
+  "confidence": "high",
+  "reason": "'will be audited by qualified, independent third-parties' becomes 'If we deem that a deployment warrants', 'when available and feasible'."
+ },
+ {
+  "id": "q038",
+  "outcome": "S",
+  "dims": [
+   4,
+   6
+  ],
+  "confidence": "high",
+  "reason": "'one possible mitigation' / 'may be applied' becomes 'we will carry out periodic residual risk assessments' and safeguards 'will be applied'."
+ },
+ {
+  "id": "q039",
+  "outcome": "S",
+  "dims": [
+   2
+  ],
+  "confidence": "low",
+  "reason": "Illustrative 'may be triggered, for example' becomes a fixed trigger 'upon the completion of a post-training run' on various checkpoints."
+ },
+ {
+  "id": "q040",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical."
+ }
+]
