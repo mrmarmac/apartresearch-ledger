@@ -199,48 +199,73 @@ def fig8():
     save(fig, "fig8_survival_of_first_commitments.png")
 
 
-# Figure 9: one row for each xAI commitment, one column for each version.
-def fig9():
+# Figures 9 and 12 to 15: one row for each commitment of a developer, one column for each version.
+def strip(lab, name, title):
     from matplotlib.patches import Patch
-    versions = [v for v in L["versions"] if v["lab"] == "xai"]
+    versions = [v for v in L["versions"] if v["lab"] == lab]
+    items = [c for c in L["commitments"] if c["lab"] == lab]
+    start = min(i for i, v in enumerate(versions) if any(c["first_version_id"] == v["version_id"] for c in items))
+    skipped = [v["label"] for v in versions[:start]]
+    versions = versions[start:]
     vids = [v["version_id"] for v in versions]
-    items = [c for c in L["commitments"] if c["lab"] == "xai"]
-    colour = {"baseline": "#DDDDDD", "kept": "#DDDDDD", "added": C["added"], "strengthened": C["strengthened"],
-              "weakened": C["weakened"], "removed": C["removed"], "merged": "#888888"}
-    rank = {"removed": 0, "weakened": 1, "merged": 2, "kept": 3, "baseline": 3, "strengthened": 4, "added": 5}
+    grey, open_edge = "#DDDDDD", "#999999"
+    colour = {"baseline": grey, "kept": grey, "added": C["added"], "strengthened": C["strengthened"],
+              "weakened": C["weakened"], "removed": C["removed"], "relocated": C["relocated"], "merged": "#888888"}
+    rank = {"removed": 0, "relocated": 1, "weakened": 2, "merged": 3, "kept": 4, "baseline": 4, "strengthened": 5, "added": 6}
 
     def key(c):
         last = c["history"][-1]["status"]
-        return (vids.index(c["first_version_id"]), rank.get(last, 3), -len(c["history"]))
+        end = 0 if c["current_status"] in ("removed", "relocated") else 1 if c["current_status"] in ("not_traced", "merged") else 2
+        return (vids.index(c["first_version_id"]), end, vids.index(c["last_version_id"]), rank.get(last, 4))
     items.sort(key=key)
-    fig, ax = plt.subplots(figsize=(7.5, 10.5))
+    fig, ax = plt.subplots(figsize=(max(5.5, 1.5 * len(vids) + 2), max(4, 0.155 * len(items) + 1.6)))
+    used = set()
     for y, c in enumerate(items):
-        by = {h["version_id"]: h["status"] for h in c["history"]}
-        for x, vid in enumerate(vids):
-            status = by.get(vid)
-            if status is None:
-                continue
-            ax.add_patch(plt.Rectangle((x + 0.04, y + 0.1), 0.92, 0.8, color=colour.get(status, "#DDDDDD"), lw=0))
-        if c["merged_into"]:
-            x = vids.index(c["last_version_id"]) + 1
-            if x < len(vids):
-                ax.add_patch(plt.Rectangle((x + 0.04, y + 0.1), 0.92, 0.8, color=colour["merged"], lw=0))
-        ax.text(-0.08, y + 0.5, c["id"].replace("xai-", ""), ha="right", va="center", fontsize=5.5, family="monospace")
+        for h in c["history"]:
+            x = vids.index(h["version_id"])
+            used.add(h["status"] if h["status"] not in ("baseline", "kept") else "kept")
+            ax.add_patch(plt.Rectangle((x + 0.04, y + 0.1), 0.92, 0.8, color=colour.get(h["status"], grey), lw=0))
+        x = vids.index(c["last_version_id"]) + 1
+        if x < len(vids) and c["current_status"] == "merged":
+            used.add("merged")
+            ax.add_patch(plt.Rectangle((x + 0.04, y + 0.1), 0.92, 0.8, color=colour["merged"], lw=0))
+        if x < len(vids) and c["current_status"] == "not_traced":
+            used.add("not_traced")
+            ax.add_patch(plt.Rectangle((x + 0.06, y + 0.14), 0.88, 0.72, facecolor="white", edgecolor=open_edge, lw=0.6))
+        ax.text(-0.08, y + 0.5, c["id"].replace(lab + "-", ""), ha="right", va="center", fontsize=5.5, family="monospace")
     ax.set_xlim(0, len(vids))
     ax.set_ylim(len(items), 0)
-    ax.set_xticks([x + 0.5 for x in range(len(vids))],
-                  [v["label"].replace("draft-", "draft\n") for v in versions], fontsize=8)
+    ax.set_xticks([x + 0.5 for x in range(len(vids))], [v["label"].replace("draft-", "draft\n") for v in versions], fontsize=8)
     ax.xaxis.tick_top()
     ax.set_yticks([])
     for side in ("left", "bottom", "top"):
         ax.spines[side].set_visible(False)
     ax.tick_params(length=0)
-    handles = [Patch(color="#DDDDDD", label="present, no material change"), Patch(color=C["added"], label="added"),
-               Patch(color=C["strengthened"], label="strengthened"), Patch(color=C["weakened"], label="weakened"),
-               Patch(color=C["removed"], label="removed"), Patch(color="#888888", label="merged into another row")]
-    ax.legend(handles=handles, ncol=3, frameon=False, fontsize=8, loc="upper center", bbox_to_anchor=(0.45, -0.01))
-    ax.set_title("64 xAI commitments across 5 versions: one row is one commitment", pad=28)
-    save(fig, "fig9_xai_commitment_strip.png")
+    legend = [("kept", Patch(color=grey, label="present, no material change")), ("added", Patch(color=C["added"], label="added")),
+              ("strengthened", Patch(color=C["strengthened"], label="strengthened")),
+              ("weakened", Patch(color=C["weakened"], label="weakened")), ("removed", Patch(color=C["removed"], label="removed")),
+              ("relocated", Patch(color=C["relocated"], label="relocated to another document")),
+              ("merged", Patch(color="#888888", label="merged into another row")),
+              ("not_traced", Patch(facecolor="white", edgecolor=open_edge, label="not traced after this version"))]
+    handles = [h for k, h in legend if k in used]
+    inches = fig.get_size_inches()[1]
+    ax.legend(handles=handles, ncol=min(3, len(handles)), frameon=False, fontsize=8, loc="upper center",
+              bbox_to_anchor=(0.45, -0.15 / inches))
+    note = f" Version {', '.join(skipped)} is not traced." if skipped else ""
+    ax.set_title(title + note, pad=28, fontsize=11)
+    save(fig, name)
+
+
+def fig9():
+    strip("xai", "fig9_xai_commitment_strip.png", "64 xAI commitments across 5 versions: one row is one commitment")
+
+
+def fig12():
+    n = {lab: sum(1 for c in L["commitments"] if c["lab"] == lab) for lab in LAB}
+    strip("google", "fig12_google_commitment_strip.png", f"{n['google']} Google DeepMind commitments across 3 versions.")
+    strip("openai", "fig13_openai_commitment_strip.png", f"{n['openai']} OpenAI commitments across 2 versions")
+    strip("meta", "fig14_meta_commitment_strip.png", f"{n['meta']} Meta commitments across 3 versions")
+    strip("anthropic", "fig15_anthropic_commitment_strip.png", f"{n['anthropic']} Anthropic commitments across 9 versions")
 
 
 # Figure 10: validation results in two groups.
@@ -309,5 +334,5 @@ def fig11():
 
 
 if __name__ == "__main__":
-    for make in (fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11):
+    for make in (fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10, fig11, fig12):
         make()
