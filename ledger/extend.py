@@ -280,7 +280,7 @@ def apply(ledger, corpus, folder, tags_for):
     final = _load(folder, "adjudication.json")
     if final:
         names = {"R": "kept", "S": "strengthened", "W": "weakened"}
-        decided = {(d["id"], vid(d["version"])): d for d in final["decisions"]}
+        decided = {(d["id"], vid(d["version"])): d for d in final["decisions"] if not d.get("held")}
         for item in ledger["commitments"]:
             for old in [item["id"]] + item["former_ids"]:
                 for entry in item["history"]:
@@ -365,13 +365,44 @@ def human_report(folder):
         f"- **The model codes \"weakened\" more often than the human.** Of the {len(weak)} entries that the model coded weakened, the human coded "
         f"{sum(r[0]['code'] == 'W' for r in weak)} weakened, {sum(r[0]['code'] == 'R' for r in weak)} kept and {sum(r[0]['code'] == 'S' for r in weak)} strengthened.",
         "- **The ledger does not overwrite the model code.** An entry where the human agrees has `human_check: agrees`. Each other entry has `needs_review: true` and records the human answer.",
-        "- **The disagreements are not adjudicated.** Nobody decided who is correct.",
+        "- **The blind disagreements are adjudicated below.**",
         "", "| Item | Commitment | Version | Model run 1 | Model run 2 | Human | Model's reason |", "|---|---|---|---|---|---|---|",
     ]
     for a, x, y in rows:
         if a["code"] != x["outcome"]:
             reason = clean(x.get("reason", "")).replace("|", "/")
             lines.append(f"| {a['item']} | `{a['id']}` | {a['version']} | {names[x['outcome']]} | {names[y['outcome']]} | {names[a['code']]} | {reason} |")
+    final = _load(folder, "adjudication.json")
+    if final:
+        done = [d for d in final["decisions"] if not d.get("held")]
+        held = [d for d in final["decisions"] if d.get("held")]
+        coded = [d for d in done if d["final"] in "RSW"]
+        k = lambda d: (d["id"], d["version"])
+        runs_agree = [d for d in coded if one[k(d)]["outcome"] == two[k(d)]["outcome"]]
+        runs_differ = [d for d in coded if one[k(d)]["outcome"] != two[k(d)]["outcome"]]
+        first = {(a["id"], a["version"]): a["code"] for a in human["answers"]}
+        lines += [
+            "", "### Adjudication: a second look at the entries without agreement", "",
+            f"**Method.** {final['method']} Page: `{final.get('page', '')}`. "
+            f"{len(done)} entries adjudicated. {len(held)} held open.", "",
+            "| Group | Entries | Final = model run 1 | Final = model run 2 | Final = first human answer |", "|---|---|---|---|---|",
+            f"| The two model runs agreed | {len(runs_agree)} | {sum(d['final'] == one[k(d)]['outcome'] for d in runs_agree)} | {sum(d['final'] == two[k(d)]['outcome'] for d in runs_agree)} | {sum(d['final'] == first[k(d)] for d in runs_agree)} |",
+            f"| The two model runs disagreed | {len(runs_differ)} | {sum(d['final'] == one[k(d)]['outcome'] for d in runs_differ)} | {sum(d['final'] == two[k(d)]['outcome'] for d in runs_differ)} | {sum(d['final'] == first[k(d)] for d in runs_differ)} |",
+            "",
+            f"- **Where the two model runs agreed, the adjudicated code is the model code in {sum(d['final'] == one[k(d)]['outcome'] for d in runs_agree)} of {len(runs_agree)} adjudicated entries.** "
+            "Together with the 34 entries where the blind check agreed, the model code stands in each decided entry where the two runs agreed.",
+            f"- **Each final code that differs from model run 1 is an entry where the two model runs disagreed** ({sum(d['final'] != one[k(d)]['outcome'] for d in runs_differ)} of {len(runs_differ)}). "
+            "The rule \"run two times, send disagreements to a person\" found each of them.",
+            "- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in "
+            f"{sum(d['final'] != first[k(d)] for d in coded)} of {len(coded)} adjudicated entries.",
+            f"- Not coded on second look: {', '.join(d['item'] + ' (' + names[d['final']] + ')' for d in done if d['final'] not in 'RSW') or 'none'}. "
+            f"Held open: {', '.join(d['item'] for d in held) or 'none'}.",
+            "- **The second look was not blind.** The adjudicator saw the model's reasons. Agreement with the model after that is weaker evidence than blind agreement.",
+            "", "| Item | Commitment | Version | Model run 1 | Model run 2 | First human answer | Final |", "|---|---|---|---|---|---|---|",
+        ]
+        for d in final["decisions"]:
+            tail = " (held, not applied)" if d.get("held") else ""
+            lines.append(f"| {d['item']} | `{d['id']}` | {d['version']} | {names[one[k(d)]['outcome']]} | {names[two[k(d)]['outcome']]} | {names[first[k(d)]]} | {names[d['final']]}{tail} |")
     lines += [
         "",
         "Limits: one coder, who is the author and is not independent. "

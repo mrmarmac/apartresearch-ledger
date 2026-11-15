@@ -3,7 +3,100 @@
  "date": "2026-11-15",
  "method": "Second look, not blind. The adjudicator saw both texts, the context, the two model answers with reasons, and his first answer.",
  "decisions": [
-  {"item": "e14", "id": "anthropic-consequence-9c90", "version": "v3.3", "final": "W", "basis": "In conversation: the trigger is now harder to reach."},
-  {"item": "e29", "id": "anthropic-security-8ada", "version": "v2.2", "final": "W", "basis": "In conversation: the exclusion is wider."}
- ]
+  {
+   "item": "e14",
+   "id": "anthropic-consequence-9c90",
+   "version": "v3.3",
+   "final": "W",
+   "basis": "In conversation: the trigger is now harder to reach."
+  },
+  {
+   "item": "e29",
+   "id": "anthropic-security-8ada",
+   "version": "v2.2",
+   "final": "W",
+   "basis": "In conversation: the exclusion is wider."
+  },
+  {
+   "item": "e01",
+   "id": "anthropic-security-06a3",
+   "version": "v3.3",
+   "final": "R",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e09",
+   "id": "anthropic-governance-d559",
+   "version": "v3.4",
+   "final": "W",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e16",
+   "id": "anthropic-security-d7b4",
+   "version": "v2.2",
+   "final": "U",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e19",
+   "id": "anthropic-third-party-cef3",
+   "version": "v3.2",
+   "final": "W",
+   "basis": "Adjudication page. Not applied: the assistant asked the adjudicator to confirm this answer.",
+   "held": true
+  },
+  {
+   "item": "e25",
+   "id": "anthropic-eval-scope-704a",
+   "version": "v3.1",
+   "final": "S",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e26",
+   "id": "anthropic-consequence-3e7e",
+   "version": "v3.1",
+   "final": "S",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e34",
+   "id": "anthropic-eval-trigger-5482",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e40",
+   "id": "anthropic-third-party-38ba",
+   "version": "v3.1",
+   "final": "W",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e41",
+   "id": "anthropic-consequence-a1d2",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e45",
+   "id": "anthropic-governance-4adb",
+   "version": "v3.1",
+   "final": "W",
+   "basis": "Adjudication page."
+  },
+  {
+   "item": "e46",
+   "id": "anthropic-eval-trigger-efa4",
+   "version": "v2.1",
+   "final": "W",
+   "basis": "Adjudication page."
+  }
+ ],
+ "page": "data/extension/anthropic/adjudication_page.html",
+ "first_answer_utc": "2026-11-15T06:45:00Z",
+ "last_answer_utc": "2026-11-15T06:53:46Z"
 }

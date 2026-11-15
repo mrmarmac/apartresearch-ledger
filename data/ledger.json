@@ -7186,12 +7186,12 @@
         {
           "event_id": "anthropic-eval-trigger-5482@anthropic-v2.1",
           "version_id": "anthropic-v2.1",
-          "status": "kept",
+          "status": "weakened",
           "quote": "In parallel with upgrading a model to the Required Safeguards, we will (1) update this policy to include any additional Capability Thresholds for which the Required Safeguards would be insufficient; and (2) conduct a follow-up capability assessment to determine that the model’s capabilities fall sufficiently far away from those Capability Thresholds, following the procedures outlined in Section 3.",
           "section": "5. Follow-Up Capability Assessment",
           "section_changed": false,
           "mixed": false,
-          "material": false,
+          "material": true,
           "disclosure": null,
           "confidence": null,
           "rationale": "Assessment moved to 'in parallel with upgrading', but Section 6.1 still requires confirming model 'sufficiently far away from the next set of Capability Thresholds' before deploying.",
@@ -7203,8 +7203,8 @@
           "wayback_timestamp": "20250401013032",
           "sha256": "c239fc31d4acabba7b35437dba103fcae4c4d4b8ae25b43bdff28b63f5c40ac5",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "cannot_tell"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-eval-trigger-5482@anthropic-v2.2",
@@ -10291,8 +10291,8 @@
           "wayback_timestamp": null,
           "sha256": "5aa73a3b3155ef856e429711c8d156e18d9b5ce1e28c2e0a74019a2c3c764d7b",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:kept"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-third-party-2587@anthropic-v3.2",
@@ -16189,7 +16189,7 @@
         {
           "event_id": "anthropic-eval-trigger-efa4@anthropic-v2.1",
           "version_id": "anthropic-v2.1",
-          "status": "strengthened",
+          "status": "weakened",
           "quote": "Autonomous AI Research and Development (AI R&D) AI R&D-4: The ability to fully automate the work of an entry-level, remote-only Researcher at Anthropic. The ASL-3 Security Standard is required. In addition, we will develop an affirmative case that (1) identifies the most immediate and relevant risks from models pursuing misaligned goals and (2) explains how we have mitigated these risks to acceptable levels. The affirmative case will describe, as relevant, evidence on model capabilities; evidence on AI alignment; mitigations (such as monitoring and other safeguards); and our overall reasoning. AI R&D-5: The ability to cause dramatic acceleration in the rate of effective scaling At minimum, the ASL-4 Security Standard (which would protect against model-weight theft by state-level adversaries) is required, although we expect a higher security standard may be required. As with AI R&D-4, we also expect an affirmative case will be required.",
           "section": "2. Capability Thresholds and Required Safeguards",
           "section_changed": false,
@@ -16206,8 +16206,8 @@
           "wayback_timestamp": "20250401013032",
           "sha256": "c239fc31d4acabba7b35437dba103fcae4c4d4b8ae25b43bdff28b63f5c40ac5",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:weakened"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-eval-trigger-efa4@anthropic-v2.2",
@@ -16296,8 +16296,8 @@
           "wayback_timestamp": "20250401013032",
           "sha256": "c239fc31d4acabba7b35437dba103fcae4c4d4b8ae25b43bdff28b63f5c40ac5",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:kept"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-consequence-a1d2@anthropic-v2.2",
@@ -16917,8 +16917,8 @@
           "wayback_timestamp": null,
           "sha256": "6247b9e4001fd342827526fabc476c9d4dd6b2041ac00055f0ccda26f4d0b07d",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:strengthened"
+          "needs_review": false,
+          "human_check": "adjudicated"
         }
       ],
       "former_ids": [],
@@ -17568,7 +17568,7 @@
           "sha256": "4807f3970c76968a75a6dffa55d8ffe547014522b63c67e261cd02f7b6fc1e39",
           "coded_by": "model",
           "needs_review": true,
-          "human_check": "disagrees:strengthened"
+          "human_check": "adjudicated:cannot_tell"
         }
       ],
       "former_ids": [],
@@ -17900,8 +17900,8 @@
           "wayback_timestamp": null,
           "sha256": "5aa73a3b3155ef856e429711c8d156e18d9b5ce1e28c2e0a74019a2c3c764d7b",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:kept"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-governance-4adb@anthropic-v3.2",
@@ -20187,12 +20187,12 @@
         {
           "event_id": "anthropic-consequence-3e7e@anthropic-v3.1",
           "version_id": "anthropic-v3.1",
-          "status": "kept",
+          "status": "strengthened",
           "quote": "We will: ● Resource and complete significant “moonshot R&D for security” projects, to explore ambitious and possibly unconventional ways to achieve unprecedented levels of security against the world’s best-resourced attackers.",
           "section": "1. Our Recommendations for Industry-Wide Safety",
           "section_changed": false,
           "mixed": false,
-          "material": false,
+          "material": true,
           "disclosure": null,
           "confidence": null,
           "rationale": "'We will: Resource and complete significant moonshot R&D for security' unchanged; revised trigger wording is truncated in context and cannot be verified.",
@@ -20204,8 +20204,8 @@
           "wayback_timestamp": null,
           "sha256": "5aa73a3b3155ef856e429711c8d156e18d9b5ce1e28c2e0a74019a2c3c764d7b",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "not_same_thing"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-consequence-3e7e@anthropic-v3.2",
@@ -25021,7 +25021,7 @@
         {
           "event_id": "anthropic-eval-scope-704a@anthropic-v3.1",
           "version_id": "anthropic-v3.1",
-          "status": "weakened",
+          "status": "strengthened",
           "quote": "Scope.A Risk Report will cover all publicly deployedmodels at the time of its publication. It will also cover internally deployed models when we determine that these models could pose significant risks5beyond those posed by models that are covered by a prior Risk Report. While there are a variety of reasons we might classify an internal model this way, this will—at a minimum—include any internal models that we are deploying for large-scale, fully autonomous research.",
           "section": "3.1. Scope and Timing",
           "section_changed": false,
@@ -25038,8 +25038,8 @@
           "wayback_timestamp": null,
           "sha256": "5aa73a3b3155ef856e429711c8d156e18d9b5ce1e28c2e0a74019a2c3c764d7b",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "disagrees:strengthened"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-eval-scope-704a@anthropic-v3.2",
@@ -27577,8 +27577,8 @@
           "wayback_timestamp": null,
           "sha256": "b7e7cc1e72e9371949415522ae3c9e61103cc739c5df64579af32dd941624f42",
           "coded_by": "model",
-          "needs_review": true,
-          "human_check": "cannot_tell"
+          "needs_review": false,
+          "human_check": "adjudicated"
         },
         {
           "event_id": "anthropic-security-06a3@anthropic-v3.4",

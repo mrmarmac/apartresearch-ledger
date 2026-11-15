@@ -161,7 +161,7 @@ Where the two model runs agree with each other (42 decided entries), the human a
 
 - **The model codes "weakened" more often than the human.** Of the 14 entries that the model coded weakened, the human coded 6 weakened, 4 kept and 4 strengthened.
 - **The ledger does not overwrite the model code.** An entry where the human agrees has `human_check: agrees`. Each other entry has `needs_review: true` and records the human answer.
-- **The disagreements are not adjudicated.** Nobody decided who is correct.
+- **The blind disagreements are adjudicated below.**
 
 | Item | Commitment | Version | Model run 1 | Model run 2 | Human | Model's reason |
 |---|---|---|---|---|---|---|
@@ -178,6 +178,37 @@ Where the two model runs agree with each other (42 decided entries), the human a
 | e41 | `anthropic-consequence-a1d2` | v2.1 | weakened | weakened | kept | 'update our list of Capability Thresholds to consider additional risks' replaced by 'begin testing for ... any additional risks'; context only says 'we may identify additional thresholds'. |
 | e45 | `anthropic-governance-4adb` | v3.1 | weakened | weakened | kept | 'Separate internal reviewers will provide comprehensive feedback' becomes 'We will solicit comprehensive internal feedback', dropping reviewer separateness and guaranteed feedback. |
 | e46 | `anthropic-eval-trigger-efa4` | v2.1 | strengthened | weakened | weakened | AI R&D-5 now requires 'At minimum, the ASL-4 Security Standard' (was ASL-3), and AI R&D-4 adds 'we will develop an affirmative case' on misalignment. |
+
+### Adjudication: a second look at the entries without agreement
+
+**Method.** Second look, not blind. The adjudicator saw both texts, the context, the two model answers with reasons, and his first answer. Page: `data/extension/anthropic/adjudication_page.html`. 12 entries adjudicated. 1 held open.
+
+| Group | Entries | Final = model run 1 | Final = model run 2 | Final = first human answer |
+|---|---|---|---|---|
+| The two model runs agreed | 7 | 7 | 7 | 0 |
+| The two model runs disagreed | 4 | 0 | 3 | 2 |
+
+- **Where the two model runs agreed, the adjudicated code is the model code in 7 of 7 adjudicated entries.** Together with the 34 entries where the blind check agreed, the model code stands in each decided entry where the two runs agreed.
+- **Each final code that differs from model run 1 is an entry where the two model runs disagreed** (4 of 4). The rule "run two times, send disagreements to a person" found each of them.
+- **The blind first answers were less reliable than the second look.** The adjudicator changed his own first answer in 9 of 11 adjudicated entries.
+- Not coded on second look: e16 (cannot tell). Held open: e19.
+- **The second look was not blind.** The adjudicator saw the model's reasons. Agreement with the model after that is weaker evidence than blind agreement.
+
+| Item | Commitment | Version | Model run 1 | Model run 2 | First human answer | Final |
+|---|---|---|---|---|---|---|
+| e14 | `anthropic-consequence-9c90` | v3.3 | weakened | weakened | strengthened | weakened |
+| e29 | `anthropic-security-8ada` | v2.2 | weakened | weakened | strengthened | weakened |
+| e01 | `anthropic-security-06a3` | v3.3 | kept | kept | cannot tell | kept |
+| e09 | `anthropic-governance-d559` | v3.4 | weakened | weakened | strengthened | weakened |
+| e16 | `anthropic-security-d7b4` | v2.2 | kept | kept | strengthened | cannot tell |
+| e19 | `anthropic-third-party-cef3` | v3.2 | weakened | weakened | kept | weakened (held, not applied) |
+| e25 | `anthropic-eval-scope-704a` | v3.1 | weakened | kept | strengthened | strengthened |
+| e26 | `anthropic-consequence-3e7e` | v3.1 | kept | strengthened | not the same thing | strengthened |
+| e34 | `anthropic-eval-trigger-5482` | v2.1 | kept | weakened | cannot tell | weakened |
+| e40 | `anthropic-third-party-38ba` | v3.1 | weakened | weakened | kept | weakened |
+| e41 | `anthropic-consequence-a1d2` | v2.1 | weakened | weakened | kept | weakened |
+| e45 | `anthropic-governance-4adb` | v3.1 | weakened | weakened | kept | weakened |
+| e46 | `anthropic-eval-trigger-efa4` | v2.1 | strengthened | weakened | weakened | weakened |
 
 Limits: one coder, who is the author and is not independent. The coder took about 28 minutes for 47 entries, which is about 36 seconds for each entry of about 900 characters plus context. The later text comes from a PDF extraction, and some extracts are cut by a page break. The coder used a summary of the rules.
 
