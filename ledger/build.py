@@ -25,11 +25,16 @@ def build_versions(corpus, provider, lab):
     versions = {}
     for row in corpus.framework_rows(provider):
         vid = version_id(lab, row["version"])
+        stamp = row["wayback_capture_timestamp"] or None
+        if not stamp:
+            # Some rows give the Wayback capture only inside the retrieval URL.
+            found = re.search(r"web\.archive\.org/web/(\d{14})", row["retrieval_url"])
+            stamp = found.group(1) if found else None
         item = {
             "label": row["version"],
             "sha256": row["sha256"],
             "source_url": row["retrieval_url"],
-            "wayback_timestamp": row["wayback_capture_timestamp"] or None,
+            "wayback_timestamp": stamp,
         }
         if row["version"] == base_label(row["version"]):
             versions[vid] = {

@@ -64,3 +64,43 @@ TAGS = {
 }
 
 FUZZY_THRESHOLD = 0.9
+
+SITE_URL = "https://mrmarmac.github.io/apartresearch-ledger"
+REPO_URL = "https://github.com/mrmarmac/apartresearch-ledger"
+SITE_TITLE = "Commitment Ledger"
+
+STATUS_LABEL = {
+    "baseline": "First seen",
+    "added": "Added",
+    "kept": "Kept",
+    "strengthened": "Strengthened",
+    "weakened": "Weakened",
+    "removed": "Removed",
+    "relocated": "Relocated",
+    "active": "Active",
+    "merged": "Merged",
+    "not_traced": "Not traced",
+}
+STATUS_MARK = {
+    "baseline": "•", "added": "+", "kept": "=", "strengthened": "↑",
+    "weakened": "↓", "removed": "×", "relocated": "→",
+}
+TOPIC_LABEL = {
+    "eval-scope": "Evaluation scope",
+    "eval-trigger": "Triggers and thresholds",
+    "eval-method": "Evaluation method",
+    "third-party": "Third-party involvement",
+    "disclosure": "Disclosure",
+    "consequence": "Consequences of results",
+    "governance": "Governance and oversight",
+    "security": "Security",
+    "mitigation": "Mitigations",
+}
+DISCLOSURE_LABEL = {
+    "announced": "The developer's account identifies this change.",
+    "partly_announced": "The developer's account identifies the area, but not the change.",
+    "silent": "The developer published an account. It does not identify this change.",
+    "no_account": "The developer published no account of this revision.",
+}
+# Events that go into the feed. "kept" and "baseline" are not changes.
+FEED_STATUSES = ("added", "strengthened", "weakened", "removed", "relocated")

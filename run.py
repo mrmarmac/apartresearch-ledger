@@ -4,6 +4,7 @@
   python run.py fetch      Download the upstream corpus (pinned commit) into cache/.
   python run.py build      Write data/ledger.json.
   python run.py validate   Check data/ledger.json and examples/ against schema.json.
+  python run.py site       Write the static site and feed.xml into docs/.
   python run.py check      Check that the demo path works.
   python run.py stats      Print a count table.
   python run.py all        fetch, build, validate, stats.
@@ -47,6 +48,16 @@ def do_build():
         handle.write("\n")
     print(f"wrote {os.path.relpath(LEDGER, ROOT)}: "
           f"{len(ledger['commitments'])} commitments, {len(ledger['versions'])} versions")
+
+
+def site():
+    from ledger.site import render
+    with open(LEDGER, encoding="utf-8") as handle:
+        ledger = json.load(handle)
+    out = os.path.join(ROOT, "docs")
+    os.makedirs(out, exist_ok=True)
+    pages = render(ledger, ROOT, out)
+    print(f"wrote docs/: index, {pages} commitment pages, feed.xml")
 
 
 def validate():
@@ -110,8 +121,8 @@ def check():
     print("ok   demo path: whistleblower commitment, 5 versions, last status removed")
 
 
-COMMANDS = {"check": [check], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
-            "all": [fetch, do_build, validate, check, stats]}
+COMMANDS = {"check": [check], "site": [site], "fetch": [fetch], "build": [do_build], "validate": [validate], "stats": [stats],
+            "all": [fetch, do_build, validate, check, site, stats]}
 
 if __name__ == "__main__":
     name = sys.argv[1] if len(sys.argv) > 1 else ""

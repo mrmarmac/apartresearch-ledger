@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>xAI is exploring building truth-seeking AI tools, such as AIs that… · xAI · Commitment Ledger</title>
+<meta name="description" content="xAI commitment xai-mitigation-7a83: xAI is exploring building truth-seeking AI tools, such as AIs that can help users better assess and understand events by better sorting…">
+<link rel="alternate" type="application/rss+xml" title="Commitment Ledger changes" href="../feed.xml">
+<style>
+:root{--bg:#f6f4ee;--panel:#fffdf8;--ink:#1c1b18;--muted:#6a665c;--line:#d9d4c6;--accent:#1f4e79;
+--removed:#a4262c;--removed-bg:#fbe9e7;--weakened:#8a5300;--weakened-bg:#fdf0d5;--strengthened:#1d6b3a;--strengthened-bg:#e3f3e6;
+--added:#1f4e79;--added-bg:#e4eef8;--kept:#5d5a52;--kept-bg:#ebe8df;--relocated:#5b3a8c;--relocated-bg:#efe8f8}
+:root:not([data-theme="light"]){color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15161a;--panel:#1d1f24;--ink:#e9e6df;--muted:#a09c92;--line:#34363d;--accent:#8fbde8;
+--removed:#ff9d96;--removed-bg:#4a1f1f;--weakened:#f2c26b;--weakened-bg:#43330f;--strengthened:#8fd6a4;--strengthened-bg:#173722;
+--added:#8fbde8;--added-bg:#172f47;--kept:#b5b1a6;--kept-bg:#2b2d33;--relocated:#c9aef2;--relocated-bg:#32244a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 56px}
+header.top{border-bottom:1px solid var(--line);padding:14px 0;margin-bottom:22px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+header.top a.home{font-weight:700;color:var(--ink);text-decoration:none;letter-spacing:.01em}
+header.top nav{margin-left:auto;display:flex;gap:14px;font-size:14px;flex-wrap:wrap}
+h1{font-size:26px;line-height:1.25;margin:0 0 8px}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:30px 0 10px}
+p.lede{color:var(--muted);margin:0 0 18px;max-width:62ch}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px}
+.quote{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:17px;line-height:1.5}
+.badge{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:3px;white-space:nowrap;border:1px solid currentColor}
+.s-removed{color:var(--removed);background:var(--removed-bg)}
+.s-weakened{color:var(--weakened);background:var(--weakened-bg)}
+.s-strengthened{color:var(--strengthened);background:var(--strengthened-bg)}
+.s-added,.s-active{color:var(--added);background:var(--added-bg)}
+.s-kept,.s-baseline,.s-merged,.s-not_traced{color:var(--kept);background:var(--kept-bg)}
+.s-relocated{color:var(--relocated);background:var(--relocated-bg)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chip{font-size:13px;padding:3px 10px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);text-decoration:none;cursor:pointer;font-family:inherit}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.filters{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 6px}
+.filters label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block}
+.filters select,.filters input{width:100%;font:inherit;font-size:16px;padding:8px;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--ink);margin-top:3px}
+.filters .wide{grid-column:1/-1}
+.count{color:var(--muted);font-size:14px;margin:12px 0 6px}
+ul.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+ul.rows li{border-bottom:1px solid var(--line)}
+ul.rows a{display:block;padding:13px 2px;color:inherit;text-decoration:none}
+ul.rows a:hover .rtext,ul.rows a:focus .rtext{text-decoration:underline}
+.rmeta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:4px}
+.rtext{font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;font-size:16px;line-height:1.45}
+.strip{display:inline-flex;gap:2px;margin-left:auto}
+.strip span{width:18px;height:18px;line-height:16px;text-align:center;font-size:12px;font-weight:700;border-radius:2px;border:1px solid currentColor}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px}
+ol.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);margin-left:6px}
+ol.timeline>li{position:relative;padding:0 0 26px 20px}
+ol.timeline>li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+ol.timeline>li.is-removed::before{background:var(--removed);border-color:var(--removed)}
+ol.timeline>li.is-weakened::before{background:var(--weakened);border-color:var(--weakened)}
+ol.timeline>li.is-strengthened::before{background:var(--strengthened);border-color:var(--strengthened)}
+ol.timeline>li.is-added::before{background:var(--added);border-color:var(--added)}
+.when{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.when time{font-weight:700}
+.when .doc{color:var(--muted);font-size:14px}
+del{color:var(--removed);background:var(--removed-bg);text-decoration:line-through;padding:0 2px;border-radius:2px}
+ins{color:var(--strengthened);background:var(--strengthened-bg);text-decoration:none;padding:0 2px;border-radius:2px}
+.gone{color:var(--removed);text-decoration:line-through;text-decoration-thickness:1px}
+.note{font-size:14px;color:var(--muted);margin:8px 0 0}
+.note b{color:var(--ink);font-weight:600}
+dl.src{display:grid;grid-template-columns:max-content 1fr;gap:3px 12px;font-size:13px;margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--line)}
+dl.src dt{color:var(--muted)}
+dl.src dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.idline{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0}
+button.copy{font:inherit;font-size:12px;padding:2px 8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:3px;cursor:pointer}
+footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.legend{display:flex;gap:6px 12px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin:6px 0 0}
+.legend span span{display:inline-block;width:18px;height:18px;line-height:16px;text-align:center;font-weight:700;border:1px solid currentColor;border-radius:2px;margin-right:4px;font-size:12px}
+@media (max-width:560px){h1{font-size:22px}.filters{grid-template-columns:1fr 1fr}.strip{margin-left:0;width:100%}.quote{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="home" href="../index.html">Commitment Ledger</a>
+<nav><a href="../ledger.json">ledger.json</a><a href="../feed.xml">RSS</a><a href="../schema.json">Schema</a><a href="https://github.com/mrmarmac/apartresearch-ledger">GitHub</a></nav>
+</header>
+
+<p class="rmeta"><a href="../index.html?lab=xai">xAI</a><span>·</span><span>Mitigations</span></p>
+<h1 class="quote gone" style="font-weight:400">xAI is exploring building truth-seeking AI tools, such as AIs that can help users better assess and understand events by better sorting through inaccurate or biased materials.</h1>
+<div class="idline"><span class="badge s-removed">Removed</span><span>Removed on 30 Jun 2026</span></div>
+<div class="idline"><span class="mono" id="cid">xai-mitigation-7a83</span><button class="copy" type="button" data-copy="xai-mitigation-7a83">Copy ID</button><span class="strip" aria-hidden="true"><span class="s-baseline" title="xai-draft-2025-02-10: First seen">•</span><span class="s-kept" title="xai-draft-2025-02-20: Kept">=</span><span class="s-kept" title="xai-2025-08-20: Kept">=</span><span class="s-kept" title="xai-2025-12-30: Kept">=</span><span class="s-removed" title="xai-2026-06-30: Removed">×</span></span></div>
+<div class="chips"></div>
+<h2>History, oldest first</h2>
+<ol class="timeline"><li class="is-baseline" id="xai-draft-2025-02-10"><div class="when"><time datetime="2025-02-10">10 Feb 2025</time><span class="badge s-baseline">First seen</span><span class="doc">xAI Risk Management Framework (Draft), version draft-2025-02-10</span></div><div class="quote">We will explore building truth-seeking AI tools, such as AIs that can help users better assess and understand events.</div><dl class="src"><dt>Section</dt><dd>Operational and Societal Risks &gt; 2.Public Understanding</dd><dt>Source</dt><dd><a href="https://web.archive.org/web/20250210221647id_/https://x.ai/documents/2025.02.10-RMF-Draft.pdf">https://web.archive.org/web/20250210221647id_/https://x.ai/documents/…</a></dd><dt>SHA-256</dt><dd><span class="mono">5ba8859b6552d5d3acc929ed22cfb7f0459deb4cf076d5d70c8cf9b9e8ee050f</span></dd><dt>Quote check</dt><dd>Found in the hashed document</dd><dt>Upstream row</dt><dd><span class="mono">XAI-1-031</span></dd><dt>Event ID</dt><dd><span class="mono">xai-mitigation-7a83@xai-draft-2025-02-10</span></dd></dl></li><li class="is-kept" id="xai-draft-2025-02-20"><div class="when"><time datetime="2025-02-20">20 Feb 2025</time><span class="badge s-kept">Kept</span><span class="doc">xAI Risk Management Framework (Draft), version draft-2025-02-20</span></div><div class="quote">We will explore building truth-seeking AI tools, such as AIs that can help users better assess and understand events.</div><dl class="src"><dt>Section</dt><dd>Operational and Societal Risks &gt; 2.Public Understanding</dd><dt>Source</dt><dd><a href="https://data.x.ai/2025.02.20-RMF-Draft.pdf">https://data.x.ai/2025.02.20-RMF-Draft.pdf</a> · <a href="https://web.archive.org/web/*/https://data.x.ai/2025.02.20-RMF-Draft.pdf">Wayback</a></dd><dt>SHA-256</dt><dd><span class="mono">89fafebb73757def5a9068105554e68799e3dcce55374a4179b7a62559b6bef9</span></dd><dt>Quote check</dt><dd>Found in the hashed document</dd><dt>Confidence</dt><dd>low</dd><dt>Upstream row</dt><dd><span class="mono">XAI-1-031</span></dd><dt>Event ID</dt><dd><span class="mono">xai-mitigation-7a83@xai-draft-2025-02-20</span></dd></dl></li><li class="is-kept" id="xai-2025-08-20"><div class="when"><time datetime="2025-08-20">20 Aug 2025</time><span class="badge s-kept">Kept</span><span class="doc">xAI Risk Management Framework, version 2025-08-20</span></div><div class="quote"><del>We will explore</del> <ins>xAI is exploring</ins> building truth-seeking AI tools, such as AIs that can help users better assess and understand <del>events.</del> <ins>events by better sorting through inaccurate or biased materials.</ins></div><p class="note"><b>Kept.</b> The text changed. The upstream coder found no material change to the obligation.</p><dl class="src"><dt>Section</dt><dd>Operational and Societal Risks &gt; 2. Public Understanding</dd><dt>Source</dt><dd><a href="https://web.archive.org/web/20250821224133id_/https://data.x.ai/2025-08-20-xai-risk-management-framework.pdf">https://web.archive.org/web/20250821224133id_/https://data.x.ai/2025-…</a></dd><dt>SHA-256</dt><dd><span class="mono">31eae94d448b5b359220cbb93673e22b11adc9e27b8e8eb87e7646521f322f8a</span></dd><dt>Quote check</dt><dd>Found in the hashed document</dd><dt>Confidence</dt><dd>medium</dd><dt>Upstream row</dt><dd><span class="mono">XAI-2-031</span></dd><dt>Event ID</dt><dd><span class="mono">xai-mitigation-7a83@xai-2025-08-20</span></dd></dl></li><li class="is-kept" id="xai-2025-12-30"><div class="when"><time datetime="2025-12-30">30 Dec 2025</time><span class="badge s-kept">Kept</span><span class="doc">xAI Frontier Artificial Intelligence Framework, version 2025-12-30</span></div><div class="quote">xAI is exploring building truth-seeking AI tools, such as AIs that can help users better assess and understand events by better sorting through inaccurate or biased materials.</div><dl class="src"><dt>Section</dt><dd>Operational and Societal Risks &gt; 2. Public Understanding</dd><dt>Source</dt><dd><a href="https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf">https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-fra…</a> · <a href="https://web.archive.org/web/*/https://data.x.ai/2025-12-31-xai-frontier-artificial-intelligence-framework.pdf">Wayback</a></dd><dt>SHA-256</dt><dd><span class="mono">aa01669c19fca50c85323595141d08f98076cf0c48ed8f4a114ad6420c1a1012</span></dd><dt>Quote check</dt><dd>Found in the hashed document</dd><dt>Confidence</dt><dd>high</dd><dt>Upstream row</dt><dd><span class="mono">XAI-3-033</span></dd><dt>Event ID</dt><dd><span class="mono">xai-mitigation-7a83@xai-2025-12-30</span></dd></dl></li><li class="is-removed" id="xai-2026-06-30"><div class="when"><time datetime="2026-06-30">30 Jun 2026</time><span class="badge s-removed">Removed</span><span class="doc">xAI Frontier Artificial Intelligence Framework, version 2026-06-30</span></div><div class="quote gone">xAI is exploring building truth-seeking AI tools, such as AIs that can help users better assess and understand events by better sorting through inaccurate or biased materials.</div><p class="note"><b>No counterpart in this version.</b></p><p class="note"><b>Why this status (upstream coder):</b> No counterpart for exploring truth-seeking AI tools; the introduction&#x27;s &#x27;maximally truth-seeking and helpful AI&#x27; is a mission statement.</p><p class="note"><b>Disclosure:</b> The developer published no account of this revision.</p><dl class="src"><dt>Source</dt><dd><a href="https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-fr…</a> · <a href="https://web.archive.org/web/*/https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf">Wayback</a></dd><dt>SHA-256</dt><dd><span class="mono">2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53</span></dd><dt>Confidence</dt><dd>medium</dd><dt>Upstream row</dt><dd><span class="mono">XAI-4-035</span></dd><dt>Event ID</dt><dd><span class="mono">xai-mitigation-7a83@xai-2026-06-30</span></dd></dl></li></ol>
+<script>
+[].forEach.call(document.querySelectorAll('button.copy'),function(b){b.addEventListener('click',function(){
+ if(navigator.clipboard){navigator.clipboard.writeText(b.dataset.copy).then(function(){b.textContent='Copied'})}})});
+</script>
+
+<footer>
+<p>Seed data derived from the <a href="https://github.com/louisyzhu/frontier-safety-framework-corpus">Frontier Safety Framework Corpus</a> by Louis Yiven Zhu
+(<a href="https://arxiv.org/abs/2609.08789">Silent Revision, arXiv:2609.08789</a>), CC BY 4.0.
+The upstream coding used a language model with one human author. Read each code as a reference, not as ground truth.
+Quotes are the property of their publishers.</p>
+</footer>
+</div>
+</body>
+</html>
