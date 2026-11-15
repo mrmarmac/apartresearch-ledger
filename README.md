@@ -2,7 +2,7 @@
 
 **What did each AI lab promise in its safety framework, and what happened to each promise?**
 
-An open ledger of 446 safety-framework commitments from 5 frontier AI developers, across 22 framework versions.
+An open ledger of 432 safety-framework commitments from 5 frontier AI developers, across 22 framework versions.
 Each commitment has one stable ID and a history: kept, strengthened, weakened, removed or relocated.
 
 - **Site:** https://mrmarmac.github.io/apartresearch-ledger/
@@ -43,12 +43,31 @@ The ledger adds four things:
 | Lab | Commitments | Versions | Traced version pairs |
 |---|---|---|---|
 | xAI | 64 | 5 | 4 |
-| Anthropic | 170 | 9 | 2 |
+| Anthropic | 156 | 9 | 2 by upstream, 6 by the ledger |
 | Google DeepMind | 55 | 4 | 2 |
 | Meta | 106 | 2 | 1 |
 | OpenAI | 51 | 2 | 1 |
 
-Recorded changes: 161 weakened, 69 strengthened, 41 removed, 156 added, 8 relocated.
+Recorded changes from the upstream coding: 161 weakened, 69 strengthened, 41 removed, 156 added, 8 relocated.
+Recorded changes from the ledger's own extension of Anthropic (model-coded): 14 weakened, 2 strengthened.
+
+### The Anthropic extension
+
+The upstream corpus does not trace 6 small Anthropic revisions: v2.0 → v2.1 → v2.2 and v3.0 → v3.1 → v3.2 → v3.3 → v3.4.
+The ledger traces them itself. Each entry says who decided it (`coded_by`).
+
+| Step | Method | Result |
+|---|---|---|
+| 1 | Text match: the same words are in the next version | 490 entries, status kept |
+| 2 | Model, two runs: find the counterpart of a changed commitment | 85 steps. The two runs found the same passage in all 85. No removal. |
+| 3 | Model, two runs: code the direction of each changed pair | 47 entries: 31 kept, 14 weakened, 2 strengthened. The runs agree on 43. The other 4 have `needs_review`. |
+| 4 | Join a chain that ends at v2.2 with the upstream chain that starts at v2.2, when the texts overlap one to one | 14 chains joined. The former ID is in `former_ids`. |
+
+- 68 Anthropic commitments now reach v3.4. 11 of them have a history from v1.0 (2023) to v3.4 (2026).
+- 25 chains overlap an upstream chain, but not one to one. They are not joined. See `related_ids`.
+- The ledger does not detect commitments that are new in v2.1, v2.2 or v3.1 to v3.4.
+- No person checked the 47 model-coded entries.
+- Data and prompts: `data/extension/anthropic/`.
 
 ## Validation
 
@@ -61,14 +80,14 @@ Full results: [`validation.md`](validation.md).
 - **Human check.** One lawyer (the author) coded 20 items blind: 10 where the model agreed with upstream and 10 where it disagreed. He coded 17, and rejected the pairing of 3. In the disagreed group (8 coded), he agreed with upstream on 4, with the model on 2, and with neither on 2. This is not a random sample.
 - **Alignment test.** Given one commitment and the full next version, the model found the same counterpart as upstream, or correctly found none, for 48 of 60 items (80%). Plain text matching: 37 of 60 (62%). Google DeepMind v3.0 to v3.1: 20 of 20. OpenAI Beta to v2, a full rewrite: 10 of 20.
 - **Watchtower check.** The ledger has 14 of the 17 sub-changes in the Watchtower entry for the xAI revision of June 2026.
-- **Quote check.** 855 of 871 quotes (98%) are in the text extraction of the hashed source document.
+- **Quote check.** 1,344 of 1,360 quotes (99%) are in the text extraction of the hashed source document.
 - **Count check.** The ledger has one event for each of the 636 upstream rows of the 5 labs.
 
 ## Known limits
 
 1. **The codes are not ground truth.** A language model helped with the upstream coding, and one human author adjudicated it. Read each status as a reference.
-2. **Anthropic has a break.** RSP v2.0 → v2.1 → v2.2 is not traced. 71 commitments stop at v2.0 with status `not_traced`. 49 start at v2.2 with new IDs. Some are the same promise.
-3. **Anthropic stops at v3.0.** Versions v3.1 to v3.4 are in the corpus but are not traced.
+2. **Anthropic is joined in part only.** The upstream coding cut the v2.0 text and the v2.2 text into different units. The ledger joined 14 chains and already had 20. 55 chains stop at v2.2 with status `not_traced`, and 25 of those overlap an upstream chain that the ledger could not join one to one.
+3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. No person checked the model-coded entries. New commitments in those versions are not detected.
 4. **Nothing after July 2026.** The ledger is a seed dataset. It does not update automatically.
 5. **Frameworks only.** Model cards, usage policies and violations are not in the ledger. Watchtower covers those.
 6. **Commitments only.** Admissions and descriptions are not commitments, and are not in the ledger.
@@ -106,6 +125,7 @@ SCHEMA.md            field definitions, status meanings, ID rules
 run.py               entry point
 ledger/              corpus reader, builder, site and feed, validation
 data/ledger.json     the dataset
+data/extension/      tracing and coding answers for the Anthropic pairs that upstream does not trace
 examples/            one full record
 validation/          test items, rules, prompt, model answers (2 runs), key, human check, Watchtower check
 validation.md        results
@@ -114,7 +134,7 @@ docs/                the site (GitHub Pages)
 
 ## Next steps
 
-- Trace the untraced Anthropic pairs, to close the break.
+- Ask a person to check the 47 model-coded Anthropic entries, and resolve the 25 overlaps.
 - Add an alignment step for new versions, and test it against the upstream rows.
 - Add a scheduled job that looks for new framework versions.
 - Ask a second person to code a sample.

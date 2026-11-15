@@ -47,8 +47,9 @@
           "anthropic-v3.0"
         ]
       ],
-      "last_traced_version_id": "anthropic-v3.0",
-      "untraced_pairs": [
+      "last_traced_version_id": "anthropic-v3.4",
+      "untraced_pairs": [],
+      "extended_pairs": [
         [
           "anthropic-v2.0",
           "anthropic-v2.1"
@@ -73,8 +74,7 @@
           "anthropic-v3.3",
           "anthropic-v3.4"
         ]
-      ],
-      "extended_pairs": []
+      ]
     },
     {
       "lab": "google",

@@ -27,6 +27,8 @@ ledger.json
 | `tags` | string[] | Keyword tags. Made by fixed rules, not by a model. |
 | `current_status` | enum | See "Current status". |
 | `merged_into` | string or null | The ID that continues this commitment. |
+| `former_ids` | string[] | IDs that this commitment had before two chains were joined. A former ID is never used again. |
+| `related_ids` | string[] | Commitments with overlapping text that the ledger could not join one to one. |
 | `first_version_id` | string | First version in the history. |
 | `last_version_id` | string | Last version in the history. |
 | `history` | array | One or more history entries, oldest first. |
@@ -47,6 +49,8 @@ ledger.json
 | `confidence` | `high`, `medium`, `low` or null | Confidence grade from the upstream first pass. |
 | `rationale` | string or null | The upstream coder's reason. |
 | `link` | enum or null | How the ledger connected this entry to the previous entry. See "Links". |
+| `coded_by` | enum | Who decided this entry. See "Coded by". |
+| `needs_review` | boolean | The two model runs did not agree on this entry. |
 | `gap_before` | boolean | One or more versions before this entry are not traced. |
 | `quote_verified` | boolean or null | The quote is in the text extraction of the hashed document. |
 | `source_row` | string or null | Row ID in the upstream sheet, for example `XAI-4-042`. |
@@ -85,6 +89,16 @@ The full rules are in the upstream codebook, `codebook_v0.2_FROZEN.md`.
 
 **Read `labs[]` before you interpret `active`.** A lab can have later versions that the ledger does not trace.
 
+## Coded by
+
+| Value | Meaning |
+|---|---|
+| `upstream` | The Silent Revision coding (Zhu, 2026). |
+| `text_match` | The same words are in this version. The status is `kept`. No judgement by a person or a model. |
+| `model` | A language model found the counterpart and coded the change. Two runs. No person checked it. |
+
+`labs[].extended_pairs` lists the version pairs that the ledger traced itself. In those pairs, the ledger does not detect new commitments.
+
 ## Disclosure
 
 | Value | Meaning |
@@ -106,6 +120,8 @@ The ledger connects those rows. `link` records the method.
 | `prior_id` | The upstream sheet names the earlier row in its notes. |
 | `exact_text` | The earlier text and the later text are identical after normalisation. |
 | `fuzzy_text` | Similarity of 0.9 or more (Python `difflib`), best match only. |
+| `text_overlap` | Two chains were joined because their texts in one version share a long identical run. |
+| `model` | A model found the counterpart (two runs). |
 | `null` | First entry of the history. |
 
 Normalisation for comparison: lower case, letters and digits only. Stored quotes do not change.
@@ -120,6 +136,8 @@ Commitment ID: `{lab}-{topic}-{hash}`. Example: `xai-governance-673f`.
   `sha256("{lab}|{first_version_id}|{normalised first quote}")`.
   If two IDs collide, the later one gets one more character.
 - The ID is assigned at first appearance. A later change of text or topic does not change it.
+- When two chains are joined, the older ID continues. The other ID goes into `former_ids`, and its page points to the new one.
+- IDs changed one time, on 15 November 2026: 14 Anthropic chains were joined.
 
 Version ID: `{lab}-{version label}`. Example: `xai-2026-06-30`, `anthropic-v3.0`.
 A file that the developer published again under the same label is in `reuploads`, not a new version.

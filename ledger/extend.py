@@ -80,7 +80,7 @@ def walk(item, family, docs, trace, code):
     quote = item["history"][-1]["quote"]
     for label in labels[1:]:
         if quote_in_text(quote, docs[label]):
-            yield label, {"status": "kept", "quote": quote, "coded_by": "text_match", "link": "exact_text", "needs_review": False}
+            yield label, {"status": "kept", "quote": clean(quote), "coded_by": "text_match", "link": "exact_text", "needs_review": False}
             continue
         runs = trace.get((item["id"], label))
         if not runs or runs[0] is None:

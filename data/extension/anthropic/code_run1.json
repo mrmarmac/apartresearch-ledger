@@ -1,0 +1,461 @@
+[
+ {
+  "item": "c01",
+  "id": "anthropic-eval-trigger-5482",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "low",
+  "reason": "Assessment moved to 'in parallel with upgrading', but Section 6.1 still requires confirming model 'sufficiently far away from the next set of Capability Thresholds' before deploying."
+ },
+ {
+  "item": "c02",
+  "id": "anthropic-governance-37e6",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Text identical apart from footnote number ('Trust.18' to 'Trust.17')."
+ },
+ {
+  "item": "c03",
+  "id": "anthropic-security-4ca8",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'We will publicly release key information'; only footnote numbers changed."
+ },
+ {
+  "item": "c04",
+  "id": "anthropic-security-fa49",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'We will publicly release key information'; only footnote numbers changed."
+ },
+ {
+  "item": "c05",
+  "id": "anthropic-eval-trigger-bc57",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Same CBRN threshold and 'ASL-3 Deployment Standard and the ASL-3 Security Standard ... are required'; added sentence is explanatory and a label."
+ },
+ {
+  "item": "c06",
+  "id": "anthropic-eval-trigger-4f67",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "Same checkpoint rule; threshold split into 'two Autonomous AI R&D Capability Thresholds' and 'we will (1) aim to' keeps the same modal force."
+ },
+ {
+  "item": "c07",
+  "id": "anthropic-security-8ada",
+  "version": "v2.2",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "high",
+  "reason": "Out-of-scope insiders broadened from 'highly sophisticated state-compromised' to 'sophisticated or state-compromised', defined as anyone with 'persistent access or can request time-limited access'."
+ },
+ {
+  "item": "c08",
+  "id": "anthropic-disclosure-07ca",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical public disclosure commitment; only footnote numbers changed."
+ },
+ {
+  "item": "c09",
+  "id": "anthropic-governance-fab3",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Same 'Responsible Scaling Officer will regularly update the Board' and 'quarterly summary reports' text, reordered with footnotes."
+ },
+ {
+  "item": "c10",
+  "id": "anthropic-eval-trigger-8bfa",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'we will assess whether the model is unlikely to reach any relevant Capability Thresholds'; footnote number changed."
+ },
+ {
+  "item": "c11",
+  "id": "anthropic-eval-trigger-4281",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Same '4x or more in Effective Compute' and 'Six months' worth' triggers; added sentence only explains calendar-time measurement."
+ },
+ {
+  "item": "c12",
+  "id": "anthropic-consequence-0dc5",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Same interim measures and 'we will de-deploy the model'; longer extract only, footnote renumbered."
+ },
+ {
+  "item": "c13",
+  "id": "anthropic-eval-method-8a23",
+  "version": "v2.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Make informal forecasts' text; footnote renumbered."
+ },
+ {
+  "item": "c14",
+  "id": "anthropic-eval-trigger-efa4",
+  "version": "v2.1",
+  "outcome": "S",
+  "dims": [
+   6
+  ],
+  "confidence": "medium",
+  "reason": "AI R&D-5 now requires 'At minimum, the ASL-4 Security Standard' (was ASL-3), and AI R&D-4 adds 'we will develop an affirmative case' on misalignment."
+ },
+ {
+  "item": "c15",
+  "id": "anthropic-consequence-a1d2",
+  "version": "v2.1",
+  "outcome": "W",
+  "dims": [
+   4
+  ],
+  "confidence": "low",
+  "reason": "'update our list of Capability Thresholds to consider additional risks' replaced by 'begin testing for ... any additional risks'; context only says 'we may identify additional thresholds'."
+ },
+ {
+  "item": "c16",
+  "id": "anthropic-security-d7b4",
+  "version": "v2.2",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Same 'Aligning where appropriate with existing guidance' list; footnote text interleaved by extraction, standards list continues after page break."
+ },
+ {
+  "item": "c17",
+  "id": "anthropic-consequence-313a",
+  "version": "v3.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'We will delay AI development and deployment as needed'; only footnote number changed."
+ },
+ {
+  "item": "c18",
+  "id": "anthropic-consequence-313a",
+  "version": "v3.3",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Anthropic in the lead' commitment; footnote 8 to 11 only."
+ },
+ {
+  "item": "c19",
+  "id": "anthropic-consequence-313a",
+  "version": "v3.4",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Anthropic in the lead' commitment; footnote 11 to 13 only."
+ },
+ {
+  "item": "c20",
+  "id": "anthropic-governance-d559",
+  "version": "v3.4",
+  "outcome": "W",
+  "dims": [
+   5
+  ],
+  "confidence": "low",
+  "reason": "Disclosure narrowed from mitigations 'we are implementing' to those 'we have implemented as of the coverage date', excluding ongoing work and later developments."
+ },
+ {
+  "item": "c21",
+  "id": "anthropic-governance-98c3",
+  "version": "v3.4",
+  "outcome": "W",
+  "dims": [
+   5
+  ],
+  "confidence": "high",
+  "reason": "'unredacted Risk Reports with Anthropic's regular-clearance staff' becomes unredacted to 'at least 200' employees and 'minimally-redacted' to all regular-clearance staff."
+ },
+ {
+  "item": "c22",
+  "id": "anthropic-governance-4adb",
+  "version": "v3.1",
+  "outcome": "W",
+  "dims": [
+   3
+  ],
+  "confidence": "medium",
+  "reason": "'Separate internal reviewers will provide comprehensive feedback' becomes 'We will solicit comprehensive internal feedback', dropping reviewer separateness and guaranteed feedback."
+ },
+ {
+  "item": "c23",
+  "id": "anthropic-consequence-9c90",
+  "version": "v3.3",
+  "outcome": "W",
+  "dims": [
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Trigger raised from 'significantly help threat actors (... moderately resourced ...)' to 'functionally substitute for' expertise of 'world-leading specialists' for a 'well-resourced team'."
+ },
+ {
+  "item": "c24",
+  "id": "anthropic-consequence-3e7e",
+  "version": "v3.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "low",
+  "reason": "'We will: Resource and complete significant moonshot R&D for security' unchanged; revised trigger wording is truncated in context and cannot be verified."
+ },
+ {
+  "item": "c25",
+  "id": "anthropic-third-party-38ba",
+  "version": "v3.1",
+  "outcome": "W",
+  "dims": [
+   3
+  ],
+  "confidence": "medium",
+  "reason": "'Separate internal reviewers will provide' becomes 'We will solicit comprehensive internal feedback'; external feedback sentence unchanged."
+ },
+ {
+  "item": "c26",
+  "id": "anthropic-consequence-f721",
+  "version": "v3.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Anthropic in the lead' commitment; footnote renumbered."
+ },
+ {
+  "item": "c27",
+  "id": "anthropic-consequence-f721",
+  "version": "v3.3",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Anthropic in the lead' commitment; footnote renumbered."
+ },
+ {
+  "item": "c28",
+  "id": "anthropic-consequence-f721",
+  "version": "v3.4",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Anthropic in the lead' commitment; footnote renumbered."
+ },
+ {
+  "item": "c29",
+  "id": "anthropic-consequence-0707",
+  "version": "v3.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Anthropic in the lead' commitment; footnote renumbered."
+ },
+ {
+  "item": "c30",
+  "id": "anthropic-consequence-0707",
+  "version": "v3.3",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Anthropic in the lead' commitment; footnote renumbered."
+ },
+ {
+  "item": "c31",
+  "id": "anthropic-consequence-0707",
+  "version": "v3.4",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'Anthropic in the lead' commitment; footnote renumbered."
+ },
+ {
+  "item": "c32",
+  "id": "anthropic-consequence-d94b",
+  "version": "v3.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Same 'we will additionally address' list ending in 'Advocacy efforts'; later extract is just fuller."
+ },
+ {
+  "item": "c33",
+  "id": "anthropic-consequence-d94b",
+  "version": "v3.3",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical marginal risk list; footnote 6 to 9 only."
+ },
+ {
+  "item": "c34",
+  "id": "anthropic-consequence-d94b",
+  "version": "v3.4",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical marginal risk list; footnote 9 to 11 only."
+ },
+ {
+  "item": "c35",
+  "id": "anthropic-governance-2046",
+  "version": "v3.4",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Same 'publicly share the updated version prior to or on its effective date'; page footer inserted by extraction."
+ },
+ {
+  "item": "c36",
+  "id": "anthropic-disclosure-c35f",
+  "version": "v3.2",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical except 'change analysis' to 'change the analysis'."
+ },
+ {
+  "item": "c37",
+  "id": "anthropic-disclosure-c35f",
+  "version": "v3.3",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "high",
+  "reason": "Off-cycle trigger now 'more capable than all models for which we have publicly analyzed risks' in listed domains, in 'any ... System Card, or other public artifact'."
+ },
+ {
+  "item": "c38",
+  "id": "anthropic-eval-scope-704a",
+  "version": "v3.1",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "low",
+  "reason": "Internal-model comparator changed from 'those posed by our public models' to 'models that are covered by a prior Risk Report', potentially excluding some internal models."
+ },
+ {
+  "item": "c39",
+  "id": "anthropic-eval-scope-704a",
+  "version": "v3.3",
+  "outcome": "W",
+  "dims": [
+   1
+  ],
+  "confidence": "high",
+  "reason": "Internal models covered only if risks 'related to high-stakes misalignment or automated R&D' significantly exceed prior; chemical/biological risks dropped from internal-model scope."
+ },
+ {
+  "item": "c40",
+  "id": "anthropic-eval-scope-704a",
+  "version": "v3.4",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "medium",
+  "reason": "Coverage fixed at a 'coverage date ... no more than 30 days prior' to publication, excluding models deployed after that date."
+ },
+ {
+  "item": "c41",
+  "id": "anthropic-disclosure-8902",
+  "version": "v3.2",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical except 'change analysis' to 'change the analysis'."
+ },
+ {
+  "item": "c42",
+  "id": "anthropic-disclosure-8902",
+  "version": "v3.3",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "high",
+  "reason": "Trigger now 'more capable than (2) all models for which we have publicly analyzed risks' in three domains, including via 'System Card, or other public artifact'."
+ },
+ {
+  "item": "c43",
+  "id": "anthropic-disclosure-9cdb",
+  "version": "v3.3",
+  "outcome": "W",
+  "dims": [
+   1,
+   2
+  ],
+  "confidence": "high",
+  "reason": "Internal trigger narrowed to risks 'related to high-stakes misalignment or automated R&D' that 'significantly exceed' those of any publicly analyzed model."
+ },
+ {
+  "item": "c44",
+  "id": "anthropic-disclosure-79be",
+  "version": "v3.4",
+  "outcome": "S",
+  "dims": [
+   5
+  ],
+  "confidence": "low",
+  "reason": "Adds aim to minimize redactions to 'the version of the report shared with all regular-clearance Anthropic employees'; public-version wording unchanged."
+ },
+ {
+  "item": "c45",
+  "id": "anthropic-third-party-cef3",
+  "version": "v3.2",
+  "outcome": "W",
+  "dims": [
+   3
+  ],
+  "confidence": "high",
+  "reason": "'In consultation with the Board and LTBT, we will select external reviewers' becomes 'We will select external reviewers', removing Board/LTBT involvement."
+ },
+ {
+  "item": "c46",
+  "id": "anthropic-third-party-1866",
+  "version": "v3.1",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "high",
+  "reason": "Identical 'only redactions ... necessary to comply with legal prohibitions'; footnote 7 still present in context."
+ },
+ {
+  "item": "c47",
+  "id": "anthropic-security-06a3",
+  "version": "v3.3",
+  "outcome": "R",
+  "dims": [],
+  "confidence": "medium",
+  "reason": "Extract cut at 'maintain logs' by column extraction; no wording change shown in 'Achieve an eyes on everything state'."
+ }
+]
