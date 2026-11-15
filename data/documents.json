@@ -1,0 +1,18 @@
+{
+ "note": "Framework versions that are not in the upstream corpus. `python run.py fetch` downloads each file into cache/documents/, checks the SHA-256, and extracts the text with pdftotext. The files are not in this repository: they belong to their publishers.",
+ "documents": [
+  {
+   "version_id": "meta-v2.1",
+   "lab": "meta",
+   "lab_name": "Meta",
+   "document": "Meta Superintelligence Scaling Framework",
+   "label": "v2.1",
+   "publication_date": "2026-10-02",
+   "date_source": "Watchtower entry of 2 October 2026 (The Midas Project). Check the date in the document before you cite it.",
+   "source_url": "https://research.meta.ai/static/meta-superintelligence-scaling-framework",
+   "wayback_timestamp": null,
+   "sha256": "5a01d327df6dd81f2be886ea6006dbb53a64c37b359c7bd95346dd718819c64f",
+   "after": "meta-v2"
+  }
+ ]
+}

@@ -5,6 +5,7 @@ This module connects those rows into one chain for each commitment, and
 gives each chain one stable ID.
 """
 import difflib
+import os
 import hashlib
 import re
 
@@ -245,7 +246,7 @@ def build_lab(corpus, provider, lab):
     return versions, commitments, coverage
 
 
-def build(corpus, labs=None, extension_folder=None, reuploads=None):
+def build(corpus, labs=None, extension_folders=None, reuploads=None, documents=None, doc_dir=None):
     labs = labs or config.LABS
     ledger = {
         "schema_version": config.SCHEMA_VERSION,
@@ -276,7 +277,17 @@ def build(corpus, labs=None, extension_folder=None, reuploads=None):
             item = dict(item)
             by_id[item.pop("version_id")].setdefault("reuploads", []).append(item)
     from . import extend
-    ledger["_extension_stats"] = dict(extend.apply(ledger, corpus, extension_folder, _tags)) if extension_folder else {}
-    if not extension_folder:
+    for doc in documents or []:
+        doc = dict(doc)
+        after = doc.pop("after")
+        doc.pop("date_source", None)
+        at = [i for i, v in enumerate(ledger["versions"]) if v["version_id"] == after][0]
+        ledger["versions"].insert(at + 1, doc)
+    ledger["_extension_stats"] = {}
+    extend.DOC_DIR = doc_dir
+    for folder in extension_folders or []:
+        ledger["_extension_stats"][os.path.basename(folder)] = dict(extend.apply(ledger, corpus, folder, _tags))
+    if not extension_folders:
+        extend.configure("anthropic")
         extend.apply(ledger, corpus, "", _tags)
     return ledger

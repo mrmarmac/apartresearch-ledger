@@ -20,6 +20,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(ROOT, "cache", "corpus")
+DOCS = os.path.join(ROOT, "cache", "documents")
 LEDGER = os.path.join(ROOT, "data", "ledger.json")
 DEMO_ID = "xai-governance-673f"  # xAI whistleblower protection
 
@@ -35,15 +36,41 @@ def fetch():
         subprocess.run(["git", "clone", "--quiet", config.CORPUS_REPO, CACHE], check=True)
     subprocess.run(["git", "-C", CACHE, "checkout", "--quiet", config.CORPUS_COMMIT], check=True)
     print(f"corpus ready at commit {config.CORPUS_COMMIT[:12]}")
+    # Versions after the end of the corpus: download, check the hash, extract the text.
+    import hashlib
+    import urllib.request
+    os.makedirs(DOCS, exist_ok=True)
+    with open(os.path.join(ROOT, "data", "documents.json"), encoding="utf-8") as handle:
+        documents = json.load(handle)["documents"]
+    for doc in documents:
+        pdf = os.path.join(DOCS, doc["version_id"] + ".pdf")
+        if not os.path.exists(pdf):
+            try:
+                request = urllib.request.Request(doc["source_url"], headers={"User-Agent": "commitment-ledger/0.1"})
+                with urllib.request.urlopen(request, timeout=60) as response, open(pdf, "wb") as out:
+                    out.write(response.read())
+            except Exception as error:
+                print(f"cannot download {doc['source_url']} ({type(error).__name__}). Download it by hand and save it as {pdf}")
+                continue
+        with open(pdf, "rb") as handle:
+            digest = hashlib.sha256(handle.read()).hexdigest()
+        if digest != doc["sha256"]:
+            print(f"WARNING {doc['version_id']}: SHA-256 is {digest}, expected {doc['sha256']}. The publisher replaced the file.")
+            continue
+        subprocess.run(["pdftotext", "-enc", "UTF-8", pdf, pdf[:-4] + ".txt"], check=True)
+        print(f"{doc['version_id']} ready, SHA-256 checked")
 
 
 def do_build():
     with open(os.path.join(ROOT, "data", "reuploads.json"), encoding="utf-8") as handle:
         found = json.load(handle)["reuploads"]
-    ledger = build(Corpus(CACHE), extension_folder=os.path.join(ROOT, "data", "extension", "anthropic"), reuploads=found)
-    ext = ledger.pop("_extension_stats")
-    if ext:
-        print("extension:", ", ".join(f"{k}={v}" for k, v in sorted(ext.items())))
+    with open(os.path.join(ROOT, "data", "documents.json"), encoding="utf-8") as handle:
+        documents = json.load(handle)["documents"]
+    folders = [os.path.join(ROOT, "data", "extension", name) for name in ("anthropic", "meta")]
+    ledger = build(Corpus(CACHE), extension_folders=folders, reuploads=found, documents=documents, doc_dir=DOCS)
+    for name, ext in ledger.pop("_extension_stats").items():
+        if ext:
+            print(f"extension {name}:", ", ".join(f"{k}={v}" for k, v in sorted(ext.items())))
     os.makedirs(os.path.dirname(LEDGER), exist_ok=True)
     with open(LEDGER, "w", encoding="utf-8") as handle:
         json.dump(ledger, handle, indent=2, ensure_ascii=False)

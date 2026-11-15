@@ -1,0 +1,178 @@
+[
+ {
+  "id": "meta-eval-method-36d3",
+  "from_version": "v2",
+  "earlier_text": "The risk assessment also considers any planned deployments, as these plans inform the type of pre-release evaluations we undertake.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-fd75",
+  "from_version": "v2",
+  "earlier_text": "Our evaluations are also designed to account for the deployment context of the model. ... For example, to help ensure that we are appropriately assessing the risk, we prepare the asset – the version of the model that we will test – in a way that seeks to account for the tools and scaffolding in the current ecosystem that could be leveraged to enhance the model’s capabilities.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-governance-b294",
+  "from_version": "v2",
+  "earlier_text": "The residual risk assessment is reviewed by the relevant research and/or product teams, as well as a multidisciplinary team of reviewers as needed. Informed by this analysis, the Chief AI Officer or the Director of Alignment and Risk will determine whether to request further testing or information, require additional mitigations or improvements, or approve the model for deployment.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-consequence-32db",
+  "from_version": "v2",
+  "earlier_text": "Deploy with mitigations Proceed with deployment of the Frontier AI only if sufficient mitigations are defined, implemented and validated to reduce risk to that of a moderate or lower model. ... In the case where pre-mitigation testing suggests that a model has crossed the high risk threshold, we will not deploy the model externally unless we have strong additional evidence that mitigations are sufficiently robust to adversarial attacks that the fully mitigated model is reduced to moderate or lower levels.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-scope-2fcf",
+  "from_version": "v2",
+  "earlier_text": "Cyber 1: Substantially lowers the barrier or reduces cost to a cyberattack that causes large-scale casualties or significant financial loss. ... Cyber 2: Automated discovery and reliable exploitation of critical zero-day vulnerabilities in current popular software that results in large-scale casualties or significant financial loss. ... Cyber 3: Large-scale casualties or significant financial loss to individuals or organizations via scaled long form fraud, extortion, and scams.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-8bad",
+  "from_version": "v2",
+  "earlier_text": "If performance thresholds for these evaluations are reached, we then expand our assessment to improve coverage, specificity, and realism – which may take the form of additional targeted evaluations focused on specific risk factors, or in-depth assessments such as uplift studies or expert red-teaming.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-11e0",
+  "from_version": "v2",
+  "earlier_text": "Models will undergo evaluation to assess the robustness of the mitigations we have implemented, which might include adversarial prompting, jailbreak attempts, and red teaming, amongst other techniques. For models that are not being considered for open release, this evaluation also will take into account the narrower availability of those models and the security measures in place to prevent unauthorized access.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-7e3a",
+  "from_version": "v2",
+  "earlier_text": "In addition to the further research we highlight for specific risk domains in section 4.2.4, we’ll continue to work on: (1) improving the quality and reliability of evaluations; (2) developing additional, robust mitigation techniques; and (3) more advanced methods for performing post-deployment monitoring of models.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-disclosure-deec",
+  "from_version": "v2",
+  "earlier_text": "We evaluate this reference class of models and incorporate the results of these evaluations into our preparedness reports. ... We will also include the results of evaluations of the reference class of comparable models to provide comparative context, including relevant capability, propensity, and refusal evaluations.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-bc8b",
+  "from_version": "v2",
+  "earlier_text": "We conduct risk assessments and assign risk thresholds with maximum elicitation in mind, capturing the upper bound of risk by evaluating the model as part of a system with scaffolding and tooling available for the proposed deployment scenario. ... This may include fine-tuning our models on a relevant set of information or tasks, fine-tuning models to be helpful-only (i.e., refusal-free), and conducting evaluations on models without mitigations.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-e80c",
+  "from_version": "v2",
+  "earlier_text": "If we are considering releasing a model’s weights, or if we might release it with a fine-tuning API, then we will engage in domain-specific capability training to attempt to upper bound the capabilities of the model.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-ea6c",
+  "from_version": "v2",
+  "earlier_text": "In agentic evaluations, we will provide the model with a task-optimized agent scaffold and ensure the model has been tuned or prompted for agentic tool usage. Agents will be provided with a generous token budget, up to the maximum context length or to the point at which performance plateaus. We will review agent transcripts to check for indications of spurious or easily-fixable agent failures.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-governance-c778",
+  "from_version": "v2",
+  "earlier_text": "Meta’s Chief AI Officer oversees the design, implementation, and operation of the entire evaluation and mitigation process. The Chief AI Officer supervises and is supported by the Director of Alignment and Risk, who bears responsibility for executing the lifecycle of risk assessment and mitigation, preparedness reports, updates to this Advanced AI Scaling Framework, internal use reports, and related deployments and disclosures, with model deployment following appropriate consultation with relevant teams and with the approval of the Chief AI Officer.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-governance-53b6",
+  "from_version": "v2",
+  "earlier_text": "Meta maintains a comprehensive whistleblower and complaint policy, and is developing further protocols to report any instances of non-compliance with this Advanced AI Scaling Framework ... Under this protocol, employees will be able to confidentially, and, if they choose, anonymously issue reports through internal channels, and all reports will be ultimately submitted to the internal governance function, the Chief AI Officer, and the Director of Alignment and Risk.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-911d",
+  "from_version": "v2",
+  "earlier_text": "Within this context, we will evaluate the efficacy of our mitigations to ensure they are sufficiently robust and ensure that the model cannot materially enable any of the catastrophic outcomes we have defined, considering the way it would be deployed. Mitigations should be sufficiently robust against adversarial attacks that are realistic given the deployment strategy and threat scenario. When evaluating mitigation efficacy, we model competent, incentivized adversaries whose capabilities reflect the specific deployment context.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-trigger-10c1",
+  "from_version": "v2",
+  "earlier_text": "However, if we observe model performance on par with or better than human experts, we will move on to evaluating capabilities on more complex, realistic attack scenarios in order to determine risk level. ... For example, if a model under test achieves < 75% pass@10 success on all categories of simple capture the flag (CTF)6 challenges in unguided mode,7 we conclude that it does not exceed the “moderate or lower” risk level.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-consequence-8456",
+  "from_version": "v2",
+  "earlier_text": "Until evaluation on the complex suite of challenges is completed, any model meeting the simple-suite threshold is provisionally rated “high” risk for the given deployment scenario and such deployment will not be implemented.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-trigger-3907",
+  "from_version": "v2",
+  "earlier_text": "For models in deployment scenarios that exceed the threshold in #1, we set the threshold for determination of ‘high’ risk level based on reliable and consistent success on realistic, high difficulty challenges. ... [Cyber 1] At least one challenge from the suite of realistic, high difficulty multi-host, corporate scale network challenges is successfully completed end-to-end (pass@10) without triggering any alerts/detections from standard defenses in place",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-method-b825",
+  "from_version": "v2",
+  "earlier_text": "We conduct evaluations to assess security risks of prompt injection for a model deployed within common agentic use cases and implement layered security defenses to protect against these threats and understand our models’ susceptibility to them.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-mitigation-cbea",
+  "from_version": "v2",
+  "earlier_text": "we will continue to take active efforts and create tools, such as AutoPatchBench and CyberSOCEval, to help major software and physical systems upgrade security over time and stay resilient against increasing cyber capabilities.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-consequence-afe4",
+  "from_version": "v2",
+  "earlier_text": "For models above the moderate or lower risk threshold, our risk acceptance criteria for external deployment requires defensible evidence demonstrating reliable refusal on benchmark datasets with thorough coverage across relevant threat scenarios and typical adversarial attacks. ... on the BioTIER refusal evaluation, which includes information that could support development of biological weapons, our risk acceptance criteria includes at least 80% refusal or safe responses, and 40% refusal or safe responses against all adversarial attacks within a typical adversarial attack portfolio.",
+  "later_versions": [
+   "v2.1"
+  ]
+ },
+ {
+  "id": "meta-eval-trigger-7e16",
+  "from_version": "v2",
+  "earlier_text": "As an illustrative example, our risk acceptance criteria include thresholds such as at least 40% on MASK and at most 50% on Agent Misalignment.",
+  "later_versions": [
+   "v2.1"
+  ]
+ }
+]

@@ -1,7 +1,8 @@
-"""Extend Anthropic chains through version pairs that the upstream corpus does not trace.
+"""Extend chains through version pairs that the upstream corpus does not trace.
 
-Pairs: v2.0 -> v2.1 -> v2.2 and v3.0 -> v3.1 -> v3.2 -> v3.3 -> v3.4.
+Anthropic: v2.0 -> v2.1 -> v2.2 and v3.0 -> v3.1 -> v3.2 -> v3.3 -> v3.4.
 These are small revisions. v2.2 -> v3.0 is a rewrite, and stays upstream-coded.
+Meta: v2 -> v2.1 (October 2026), a version after the end of the upstream corpus.
 
 Method, in this sequence:
 1. Text: if the verbatim quote is in the next version, the commitment is kept.
@@ -17,20 +18,47 @@ import os
 from .alignment import same_passage
 from .textnorm import clean, quote_in_text, squash
 
-PROVIDER = "Anthropic"
-LAB = "anthropic"
-FAMILIES = {"A": ["v2.0", "v2.1", "v2.2"], "B": ["v3.0", "v3.1", "v3.2", "v3.3", "v3.4"]}
-EXTENDED_PAIRS = [["anthropic-v2.0", "anthropic-v2.1"], ["anthropic-v2.1", "anthropic-v2.2"],
-                  ["anthropic-v3.0", "anthropic-v3.1"], ["anthropic-v3.1", "anthropic-v3.2"],
-                  ["anthropic-v3.2", "anthropic-v3.3"], ["anthropic-v3.3", "anthropic-v3.4"]]
+CONFIGS = {
+    "anthropic": {
+        "provider": "Anthropic",
+        "families": {"A": ["v2.0", "v2.1", "v2.2"], "B": ["v3.0", "v3.1", "v3.2", "v3.3", "v3.4"]},
+        "last": "v3.4",
+    },
+    # Meta v2.1 (October 2026) is after the end of the upstream corpus.
+    "meta": {"provider": "Meta", "families": {"M": ["v2", "v2.1"]}, "last": "v2.1"},
+}
+PROVIDER = LAB = FAMILIES = EXTENDED_PAIRS = LAST = None
+DOC_DIR = None
+
+
+def configure(lab, doc_dir=None):
+    """Select the lab that the functions below work on."""
+    global PROVIDER, LAB, FAMILIES, EXTENDED_PAIRS, LAST, DOC_DIR
+    cfg = CONFIGS[lab]
+    PROVIDER, LAB, FAMILIES, LAST = cfg["provider"], lab, cfg["families"], cfg["last"]
+    EXTENDED_PAIRS = [[vid(a), vid(b)] for labels in FAMILIES.values() for a, b in zip(labels, labels[1:])]
+    if doc_dir:
+        DOC_DIR = doc_dir
 
 
 def vid(label):
     return f"{LAB}-{label}"
 
 
+def raw_text(corpus, label):
+    """Text of one version: from the upstream corpus, or from cache/documents/ for a later version."""
+    try:
+        return corpus.text(PROVIDER, label)
+    except KeyError:
+        path = os.path.join(DOC_DIR or "", f"{LAB}-{label}.txt")
+        if not os.path.exists(path):
+            raise SystemExit(f"Missing {path}. Run `python run.py fetch`, or put the PDF text there by hand.")
+        with open(path, encoding="utf-8") as handle:
+            return handle.read()
+
+
 def _docs(corpus):
-    return {label: squash(corpus.text(PROVIDER, label)) for labels in FAMILIES.values() for label in labels}
+    return {label: squash(raw_text(corpus, label)) for labels in FAMILIES.values() for label in labels}
 
 
 def _family_members(ledger, family):
@@ -60,7 +88,7 @@ def _answers(folder, kind):
         for family in FAMILIES:
             data = _load(folder, f"{kind}_{family}_run{run}.json")
             if kind == "code":
-                data = _load(folder, f"code_run{run}.json") if family == "A" else None
+                data = _load(folder, f"code_run{run}.json") if family == next(iter(FAMILIES)) else None
             for row in data or []:
                 if kind == "trace":
                     for step in row["steps"]:
@@ -115,6 +143,7 @@ def walk(item, family, docs, trace, code):
 
 def plan(ledger, corpus, folder):
     """Return the trace items and the coding items that still need model answers."""
+    configure(os.path.basename(os.path.normpath(folder)))
     docs = _docs(corpus)
     trace, code = _answers(folder, "trace"), _answers(folder, "code")
     trace_items = {family: [] for family in FAMILIES}
@@ -160,6 +189,8 @@ def apply(ledger, corpus, folder, tags_for):
     """Add the extension entries to the ledger. Returns a dict of counts."""
     import collections
     stats = collections.Counter()
+    if folder:
+        configure(os.path.basename(os.path.normpath(folder)))
     for item in ledger["commitments"]:
         item.setdefault("former_ids", [])
         item.setdefault("related_ids", [])
@@ -168,16 +199,17 @@ def apply(ledger, corpus, folder, tags_for):
             entry.setdefault("needs_review", False)
             entry.setdefault("human_check", None)
     # Apply nothing until the tracing answers and the coding answers are both in the folder.
-    if not os.path.isdir(folder) or _load(folder, "trace_A_run1.json") is None or _load(folder, "code_run1.json") is None:
+    first = next(iter(FAMILIES))
+    if not os.path.isdir(folder) or _load(folder, f"trace_{first}_run1.json") is None or _load(folder, "code_run1.json") is None:
         return stats
     docs = _docs(corpus)
     trace, code = _answers(folder, "trace"), _answers(folder, "code")
     versions = {v["version_id"]: v for v in ledger["versions"]}
     kept = {"status": "kept", "coded_by": "text_match", "link": "exact_text", "needs_review": False}
 
-    # 1. Chains that upstream text already connects from v2.0 to v3.0: fill v2.1 and v2.2.
+    # 1. Chains that upstream text already connects from v2.0 to v3.0: fill v2.1 and v2.2. Anthropic only.
     for item in ledger["commitments"]:
-        if item["lab"] != LAB:
+        if item["lab"] != LAB or LAB != "anthropic":
             continue
         hist = item["history"]
         for i in range(1, len(hist)):
@@ -202,11 +234,11 @@ def apply(ledger, corpus, folder, tags_for):
                 item["history"].append(_entry(versions, label, fact))
                 stats[f"{fact['coded_by']}:{fact['status']}"] += 1
                 stats["needs_review"] += bool(fact.get("needs_review"))
-            if family == "A" and item["history"][-1]["version_id"] == vid("v2.2") and item["history"][-1]["quote"]:
+            if LAB == "anthropic" and family == "A" and item["history"][-1]["version_id"] == vid("v2.2") and item["history"][-1]["quote"]:
                 carried.append(item)
 
     # 3. Join a chain carried to v2.2 with the upstream chain that starts at v2.2, when the texts overlap one to one.
-    bases = [c for c in ledger["commitments"] if c["lab"] == LAB and c["first_version_id"] == vid("v2.2")
+    bases = [c for c in ledger["commitments"] if LAB == "anthropic" and c["lab"] == LAB and c["first_version_id"] == vid("v2.2")
              and c["history"][0]["status"] == "baseline"]
     hits = {c["id"]: [b for b in bases if same_passage(c["history"][-1]["quote"], b["history"][0]["quote"])] for c in carried}
     back = collections.defaultdict(list)
@@ -258,7 +290,7 @@ def apply(ledger, corpus, folder, tags_for):
     if human:
         names = {"R": "kept", "S": "strengthened", "W": "weakened"}
         given = {(a["id"], vid(a["version"])): a["code"] for a in human["answers"]}
-        for item in ledger["commitments"]:
+        for item in [c for c in ledger["commitments"] if c["lab"] == LAB]:
             for old in [item["id"]] + item["former_ids"]:
                 for entry in item["history"]:
                     code = given.get((old, entry["version_id"]))
@@ -281,7 +313,7 @@ def apply(ledger, corpus, folder, tags_for):
     if final:
         names = {"R": "kept", "S": "strengthened", "W": "weakened"}
         decided = {(d["id"], vid(d["version"])): d for d in final["decisions"] if not d.get("held")}
-        for item in ledger["commitments"]:
+        for item in [c for c in ledger["commitments"] if c["lab"] == LAB]:
             for old in [item["id"]] + item["former_ids"]:
                 for entry in item["history"]:
                     decision = decided.get((old, entry["version_id"]))
@@ -299,7 +331,7 @@ def apply(ledger, corpus, folder, tags_for):
                     stats["adjudicated"] += 1
 
     # 5. Recompute the fields that depend on the history.
-    last_traced = vid(FAMILIES["B"][-1])
+    last_traced = vid(LAST)
     for item in ledger["commitments"]:
         if item["lab"] != LAB:
             continue
@@ -328,6 +360,7 @@ def apply(ledger, corpus, folder, tags_for):
 
 def human_report(folder):
     """Lines for validation.md: the human check of the model-coded extension entries."""
+    configure(os.path.basename(os.path.normpath(folder)))
     human = _load(folder, "human_check.json")
     run1, run2 = _load(folder, "code_run1.json"), _load(folder, "code_run2.json")
     if not (human and run1 and run2):

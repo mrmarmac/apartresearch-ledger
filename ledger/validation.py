@@ -291,8 +291,9 @@ def score(corpus, val_dir, model_name):
         json.dump(items, handle, indent=1, ensure_ascii=False)
     lines += _stability(val_dir, key, preds)
     lines += _human(val_dir, key, preds)
-    from .extend import human_report
-    lines += human_report(os.path.join(os.path.dirname(val_dir), "data", "extension", "anthropic"))
+    from . import extend
+    extend.DOC_DIR = os.path.join(os.path.dirname(val_dir), "cache", "documents")
+    lines += extend.human_report(os.path.join(os.path.dirname(val_dir), "data", "extension", "anthropic"))
     extra = os.path.join(val_dir, "alignment", "report.md")
     if os.path.exists(extra):
         with open(extra, encoding="utf-8") as handle:
