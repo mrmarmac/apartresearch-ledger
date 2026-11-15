@@ -152,7 +152,7 @@ def _entry(versions, label, fact):
         "quote_verified": fact.get("verified", True) if fact["quote"] else None,
         "source_row": None, "source_url": version["source_url"],
         "wayback_timestamp": version["wayback_timestamp"], "sha256": version["sha256"],
-        "coded_by": fact["coded_by"], "needs_review": bool(fact.get("needs_review")),
+        "coded_by": fact["coded_by"], "needs_review": bool(fact.get("needs_review")), "human_check": None,
     }
 
 
@@ -166,6 +166,7 @@ def apply(ledger, corpus, folder, tags_for):
         for entry in item["history"]:
             entry.setdefault("coded_by", "upstream")
             entry.setdefault("needs_review", False)
+            entry.setdefault("human_check", None)
     # Apply nothing until the tracing answers and the coding answers are both in the folder.
     if not os.path.isdir(folder) or _load(folder, "trace_A_run1.json") is None or _load(folder, "code_run1.json") is None:
         return stats
@@ -252,6 +253,29 @@ def apply(ledger, corpus, folder, tags_for):
             base["history"][0:0] = new
             stats[f"moved_back_to_{earlier[0]}"] += 1
 
+    # 4b. One person checked the model-coded entries, blind. Record the result. Do not overwrite the model code.
+    human = _load(folder, "human_check.json")
+    if human:
+        names = {"R": "kept", "S": "strengthened", "W": "weakened"}
+        given = {(a["id"], vid(a["version"])): a["code"] for a in human["answers"]}
+        for item in ledger["commitments"]:
+            for old in [item["id"]] + item["former_ids"]:
+                for entry in item["history"]:
+                    code = given.get((old, entry["version_id"]))
+                    if code is None or entry["coded_by"] != "model":
+                        continue
+                    if code == "N":
+                        entry["human_check"] = "not_same_thing"
+                    elif code == "U":
+                        entry["human_check"] = "cannot_tell"
+                    elif names[code] == entry["status"]:
+                        entry["human_check"] = "agrees"
+                    else:
+                        entry["human_check"] = "disagrees:" + names[code]
+                    if entry["human_check"] != "agrees":
+                        entry["needs_review"] = True
+                    stats["human:" + entry["human_check"].split(":")[0]] += 1
+
     # 5. Recompute the fields that depend on the history.
     last_traced = vid(FAMILIES["B"][-1])
     for item in ledger["commitments"]:
@@ -278,3 +302,58 @@ def apply(ledger, corpus, folder, tags_for):
             cov["last_traced_version_id"] = last_traced
             cov["untraced_pairs"] = [p for p in cov["untraced_pairs"] if p not in EXTENDED_PAIRS]
     return stats
+
+
+def human_report(folder):
+    """Lines for validation.md: the human check of the model-coded extension entries."""
+    human = _load(folder, "human_check.json")
+    run1, run2 = _load(folder, "code_run1.json"), _load(folder, "code_run2.json")
+    if not (human and run1 and run2):
+        return []
+    one = {(r["id"], r["version"]): r for r in run1}
+    two = {(r["id"], r["version"]): r for r in run2}
+    names = dict(human["codes"])
+    rows = [(a, one[(a["id"], a["version"])], two[(a["id"], a["version"])]) for a in human["answers"]]
+    decided = [r for r in rows if r[0]["code"] in "RSW"]
+    agree = sum(r[0]["code"] == r[1]["outcome"] for r in decided)
+    opposite = sum({r[0]["code"], r[1]["outcome"]} == {"S", "W"} for r in decided)
+    both = [r for r in decided if r[1]["outcome"] == r[2]["outcome"]]
+    agree_both = sum(r[0]["code"] == r[1]["outcome"] for r in both)
+    pairs = [(r[1]["outcome"], r[0]["code"]) for r in decided]
+    n = len(pairs)
+    chance = sum(sum(g == c for g, _ in pairs) * sum(h == c for _, h in pairs) for c in "RSW") / (n * n)
+    kappa = (agree / n - chance) / (1 - chance)
+    lines = [
+        "", "## Human check of the Anthropic extension: 47 model-coded entries", "",
+        f"**Coder:** {human['coder']}. One person. Blind: the page showed the two texts, the version pair and the text around the later passage. "
+        "It did not show the model's code or the commitment ID. Random sequence. Five answers: kept, strengthened, weakened, not the same thing, cannot tell. "
+        "Page: `data/extension/anthropic/human_check_page.html`.", "",
+        f"**Result: the human agrees with the model on {agree} of {n} decided entries ({100 * agree / n:.0f}%, Cohen's kappa {kappa:.2f}). "
+        f"Opposite direction: {opposite} of {n}.** "
+        f"Not decided: {sum(r[0]['code'] == 'N' for r in rows)} \"not the same thing\", {sum(r[0]['code'] == 'U' for r in rows)} \"cannot tell\".", "",
+        f"Where the two model runs agree with each other ({len(both)} decided entries), the human agrees with them on {agree_both} ({100 * agree_both / len(both):.0f}%).", "",
+        "| Model run 1 | Human: kept | Human: strengthened | Human: weakened | Human: not the same thing | Human: cannot tell |", "|---|---|---|---|---|---|",
+    ]
+    for code in "RSW":
+        sub = [r for r in rows if r[1]["outcome"] == code]
+        lines.append(f"| {names[code]} ({len(sub)}) | " + " | ".join(str(sum(r[0]["code"] == h for r in sub)) for h in "RSWNU") + " |")
+    weak = [r for r in rows if r[1]["outcome"] == "W"]
+    lines += [
+        "",
+        f"- **The model codes \"weakened\" more often than the human.** Of the {len(weak)} entries that the model coded weakened, the human coded "
+        f"{sum(r[0]['code'] == 'W' for r in weak)} weakened, {sum(r[0]['code'] == 'R' for r in weak)} kept and {sum(r[0]['code'] == 'S' for r in weak)} strengthened.",
+        "- **The ledger does not overwrite the model code.** An entry where the human agrees has `human_check: agrees`. Each other entry has `needs_review: true` and records the human answer.",
+        "- **The disagreements are not adjudicated.** Nobody decided who is correct.",
+        "", "| Item | Commitment | Version | Model run 1 | Model run 2 | Human | Model's reason |", "|---|---|---|---|---|---|---|",
+    ]
+    for a, x, y in rows:
+        if a["code"] != x["outcome"]:
+            reason = clean(x.get("reason", "")).replace("|", "/")
+            lines.append(f"| {a['item']} | `{a['id']}` | {a['version']} | {names[x['outcome']]} | {names[y['outcome']]} | {names[a['code']]} | {reason} |")
+    lines += [
+        "",
+        "Limits: one coder, who is the author and is not independent. "
+        f"The coder took about 28 minutes for {len(rows)} entries, which is about 36 seconds for each entry of about 900 characters plus context. "
+        "The later text comes from a PDF extraction, and some extracts are cut by a page break. The coder used a summary of the rules.",
+    ]
+    return lines

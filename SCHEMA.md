@@ -50,7 +50,8 @@ ledger.json
 | `rationale` | string or null | The upstream coder's reason. |
 | `link` | enum or null | How the ledger connected this entry to the previous entry. See "Links". |
 | `coded_by` | enum | Who decided this entry. See "Coded by". |
-| `needs_review` | boolean | The two model runs did not agree on this entry. |
+| `needs_review` | boolean | The two model runs did not agree on this entry, or a person checked it and did not agree. |
+| `human_check` | string or null | Result of a blind check by one person: `agrees`, `disagrees:<code>`, `not_same_thing`, `cannot_tell`. `null`: not checked. The ledger does not overwrite the entry. |
 | `gap_before` | boolean | One or more versions before this entry are not traced. |
 | `quote_verified` | boolean or null | The quote is in the text extraction of the hashed document. |
 | `source_row` | string or null | Row ID in the upstream sheet, for example `XAI-4-042`. |
@@ -95,7 +96,7 @@ The full rules are in the upstream codebook, `codebook_v0.2_FROZEN.md`.
 |---|---|
 | `upstream` | The Silent Revision coding (Zhu, 2026). |
 | `text_match` | The same words are in this version. The status is `kept`. No judgement by a person or a model. |
-| `model` | A language model found the counterpart and coded the change. Two runs. No person checked it. |
+| `model` | A language model found the counterpart and coded the change. Two runs. See `human_check` for the result of a check by a person. |
 
 `labs[].extended_pairs` lists the version pairs that the ledger traced itself. In those pairs, the ledger does not detect new commitments.
 

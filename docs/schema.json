@@ -151,7 +151,11 @@
           "description": "Who decided this entry. upstream: the Silent Revision coding. text_match: the same words are in this version. model: a language model, two runs, not checked by a person.",
           "enum": ["upstream", "text_match", "model"]
         },
-        "needs_review": { "type": "boolean", "description": "The two model runs did not agree on this entry." },
+        "needs_review": { "type": "boolean", "description": "The two model runs did not agree on this entry, or a person checked it and did not agree." },
+        "human_check": {
+          "description": "Result of a blind check by one person. null: not checked. agrees: same code as the entry. disagrees:<code>: the person gave a different code. The ledger does not overwrite the entry.",
+          "type": ["string", "null"], "pattern": "^(agrees|not_same_thing|cannot_tell|disagrees:(kept|strengthened|weakened))$"
+        },
         "gap_before": { "type": "boolean", "description": "One or more versions between the previous entry and this entry are not traced." },
         "quote_verified": { "type": ["boolean", "null"], "description": "The quote is in the text extraction of the hashed document." },
         "source_row": { "type": ["string", "null"], "description": "Row ID in the upstream coding sheet." },

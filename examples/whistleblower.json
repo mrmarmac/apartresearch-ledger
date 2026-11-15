@@ -225,7 +225,8 @@
           "wayback_timestamp": "20250210221647",
           "sha256": "5ba8859b6552d5d3acc929ed22cfb7f0459deb4cf076d5d70c8cf9b9e8ee050f",
           "coded_by": "upstream",
-          "needs_review": false
+          "needs_review": false,
+          "human_check": null
         },
         {
           "event_id": "xai-governance-673f@xai-draft-2025-02-20",
@@ -247,7 +248,8 @@
           "wayback_timestamp": null,
           "sha256": "89fafebb73757def5a9068105554e68799e3dcce55374a4179b7a62559b6bef9",
           "coded_by": "upstream",
-          "needs_review": false
+          "needs_review": false,
+          "human_check": null
         },
         {
           "event_id": "xai-governance-673f@xai-2025-08-20",
@@ -269,7 +271,8 @@
           "wayback_timestamp": "20250821224133",
           "sha256": "31eae94d448b5b359220cbb93673e22b11adc9e27b8e8eb87e7646521f322f8a",
           "coded_by": "upstream",
-          "needs_review": false
+          "needs_review": false,
+          "human_check": null
         },
         {
           "event_id": "xai-governance-673f@xai-2025-12-30",
@@ -291,7 +294,8 @@
           "wayback_timestamp": null,
           "sha256": "aa01669c19fca50c85323595141d08f98076cf0c48ed8f4a114ad6420c1a1012",
           "coded_by": "upstream",
-          "needs_review": false
+          "needs_review": false,
+          "human_check": null
         },
         {
           "event_id": "xai-governance-673f@xai-2026-06-30",
@@ -313,7 +317,8 @@
           "wayback_timestamp": null,
           "sha256": "2c3c6313bd2fb6eeffcafedb38013c34d92c53331ddedbfa331821c75055df53",
           "coded_by": "upstream",
-          "needs_review": false
+          "needs_review": false,
+          "human_check": null
         }
       ],
       "former_ids": [],

@@ -145,6 +145,42 @@ Observations:
 
 Limits of the human check: one coder. The coder is the author of this project and is not independent of it. 17 items. The coder took about 8 minutes for the 17 items, which is about 30 seconds for each item. The coder used a summary of the rules, not the full codebook.
 
+## Human check of the Anthropic extension: 47 model-coded entries
+
+**Coder:** M.R. (author, lawyer). One person. Blind: the page showed the two texts, the version pair and the text around the later passage. It did not show the model's code or the commitment ID. Random sequence. Five answers: kept, strengthened, weakened, not the same thing, cannot tell. Page: `data/extension/anthropic/human_check_page.html`.
+
+**Result: the human agrees with the model on 34 of 44 decided entries (77%, Cohen's kappa 0.54). Opposite direction: 5 of 44.** Not decided: 1 "not the same thing", 2 "cannot tell".
+
+Where the two model runs agree with each other (42 decided entries), the human agrees with them on 34 (81%).
+
+| Model run 1 | Human: kept | Human: strengthened | Human: weakened | Human: not the same thing | Human: cannot tell |
+|---|---|---|---|---|---|
+| kept (31) | 27 | 1 | 0 | 1 | 2 |
+| strengthened (2) | 0 | 1 | 1 | 0 | 0 |
+| weakened (14) | 4 | 4 | 6 | 0 | 0 |
+
+- **The model codes "weakened" more often than the human.** Of the 14 entries that the model coded weakened, the human coded 6 weakened, 4 kept and 4 strengthened.
+- **The ledger does not overwrite the model code.** An entry where the human agrees has `human_check: agrees`. Each other entry has `needs_review: true` and records the human answer.
+- **The disagreements are not adjudicated.** Nobody decided who is correct.
+
+| Item | Commitment | Version | Model run 1 | Model run 2 | Human | Model's reason |
+|---|---|---|---|---|---|---|
+| e01 | `anthropic-security-06a3` | v3.3 | kept | kept | cannot tell | Extract cut at 'maintain logs' by column extraction; no wording change shown in 'Achieve an eyes on everything state'. |
+| e09 | `anthropic-governance-d559` | v3.4 | weakened | weakened | strengthened | Disclosure narrowed from mitigations 'we are implementing' to those 'we have implemented as of the coverage date', excluding ongoing work and later developments. |
+| e14 | `anthropic-consequence-9c90` | v3.3 | weakened | weakened | strengthened | Trigger raised from 'significantly help threat actors (... moderately resourced ...)' to 'functionally substitute for' expertise of 'world-leading specialists' for a 'well-resourced team'. |
+| e16 | `anthropic-security-d7b4` | v2.2 | kept | kept | strengthened | Same 'Aligning where appropriate with existing guidance' list; footnote text interleaved by extraction, standards list continues after page break. |
+| e19 | `anthropic-third-party-cef3` | v3.2 | weakened | weakened | kept | 'In consultation with the Board and LTBT, we will select external reviewers' becomes 'We will select external reviewers', removing Board/LTBT involvement. |
+| e25 | `anthropic-eval-scope-704a` | v3.1 | weakened | kept | strengthened | Internal-model comparator changed from 'those posed by our public models' to 'models that are covered by a prior Risk Report', potentially excluding some internal models. |
+| e26 | `anthropic-consequence-3e7e` | v3.1 | kept | strengthened | not the same thing | 'We will: Resource and complete significant moonshot R&D for security' unchanged; revised trigger wording is truncated in context and cannot be verified. |
+| e29 | `anthropic-security-8ada` | v2.2 | weakened | weakened | strengthened | Out-of-scope insiders broadened from 'highly sophisticated state-compromised' to 'sophisticated or state-compromised', defined as anyone with 'persistent access or can request time-limited access'. |
+| e34 | `anthropic-eval-trigger-5482` | v2.1 | kept | weakened | cannot tell | Assessment moved to 'in parallel with upgrading', but Section 6.1 still requires confirming model 'sufficiently far away from the next set of Capability Thresholds' before deploying. |
+| e40 | `anthropic-third-party-38ba` | v3.1 | weakened | weakened | kept | 'Separate internal reviewers will provide' becomes 'We will solicit comprehensive internal feedback'; external feedback sentence unchanged. |
+| e41 | `anthropic-consequence-a1d2` | v2.1 | weakened | weakened | kept | 'update our list of Capability Thresholds to consider additional risks' replaced by 'begin testing for ... any additional risks'; context only says 'we may identify additional thresholds'. |
+| e45 | `anthropic-governance-4adb` | v3.1 | weakened | weakened | kept | 'Separate internal reviewers will provide comprehensive feedback' becomes 'We will solicit comprehensive internal feedback', dropping reviewer separateness and guaranteed feedback. |
+| e46 | `anthropic-eval-trigger-efa4` | v2.1 | strengthened | weakened | weakened | AI R&D-5 now requires 'At minimum, the ASL-4 Security Standard' (was ASL-3), and AI R&D-4 adds 'we will develop an affirmative case' on misalignment. |
+
+Limits: one coder, who is the author and is not independent. The coder took about 28 minutes for 47 entries, which is about 36 seconds for each entry of about 900 characters plus context. The later text comes from a PDF extraction, and some extracts are cut by a page break. The coder used a summary of the rules.
+
 ## Alignment test: find the counterpart
 
 **Question.** A method gets one commitment from the earlier version and the full text of the later version. Does it find the same counterpart as the upstream coding, or correctly find none?

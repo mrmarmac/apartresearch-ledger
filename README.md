@@ -66,7 +66,7 @@ The ledger traces them itself. Each entry says who decided it (`coded_by`).
 - 68 Anthropic commitments now reach v3.4. 11 of them have a history from v1.0 (2023) to v3.4 (2026).
 - 25 chains overlap an upstream chain, but not one to one. They are not joined. See `related_ids`.
 - The ledger does not detect commitments that are new in v2.1, v2.2 or v3.1 to v3.4.
-- No person checked the 47 model-coded entries.
+- One person (the author) checked the 47 model-coded entries blind. He agrees with the model on 34 of 44 decided entries (77%). Of the 14 entries that the model coded weakened, he coded 6 weakened, 4 kept and 4 strengthened. The disagreements are not adjudicated. Those entries have `needs_review`.
 - Data and prompts: `data/extension/anthropic/`.
 
 ## Validation
@@ -87,7 +87,7 @@ Full results: [`validation.md`](validation.md).
 
 1. **The codes are not ground truth.** A language model helped with the upstream coding, and one human author adjudicated it. Read each status as a reference.
 2. **Anthropic is joined in part only.** The upstream coding cut the v2.0 text and the v2.2 text into different units. The ledger joined 14 chains and already had 20. 55 chains stop at v2.2 with status `not_traced`, and 25 of those overlap an upstream chain that the ledger could not join one to one.
-3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. No person checked the model-coded entries. New commitments in those versions are not detected.
+3. **Anthropic v2.1, v2.2 and v3.1 to v3.4 are traced by the ledger, not by upstream.** Text match and a model did this work. One person checked the model-coded entries and disagrees on 10 of 44. New commitments in those versions are not detected.
 4. **Nothing after July 2026.** The ledger is a seed dataset. It does not update automatically.
 5. **Frameworks only.** Model cards, usage policies and violations are not in the ledger. Watchtower covers those.
 6. **Commitments only.** Admissions and descriptions are not commitments, and are not in the ledger.
@@ -134,7 +134,7 @@ docs/                the site (GitHub Pages)
 
 ## Next steps
 
-- Ask a person to check the 47 model-coded Anthropic entries, and resolve the 25 overlaps.
+- Adjudicate the 13 model-coded Anthropic entries where the human check did not agree, and resolve the 25 overlaps.
 - Add an alignment step for new versions, and test it against the upstream rows.
 - Add a scheduled job that looks for new framework versions.
 - Ask a second person to code a sample.

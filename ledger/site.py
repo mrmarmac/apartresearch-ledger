@@ -286,8 +286,18 @@ def _entry_html(c, i, versions):
     if h.get("disclosure") in config.DISCLOSURE_LABEL and h["status"] in config.FEED_STATUSES:
         parts.append(f'<p class="note"><b>Disclosure:</b> {E(config.DISCLOSURE_LABEL[h["disclosure"]])}</p>')
     if h.get("coded_by") == "model":
-        parts.append('<p class="note"><b>Coded by a model.</b> Two runs of a language model found this counterpart and coded this change. No person checked it.'
-                     + (' <b>The two runs did not agree. This entry needs review.</b>' if h.get("needs_review") else '') + '</p>')
+        check = h.get("human_check")
+        if check == "agrees":
+            tail = " One person checked it blind and gave the same code."
+        elif check and check.startswith("disagrees:"):
+            tail = f' <b>One person checked it blind and coded it "{E(check.split(":")[1])}". Not resolved. This entry needs review.</b>'
+        elif check == "not_same_thing":
+            tail = " <b>One person checked it blind and did not accept that the two texts are the same commitment. This entry needs review.</b>"
+        elif check == "cannot_tell":
+            tail = " <b>One person checked it blind and could not decide from the extracted text. This entry needs review.</b>"
+        else:
+            tail = " No person checked it." + (" <b>The two runs did not agree. This entry needs review.</b>" if h.get("needs_review") else "")
+        parts.append('<p class="note"><b>Coded by a model.</b> Two runs of a language model found this counterpart and coded this change.' + tail + '</p>')
     if h.get("gap_before"):
         parts.append('<p class="note"><b>Gap.</b> One or more versions before this entry are not traced.</p>')
     src = [("Section", E(h["section"]) + (" (heading changed)" if h.get("section_changed") else "")) if h["section"] else None,
