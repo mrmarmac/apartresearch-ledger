@@ -55,7 +55,7 @@
   "url": "https://research.meta.ai/static/meta-superintelligence-scaling-framework"
  },
  "openai-pf-page": {
-  "fails": 2,
+  "fails": 3,
   "last_error": "HTTP 403",
   "url": "https://openai.com/safety/preparedness"
  },
