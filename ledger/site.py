@@ -490,6 +490,76 @@ def _pairs_text(site, pairs):
     return ", ".join(f'{E(_vname(site.versions[a]))} → {E(_vname(site.versions[b]))}' for a, b in pairs) or "None"
 
 
+STRIP_LABEL = {
+    "kept": "Present, no material change", "added": "Added", "strengthened": "Strengthened", "weakened": "Weakened",
+    "removed": "Removed", "relocated": "Relocated to another document", "merged": "Merged into another row",
+    "not_traced": "Not traced after this version",
+}
+STRIP_RANK = {"removed": 0, "relocated": 1, "weakened": 2, "merged": 3, "kept": 4, "baseline": 4, "strengthened": 5, "added": 6}
+
+
+def _strip_chart(site, lab):
+    """The strip figure of the paper, as links. One row for each commitment, one column for each version.
+
+    Same order and colours as paper/make_figures.py strip(). Each cell opens that entry in the commitment's history.
+    """
+    name = site.labs[lab]
+    items = list(site.by_lab[lab])
+    versions = site.lab_versions[lab]
+    firsts = {c["first_version_id"] for c in items}
+    start = min(n for n, v in enumerate(versions) if v["version_id"] in firsts)
+    skipped, versions = versions[:start], versions[start:]
+    vids = [v["version_id"] for v in versions]
+
+    def key(c):
+        end = 0 if c["current_status"] in ("removed", "relocated") else 1 if c["current_status"] in ("not_traced", "merged") else 2
+        return (vids.index(c["first_version_id"]), end, vids.index(c["last_version_id"]), STRIP_RANK.get(c["history"][-1]["status"], 4))
+
+    items.sort(key=key)
+    used = set()
+    rows = []
+    for c in items:
+        by_version = {h["version_id"]: h for h in c["history"]}
+        after = vids.index(c["last_version_id"]) + 1
+        text = E(_short(c["text"], 150))
+        cells = []
+        for n, v in enumerate(versions):
+            h = by_version.get(v["version_id"])
+            if h:
+                kind = "kept" if h["status"] in ("baseline", "kept") else h["status"]
+                label = config.STATUS_LABEL[h["status"]]
+                href = f'../c/{c["id"]}.html#{E(v["version_id"])}'
+            elif n == after and c["current_status"] in ("merged", "not_traced"):
+                kind = c["current_status"]
+                label = STRIP_LABEL[kind]
+                href = f'../c/{c["id"]}.html'
+            else:
+                cells.append("<i></i>")
+                continue
+            used.add(kind)
+            tip = f'{c["id"]} · {_vname(v)} · {label}'
+            cells.append(f'<a class="b-{kind}" href="{href}" title="{E(tip)}" aria-label="{E(tip)}" data-t="{text}"></a>')
+        short_id = c["id"][len(lab) + 1:] if c["id"].startswith(lab + "-") else c["id"]
+        rows.append(f'<div class="sc-row"><a class="sc-id" href="../c/{c["id"]}.html" title="{text}" data-t="{text}" '
+                    f'aria-label="{c["id"]}">{E(short_id)}</a>{"".join(cells)}</div>')
+    heads = "".join(f'<a href="../v/{E(v["version_id"])}.html" title="{E(_vname(v))}, {_date(v["publication_date"])}: everything that changed">'
+                    f'{E(_vlabel(v))}</a>' for v in versions)
+    legend = "".join(f'<span><i class="b-{k}"></i>{E(STRIP_LABEL[k])}</span>' for k in STRIP_LABEL if k in used)
+    note = ""
+    if skipped:
+        names = ", ".join(E(_vname(v)) for v in skipped)
+        note = f' {"Version" if len(skipped) == 1 else "Versions"} {names} {"is" if len(skipped) == 1 else "are"} not traced, and not shown.'
+    return f"""<h2 id="strip">Strip chart</h2>
+<p class="sub">{len(items)} {E(name)} commitments across {_plural(len(versions), "version")}. One row is one commitment, in order of first appearance. One bar is one version, oldest on the left. Select a bar to open that entry, or a version name to see everything that changed in it.{note}</p>
+<div class="sc-legend" role="note" aria-label="Legend">{legend}</div>
+<div class="sc" style="--n:{len(versions)}">
+<div class="sc-row sc-head"><span class="sc-id">ID</span>{heads}</div>
+<p class="sc-info" id="sc-info" aria-live="polite">Point at a bar, or move to it with the Tab key, to read the commitment here.</p>
+{"".join(rows)}
+</div>
+"""
+
+
 def render_developer(site, lab):
     name = site.labs[lab]
     mine = site.by_lab[lab]
@@ -543,6 +613,7 @@ def render_developer(site, lab):
 <div><b>{events.get("strengthened", 0)}</b><span>strengthenings recorded</span></div>
 </div>
 <p style="margin-top:14px"><a class="btn sm" href="../browse.html?lab={lab}">Search {E(name)} commitments</a>
+<a class="btn sm" href="#strip">Strip chart</a>
 <a class="btn sm" href="../browse.html?lab={lab}&amp;current=removed">Removed</a> <a class="btn sm" href="../browse.html?lab={lab}&amp;event=weakened">Weakened at some point</a></p>
 
 <h2>Versions</h2>
@@ -551,8 +622,9 @@ def render_developer(site, lab):
 
 <div class="callout"><h3>Coverage for {E(name)}</h3><ul>{"".join(notes)}</ul></div>
 
-<h2>Every commitment, version by version</h2>
-<p class="sub">One row is one commitment. One square is one version, oldest on the left. Select a row to open its history.</p>
+{_strip_chart(site, lab)}
+<h2 id="topics">Every commitment, by topic</h2>
+<p class="sub">The same data with the wording, grouped by topic. One square is one version, oldest on the left. Select a row to open its history.</p>
 {_legend()}
 <div class="sheet"><div class="sheet-head"><span class="small muted">Commitment</span><span class="cols" aria-hidden="true">{heads}</span></div>{"".join(groups)}</div>
 <h2>Other developers</h2>

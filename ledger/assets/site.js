@@ -91,3 +91,21 @@
   if (el('sort').value !== 'serious') sort();
   apply();
 })();
+
+/* Strip chart: show the commitment under the pointer or the keyboard focus. */
+(function () {
+  var box = document.getElementById("sc-info");
+  if (!box) return;
+  function show(e) {
+    var a = e.target.closest ? e.target.closest(".sc a[data-t]") : null;
+    if (!a) return;
+    box.textContent = "";
+    var b = document.createElement("b");
+    b.textContent = a.getAttribute("aria-label");
+    box.appendChild(b);
+    box.appendChild(document.createTextNode(" " + a.getAttribute("data-t")));
+  }
+  var chart = box.parentNode;
+  chart.addEventListener("mouseover", show);
+  chart.addEventListener("focusin", show);
+})();

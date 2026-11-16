@@ -31,6 +31,20 @@ def test_pages_exist():
         assert os.path.exists(os.path.join(DOCS, "d", lab + ".html")), lab
 
 
+def test_strip_chart():
+    """Each developer page has one strip row for each commitment and one linked bar for each history entry."""
+    ledger = json.load(open(os.path.join(ROOT, "data", "ledger.json"), encoding="utf-8"))
+    for lab in {c["lab"] for c in ledger["commitments"]}:
+        mine = [c for c in ledger["commitments"] if c["lab"] == lab]
+        page = read(f"d/{lab}.html")
+        chart = page.split('<h2 id="strip">')[1].split('<h2 id="topics">')[0]
+        assert chart.count('class="sc-row"') == len(mine), lab
+        entries = sum(len(c["history"]) for c in mine)
+        assert len(re.findall(r'href="\.\./c/[^"#]+\.html#[^"]+"', chart)) == entries, lab
+        open_ends = sum(1 for c in mine if c["current_status"] in ("merged", "not_traced"))
+        assert chart.count('<a class="b-not_traced"') + chart.count('<a class="b-merged"') <= open_ends, lab
+
+
 def test_internal_links():
     """Every link to a page or a file of this site must have a target."""
     missing = []

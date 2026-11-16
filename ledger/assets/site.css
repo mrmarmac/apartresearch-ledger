@@ -236,3 +236,29 @@ footer p{margin:0 0 6px;max-width:90ch}
 footer .links{display:flex;gap:6px 16px;flex-wrap:wrap;margin-bottom:10px;color:var(--ink)}
 @media (prefers-reduced-motion:no-preference){.row,.grow,.vrow,.btn,.chip,.dev{transition:background-color .12s,border-color .12s}}
 @media (max-width:560px){.quote{font-size:16.5px}.lede{font-size:17px}.card{padding:15px}.facts{grid-template-columns:1fr;gap:1px 0}.facts dd{margin-bottom:8px}details.src dl{grid-template-columns:1fr;gap:1px 0}details.src dd{margin-bottom:6px}}
+
+/* Strip chart on a developer page. Fills are the paper's figure colours, the same in light and dark. */
+.sc{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:0 12px 12px;--lab:136px}
+.sc-row{display:grid;grid-template-columns:var(--lab) repeat(var(--n),minmax(0,1fr));gap:2px 4px;align-items:center;margin-top:2px}
+.sc-row>a:not(.sc-id),.sc-row>i{height:13px;border-radius:2px;display:block}
+.sc-row:hover .sc-id,.sc-row:focus-within .sc-id{color:var(--ink);text-decoration:underline}
+.sc-row:hover{background:var(--sunk)}
+.sc-row>a:not(.sc-id):hover,.sc-row>a:not(.sc-id):focus-visible{outline:2px solid var(--ink);outline-offset:1px;position:relative;z-index:1}
+.sc-id{font-family:var(--f-mono);font-size:11px;line-height:13px;color:var(--muted);text-decoration:none;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:4px}
+.sc-head{position:sticky;top:0;z-index:3;background:var(--surface);padding:10px 0 6px;margin-top:0;border-bottom:1px solid var(--rule)}
+.sc-head.sc-row:hover{background:var(--surface)}
+.sc-head>a:not(.sc-id){height:auto;text-align:center;font-size:12px;font-weight:600;color:var(--ink);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-radius:4px;padding:2px 0}
+.sc-head>a:not(.sc-id):hover{outline:0;background:var(--sunk);text-decoration:underline}
+.sc-head .sc-id{font-family:var(--f-ui);font-size:11.5px}
+.sc-info{max-width:none;position:sticky;top:41px;z-index:2;background:var(--surface);margin:0 0 6px;padding:6px 0;font-size:13px;line-height:1.35;color:var(--muted);min-height:3.4em;border-bottom:1px solid var(--line)}
+.sc-info b{color:var(--ink);font-family:var(--f-mono);font-weight:600;font-size:12px}
+.b-kept{background:#dddddd}.b-added{background:#56b4e9}.b-strengthened{background:#0072b2}.b-weakened{background:#d55e00}
+.b-removed{background:#7a1f1f}.b-relocated{background:#cc79a7}.b-merged{background:#888888}
+.b-not_traced{background:transparent;box-shadow:inset 0 0 0 1px #999999}
+.sc-legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin:10px 0}
+.sc-legend span{display:inline-flex;align-items:center;gap:6px}
+.sc-legend i{width:26px;height:11px;border-radius:2px;display:inline-block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .b-kept{background:#4a5462}:root:not([data-theme="light"]) .b-removed{background:#b33a3a}}
+:root[data-theme="dark"] .b-kept{background:#4a5462}:root[data-theme="dark"] .b-removed{background:#b33a3a}
+@media (max-width:640px){.sc{--lab:78px;padding:0 8px 8px}.sc-row{gap:3px 2px}.sc-row>a:not(.sc-id),.sc-row>i{height:18px}.sc-id{font-size:9.5px;line-height:18px}.sc-head>a:not(.sc-id){font-size:10.5px}.sc-info{font-size:12.5px}}
+@media print{.sc-info{display:none}.sc-head{position:static}}
