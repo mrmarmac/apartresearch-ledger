@@ -92,7 +92,7 @@ def site():
     out = os.path.join(ROOT, "docs")
     os.makedirs(out, exist_ok=True)
     pages = render(ledger, ROOT, out)
-    print(f"wrote docs/: index, {pages} commitment pages, feed.xml")
+    print(f"wrote docs/: overview, browse, developer and version pages, {pages} commitment pages, feed.xml")
 
 
 def validate():
