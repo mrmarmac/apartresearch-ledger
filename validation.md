@@ -422,7 +422,7 @@ Meta v2.1 is not in the upstream corpus. The ledger traced this pair itself. Fil
 | Tracing, two model runs, full document | 18 counterparts, 4 none. Same passage in both runs for 16 of 18. Both runs agree on the 4 "none". |
 | Direction, two model runs, full section | 12 kept, 6 weakened. 18 of 18 agreement between the runs. |
 | New commitments, two model runs | 15 candidates. 14 in both runs, 1 in run 2 only. |
-| Review by one person, not blind | 26 items: 6 weakened, 4 removed, 15 candidates, 2 tracing disagreements. He confirmed all 26. |
+| Review by one person, not blind | 26 items: 6 weakened, 4 removed, 15 candidates, and 1 kept entry where the two tracing runs disagreed. He confirmed all 26. The other tracing disagreement is one of the 6 weakened. |
 
 How to read this:
 
