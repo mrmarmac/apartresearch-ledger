@@ -272,14 +272,14 @@ def fig12():
 def fig10():
     groups = [("Model against a reference", [
                   ("Stability: model run 2 = run 1", 113, 120),
-                  ("Direction: model = upstream code", 105, 120),
-                  ("Counterpart: model = upstream", 48, 60),
+                  ("Direction: model = source code", 105, 120),
+                  ("Counterpart: model = source", 48, 60),
                   ("Counterpart: text matching only (baseline)", 37, 60),
                   ("Direction: blind human = model (Anthropic)", 34, 44),
-                  ("New commitments: model finds upstream additions", 26, 34)]),
+                  ("New commitments: model finds source additions", 26, 34)]),
               ("Ledger against an independent tracker", [
-                  ("Watchtower Meta changes that are in the ledger", 15, 17),
-                  ("Watchtower xAI changes that are in the ledger", 14, 17)])]
+                  ("Watchtower Meta changes that are in the Ledger", 15, 17),
+                  ("Watchtower xAI changes that are in the Ledger", 14, 17)])]
     fig, axes = plt.subplots(2, 1, figsize=(8.5, 4.8), sharex=True, gridspec_kw={"height_ratios": [6, 2]})
     for ax, (title, rows) in zip(axes, groups):
         rows = rows[::-1]

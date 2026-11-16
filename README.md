@@ -92,7 +92,7 @@ Meta published v2.1 after the upstream corpus was frozen. The ledger traces v2 â
 | 2 | Model, two runs, full document: find the counterpart of the other 22 | 18 counterparts, 4 with none. The runs found the same passage for 16 of the 18. |
 | 3 | Model, two runs, full section: code the direction of the 18 pairs | 12 kept, 6 weakened. The runs agree on all 18. |
 | 4 | Model, two runs, both full documents: list passages in v2.1 with no counterpart in v2 | 15 candidates. 14 are in both runs. |
-| 5 | One person, not blind: decide the 6 weakened, the 4 removed, the 15 candidates and the 2 tracing disagreements | He confirmed all 26. No entry has `needs_review`. |
+| 5 | One person, not blind: decide the 6 weakened, the 4 removed, the 15 candidates and the 1 kept entry where the two tracing runs disagreed | He confirmed all 26. The other tracing disagreement is one of the 6 weakened. No entry has `needs_review`. |
 
 - The person saw the two model answers and a note on the Watchtower entry. This step is a confirmation, not an independent check.
 - The 11 model-coded "kept" entries without a tracing disagreement were not checked by a person.
