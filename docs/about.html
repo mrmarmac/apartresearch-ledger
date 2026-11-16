@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Method, definitions and limits · Commitment Ledger</title>
+<meta name="description" content="How the Commitment Ledger is built: identifiers, status definitions, who decided each entry, coverage, checks and known limits.">
+<meta property="og:title" content="Method, definitions and limits · Commitment Ledger">
+<meta property="og:description" content="How the Commitment Ledger is built: identifiers, status definitions, who decided each entry, coverage, checks and known limits.">
+<meta property="og:type" content="website">
+<link rel="alternate" type="application/rss+xml" title="Commitment Ledger: changes" href="feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script>try{var t=localStorage.getItem('ledger-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="2" width="5" height="5" rx="1" fill="currentColor"/><rect x="8" y="2" width="5" height="5" rx="1" fill="currentColor" opacity=".55"/><rect x="15" y="2" width="5" height="5" rx="1" fill="currentColor" opacity=".25"/><rect x="1" y="9" width="5" height="5" rx="1" fill="currentColor"/><rect x="8" y="9" width="5" height="5" rx="1" fill="currentColor"/><rect x="15" y="9" width="5" height="5" rx="1" fill="currentColor" opacity=".55"/><rect x="1" y="16" width="5" height="5" rx="1" fill="currentColor"/><rect x="8" y="16" width="5" height="5" rx="1" fill="currentColor" opacity=".25"/></svg>Commitment Ledger</a>
+<nav class="nav" aria-label="Main">
+<a href="browse.html">Browse</a><a href="index.html#developers">Developers</a><a href="revisions.html">Revisions</a><a href="about.html" aria-current="page">About</a>
+<span class="sep wideonly" aria-hidden="true"></span>
+<a class="wideonly" href="ledger.json">Data</a><a class="wideonly" href="feed.xml">RSS</a><a class="wideonly" href="https://github.com/mrmarmac/apartresearch-ledger">GitHub</a>
+</nav>
+<button type="button" id="theme" class="themebtn" aria-label="Switch between light and dark">Dark</button>
+</div></header>
+<main id="main"><div class="wrap">
+
+<p class="crumbs"><a href="index.html">Home</a><span aria-hidden="true">›</span><span>About</span></p>
+<h1>Method, definitions and limits</h1>
+<p class="lede">What the Ledger records, where each entry comes from, how far to trust it, and how to reuse it.</p>
+<div class="toc"><a class="chip" href="#what">What it is</a><a class="chip" href="#ids">Identifiers</a><a class="chip" href="#statuses">Statuses</a><a class="chip" href="#who">Who decided</a>
+<a class="chip" href="#coverage">Coverage</a><a class="chip" href="#checks">Checks</a><a class="chip" href="#limits">Limits</a><a class="chip" href="#reuse">Reuse</a></div>
+<div class="prose">
+
+<h2 id="what">What it is</h2>
+<p>AI developers publish safety frameworks: documents that set capability thresholds, the evaluations used to test against them, and what the developer will do when a threshold is crossed.
+Developers revise these documents. The Ledger follows each commitment through those revisions.</p>
+<p>A <b>commitment</b> is a statement in a safety framework in which the developer commits itself to a practice. Admissions and descriptions are not commitments, and are not in the Ledger.</p>
+<p>The Ledger holds 447 commitments from 5 developers across 23 framework versions, with 478 recorded changes.
+It does not code the frameworks afresh. The seed data is the coding of the <a href="https://github.com/louisyzhu/frontier-safety-framework-corpus">Frontier Safety Framework Corpus</a>
+(Zhu, 2026, <a href="https://arxiv.org/abs/2609.08789">Silent Revision</a>). That study gives a commitment a new row in each pair of versions. The Ledger connects those rows into one history and gives it one ID.</p>
+
+<h2 id="ids">Identifiers</h2>
+<p>A commitment ID has the form <span class="mono">developer-topic-hash</span>, for example <a class="mono" href="c/xai-governance-673f.html">xai-governance-673f</a>.</p>
+<ul>
+<li>The developer part does not change when a company changes its name.</li>
+<li>The topic is the topic at first appearance.</li>
+<li>The hash is the first 4 hexadecimal characters of the SHA-256 of the developer, the first version and the normalised first quote. If two IDs collide, the later one takes one more character.</li>
+<li>The ID is assigned at first appearance. A later change of wording or topic does not change it. An ID is never reused.</li>
+<li>When two histories are joined, the older ID continues. The other becomes a former ID, and its page points to the new one. 14 histories were joined this way on 15 November 2026.</li>
+</ul>
+<p>Each history entry also has an ID: <span class="mono">commitment-id@version-id</span>. It is the identifier of the matching item in the RSS feed.</p>
+
+<h2 id="statuses">Statuses</h2>
+<p>A status on a history entry describes the change from the version before.</p>
+<div class="scroll"><table><thead><tr><th>Status</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="badge s-baseline"><span aria-hidden="true">•</span> First seen</span></td><td>The first version where the Ledger sees the commitment. No claim of change.</td></tr><tr><td><span class="badge s-added"><span aria-hidden="true">+</span> Added</span></td><td>In this version, with no counterpart in the version before.</td></tr><tr><td><span class="badge s-kept"><span aria-hidden="true">=</span> Kept</span></td><td>A counterpart exists and nothing material changed. The words can differ.</td></tr><tr><td><span class="badge s-strengthened"><span aria-hidden="true">↑</span> Strengthened</span></td><td>The obligation became larger in one or more ways, and smaller in none.</td></tr><tr><td><span class="badge s-weakened"><span aria-hidden="true">↓</span> Weakened</span></td><td>The obligation became smaller in one or more ways. Also used for mixed changes.</td></tr><tr><td><span class="badge s-removed"><span aria-hidden="true">×</span> Removed</span></td><td>No counterpart in this version.</td></tr><tr><td><span class="badge s-relocated"><span aria-hidden="true">→</span> Relocated</span></td><td>The counterpart moved to a companion document or a non-binding section.</td></tr></tbody></table></div>
+<p>The source study judges a change on six dimensions: scope, threshold or trigger, actor, obligation strength, disclosure scope, and consequence.
+"Relocated" does not mean "moved to a different section" of the same document.</p>
+<h3>Where a commitment stands now</h3>
+<div class="scroll"><table><thead><tr><th>Status now</th><th>Commitments</th><th>Meaning</th></tr></thead><tbody><tr><td><span class="badge s-active">In force</span></td><td class="n">329</td><td>In the last version that the Ledger traces for this developer. It says nothing about compliance.</td></tr><tr><td><span class="badge s-removed"><span aria-hidden="true">×</span> Removed</span></td><td class="n">45</td><td>The last entry in the history is a removal.</td></tr><tr><td><span class="badge s-relocated"><span aria-hidden="true">→</span> Relocated</span></td><td class="n">8</td><td>The last entry moved the text to a companion document or a non-binding section.</td></tr><tr><td><span class="badge s-merged">Merged</span></td><td class="n">3</td><td>The source coding merged this commitment into another one.</td></tr><tr><td><span class="badge s-not_traced">Not traced</span></td><td class="n">62</td><td>The record stops. The Ledger could not follow the commitment further. This is not a removal.</td></tr></tbody></table></div>
+<h3>The developer's own account</h3>
+<p>For each material change, the source study records whether the developer's own account of the revision identifies it.</p>
+<div class="scroll"><table><thead><tr><th>Label</th><th>Meaning</th></tr></thead><tbody><tr><td>Identified in the developer&#x27;s account</td><td>The developer&#x27;s account identifies this change.</td></tr><tr><td>Area identified, change not identified</td><td>The developer&#x27;s account identifies the area, but not the change.</td></tr><tr><td>Not identified in the developer&#x27;s account</td><td>The developer published an account. It does not identify this change.</td></tr><tr><td>No account published</td><td>The developer published no account of this revision.</td></tr></tbody></table></div>
+
+<h2 id="who">Who decided each entry</h2>
+<p>The Ledger has 1,533 history entries. Each one says who decided it.</p>
+<div class="scroll"><table><thead><tr><th>Decided by</th><th>Entries</th><th>What that means</th></tr></thead><tbody><tr><td>Source coding</td><td class="n">877</td><td>The coding of the Silent Revision study (Zhu, 2026): a first pass by a Claude model, adjudicated by that study&#x27;s author. No independent human coder.</td></tr><tr><td>Text match</td><td class="n">572</td><td>The same words are in this version. The status is Kept. No judgement by a person or a model.</td></tr><tr><td>Language model</td><td class="n">84</td><td>A language model found the counterpart and coded the change, in two runs. One person checked 73 of these entries. Each entry says whether it was checked.</td></tr></tbody></table></div>
+<p>Histories are connected across versions by text: a note in the source data that names the earlier row, then identical text after normalisation, then a similarity ratio of 0.9 or more.
+For the version pairs that the Ledger traced itself, a language model found the counterpart. A commitment that was fully rewritten gets a new ID.</p>
+
+<h2 id="coverage">Coverage</h2>
+<div class="scroll"><table><thead><tr><th>Developer</th><th>Commitments</th><th>Versions</th><th>Traced by the source study</th><th>Traced by the Ledger</th><th>Not traced</th><th>Last traced version</th></tr></thead>
+<tbody><tr><th scope="row"><a href="d/xai.html">xAI</a></th><td class="n">64</td><td class="n">5</td><td>10 Feb 2025 → 20 Feb 2025, 20 Feb 2025 → 20 Aug 2025, 20 Aug 2025 → 30 Dec 2025, 30 Dec 2025 → 30 Jun 2026</td><td>None</td><td>None</td><td>30 Jun 2026, 30 Jun 2026</td></tr><tr><th scope="row"><a href="d/anthropic.html">Anthropic</a></th><td class="n">156</td><td class="n">9</td><td>v1.0 → v2.0, v2.2 → v3.0</td><td>v2.0 → v2.1, v2.1 → v2.2, v3.0 → v3.1, v3.1 → v3.2, v3.2 → v3.3, v3.3 → v3.4</td><td>None</td><td>v3.4, 8 Jul 2026</td></tr><tr><th scope="row"><a href="d/google.html">Google DeepMind</a></th><td class="n">55</td><td class="n">4</td><td>v2.0 → v3.0, v3.0 → v3.1</td><td>None</td><td>v1.0 → v2.0</td><td>v3.1, 17 Apr 2026</td></tr><tr><th scope="row"><a href="d/meta.html">Meta</a></th><td class="n">121</td><td class="n">3</td><td>v1.1 → v2</td><td>v2 → v2.1</td><td>None</td><td>v2.1, 2 Oct 2026</td></tr><tr><th scope="row"><a href="d/openai.html">OpenAI</a></th><td class="n">51</td><td class="n">2</td><td>beta → v2</td><td>None</td><td>None</td><td>v2, 15 Apr 2025</td></tr></tbody></table></div>
+<p>The source study also traced Microsoft and Naver. They are not in the Ledger. The newest version in the Ledger is Meta v2.1, 2 Oct 2026.</p>
+
+<h2 id="checks">Checks</h2>
+<p>Full results, with the test items and model answers: <a href="https://github.com/mrmarmac/apartresearch-ledger/blob/main/validation.md">validation.md</a>. The language model in every test was Claude Opus 5.5.</p>
+<div class="scroll"><table><thead><tr><th>Check</th><th>Result</th></tr></thead><tbody>
+<tr><td>Quotes found in the hashed source document</td><td class="n">1,459 of 1,475</td></tr>
+<tr><td>Direction of change: the model gives the source code for a matched pair</td><td>105 of 120 (88%, Cohen's kappa 0.81)</td></tr>
+<tr><td>Stability: a second model run gives the same answer</td><td>113 of 120</td></tr>
+<tr><td>Counterpart: the model finds the same counterpart as the source</td><td>48 of 60. Text matching alone: 37 of 60</td></tr>
+<tr><td>Counterpart on an incremental revision, and on a full rewrite</td><td>20 of 20, and 10 of 20</td></tr>
+<tr><td>New commitments: a model run finds the additions in the source coding</td><td>26 of 34</td></tr>
+<tr><td>Blind check by one person of the model-coded Anthropic entries</td><td>Agrees on 34 of 44 decided</td></tr>
+<tr><td>Changes listed by Watchtower that are in the Ledger</td><td>xAI, June 2026: 14 of 17. Meta v2.1: 15 of 17</td></tr>
+</tbody></table></div>
+<p>The model tests are not independent of the source coding. Both sides used Claude models, so agreement between them shows consistency within one model family.</p>
+
+<h2 id="limits">Known limits</h2>
+<ul>
+<li><b>The statuses are not ground truth.</b> A Claude model made the source study's first pass and that study's author adjudicated it. No other person coded independently.</li>
+<li><b>One person checked the Ledger's own tracing.</b> That person is the Ledger's author. For Meta v2.1 he saw the model's answers first.</li>
+<li><b>Tracing is weaker at a rewrite.</b> The model found the source's counterpart in 20 of 20 cases on an incremental revision, and in 10 of 20 on a full rewrite.</li>
+<li><b>New commitments can be missed.</b> The step that looks for them found 26 of 34 in a test. For Anthropic v2.1, v2.2 and v3.1 to v3.4 the Ledger does not look for new commitments at all.</li>
+<li><b>62 histories stop early</b> with the status "Not traced". 25 of them overlap a later history that could not be joined one to one, so some commitments may be counted twice.</li>
+<li><b>"In force" means "in the last traced version".</b> A new version starts to count only after someone traces it. A daily watcher reports when a framework file or page changes.</li>
+<li><b>Frameworks only.</b> Model cards, usage policies and violations are not in the Ledger. <a href="https://www.themidasproject.com/watchtower">Watchtower</a> covers those.</li>
+<li><b>Tags are keyword rules.</b> They can miss or over-match.</li>
+<li><b>16 quotes were not found</b> by the automatic check against the text extracted from the source file. Each entry says whether its quote was found.</li>
+</ul>
+
+<h2 id="reuse">Reuse</h2>
+<ul>
+<li><b>Data:</b> <a href="ledger.json">ledger.json</a>, described by <a href="schema.json">schema.json</a> and <a href="https://github.com/mrmarmac/apartresearch-ledger/blob/main/SCHEMA.md">SCHEMA.md</a>. Licence: CC BY 4.0. Credit this project and the source corpus.</li>
+<li><b>Feed:</b> <a href="feed.xml">feed.xml</a>, one item for each recorded change.</li>
+<li><b>Code:</b> <a href="https://github.com/mrmarmac/apartresearch-ledger">GitHub</a>, MIT licence. The site and the feed are built from ledger.json with no language model step.</li>
+<li><b>Quotes</b> from framework documents belong to their publishers. The Ledger links to each document by address and SHA-256.</li>
+</ul>
+<p>Source corpus: Zhu, Louis Yiven (2026). Silent Revision: a versioned corpus of frontier AI safety frameworks and their revision accounts. Zenodo. arXiv:2609.08789. DOI <a href="https://doi.org/10.5281/zenodo.22670700">10.5281/zenodo.22670700</a>.</p>
+<p>The Ledger builds on <a href="https://www.themidasproject.com/watchtower">Watchtower</a> by The Midas Project and extends the idea to a record for each commitment. The Midas Project did not take part in this work and has not endorsed it.
+Made for the Apart Research AI x Epistemics sprint, November 2026.</p>
+</div>
+
+</div></main>
+<footer><div class="wrap">
+<p class="links"><a href="browse.html">Browse commitments</a><a href="revisions.html">Revisions</a><a href="about.html">Method and limits</a>
+<a href="ledger.json">ledger.json</a><a href="schema.json">schema.json</a><a href="feed.xml">RSS feed</a><a href="https://github.com/mrmarmac/apartresearch-ledger">GitHub</a></p>
+<p>Statuses are a reference, not ground truth. Most come from the coding of the
+<a href="https://github.com/louisyzhu/frontier-safety-framework-corpus">Frontier Safety Framework Corpus</a> by Louis Yiven Zhu
+(<a href="https://arxiv.org/abs/2609.08789">Silent Revision, arXiv:2609.08789</a>, CC BY 4.0): a language model first pass, adjudicated by that study's author.</p>
+<p>Ledger data: CC BY 4.0. Code: MIT. Quoted framework text belongs to its publisher; each quote links to its source document by address and SHA-256.
+Builds on <a href="https://www.themidasproject.com/watchtower">Watchtower</a> by The Midas Project, which did not take part in this work.</p>
+</div></footer>
+</body>
+</html>

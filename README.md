@@ -16,7 +16,7 @@ Made for the Apart Research AI x Epistemics sprint, November 2026.
 
 ## Demo
 
-1. Open the [index with the filter `xAI` + `whistleblower`](https://mrmarmac.github.io/apartresearch-ledger/index.html?lab=xai&tag=whistleblower).
+1. Open [Browse with the filter `xAI` + `whistleblower`](https://mrmarmac.github.io/apartresearch-ledger/browse.html?lab=xai&tag=whistleblower).
 2. Open [`xai-governance-673f`](https://mrmarmac.github.io/apartresearch-ledger/c/xai-governance-673f.html).
 3. The clause is in 4 versions from February 2025. It is not in the version of 30 June 2026.
    Each entry has the verbatim text, the source link, and the SHA-256 of the document.
@@ -146,7 +146,7 @@ python run.py all
 | `python run.py build` | Writes `data/ledger.json`. |
 | `python run.py validate` | Checks the ledger against `schema.json`. |
 | `python run.py check` | Checks that the demo path works. |
-| `python run.py site` | Writes the site and `feed.xml` into `docs/`. |
+| `python run.py site` | Writes the site and `feed.xml` into `docs/`: overview, browse, one page for each developer, version and commitment, and a method page. |
 | `python run.py align` | Scores the alignment test and writes `validation/alignment/report.md`. |
 | `python run.py score` | Scores `validation/predictions/` and writes `validation.md`. |
 | `python run.py watch` | Gets each watched address and compares its hash with `watch/state.json`. |
