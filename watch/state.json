@@ -10,6 +10,7 @@
    "https://assets.claude.com/64cb0ac5eb0f8030187131f490827323e3d53308.pdf",
    "https://assets.claude.com/7c534a9e7a82d4411dd568d85ffbcd14ac243a62.pdf",
    "https://assets.claude.com/872c653b2d0501d6ab44cf87f43e1dc4853e4d37.pdf",
+   "https://assets.claude.com/b7a5629e40b391b2adfb4cc8c0888ac9d6bfddf6.pdf",
    "https://assets.claude.com/bf04581e4f329735fd90634f6a1962c13c0bd351.pdf",
    "https://assets.claude.com/c11e84981d0a7281a1b229f3fa6af0da66eaf43f.pdf",
    "https://assets.claude.com/dd0ec579bee2cd144069c478ede3e35ea080ad02.pdf",
@@ -18,7 +19,7 @@
    "https://assets.claude.com/fbfdce5e4e825a3e089085205a842a9ae8ffac99.pdf",
    "https://assets.claude.com/fed9cc193a14b84131812372d8d5857f8f304c52.pdf"
   ],
-  "sha256": "aeebf30dc964b600bfbd1531f103f1181b286f5fa925e71cd2668b48b5649cfe",
+  "sha256": "24f66f70a193003ea72067ddb03643b90042b368e9b5347d49eb595bac442716",
   "url": "https://www.anthropic.com/responsible-scaling-policy"
  },
  "anthropic-rsp-v3.4": {
@@ -55,7 +56,7 @@
   "url": "https://research.meta.ai/static/meta-superintelligence-scaling-framework"
  },
  "openai-pf-page": {
-  "fails": 4,
+  "fails": 5,
   "last_error": "HTTP 403",
   "url": "https://openai.com/safety/preparedness"
  },
